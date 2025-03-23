@@ -14,10 +14,6 @@ order: 4
         <h3>{{ author[1].name | default: "Bilinmeyen Yazar" }}</h3>
         <p>{{ author[1].description | default: "Açıklama bulunamadı." }}</p>
 
-        {% if author[1].url %}
-          <p><a href="{{ author[1].url }}" target="_blank">Profil</a></p>
-        {% endif %}
-
         {% if author[1].github %}
           <p><a href="{{ author[1].github }}" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
         {% endif %}

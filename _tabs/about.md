@@ -5,6 +5,7 @@ permalink: /about/
 icon: fas fa-user-friends
 order: 4
 ---
+<pre>{{ site.data.authors | jsonify }}</pre>
 
 <section id="authors">
   <h2>Yazarlar</h2>

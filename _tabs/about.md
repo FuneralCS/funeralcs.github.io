@@ -7,21 +7,38 @@ order: 4
 ---
 
 <style>
-  /* --- GENEL AYARLAR --- */
+  /* ------------------------------
+     1) GENEL / GRID YAPISI
+  ------------------------------ */
   #authors {
     margin-top: 1rem;
   }
-
   #authors .authors-list {
-    /* Responsive grid: geniş ekranda yan yana, dar ekranda alt alta */
     display: grid;
+    /* Ekran boyutuna göre otomatik sütunlar: */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1.5rem;
     margin-top: 1.5rem;
   }
 
-  #authors .author-item {
+  /* ------------------------------
+     2) KART (LIGHT ve DARK MOD)
+  ------------------------------ */
+
+  /* Light tema (html[data-mode="light"]) */
+  html[data-mode="light"] #authors .author-item {
     background-color: #f4f4f4;
+    color: #333;
+  }
+
+  /* Dark tema (html'de data-mode="light" YOKSA) */
+  html:not([data-mode="light"]) #authors .author-item {
+    background-color: #2b2b2b;
+    color: #ddd;
+  }
+
+  /* Kartın ortak stilleri */
+  #authors .author-item {
     border-radius: 1rem;
     padding: 1.5rem 1rem;
     text-align: center;
@@ -29,41 +46,40 @@ order: 4
     transition: background-color 0.3s, color 0.3s;
   }
 
-  /* --- DARK MODE DESTEĞİ --- */
-  /* Chirpy teması koyu moda geçtiğinde <html data-mode="dark"> oluyor */
-  html[data-mode="dark"] #authors .author-item {
-    background-color: #2b2b2b;
-    color: #ddd;
-  }
-
-  /* --- AVATAR ALANI --- */
+  /* ------------------------------
+     3) AVATAR DESTEĞİ
+  ------------------------------ */
   #authors .author-avatar {
     width: 100px;
     height: 100px;
     margin: 0 auto 1rem;
     border-radius: 50%;
-    background-color: #ccc; /* Eğer avatar resmi yoksa gri daire */
+    background-color: #ccc; /* Avatar yoksa gri daire */
     background-size: cover;
     background-position: center;
   }
 
-  html[data-mode="dark"] #authors .author-avatar {
-    background-color: #444; /* Koyu modda gri daire biraz daha koyu */
+  /* Karanlık tema için default gri biraz daha koyu */
+  html:not([data-mode="light"]) #authors .author-avatar {
+    background-color: #444;
   }
 
-  /* --- YAZI TARZI --- */
+  /* ------------------------------
+     4) YAZI VE METİN
+  ------------------------------ */
   #authors h3 {
     margin-bottom: 0.5rem;
     font-size: 1.25rem;
   }
-
   #authors p {
     margin-bottom: 0.5rem;
     font-size: 0.95rem;
     line-height: 1.4;
   }
 
-  /* --- SOSYAL LİNKLER --- */
+  /* ------------------------------
+     5) SOSYAL MEDYA LİNKLERİ
+  ------------------------------ */
   #authors .social-links {
     display: flex;
     justify-content: center;
@@ -72,6 +88,25 @@ order: 4
     margin-top: 0.75rem;
   }
 
+  /* Light tema link rengi */
+  html[data-mode="light"] #authors .social-links a {
+    background-color: #e9ecef;
+    color: #333;
+  }
+  html[data-mode="light"] #authors .social-links a:hover {
+    background-color: #ced4da;
+  }
+
+  /* Dark tema link rengi */
+  html:not([data-mode="light"]) #authors .social-links a {
+    background-color: #3a3a3a;
+    color: #ddd;
+  }
+  html:not([data-mode="light"]) #authors .social-links a:hover {
+    background-color: #555;
+  }
+
+  /* Ortak link stili */
   #authors .social-links a {
     display: inline-flex;
     align-items: center;
@@ -79,23 +114,9 @@ order: 4
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background-color: #e9ecef;
     text-decoration: none;
-    color: inherit;
     font-size: 18px;
     transition: background-color 0.3s ease;
-  }
-
-  #authors .social-links a:hover {
-    background-color: #bfc0c2;
-  }
-
-  html[data-mode="dark"] #authors .social-links a {
-    background-color: #3a3a3a;
-  }
-
-  html[data-mode="dark"] #authors .social-links a:hover {
-    background-color: #555;
   }
 </style>
 
@@ -104,9 +125,9 @@ order: 4
   <div class="authors-list">
     {% for author in site.data.authors %}
       <div class="author-item">
-        <!-- Avatar resmi varsa background-image ile ekleyelim -->
+        <!-- Avatar resmi varsa background-image ile ekle -->
         {% if author[1].avatar %}
-          <div class="author-avatar" 
+          <div class="author-avatar"
                style="background-image: url('{{ author[1].avatar }}');">
           </div>
         {% else %}
@@ -120,7 +141,6 @@ order: 4
           <p><a href="{{ author[1].url }}" target="_blank">Profil</a></p>
         {% endif %}
 
-        <!-- Sosyal medya linkleri -->
         <div class="social-links">
           {% if author[1].github %}
             <a href="{{ author[1].github }}" target="_blank" title="GitHub">

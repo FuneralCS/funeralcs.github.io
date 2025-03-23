@@ -7,7 +7,7 @@ order: 4
 ---
 
 <section id="authors">
-  <h2>Yazarlar</h2>
+  <h2>Ekibimiz</h2>
   <div class="authors-list">
     {% for author in site.data.authors %}
       <div class="author-item" style="margin-bottom: 2em;">

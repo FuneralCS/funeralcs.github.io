@@ -5,20 +5,43 @@ permalink: /about/
 icon: fas fa-user-friends
 order: 4
 ---
-
-## ✍️ FuneralCS Ekibi
-
-{% for id in site.data.authors %}
-  {% assign author = site.data.authors[id[0]] %}
-  {% if author.url %}
-### 👤 [{{ author.name }}]({{ author.url }})
-  {% else %}
-### 👤 {{ author.name }}
-  {% endif %}
-
-{{ author.description }}
-
----
-{% endfor %}
-
-{: .prompt-tip }
+<section id="authors">
+  <h2>Yazarlar</h2>
+  <div class="authors-list">
+    {% for key, author in site.data.authors %}
+      <div class="author-item">
+        <!-- Eğer 'name' bilgisi yoksa varsayılan "Bilinmeyen Yazar" gösterilir -->
+        <h3>{{ author.name | default: "Bilinmeyen Yazar" }}</h3>
+        
+        <!-- Eğer 'description' bilgisi yoksa varsayılan açıklama gösterilir -->
+        <p>{{ author.description | default: "Açıklama bulunamadı." }}</p>
+        
+        <!-- Eğer 'url' bilgisi varsa profil bağlantısı oluşturulur -->
+        {% if author.url %}
+          <p><a href="{{ author.url }}" target="_blank">Profil</a></p>
+        {% endif %}
+        
+        <!-- GitHub hesabı desteği -->
+        {% if author.github %}
+          <p><a href="{{ author.github }}" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
+        {% endif %}
+        
+        <!-- Sosyal medya hesapları -->
+        <div class="social-links">
+          {% if author.twitter %}
+            <a href="{{ author.twitter }}" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+          {% endif %}
+          {% if author.facebook %}
+            <a href="{{ author.facebook }}" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+          {% endif %}
+          {% if author.linkedin %}
+            <a href="{{ author.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          {% endif %}
+          {% if author.instagram %}
+            <a href="{{ author.instagram }}" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

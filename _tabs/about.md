@@ -19,4 +19,4 @@ permalink: /about/
 
 ---
 {% endfor %}
-
+{: .prompt-tip }

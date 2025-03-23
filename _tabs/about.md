@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Yazarlar
-permalink: /about/
+permalink: /authors/
 icon: fas fa-user-friends
 order: 4
 ---

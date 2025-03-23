@@ -1,0 +1,65 @@
+/* assets/css/custom.css */
+
+/* Ana container: #authors */
+#authors .authors-list {
+    display: grid;
+    /* Ekran genişliğine göre otomatik sütunlar: */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  #authors .author-item {
+    background-color: var(--card-bg, #f9f9f9); 
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* Chirpy teması koyu moda geçince genelde `.mode-dark` sınıfı ekliyor. 
+     Koyu modda renkleri değiştiriyoruz. */
+  .mode-dark #authors .author-item {
+    background-color: #222;
+    color: #ddd;
+  }
+  
+  /* Yuvarlak avatar placeholder */
+  #authors .author-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background-color: #ccc;
+    /* 
+       Eğer `_data/authors.yml` içine 
+       avatar: "/assets/img/tunahan.jpg" gibi bir alan eklediysen,
+       HTML’de background-image ile ekleyebilirsin.
+    */
+  }
+  
+  /* Sosyal medya linklerini (GitHub, Twitter vb.) yan yana diz */
+  #authors .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  #authors .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: inherit;  /* Temanın metin rengini alır */
+    background-color: #e9ecef;
+    transition: background-color 0.3s;
+  }
+  
+  #authors .social-links a:hover {
+    background-color: #ced4da;
+  }
+  

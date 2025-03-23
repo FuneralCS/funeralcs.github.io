@@ -7,15 +7,19 @@ order: 4
 ---
 
 <style>
-  /* Grid yapı */
+  /* --- GENEL AYARLAR --- */
+  #authors {
+    margin-top: 1rem;
+  }
+
   #authors .authors-list {
+    /* Responsive grid: geniş ekranda yan yana, dar ekranda alt alta */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1.5rem;
     margin-top: 1.5rem;
   }
 
-  /* Kart kutusu */
   #authors .author-item {
     background-color: #f4f4f4;
     border-radius: 1rem;
@@ -25,26 +29,41 @@ order: 4
     transition: background-color 0.3s, color 0.3s;
   }
 
-  /* Karanlık modda stil */
+  /* --- DARK MODE DESTEĞİ --- */
+  /* Chirpy teması koyu moda geçtiğinde <html data-mode="dark"> oluyor */
   html[data-mode="dark"] #authors .author-item {
     background-color: #2b2b2b;
     color: #ddd;
   }
 
-  /* Avatar alanı (şimdilik boş daire) */
+  /* --- AVATAR ALANI --- */
   #authors .author-avatar {
     width: 100px;
     height: 100px;
     margin: 0 auto 1rem;
     border-radius: 50%;
-    background-color: #ccc;
+    background-color: #ccc; /* Eğer avatar resmi yoksa gri daire */
+    background-size: cover;
+    background-position: center;
   }
 
   html[data-mode="dark"] #authors .author-avatar {
-    background-color: #444;
+    background-color: #444; /* Koyu modda gri daire biraz daha koyu */
   }
 
-  /* Sosyal linkleri yatay diz */
+  /* --- YAZI TARZI --- */
+  #authors h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  #authors p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  /* --- SOSYAL LİNKLER --- */
   #authors .social-links {
     display: flex;
     justify-content: center;
@@ -67,28 +86,16 @@ order: 4
     transition: background-color 0.3s ease;
   }
 
-  html[data-mode="dark"] #authors .social-links a {
-    background-color: #3a3a3a;
-  }
-
   #authors .social-links a:hover {
     background-color: #bfc0c2;
   }
 
+  html[data-mode="dark"] #authors .social-links a {
+    background-color: #3a3a3a;
+  }
+
   html[data-mode="dark"] #authors .social-links a:hover {
     background-color: #555;
-  }
-
-  /* Başlık & paragraf */
-  #authors h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
-  }
-
-  #authors p {
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
-    line-height: 1.4;
   }
 </style>
 
@@ -97,7 +104,14 @@ order: 4
   <div class="authors-list">
     {% for author in site.data.authors %}
       <div class="author-item">
-        <div class="author-avatar"></div>
+        <!-- Avatar resmi varsa background-image ile ekleyelim -->
+        {% if author[1].avatar %}
+          <div class="author-avatar" 
+               style="background-image: url('{{ author[1].avatar }}');">
+          </div>
+        {% else %}
+          <div class="author-avatar"></div>
+        {% endif %}
 
         <h3>{{ author[1].name | default: "Bilinmeyen Yazar" }}</h3>
         <p>{{ author[1].description | default: "Açıklama bulunamadı." }}</p>
@@ -106,18 +120,27 @@ order: 4
           <p><a href="{{ author[1].url }}" target="_blank">Profil</a></p>
         {% endif %}
 
+        <!-- Sosyal medya linkleri -->
         <div class="social-links">
           {% if author[1].github %}
-            <a href="{{ author[1].github }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="{{ author[1].github }}" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
           {% endif %}
           {% if author[1].instagram %}
-            <a href="{{ author[1].instagram }}" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="{{ author[1].instagram }}" target="_blank" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
           {% endif %}
           {% if author[1].twitter %}
-            <a href="{{ author[1].twitter }}" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="{{ author[1].twitter }}" target="_blank" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
           {% endif %}
           {% if author[1].linkedin %}
-            <a href="{{ author[1].linkedin }}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="{{ author[1].linkedin }}" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
           {% endif %}
         </div>
       </div>

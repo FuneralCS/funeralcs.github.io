@@ -8,20 +8,21 @@ order: 4
 <section id="authors">
   <h2>Yazarlar</h2>
   <div class="authors-list">
-    {% for key, author in site.data.authors %}
+    {% for key in site.data.authors | keys %}
+      {% assign author = site.data.authors[key] %}
       <div class="author-item">
-        <!-- Eğer 'name' bilgisi yoksa varsayılan "Bilinmeyen Yazar" gösterilir -->
+        <!-- 'name' yoksa varsayılan "Bilinmeyen Yazar" gösterilir -->
         <h3>{{ author.name | default: "Bilinmeyen Yazar" }}</h3>
         
-        <!-- Eğer 'description' bilgisi yoksa varsayılan açıklama gösterilir -->
+        <!-- 'description' yoksa varsayılan açıklama gösterilir -->
         <p>{{ author.description | default: "Açıklama bulunamadı." }}</p>
         
-        <!-- Eğer 'url' bilgisi varsa profil bağlantısı oluşturulur -->
+        <!-- 'url' bilgisi varsa profil bağlantısı oluşturulur -->
         {% if author.url %}
           <p><a href="{{ author.url }}" target="_blank">Profil</a></p>
         {% endif %}
         
-        <!-- GitHub hesabı desteği -->
+        <!-- GitHub hesabı -->
         {% if author.github %}
           <p><a href="{{ author.github }}" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
         {% endif %}

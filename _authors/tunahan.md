@@ -9,7 +9,7 @@ permalink: /authors/tunahan/
 <h2>Yazar</h2>
 
 {% if author.avatar %}
-  <img src="{{ author.avatar }}" alt="{{ author.name }}" style="width:150px;border-radius:50%;margin-bottom:1rem;">
+  <img alt="{{ author.name }}" src="{{ author.avatar }}"  style="width:150px;border-radius:50%;margin-bottom:1rem;">
 {% endif %}
 
 <!-- BURASI CV / TANITIM ALANI -->

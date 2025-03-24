@@ -14,7 +14,7 @@ parent: /authors/
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
   Merhaba, ben Tunahan. İstanbul Üniversitesi Bilgisayar Bilimleri 1. sınıf öğrencisiyim.  
-  Aktif olarak makine öğrenmesi çalışıyorum aynı zamanda ekibimiz ile birlikte çeşitli çalışmalar yapmaktayım.
+  Aktif olarak makine öğrenmesi çalışıyorum aynı zamanda ekibim ile birlikte çeşitli çalışmalar yapmaktayım.
 </p>
 
 <!-- Sosyal ikonlar -->

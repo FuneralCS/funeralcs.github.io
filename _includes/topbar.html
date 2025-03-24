@@ -37,13 +37,15 @@
               </a>
             </span>
           {% endif %}
+      
           {% elsif page.url contains '/authors/' and page.url != '/authors/' %}
             <span>
               <a href="{{ '/authors/' | relative_url }}">
                 {{- site.data.locales[include.lang].tabs.authors | default: "Yazarlar" -}}
               </a>
             </span>
-
+          {% endif %}
+      
         {% endfor %}
       {% endif %}
     </nav>

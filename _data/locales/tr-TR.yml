@@ -9,12 +9,12 @@ layout:
 
 # The tabs of sidebar
 tabs:
-  # format: <filename_without_extension>: <value>
   home: Ana Sayfa
   categories: Kategoriler
   tags: Etiketler
   archives: Arşiv
-  about: Yazarlar
+  authors: "<a href='/authors/'>Yazarlar</a>"
+
 
 # the text displayed in the search bar & search results
 search:

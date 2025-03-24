@@ -1,5 +1,5 @@
 ---
-layout: authors
+layout: page
 title: Yazarlar
 permalink: /authors/
 icon: fas fa-user-friends

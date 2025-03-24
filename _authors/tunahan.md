@@ -4,10 +4,8 @@ title: Tunahan Yardımcı
 permalink: /authors/tunahan/
 parent: /authors/
 ---
-
-{% assign author = site.data.authors.tunahan %}
-
 <h2>Yazar</h2>
+{% assign author = site.data.authors.tunahan %}
 
 {% if author.avatar %}
   <img alt="{{ author.name }}" src="{{ author.avatar }}"  style="width:150px;border-radius:50%;margin-bottom:1rem;">
@@ -20,19 +18,40 @@ parent: /authors/
 </p>
 
 <!-- Sosyal ikonlar -->
-<div class="social-links" style="margin-top:1rem;">
+<div class="author-links">
   {% if author.github %}
-    <a href="{{ author.github }}" target="_blank" title="GitHub">
-      <i class="fab fa-github"></i>
+    <a href="{{ author.github }}" target="_blank" class="social-link">
+      <i class="fab fa-github"></i> GitHub
     </a>
   {% endif %}
   {% if author.instagram %}
-    <a href="{{ author.instagram }}" target="_blank" title="Instagram">
-      <i class="fab fa-instagram"></i>
+    <a href="{{ author.instagram }}" target="_blank" class="social-link">
+      <i class="fab fa-instagram"></i> Instagram
     </a>
   {% endif %}
 </div>
+<style>
+  .author-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
 
+  .author-links .social-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    text-decoration: none;
+    gap: 0.5rem;
+    color: inherit;
+    transition: color 0.2s;
+  }
+
+  .author-links .social-link:hover {
+    color: #0d6efd; /* hover rengi */
+  }
+</style>
 <!-- Yazıları -->
 <h3 style="margin-top: 2rem;">Yazıları</h3>
 <ul>

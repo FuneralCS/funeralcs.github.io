@@ -6,7 +6,7 @@ permalink: /authors/tunahan/
 
 {% assign author = site.data.authors.tunahan %}
 
-<h2>{{ author.name }}</h2>
+<h2>Yazar</h2>
 
 {% if author.avatar %}
   <img src="{{ author.avatar }}" alt="{{ author.name }}" style="width:150px;border-radius:50%;margin-bottom:1rem;">

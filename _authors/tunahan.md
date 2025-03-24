@@ -2,6 +2,7 @@
 layout: page
 title: Tunahan Yardımcı
 permalink: /authors/tunahan/
+parent: /authors/
 ---
 
 {% assign author = site.data.authors.tunahan %}

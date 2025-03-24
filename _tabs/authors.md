@@ -163,7 +163,7 @@ order: 4
             </a>
           {% endif %}
           {% if author[1].slug %}
-            <p><a href="/authors/{{ author[1].slug }}/">Detay</a></p>
+            <p><a href="/authors/{{ author[1].slug }}/">ⓘ</a></p>
           {% endif %}
 
         </div>

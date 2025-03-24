@@ -162,6 +162,10 @@ order: 4
               <i class="fab fa-linkedin"></i>
             </a>
           {% endif %}
+          {% if author[1].slug %}
+            <p><a href="/authors/{{ author[1].slug }}/">Detay</a></p>
+          {% endif %}
+
         </div>
       </div>
     {% endfor %}

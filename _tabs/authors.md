@@ -5,7 +5,6 @@ permalink: /authors/
 icon: fas fa-user-friends
 order: 4
 ---
-
 <style>
   /* ------------------------------
      1) GENEL / GRID YAPISI

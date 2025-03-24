@@ -121,7 +121,6 @@ order: 4
 </style>
 
 <section id="authors">
-  <h2>Yazarlar</h2>
   <div class="authors-list">
     {% for author in site.data.authors %}
       <div class="author-item">

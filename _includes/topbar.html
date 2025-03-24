@@ -13,7 +13,7 @@
       {% if paths.size == 0 or page.layout == 'home' %}
         <!-- index page -->
         <span>{{ site.data.locales[include.lang].tabs.home | capitalize }}</span>
-
+      
       {% else %}
         {% for item in paths %}
           {% if forloop.first %}
@@ -22,29 +22,27 @@
                 {{- site.data.locales[include.lang].tabs.home | capitalize -}}
               </a>
             </span>
-
-          {% elsif forloop.last %}
-            {% if page.collection == 'tabs' %}
-              <span>{{ site.data.locales[include.lang].tabs[item] | default: page.title }}</span>
-            {% else %}
-              <span>{{ page.title }}</span>
-            {% endif %}
-
-          {% elsif page.layout == 'category' or page.layout == 'tag' %}
+      
+          {% elsif item == 'categories' or item == 'tags' %}
             <span>
-              <a href="{{ item | append: '/' | relative_url }}">
-                {{- site.data.locales[include.lang].tabs[item] | default: page.title -}}
+              <a href="{{ '/' | append: item | append: '/' | relative_url }}">
+                {{- site.data.locales[include.lang].tabs[item] | capitalize -}}
               </a>
             </span>
-          {% endif %}
       
-          {% elsif page.url contains '/authors/' and page.url != '/authors/' %}
+          {% elsif item == 'authors' and page.url != '/authors/' %}
             <span>
               <a href="{{ '/authors/' | relative_url }}">
                 {{- site.data.locales[include.lang].tabs.authors | default: "Yazarlar" -}}
               </a>
             </span>
+      
+          {% elsif forloop.last %}
+            <span>{{ page.title }}</span>
           {% endif %}
+        {% endfor %}
+      {% endif %}
+
       
         {% endfor %}
       {% endif %}

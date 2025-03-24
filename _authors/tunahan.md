@@ -1,12 +1,11 @@
 ---
 layout: page
-title: Tunahan Yardımcı
+title: Yazar
 permalink: /authors/tunahan/
 parent: /authors/
 ---
-<h2>Yazar</h2>
 {% assign author = site.data.authors.tunahan %}
-
+<h2>Tunahan Yardımcı</h2>
 {% if author.avatar %}
   <img alt="{{ author.name }}" src="{{ author.avatar }}"  style="width:150px;border-radius:50%;margin-bottom:1rem;">
 {% endif %}

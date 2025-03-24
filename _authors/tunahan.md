@@ -2,8 +2,13 @@
 layout: page
 title: Tunahan Yardımcı
 permalink: /authors/tunahan/
-parent: Yazarlar
+breadcrumb: false
 ---
+<nav class="my-breadcrumb" style="margin-bottom:1rem;">
+  <a href="{{ site.baseurl | default: '/' }}">Ana Sayfa</a> ›
+  <a href="/authors/">Yazarlar</a> ›
+  Tunahan Yardımcı
+</nav>
 {% assign author = site.data.authors.tunahan %}
 {% if author.avatar %}
   <img alt="{{ author.name }}" src="{{ author.avatar }}"  style="width:150px;border-radius:50%;margin-bottom:1rem;">

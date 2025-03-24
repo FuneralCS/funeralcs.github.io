@@ -4,6 +4,18 @@ title: Tunahan Yardımcı
 permalink: /authors/tunahan/
 breadcrumb: false
 ---
+<style>
+  /* Breadcrumb’ı gizle */
+  #breadcrumb {
+    display: none !important;
+  }
+
+  /* Title’ı yukarı al */
+  #topbar + article .dynamic-title {
+    margin-top: 0 !important;
+  }
+</style>
+
 <nav class="my-breadcrumb" style="margin-bottom:1rem;">
   <a href="{{ site.baseurl | default: '/' }}">Ana Sayfa</a> ›
   <a href="/authors/">Yazarlar</a> ›

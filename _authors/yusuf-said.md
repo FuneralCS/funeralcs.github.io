@@ -4,7 +4,7 @@ title: Yusuf Said
 permalink: /authors/yusuf-said/
 ---
 
-{% assign author = site.data.authors.yusuf-said %}
+{% assign author = site.data.authors.yusuf %}
 {% if author.avatar %}
   <img alt="{{ author.name }}" src="{{ author.avatar }}"  style="width:150px;border-radius:50%;margin-bottom:1rem;">
 {% endif %}

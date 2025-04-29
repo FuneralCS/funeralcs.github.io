@@ -63,8 +63,8 @@ pip install universal-cuda-tools
 ```
 veya kaynak koddan:
 ```bash
-git clone https://github.com/username/cuda-tools.git
-cd cuda-tools
+git clone https://github.com/tunahanyrd/universal-cuda-tools.git
+cd universal-cuda-tools
 python -m build
 pip install dist/universal_cuda_tools-<versiyon>.whl
 ```

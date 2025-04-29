@@ -3,10 +3,12 @@ tunahan:
   description: İstanbul Üniversitesi Bilgisayar Bilimleri 1. sınıf öğrencisi. Aktif olarak yapay zekalar üzerine çalışmakta.
   avatar: "/assets/img/tunahan.jpg"
   github: "https://github.com/Tunahanyrd"
+  linkedin: "tunahan-yardımcı-ab846133b"
   slug: "tunahan"
 yusuf:
   name: Yusuf Said Çöpçü
   description: İstanbul Üniversitesi Bilgisayar Bilimleri 1. sınıf öğrencisiyim. Yapay zeka ve makine öğrenmesi odaklı çalışmakta.
   avatar: "/assets/img/yusuf.jpg"
-  github: "https://github.com/Tunahanyrd"
+  github: "https://github.com/yusuf-said"
+  linkedin: "yusuf-said"
   slug: "yusuf-said"

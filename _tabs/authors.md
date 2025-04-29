@@ -161,8 +161,11 @@ order: 4
             </a>
           {% endif %}
           {% if author[1].slug %}
-            <p><a href="/authors/{{ author[1].slug }}/">ⓘ</a></p>
+            <a href="/authors/{{ author[1].slug }}/" title="Detaylı Bilgi">
+              <i class="fas fa-info-circle"></i>
+            </a>
           {% endif %}
+
 
         </div>
       </div>

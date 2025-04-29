@@ -4,3 +4,9 @@ tunahan:
   avatar: "/assets/img/tunahan.jpg"
   github: "https://github.com/Tunahanyrd"
   slug: "tunahan"
+yusuf:
+  name: Yusuf Said Çöpçü
+  description: İstanbul Üniversitesi Bilgisayar Bilimleri 1. sınıf öğrencisiyim. Yapay zeka ve makine öğrenmesi odaklı çalışmakta.
+  avatar: "/assets/img/yusuf.jpg"
+  github: "https://github.com/Tunahanyrd"
+  slug: "yusuf-said"

@@ -275,13 +275,6 @@ t0 = time.time(); gpu_op(x_gpu); print("GPU:", time.time()-t0)
   import os; os.environ['TF_CPP_MIN_LOG_LEVEL']='3'
   ```
 
-## FAQ
-**Q: How do I tensorize NumPy scalars?**  
-**A:** Use `auto_tensorize=True` or `DeviceContext`  
-
-**Q: How does `dry_run` work?**  
-**A:** `@cuda_advanced(dry_run=True)` skips execution, returns `None`  
-
 ## License
 MIT License © 2025  
 See `LICENSE` file for details

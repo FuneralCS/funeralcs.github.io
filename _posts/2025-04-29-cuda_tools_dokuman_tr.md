@@ -287,13 +287,6 @@ t0 = time.time(); gpu_op(x_gpu); print("GPU:", time.time()-t0)
   import os; os.environ['TF_CPP_MIN_LOG_LEVEL']='3'
   ```
 
-## SSS
-**S: NumPy scalar nasıl tensorize edilir?**  
-**C:** `auto_tensorize=True` veya `DeviceContext` ile otomatik.  
-
-**S: dry_run nasıl çalışır?**  
-**C:** `@cuda_advanced(dry_run=True)` ile fonksiyon atlanır, `None` döner.  
-
 ## Lisans
 MIT License © 2025  
 Detaylar için `LICENSE` dosyasına bakınız.  

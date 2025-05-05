@@ -39,9 +39,7 @@ pin: true
    - `patch_numpy_with_cupy`
 8. [Sinir Ağı Örneği](#sinir-ağı-örneği)
 9. [Benchmark ve Profiling](#benchmark-ve-profiling)
-10. [Dikkat Edilmesi Gerekenler](#dikkat-edilmesi-gerekenler)
-11. [SSS](#sss)
-12. [Lisans](#lisans)
+10. [Lisans](#lisans)
 
 ## Genel Bakış
 `universal-cuda-tools`, PyTorch ve isteğe bağlı TensorFlow ile entegre çalışan,

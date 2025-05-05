@@ -40,9 +40,7 @@ pin: true
    - `patch_numpy_with_cupy`
 8. [Neural Network Example](#neural-network-example)
 9. [Benchmark and Profiling](#benchmark-and-profiling)
-10. [Caveats](#caveats)
-11. [FAQ](#faq)
-12. [License](#license)
+10. [License](#license)
 
 ## Overview
 `universal-cuda-tools` is a Python toolkit that works with PyTorch and optionally TensorFlow. It automatically tensorizes raw Python, NumPy, or CuPy data, manages GPU/CPU device placement, and wraps advanced features like mixed precision (AMP), timeouts, retries, VRAM checks, memory profiling, live dashboard, and dry-run mode into a single utility package.

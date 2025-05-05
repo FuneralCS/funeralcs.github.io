@@ -158,7 +158,7 @@ ResNet ise çıktı ile girdi arasında doğrudan bağlantı kurar:
 ```
 
 Bu "skip connection" sayesinde ağ, farkları öğrenmeye odaklanır.  
->  Basitçe: Toplamayı biliyorsan çarpma öğrenmek daha kolaydır. Model için de aynısı geçerli.
+>  Basitçe: Toplamayı biliyorsan çarpma öğrenmek daha kolaydır. Model için de aynısı geçerli. Yani çarpmayı öğreteceksek önce toplamayı öğretiyoruz yani iki sayının etkileşimini, ardından çarpmanın genelini artık bağlantı adıyla modele tekrar veriyoruz.
 
 **ResNet-18 Yapısı**:
 - Giriş: RGB görüntü (3×224×224)
@@ -178,4 +178,4 @@ Bilgisayarlı görüde LeNet'ten ResNet'e gelene kadar uzun bir yol katettik. Bu
 
 Umarım bu yazı sizin için aydınlatıcı ve öğretici olmuştur.
 
-Bir sonraki yazıda görüşmek üzere, hoşça kalın! 🚀👋
+Bir sonraki yazıda görüşmek üzere, hoşça kalın! 

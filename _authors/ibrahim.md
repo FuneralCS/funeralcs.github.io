@@ -4,7 +4,7 @@ title: İbrahim Buğrahan Bilici
 permalink: /authors/ibrahim/
 ---
 
-{% assign author = site.data.authors.tunahan %}
+{% assign author = site.data.authors.ibrahim %}
 {% if author.avatar %}
   <img alt="{{ author.name }}" src="{{ author.avatar }}"  style="width:150px;border-radius:50%;margin-bottom:1rem;">
 {% endif %}

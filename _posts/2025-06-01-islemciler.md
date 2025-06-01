@@ -1,5 +1,5 @@
 ---
-title: "CPU Nedir,Ne İşe Yarar"
+title: "CPU Nedir, Ne İşe Yarar"
 date: 2025-06-01 15:37:00 +0300
 categories: [donanımlar]
 tags: [işlemci, bilgisayar, donanım]

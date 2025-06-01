@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Sezgin Tunay Sönmezocak
-permalink: /authors/vlademirdelvis/
+permalink: /authors/vladimirdelvis/
 ---
 
-{% assign author = site.data.authors.vlademirdelvis %}
+{% assign author = site.data.authors.vladimirdelvis %}
 {% if author.avatar %}
   <img alt="{{ author.name }}" src="{{ author.avatar }}"  style="width:150px;border-radius:50%;margin-bottom:1rem;">
 {% endif %}

@@ -19,6 +19,7 @@ ibrahim:
   description: İstanbul Üniversitesi Bilgisayar Bilimleri öğrencisiyim.
   github: "https://github.com/satukbugra5"
   slug: "ibrahim"
+  avatar: "/assets/img/ibrahim.png"
 vladimirdelvis:
   name: Sezgin Tunay Sönmezocak
   description: İstanbul Üniversitesi Bilgisayar Bilimleri 1. sınıf öğrencisiyim. Linux, güvenlik ve mahremiyet odaklı çalışmalar yürütüyorum. Ayrıca siber güvenlik ve yazılım geliştirme konularına da meraklıyımdır.

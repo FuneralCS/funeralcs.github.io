@@ -1,0 +1,13 @@
+<!-- OneSignal Push Notification -->
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "ece1c0dc-646d-457d-b974-b4e2c2dcbcac",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>

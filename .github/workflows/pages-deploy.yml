@@ -77,7 +77,7 @@ jobs:
         uses: actions/deploy-pages@v4
 
       # 3) Feed’i çek, yeni başlık varsa OneSignal’a gönder, sonra listeyi güncelle
-            - name: Fetch feed & send OneSignal notification
+      - name: Fetch feed & send OneSignal notification
         env:
           ONESIGNAL_APP_ID:        ${{ secrets.ONESIGNAL_APP_ID }}
           ONESIGNAL_REST_API_KEY:  ${{ secrets.ONESIGNAL_REST_API_KEY }}

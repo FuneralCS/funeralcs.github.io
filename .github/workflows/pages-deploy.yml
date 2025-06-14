@@ -1,4 +1,4 @@
-name: "Build and Deploy"
+name: Build and Deploy
 on:
   push:
     branches:
@@ -8,8 +8,6 @@ on:
       - .gitignore
       - README.md
       - LICENSE
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 permissions:
@@ -17,7 +15,7 @@ permissions:
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
+# Sadece bir deploy’ın aynı anda çalışmasını sağlar
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -31,9 +29,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          # submodules: true
-          # If using the 'assets' git submodule from Chirpy Starter, uncomment above
-          # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
 
       - name: Setup Pages
         id: pages
@@ -53,8 +48,8 @@ jobs:
       - name: Test site
         run: |
           bundle exec htmlproofer _site \
-            \-\-disable-external \
-            \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+            --disable-external \
+            --ignore-urls "/^http:\/\/127\.0\.0\.1/,/^http:\/\/0\.0\.0\.0/,/^http:\/\/localhost/"
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
@@ -62,12 +57,106 @@ jobs:
           path: "_site${{ steps.pages.outputs.base_path }}"
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
+
     steps:
+      # 1) Repo’yu çekiyoruz ki hem deploy hem commit adımları çalışsın
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      # 2) Deploy adımı
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # 3) Feed’i çek, yeni başlık varsa OneSignal’a gönder, sonra listeyi güncelle
+      - name: Fetch feed & send OneSignal notification
+        env:
+          ONESIGNAL_API_KEY: ${{ secrets.ONESIGNAL_API_KEY }}
+        run: |
+          python3 - <<'EOF'
+          import os, json, urllib.request
+          from xml.etree import ElementTree as ET
+
+          FEED_URL    = 'https://funeralcs.com/feed.xml'
+          LIST_FILE   = 'notified_posts.json'
+          API_KEY     = os.environ['ONESIGNAL_API_KEY']
+
+          # 1) Feed’i çek ve parse et
+          data = urllib.request.urlopen(FEED_URL).read()
+          root = ET.fromstring(data)
+          ns = {'atom': 'http://www.w3.org/2005/Atom'}
+          entries = root.findall('atom:entry', ns)
+          if not entries:
+              print('Feed boş, çıkılıyor.')
+              exit(0)
+
+          # En son entry
+          latest = entries[0]
+          title  = latest.find('atom:title', ns).text
+          link   = latest.find('atom:link', ns).attrib.get('href')
+
+          # 2) Daha önce görülmüş listeyi yükle ya da başlat
+          if os.path.exists(LIST_FILE):
+              seen = json.load(open(LIST_FILE))
+          else:
+              seen = []
+
+          if title in seen:
+              print('Daha önce bildirildi:', title)
+              exit(0)
+
+          # 3) Yeni bildirim gönder
+          payload = {
+              "app_id": API_KEY,
+              "included_segments": ["All"],
+              "headings": {"en": title},
+              "contents": {"en": "FuneralCS’te yeni bir gönderi yayınlandı!"},
+              "url": link
+          }
+          req = urllib.request.Request(
+              "https://onesignal.com/api/v1/notifications",
+              data=json.dumps(payload).encode('utf-8'),
+              headers={
+                  "Authorization": f"Basic {API_KEY}",
+                  "Content-Type": "application/json"
+              }
+          )
+          resp = urllib.request.urlopen(req)
+          print("Bildirim gönderildi:", resp.read().decode())
+
+          # 4) Listeyi güncelle ve dosyaya yaz
+          seen.append(title)
+          with open(LIST_FILE, 'w') as f:
+              json.dump(seen, f)
+          EOF
+
+      # 4) Eğer notified_posts.json değiştiyse, notifications branch’ine commit et
+      - name: Commit notified list to `notifications` branch
+        if: success()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # notifications branch’i hazırla
+          git fetch origin notifications || true
+          if git show-ref --verify --quiet refs/heads/notifications; then
+            git checkout notifications
+          elif git ls-remote --exit-code --heads origin notifications; then
+            git checkout -b notifications origin/notifications
+          else
+            git checkout -b notifications
+          fi
+
+          # Değişen dosyayı commit & push
+          git add notified_posts.json
+          git diff --cached --quiet || (git commit -m "Update notified posts list" && git push origin HEAD:notifications)

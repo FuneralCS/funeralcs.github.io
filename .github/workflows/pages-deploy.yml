@@ -148,6 +148,7 @@ jobs:
           EOF
 
       # 4) Eğer notified_posts.json değiştiyse, notifications branch’ine commit et
+        # 4) Eğer notified_posts.json değiştiyse, notifications branch’ine commit et
       - name: Commit notified list to `notifications` branch
         if: success()
         env:
@@ -155,9 +156,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          # notifications branch’i hazırla
+    
+          # 1) Remote notifications dalını çek (varsa)
           git fetch origin notifications || true
+    
+          # 2) Yeni dosyayı güvene al
+          mv notified_posts.json /tmp/notified_posts.json
+    
+          # 3) notifications dalına geç (lokalde varsa direkt, yoksa origin’den çek)
           if git show-ref --verify --quiet refs/heads/notifications; then
             git checkout notifications
           elif git ls-remote --exit-code --heads origin notifications; then
@@ -165,7 +171,15 @@ jobs:
           else
             git checkout -b notifications
           fi
-
-          # Değişen dosyayı commit & push
+    
+          # 4) Güncellenmiş listeyi geri getir
+          mv /tmp/notified_posts.json notified_posts.json
+    
+          # 5) Commit & push
           git add notified_posts.json
-          git diff --cached --quiet || (git commit -m "Update notified posts list" && git push origin HEAD:notifications)
+          if ! git diff --cached --quiet; then
+            git commit -m "Update notified posts list"
+            git push origin notifications
+          else
+            echo "✔️ Bildirim listesi değişmemiş."
+          fi

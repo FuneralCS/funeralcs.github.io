@@ -11,7 +11,7 @@ permalink: /authors/yunus/
 
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
-  İstanbul Üniversitesi Bilgisayar Bilimleri 1. sınıf öğrencisi. Yapay zeka,makine öğrenmesi alanlarında kendimi geliştirmekte.
+  İstanbul Üniversitesi Bilgisayar Bilimleri 1. sınıf öğrencisiyim. Yapay zeka,makine öğrenmesi alanlarında kendimi geliştirmekteyim.Araştırmayı ve yeni şeyler öğrenmeyi severim.
 </p>
 
 <!-- Sosyal ikonlar -->

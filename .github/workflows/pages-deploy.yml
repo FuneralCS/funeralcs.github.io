@@ -77,45 +77,49 @@ jobs:
         uses: actions/deploy-pages@v4
 
       # 3) Feed’i çek, yeni başlık varsa OneSignal’a gönder, sonra listeyi güncelle
-      - name: Fetch feed & send OneSignal notification
+            - name: Fetch feed & send OneSignal notification
         env:
-          ONESIGNAL_API_KEY: ${{ secrets.ONESIGNAL_API_KEY }}
+          ONESIGNAL_APP_ID:        ${{ secrets.ONESIGNAL_APP_ID }}
+          ONESIGNAL_REST_API_KEY:  ${{ secrets.ONESIGNAL_REST_API_KEY }}
         run: |
           python3 - <<'EOF'
-          import os, json, urllib.request
+          import os, json, sys, urllib.request
           from xml.etree import ElementTree as ET
+          from urllib.error import HTTPError
 
-          FEED_URL    = 'https://funeralcs.com/feed.xml'
-          LIST_FILE   = 'notified_posts.json'
-          API_KEY     = os.environ['ONESIGNAL_API_KEY']
+          FEED_URL  = 'https://funeralcs.com/feed.xml'
+          SEEN_FILE = 'notified_posts.json'
+
+          # Secrets’i al
+          APP_ID   = os.environ['ONESIGNAL_APP_ID']
+          REST_KEY = os.environ['ONESIGNAL_REST_API_KEY']
 
           # 1) Feed’i çek ve parse et
           data = urllib.request.urlopen(FEED_URL).read()
           root = ET.fromstring(data)
-          ns = {'atom': 'http://www.w3.org/2005/Atom'}
+          ns   = {'atom': 'http://www.w3.org/2005/Atom'}
           entries = root.findall('atom:entry', ns)
           if not entries:
-              print('Feed boş, çıkılıyor.')
-              exit(0)
+              print('⚠️ Feed boş, çıkılıyor.')
+              sys.exit(0)
 
-          # En son entry
           latest = entries[0]
           title  = latest.find('atom:title', ns).text
-          link   = latest.find('atom:link', ns).attrib.get('href')
+          link   = latest.find('atom:link', ns).attrib['href']
 
-          # 2) Daha önce görülmüş listeyi yükle ya da başlat
-          if os.path.exists(LIST_FILE):
-              seen = json.load(open(LIST_FILE))
+          # 2) Daha önce görülenleri oku
+          if os.path.exists(SEEN_FILE):
+              seen = json.load(open(SEEN_FILE))
           else:
               seen = []
 
           if title in seen:
-              print('Daha önce bildirildi:', title)
-              exit(0)
+              print('🔁 Zaten bildirildi:', title)
+              sys.exit(0)
 
-          # 3) Yeni bildirim gönder
+          # 3) OneSignal’a bildirim isteği yap
           payload = {
-              "app_id": API_KEY,
+              "app_id": APP_ID,
               "included_segments": ["All"],
               "headings": {"en": title},
               "contents": {"en": "FuneralCS’te yeni bir gönderi yayınlandı!"},
@@ -125,16 +129,21 @@ jobs:
               "https://onesignal.com/api/v1/notifications",
               data=json.dumps(payload).encode('utf-8'),
               headers={
-                  "Authorization": f"Basic {API_KEY}",
+                  "Authorization": f"Basic {REST_KEY}",
                   "Content-Type": "application/json"
               }
           )
-          resp = urllib.request.urlopen(req)
-          print("Bildirim gönderildi:", resp.read().decode())
+          try:
+              resp = urllib.request.urlopen(req)
+              print("✅ Bildirim gönderildi:", resp.status, resp.read().decode())
+          except HTTPError as e:
+              err = e.read().decode()
+              print(f"❌ OneSignal Hatası {e.code}: {err}")
+              sys.exit(1)
 
-          # 4) Listeyi güncelle ve dosyaya yaz
+          # 4) Görülenler listesine ekle ve kaydet
           seen.append(title)
-          with open(LIST_FILE, 'w') as f:
+          with open(SEEN_FILE, 'w') as f:
               json.dump(seen, f)
           EOF
 

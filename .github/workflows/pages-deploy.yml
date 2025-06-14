@@ -75,7 +75,14 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
+      # fetch
+      - name: Load notified_posts.json from notifications branch
+        run: |
+          # notifications branch’ini fetch et
+          git fetch origin notifications
+          # Eğer dosya varsa al, yoksa boş bir JSON oluştur
+          git checkout origin/notifications -- notified_posts.json 2>/dev/null || echo '[]' > notified_posts.json
+          
       # 3) Feed’i çek, yeni başlık varsa OneSignal’a gönder, sonra listeyi güncelle
       - name: Fetch feed & send OneSignal notification
         env:

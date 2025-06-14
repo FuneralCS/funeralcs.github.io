@@ -1,0 +1,60 @@
+name: Send OneSignal Notification on Deploy
+
+on:
+  push:
+    branches:
+      - main   # deploy için kullandığın branch
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Fetch latest blog post metadata
+        id: fetch_feed
+        run: |
+          FEED_URL="https://www.funeralcs.com/feed.xml"
+          echo "Downloading feed from $FEED_URL"
+          curl -s "$FEED_URL" > feed.xml
+
+          # Son item'ın başlığını al
+          POST_TITLE=$(python3 - <<'PYCODE'
+import xml.etree.ElementTree as ET
+tree = ET.parse('feed.xml')
+root = tree.getroot()
+item = root.find('channel/item')
+print(item.find('title').text.strip())
+PYCODE
+          )
+
+          # Son item'ın URL'ini al
+          POST_URL=$(python3 - <<'PYCODE'
+import xml.etree.ElementTree as ET
+tree = ET.parse('feed.xml')
+root = tree.getroot()
+item = root.find('channel/item')
+print(item.find('link').text.strip())
+PYCODE
+          )
+
+          echo "post_title=$POST_TITLE"  >> $GITHUB_OUTPUT
+          echo "post_url=$POST_URL"      >> $GITHUB_OUTPUT
+
+      - name: Send push notification to OneSignal
+        run: |
+          curl -X POST "https://onesignal.com/api/v1/notifications" \
+            -H "Authorization: Basic ${{ secrets.ONESIGNAL_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "app_id": "'"${{ secrets.ONESIGNAL_APP_ID }}"'",
+              "included_segments": ["All"],
+              "headings": {
+                "en": "'"${{ steps.fetch_feed.outputs.post_title }}"' Yazımız Yayında!"
+              },
+              "contents": {
+                "en": "Yeni bir yazı seni bekliyor. Hemen oku!"
+              },
+              "url": "'"${{ steps.fetch_feed.outputs.post_url }}"'"
+            }'

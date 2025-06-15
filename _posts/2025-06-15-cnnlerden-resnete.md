@@ -6,7 +6,7 @@ tags: [derin öğrenme, resnet, lenet, yazılım, görüntü işleme]
 author: tunahan
 image:
   path: /assets/img/cv.png
-description: "Bugün CNN’lerin doğuşundan itibaren ResNet mimarisine nasıl geldik. Tüm bunlara değineceğiz
+description: "Bugün CNN’lerin doğuşundan itibaren ResNet mimarisine nasıl geldik. Tüm bunlara değineceğiz"
 toc: true
 math: false
 mermaid: false

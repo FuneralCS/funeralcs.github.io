@@ -12,7 +12,7 @@ toc: true
 math: false
 mermaid: false
 comments: true
-pin: true
+pin: false
 ---
 ## İşlemci Nedir?
 

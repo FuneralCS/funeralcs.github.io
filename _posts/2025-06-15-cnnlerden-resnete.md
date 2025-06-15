@@ -5,9 +5,8 @@ categories: [derin öğrenme, resnet, lenet, görüntü işleme]
 tags: [derin öğrenme, resnet, lenet, yazılım, görüntü işleme]
 author: tunahan
 image:
-  path: 
-  alt: 
-description: "Bugün CNN’lerin doğuşundan itibaren ResNet’e kadar olan kısmı ele alacağız."
+  path: assets/img/cv.png
+description: "Bugün CNN’lerin doğuşundan itibaren ResNet mimarisine nasıl geldik. Tüm bunlara değineceğiz
 toc: true
 math: false
 mermaid: false
@@ -15,7 +14,7 @@ comments: true
 pin: false
 ---
 
-# Sıfırdan CNN’ler: LeNet’ten ResNet’e — Öğrenci Notları
+# Sıfırdan CNN’ler: LeNet’ten ResNet’e
 
 Herkese selamlar!  Bu yazıda size bilgisayarlı görünün (Computer Vision) ilkel yöntemlerinden ResNet gibi derin öğrenme devlerine uzanan yolculuğumuzu anlatacağım.
 

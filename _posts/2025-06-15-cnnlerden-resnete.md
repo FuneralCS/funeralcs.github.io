@@ -13,7 +13,6 @@ mermaid: false
 comments: true
 pin: false
 ---
-
 # Sıfırdan CNN’ler: LeNet’ten ResNet’e
 
 Herkese selamlar!  Bu yazıda size bilgisayarlı görünün (Computer Vision) ilkel yöntemlerinden ResNet gibi derin öğrenme devlerine uzanan yolculuğumuzu anlatacağım.

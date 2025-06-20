@@ -219,7 +219,7 @@ Bellekte bir veriye nasıl ulaşılacağını belirler. İşlemci komutları, ve
 
 Modern işletim sistemleri, belleği daha verimli ve güvenli kullanmak için bu iki tekniği kullanır.
 
-#### 📦 Paging (Sayfalama)
+#### Paging (Sayfalama)
 
 * Bellek, sabit boyutlu sayfalara bölünür (örneğin 4 KB).
 * Her işlem kendi sanal sayfalarını kullanır.

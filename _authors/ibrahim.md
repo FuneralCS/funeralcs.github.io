@@ -11,7 +11,7 @@ permalink: /authors/ibrahim/
 
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
-  İstanbul Üniversitesi Bilgisayar Bilimleri öğrencisiyim. Bu arada arch kullanıyorum.
+  İstanbul Üniversitesi Bilgisayar Bilimleri öğrencisiyim. Bu arada arch kullanıyorum. babajum marjinellik yeah
 </p>
 
 <!-- Sosyal ikonlar -->

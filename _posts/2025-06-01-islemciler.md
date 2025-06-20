@@ -7,7 +7,7 @@ author: ibrahim
 image:
   path: /assets/img/islemci_dokumani.png
   alt: İşlemci Dökümanı
-description: "Python Cuda Tools modülünün dökümanı"
+description: "İşlemciler hakkındaki en detaylı içerik"
 toc: true
 math: false
 mermaid: false

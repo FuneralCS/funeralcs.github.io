@@ -81,10 +81,11 @@ Farkı gördünüz değil mi? Benim yarı bozuk lisanım ChatGPT ile statik ve k
 
 Peki neden her seferinde birebir çıktıyı vermez modeller?
 Şöyle açıklayayım:
+
 ```
 Sizin prompt'ta yazıp yazmadığınız nokta bile çıktıyı değiştirirken 128 tane gizli katmanlı ve bir o kadar da karmaşık bir model mimarisinden her seferinde aynı çıktıyı beklemek? Ütopik açıkçası. 
 ```
- Bir de tabii biz kasti şekilde rastgelelik sağlamaya çalışıyıoruz ancak oralara bu yazıda girmeyeceğim
+ Bir de tabii biz kasti şekilde rastgelelik sağlamaya çalışıyoruz ancak oralara bu yazıda girmeyeceğim
 
 Ancak şunu eklemeden edemeyeceğim:
 Model ne düşündüğünü, hatta çıktı verdiğini, hatta ve hatta çıktı verip vermediğini bile bilmiyor (Ta ki siz yeni prompt girene kadar)

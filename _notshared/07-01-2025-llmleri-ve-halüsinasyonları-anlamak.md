@@ -1,3 +1,19 @@
+---
+title: "LLM'leri ve Halüsinasyonları Anlamak"
+date: 2025-07-01 16:33:16 +0300
+categories: [yapay zeka, derin öğrenme, büyük dil modelleri]
+tags: [llm, yapay zeka, halüsinasyon, doğal dil işleme, transformer]
+author: tunahan
+image:
+  path: /assets/img/07-01-2025-llmleri-ve-halüsinasyonları-anlamak/cover.png
+description: "Büyük Dil Modellerini (LLM'leri) ile giderek artan etkileşimimizde karşılaştığımız önemli bir sorun olan halüsinasyonları, nedenlerini ve nasıl azaltılabileceğini keşfedin."
+toc: true
+math: false
+mermaid: false
+comments: true
+pin: false
+---
+
 ## LLM'ler
 
 Yapay zeka modelleri hayatımızın her alanına girerken, özellikle Büyük Dil Modelleri (LLM'ler) ile etkileşimimiz giderek artıyor. Ancak bu devrimsel teknolojinin ardında, zaman zaman karşımıza çıkan ve kullanıcı deneyimini doğrudan etkileyen önemli bir sorun var: Halüsinasyonlar. Bu yazıda, LLM'lerin derinliklerine inip onları anlamaya çalışacak ve ardından bu "uydurma" davranışın nedenlerini ve nasıl azaltılabileceğini keşfedeceğiz

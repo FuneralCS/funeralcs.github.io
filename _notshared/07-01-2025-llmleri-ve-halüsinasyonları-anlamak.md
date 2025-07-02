@@ -71,8 +71,9 @@ Peki tekrar "İstanbul'un yakaları nelerdir?" dediğimizde de mi farklı bir ya
     <figcaption>Görsel: ChatGPT'nin İstanbul'un yakaları sorusuna tekrar verdiği aynı yanıt.</figcaption>
 </figure>
 
-Tabii ki de hayır aynı çıktıyı verecek çünkü İstanbul'un iki yakası her zaman aynı!
-Bu rastgelelik, bazen sorduğunuz sorunun tipine göre farklılık gösterir. Örneğin, 'İstanbul'un yakaları nelerdir?' gibi net bir soruda rastgelelik daha çok cevabın **nasıl** verildiğini (nitelik) etkilerken; 'Bana bir hikaye anlat' gibi yaratıcı bir istekte ise cevabın **ne** olduğunu (nicelik) tamamen değiştirir
+Tabii ki de hayır aynı çıktıyı verecek ve vermeli de çünkü İstanbul'un iki yakası sabittir!
+
+Bizim rastgelelik dediğimiz şey, sorduğunuz sorunun tipine göre farklılık gösterir. Örneğin, 'İstanbul'un yakaları nelerdir?' gibi net bir soruda rastgelelik daha çok cevabın **nasıl** verildiğini (nitelik) etkilerken; 'Bana bir hikaye anlat' gibi yaratıcı bir istekte ise cevabın **ne** olduğunu (nicelik) tamamen değiştirir
 
 ```ChatGPT
 Model, kelimeleri vektör uzayında temsil eder ve benzer anlamlara sahip kelimeleri bir araya getirir. Örneğin, erkek, kral, prens ve baba gibi kelimeler birbirine yakın olurken, kadın, kraliçe, prenses ve anne gibi kelimeler de kendi aralarında yakınlaşır. Bu sayede, cinsiyetler, aile üyeleri ve nitelikler gibi kategoriler arasındaki ilişkiler daha net bir şekilde modellenir. Sonuç olarak, derin öğrenme bu tür ilişkileri keşfederek veriler arasında anlamlı bağlantılar kurar.
@@ -96,7 +97,6 @@ Model ne düşündüğünü, hatta çıktı verdiğini, hatta ve hatta çıktı 
 
 Yazıya başlamadan önce hepinizden ChatGPT'de (ama o serisi değil sebebini anlatacağım) yeni bir sohbet açıp ona "Türkiye kelimesinde kaç tane 'e' harfi vardır?" demenizi istiyorum. Biz de deneyelim:
 
-
 <figure>
     <img src="/assets/img/07-01-2025-llmleri-ve-halüsinasyonları-anlamak/kac-e-var.png" alt="ChatGPT'nin Türkiye kelimesinde kaç 'e' var sorusuna verdiği müthiş yanıt" width="600">
     <figcaption>Görsel: ChatGPT'nin Türkiye kelimesinde kaç 'e' var sorusuna verdiği müthiş yanıt.</figcaption>
@@ -105,9 +105,11 @@ Yazıya başlamadan önce hepinizden ChatGPT'de (ama o serisi değil sebebini an
 Gördüğünüz gibi... Şimdi düşünelim, nasıl olur da çalıştırılması için sunucu kümesi kullanılan ve eğitimi için internette girilmedik kaynak kalmayan bu model, nasıl olur da bunu yapamaz. Sebebi çok basit:
 O düşünmüyor ki!
 Az önce de anlattım;
+
 ```
 ...Model ne düşündüğünü, hatta çıktı verdiğini, hatta ve hatta çıktı verip vermediğini bile bilmiyor...
 ```
+
 O sadece varsa internette gördüğü eski bilgisini sizlere açıklıyor. Peki ya görmediyse? Ya yanlışsa? Ya sadece türevini gördüyse ve genelleyemezse?
 
 İşte buna halüsinasyon deniyor.

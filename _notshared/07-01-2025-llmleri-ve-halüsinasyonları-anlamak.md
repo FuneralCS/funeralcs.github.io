@@ -73,7 +73,7 @@ Peki tekrar "İstanbul'un yakaları nelerdir?" dediğimizde de mi farklı bir ya
 
 Tabii ki de hayır aynı çıktıyı verecek ve vermeli de çünkü İstanbul'un iki yakası sabittir!
 
-Bizim rastgelelik dediğimiz şey, sorduğunuz sorunun tipine göre farklılık gösterir. Örneğin, 'İstanbul'un yakaları nelerdir?' gibi net bir soruda rastgelelik daha çok cevabın **nasıl** verildiğini (nitelik) etkilerken; 'Bana bir hikaye anlat' gibi yaratıcı bir istekte ise cevabın **ne** olduğunu (nicelik) tamamen değiştirir
+Yani bizim rastgelelik dediğimiz şey, sorduğunuz sorunun tipine göre farklılık gösterir. Örneğin, 'İstanbul'un yakaları nelerdir?' gibi net bir soruda rastgelelik daha çok cevabın **nasıl** verildiğini (nitelik) etkilerken; 'Bana bir hikaye anlat' gibi yaratıcı bir istekte ise cevabın **ne** olduğunu (nicelik) tamamen değiştirir
 
 ```ChatGPT
 Model, kelimeleri vektör uzayında temsil eder ve benzer anlamlara sahip kelimeleri bir araya getirir. Örneğin, erkek, kral, prens ve baba gibi kelimeler birbirine yakın olurken, kadın, kraliçe, prenses ve anne gibi kelimeler de kendi aralarında yakınlaşır. Bu sayede, cinsiyetler, aile üyeleri ve nitelikler gibi kategoriler arasındaki ilişkiler daha net bir şekilde modellenir. Sonuç olarak, derin öğrenme bu tür ilişkileri keşfederek veriler arasında anlamlı bağlantılar kurar.

@@ -32,9 +32,18 @@ vladimirdelvis:
 yunus:
   name: Yunus Emre Urhan 
   description: İstanbul Üniversitesi Bilgisayar Bilimleri 1. sınıf öğrencisi. Yapay zeka,makine öğrenmesi alanlarında kendini geliştirmekte.
-  avatar: 
   github: https://github.com/YunusEmreUrhan
   instagram: https://www.instagram.com/yunus_emre3451/ 
   Linkedin: https://www.linkedin.com/in/yunus-emre-urhan-97ab11336/
   avatar: "/assets/img/yunus.jpg"
   slug: "yunus"
+  
+kerim:
+  name: Kerim Özek 
+  description: First-year Computer Science student at Istanbul University, with a keen interest in cloud computing and artificial intelligence.
+  github: https://github.com/kerim-ozek
+  instagram: https://www.instagram.com/ozekkerim/
+  Linkedin: www.linkedin.com/in/kerim-özek-4480a9247
+  avatar: "/assets/img/kerim.jpeg"
+  slug: "kerim"
+

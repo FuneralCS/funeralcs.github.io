@@ -3,7 +3,7 @@ title: "Give That Old Laptop a Second Chance - Build Your Own Private Digital Em
 date: 2025-06-29 12:40:00 +0300
 categories: [technology, guide]
 tags: [laptop, linux, home server, self-hosting]
-author: Kerim Özek
+author: kerim
 image:
   path: /assets/img/06-29-2025-give-that-old-laptop-a-second-chance/Blog_kapakfoto.jpg
   alt: Blog Kapak Fotoğrafı

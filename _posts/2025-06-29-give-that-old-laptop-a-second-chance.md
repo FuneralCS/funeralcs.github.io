@@ -1,6 +1,6 @@
 ---
 title: "Give That Old Laptop a Second Chance - Build Your Own Private Digital Empire"
-date: 2025-07-03 12:40:00 +0300
+date: 2025-06-29 12:40:00 +0300
 categories: [technology, guide]
 tags: [laptop, linux, home server, self-hosting]
 author: Kerim Özek

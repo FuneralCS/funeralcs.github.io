@@ -84,7 +84,7 @@ HTTP isteğinin yapısı:
     <figcaption>Görsel: HTTP istek yapısı</figcaption>
 </figure>
 
-2. **4. katman (TCP)**: Bu katman ulaşım katmanıdır. HTTP protokolü TCP üzerinde çalışıtığından TCP taşıma protokolü olarak görev yapacaktır. Burada kaynak ve hedef cihazın IP adresleri, port bilgileri (kaynak için rastgele, hedef için 443) ve payload yer alır. Bu payload aslında sırasıyla 7,6,5 katmanlarının sonucunda üretilmiş paketin ta kendisidir. Aşağıda 2 adet görsel var. Mavi kısımlar payloadı gösteriyor. Birisinde şifreleme olduğu için payloadın içeriğinin ne olduğu bilinmiyor ama diğerinde ne olduğu biliniyor.
+2. **4. katman (TCP)**: Bu katman ulaşım katmanıdır. HTTP protokolü TCP üzerinde çalıştığından TCP taşıma protokolü olarak görev yapacaktır. Burada kaynak ve hedef cihazın IP adresleri, port bilgileri (kaynak için rastgele, hedef için 443) ve payload yer alır. Bu payload aslında sırasıyla 7,6,5 katmanlarının sonucunda üretilmiş paketin ta kendisidir. Aşağıda 2 adet görsel var. Mavi kısımlar payloadı gösteriyor. Birisinde şifreleme olduğu için payloadın içeriğinin ne olduğu bilinmiyor ama diğerinde ne olduğu biliniyor.
 
 <figure>
     <img src="/assets/img/2025-07-05-paket-yolculuk/http_tcp.webp" alt="TCP payload (HTTP)">

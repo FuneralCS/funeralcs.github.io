@@ -82,16 +82,6 @@ script_includes:
 
 
         <div>
-          <!-- pageviews -->
-          {% if site.pageviews.provider and site.analytics[site.pageviews.provider].id %}
-          <span>
-            <em id="pageviews">
-              <i class="fas fa-spinner fa-spin small"></i>
-            </em>
-            {{ site.data.locales[lang].post.pageview_measure }}
-          </span>
-          {% endif %}
-
           <!-- read time -->
           {% include read-time.html content=content prompt=true lang=lang %}
         </div>
@@ -163,5 +153,4 @@ script_includes:
       {% include post-sharing.html lang=lang %}
     </div>
   </div>
-  {% include custom.html %}
 </article>

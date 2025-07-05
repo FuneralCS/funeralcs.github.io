@@ -8,7 +8,7 @@ order: 4
 
 # 👋 Hakkımızda
 
-**Funeralcs**, İstanbul Üniversitesi Bilgisayar Bilimleri öğrencilerinin oluşturduğu bir blog sayfasıdır.
+**FuneralCS**,Bilgisayar Bilimleri öğrencilerinin oluşturduğu bir blog sayfasıdır.
 
 Bu sayfada;
 

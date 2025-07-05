@@ -2,7 +2,7 @@
 layout: page
 title: Hakkımızda
 permalink: /about/
-icon: fas fa-user-friends
+icon: fas fa-info-circle
 order: 4
 ---
 

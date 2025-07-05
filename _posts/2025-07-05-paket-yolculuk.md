@@ -35,6 +35,7 @@ pin: false
 ---
 
 ### OSI Modeli
+
 |Katman numarası|Adı|Protokolleri|
 |:---:|:---:|:---:|
 |7|UYGULAMA|HTTP,HTTPS,FTP,SFTP,SSH,DNS|
@@ -141,11 +142,11 @@ Burada gördüğünüz işlemler sadece buzdağının görünen kısmıdır. Şi
 
 Görseller wireshark programı kullanılarak alınmıştır.
 
-1. https://tr.wikipedia.org/wiki/IP_adresi
-2. https://tr.wikipedia.org/wiki/MAC_adresi
-3. https://tr.wikipedia.org/wiki/DNS
-4. https://tr.wikipedia.org/wiki/OSI_modeli
-5. https://www.networkacademy.io/ccna/network-services/nat-overload-pat
+1. <https://tr.wikipedia.org/wiki/IP_adresi>
+2. <https://tr.wikipedia.org/wiki/MAC_adresi>
+3. <https://tr.wikipedia.org/wiki/DNS>
+4. <https://tr.wikipedia.org/wiki/OSI_modeli>
+5. <https://www.networkacademy.io/ccna/network-services/nat-overload-pat>
 
 [1]: https://tr.wikipedia.org/wiki/IP_adresi
 [2]: https://tr.wikipedia.org/wiki/MAC_adresi

@@ -17,6 +17,10 @@ layout: compress
 {% include head.html %}
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBF7HSM7" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   {% include sidebar.html lang=lang %}
 
   <div id="main-wrapper" class="d-flex justify-content-center">
@@ -82,8 +86,6 @@ layout: compress
   {% endfor %}
 
   {% include_cached search-loader.html lang=lang %}
-
-  {%- comment -%} Firebase sayaç ve diğer script’ler {%- endcomment -%}
   {% include custom.html %}
 </body>
 

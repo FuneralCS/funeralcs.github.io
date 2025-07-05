@@ -13,13 +13,10 @@
 <!-- _includes/custom.html -->
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-  import {
-    getDatabase,
-    ref,
-    onValue,
-    runTransaction
-  } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+  import { getDatabase, ref, onValue, runTransaction }
+    from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
 
+  // ① Firebase ayarların
   const firebaseConfig = {
     apiKey: "AIzaSyBuNnULimBcSpMhSH-6ZlSagp2tCtEu1uI",
     authDomain: "funeralcs-pageviews.firebaseapp.com",
@@ -29,24 +26,26 @@
     messagingSenderId: "386030303930",
     appId: "1:386030303930:web:a27f52f766c021276b2083"
   };
-
-  // Firebase’i başlat
   const app = initializeApp(firebaseConfig);
   const db = getDatabase(app);
 
-  // URL’den key üret (/posts/islemciler/ → _posts_islemciler_)
-  const raw = window.location.pathname;
-  const clean = raw.replace(/\//g, "_");
-  const counterRef = ref(db, "pageviews/" + clean);
+  // ② URL’den baseurl’i çıkar ve key’e dönüştür
+  let rawPath = window.location.pathname;               // "/funeralcs/posts/islemciler/"
+  const base = "{{ site.baseurl }}";                  // "/funeralcs"
+  if (base && rawPath.startsWith(base)) {
+    rawPath = rawPath.slice(base.length);
+  }
+  const safeKey = rawPath.replace(/\//g, "_");          // "_posts_islemciler_"
+  const counter = ref(db, "pageviews/" + safeKey);
 
-  // Tekil ziyaretçi için
-  if (!localStorage.getItem("viewed_" + clean)) {
-    runTransaction(counterRef, v => (v || 0) + 1);
-    localStorage.setItem("viewed_" + clean, "true");
+  // ③ İlk ziyaretse +1
+  if (!localStorage.getItem("viewed_" + safeKey)) {
+    runTransaction(counter, v => (v || 0) + 1);
+    localStorage.setItem("viewed_" + safeKey, "true");
   }
 
-  // Değeri oku ve #pageviews’e yaz
-  onValue(counterRef, snap => {
+  // ④ Sayacı oku ve ekrana yaz
+  onValue(counter, snap => {
     const n = snap.val();
     const el = document.getElementById("pageviews");
     if (el && n != null) {

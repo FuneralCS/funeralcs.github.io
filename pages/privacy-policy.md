@@ -15,4 +15,4 @@ Sitemizde, kullanıcı deneyimini geliştirmek amacıyla çerezler kullanılabil
 Bu site, Google AdSense reklamlarını içerebilir. Google, reklam gösterimi sırasında çerezlerden yararlanabilir. Daha fazla bilgi için: [Google Reklam Politikaları](https://policies.google.com/technologies/ads)
 
 ### İletişim
-Bu siteyle ilgili herhangi bir sorunuz varsa bizimle iletişime geçebilirsiniz: [funeralcs@gmail.com](mailto:funeralcs@gmail.com)
+Bu siteyle ilgili herhangi bir sorunuz varsa bizimle iletişime geçebilirsiniz: [funeralcsblog@gmail.com](mailto:funeralcsblog@gmail.com)

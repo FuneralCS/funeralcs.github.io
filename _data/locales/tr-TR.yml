@@ -29,17 +29,15 @@ panel:
   toc: İçindekiler
 
 copyright:
-  # Shown at the bottom of the post
-  license:
-    template: Bu gönderi :LICENSE_NAME lisansı altındadır.
-    name: CC BY 4.0
-    link: https://creativecommons.org/licenses/by/4.0/deed.tr
-
-  # Displayed in the footer
-  brief: Bazı hakları saklıdır.
+  brief: '<a href="/pages/privacy-policy/" target="_blank" rel="noopener">Bazı hakları saklıdır.</a>'
   verbose: >-
-    Aksi belirtilmediği sürece, bu sitedeki gönderiler Creative Commons Atıf 4.0 Uluslararası (CC BY 4.0) Lisansı altındadır.
-    Kısaca sayfa linkini vererek değiştirebilir / paylaşabilirsiniz.
+    Aksi belirtilmediği sürece, bu sitedeki içerikler 
+    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">
+    Creative Commons Attribution 4.0 International (CC BY 4.0)
+    </a> lisansı altındadır.  
+    Gizlilik uygulamalarımız hakkında bilgi almak için 
+    <a href="/pages/privacy-policy/" target="_blank" rel="noopener">
+    gizlilik politikamıza göz atabilirsiniz</a>.
 
 meta: :PLATFORM ve :THEME teması
 

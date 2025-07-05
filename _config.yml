@@ -172,6 +172,7 @@ collections:
     sort_by: order
   authors:
     output: true
+    permalink: /authors/:name/
 
 defaults:
   - scope:

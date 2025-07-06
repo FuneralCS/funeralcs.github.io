@@ -16,7 +16,9 @@
     {% else %}
       <em class="fst-normal">{{ site.social.name }}</em>.
     {% endif %}
+  </p>
 
+  <p>
     {% if site.data.locales[include.lang].copyright.brief %}
       <span
         data-bs-toggle="tooltip"
@@ -25,12 +27,30 @@
       >
         {{- site.data.locales[include.lang].copyright.brief -}}
       </span>
-      <br />
+    {% endif %}
+  </p>
+
+  <p>
+    {% if site.data.locales[include.lang].copyright.verbose %}
       <span>
         {{ site.data.locales[include.lang].copyright.verbose | markdownify }}
       </span>
-
     {% endif %}
+  </p>
+
+  <!-- Gizlilik Politikası Bağlantısı -->
+  <p class="mb-1">
+    <span>
+      <a href="https://funeralcs.com/privacy-policy" target="_blank" rel="noopener">
+        Gizlilik Politikamıza
+      </a> göz atabilirsiniz.
+    </span>
+  </p>
+
+  <p class="text-muted mt-2">
+    <small>
+      <em>{{ site.data.locales[include.lang].copyright.brief }}</em>
+    </small>
   </p>
 
   <p>
@@ -53,6 +73,7 @@
   </p>
 </footer>
 
+<!-- Tooltip Başlatma Scripti -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));

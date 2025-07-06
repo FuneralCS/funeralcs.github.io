@@ -16,41 +16,16 @@
     {% else %}
       <em class="fst-normal">{{ site.social.name }}</em>.
     {% endif %}
-  </p>
 
-  <!-- Kısa açıklama ve Tooltip -->
-  <p class="mb-1">
     {% if site.data.locales[include.lang].copyright.brief %}
       <span
         data-bs-toggle="tooltip"
         data-bs-placement="top"
-        title="{{ site.data.locales[include.lang].copyright.tooltip }}"
+        title="{{ site.data.locales[include.lang].copyright.verbose }}"
       >
-        {{ site.data.locales[include.lang].copyright.brief }}
+        {{- site.data.locales[include.lang].copyright.brief -}}
       </span>
     {% endif %}
-  </p>
-
-  <!-- Uzun açıklama (verbose) -->
-  <p class="mb-1">
-    {% if site.data.locales[include.lang].copyright.verbose %}
-      <span>
-        {{ site.data.locales[include.lang].copyright.verbose | markdownify }}
-      </span>
-    {% endif %}
-  </p>
-
-  <!-- Gizlilik Politikası Bağlantısı -->
-  <p class="mb-1">
-    <a href="https://funeralcs.com/privacy-policy" target="_blank" rel="noopener">
-      Gizlilik Politikamıza göz atabilirsiniz.
-    </a>
-  </p>
-
-  <p class="text-muted mt-2">
-    <small>
-      <em>{{ site.data.locales[include.lang].copyright.brief }}</em>
-    </small>
   </p>
 
   <p>
@@ -72,13 +47,3 @@
     {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}
   </p>
 </footer>
-
-<!-- Tooltip Başlatma Scripti -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-      new bootstrap.Tooltip(tooltipTriggerEl);
-    });
-  });
-</script>

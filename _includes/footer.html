@@ -25,6 +25,11 @@
       >
         {{- site.data.locales[include.lang].copyright.brief -}}
       </span>
+      <br />
+      <span>
+        {{ site.data.locales[include.lang].copyright.verbose | markdownify }}
+      </span>
+
     {% endif %}
   </p>
 

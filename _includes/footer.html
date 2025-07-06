@@ -2,10 +2,7 @@
 
 <footer
   aria-label="Site Info"
-  class="
-    d-flex flex-column justify-content-center text-muted
-    flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3
-  "
+  class="d-flex flex-column justify-content-center text-muted flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3"
 >
   <p>
     {{- '©' }}
@@ -18,19 +15,21 @@
     {% endif %}
   </p>
 
-  <p>
+  <!-- Kısa açıklama ve Tooltip -->
+  <p class="mb-1">
     {% if site.data.locales[include.lang].copyright.brief %}
       <span
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="{{ site.data.locales[include.lang].copyright.tooltip }}"
       >
-        {{- site.data.locales[include.lang].copyright.brief -}}
+        {{ site.data.locales[include.lang].copyright.brief }}
       </span>
     {% endif %}
   </p>
 
-  <p>
+  <!-- Uzun açıklama (verbose) -->
+  <p class="mb-1">
     {% if site.data.locales[include.lang].copyright.verbose %}
       <span>
         {{ site.data.locales[include.lang].copyright.verbose | markdownify }}
@@ -40,11 +39,9 @@
 
   <!-- Gizlilik Politikası Bağlantısı -->
   <p class="mb-1">
-    <span>
-      <a href="https://funeralcs.com/privacy-policy" target="_blank" rel="noopener">
-        Gizlilik Politikamıza
-      </a> göz atabilirsiniz.
-    </span>
+    <a href="https://funeralcs.com/privacy-policy" target="_blank" rel="noopener">
+      Gizlilik Politikamıza göz atabilirsiniz.
+    </a>
   </p>
 
   <p class="text-muted mt-2">

@@ -1,51 +1,58 @@
 <!-- The Footer -->
+
 <footer
   aria-label="Site Info"
-  class="d-flex flex-column align-items-center text-muted py-4"
+  class="
+    d-flex flex-column justify-content-center text-muted
+    flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3
+  "
 >
-  <div class="container text-center">
-    <!-- Copyright ve Lisans Bilgisi -->
-    <p class="mb-2">
-      <strong>© {{ 'now' | date: '%Y' }} FuneralCS. </strong>
-    </p>
+  <p>
+    {{- '©' }}
+    <time>{{ 'now' | date: '%Y' }}</time>
 
-    <!-- Creative Commons Lisans Bilgisi -->
-    <p class="mb-1">
+    {% if site.social.links %}
+      <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
+    {% else %}
+      <em class="fst-normal">{{ site.social.name }}</em>.
+    {% endif %}
+
+    {% if site.data.locales[include.lang].copyright.brief %}
       <span
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="{{ site.data.locales[include.lang].copyright.tooltip }}"
       >
-        Bu site içerikleri <a href="{{ site.data.locales[include.lang].copyright.link }}" target="_blank" rel="noopener">Creative Commons Atıf 4.0 Uluslararası (CC BY 4.0)</a> lisansı altındadır.
+        {{- site.data.locales[include.lang].copyright.brief -}}
       </span>
-    </p>
-
-    <!-- Gizlilik Politikası Bağlantısı -->
-    <p class="mb-1">
+      <br />
       <span>
-        <a href="https://funeralcs.com/privacy-policy" target="_blank" rel="noopener">
-          Gizlilik Politikamıza
-        </a> göz atabilirsiniz.
+        {{ site.data.locales[include.lang].copyright.verbose | markdownify }}
       </span>
-    </p>
 
-    <!-- Kısa açıklama (Bazı haklar saklıdır) -->
-    <p class="text-muted mt-2">
-      <small>
-        <em>{{ site.data.locales[include.lang].copyright.brief }}</em>
-      </small>
-    </p>
-  </div>
+    {% endif %}
+  </p>
 
-  <!-- Sosyal Bağlantılar (Varsa) -->
-  {% if site.social.links %}
-    <div class="social-links mt-3">
-      <a href="{{ site.social.links[0] }}" target="_blank" class="text-muted">{{ site.social.name }}</a>
-    </div>
-  {% endif %}
+  <p>
+    {%- capture _platform -%}
+      <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
+    {%- endcapture -%}
+
+    {%- capture _theme -%}
+      <a
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="v{{ theme.version }}"
+        href="https://github.com/cotes2020/jekyll-theme-chirpy"
+        target="_blank"
+        rel="noopener"
+      >Chirpy</a>
+    {%- endcapture -%}
+
+    {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}
+  </p>
 </footer>
 
-<!-- Bootstrap Tooltip Başlatma Scripti -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));

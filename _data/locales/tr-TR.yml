@@ -35,15 +35,15 @@ copyright:
     link: https://creativecommons.org/licenses/by/4.0/deed.tr
 
   brief: Bazı hakları saklıdır.
-  tooltip: Creative Commons CC BY 4.0 lisansı geçerlidir.
+  tooltip: Bu sitedeki içerikler, aksi belirtilmediği sürece CC BY 4.0 lisansı altındadır. Detaylar için gizlilik politikasına göz atabilirsiniz.
   verbose: >-
-    Bu sitedeki içerikler, aksi belirtilmediği sürece 
+    Aksi belirtilmediği sürece, bu sitedeki içerikler 
     <a href="https://creativecommons.org/licenses/by/4.0/deed.tr" target="_blank" rel="noopener">
-    Creative Commons Atıf 4.0 Uluslararası (CC BY 4.0)</a> lisansı altındadır. 
-    Sayfa bağlantısını vererek paylaşabilir ve değiştirebilirsiniz.
+    Creative Commons Atıf 4.0 Uluslararası (CC BY 4.0)</a> lisansı altındadır.
+    Sayfa bağlantısını vererek paylaşabilir ve değiştirebilirsiniz. 
     Gizlilik uygulamalarımız için 
-    <a href="https://funeralcs.com/privacy-policy" target="_blank" rel="noopener">
-    gizlilik politikasına</a> göz atabilirsiniz.
+    <a href="https://funeralcs.com/privacy-policy" target="_blank" rel="noopener">gizlilik politikasına</a> göz atabilirsiniz.
+
 
 meta: :PLATFORM ve :THEME teması
 

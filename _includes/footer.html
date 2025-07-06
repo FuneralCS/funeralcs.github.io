@@ -4,10 +4,12 @@
   class="d-flex flex-column align-items-center text-muted py-4"
 >
   <div class="container text-center">
+    <!-- Copyright ve Lisans Bilgisi -->
     <p class="mb-2">
       <strong>© {{ 'now' | date: '%Y' }} FuneralCS. </strong>
     </p>
 
+    <!-- Creative Commons Lisans Bilgisi -->
     <p class="mb-1">
       <span
         data-bs-toggle="tooltip"
@@ -18,6 +20,7 @@
       </span>
     </p>
 
+    <!-- Gizlilik Politikası Bağlantısı -->
     <p class="mb-1">
       <span>
         <a href="https://funeralcs.com/privacy-policy" target="_blank" rel="noopener">
@@ -26,6 +29,7 @@
       </span>
     </p>
 
+    <!-- Kısa açıklama (Bazı haklar saklıdır) -->
     <p class="text-muted mt-2">
       <small>
         <em>{{ site.data.locales[include.lang].copyright.brief }}</em>
@@ -33,7 +37,7 @@
     </p>
   </div>
 
-  <!-- Optional: Social links or additional links can be added below -->
+  <!-- Sosyal Bağlantılar (Varsa) -->
   {% if site.social.links %}
     <div class="social-links mt-3">
       <a href="{{ site.social.links[0] }}" target="_blank" class="text-muted">{{ site.social.name }}</a>
@@ -41,6 +45,7 @@
   {% endif %}
 </footer>
 
+<!-- Bootstrap Tooltip Başlatma Scripti -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
@@ -49,5 +54,3 @@
     });
   });
 </script>
-
-

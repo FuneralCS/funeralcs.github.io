@@ -32,12 +32,10 @@ copyright:
   brief: '<a href="/privacy-policy/" target="_blank" rel="noopener">Bazı hakları saklıdır.</a>'
   verbose: >-
     Aksi belirtilmedikçe, bu sitedeki tüm içerikler 
-    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">
-    Creative Commons Attribution 4.0 International (CC BY 4.0)
-    </a> lisansı ile sunulmaktadır.  
+    '<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"> Creative Commons Attribution 4.0 International (CC BY 4.0)</a>' lisansı ile sunulmaktadır.  
     Gizlilik uygulamalarımız hakkında daha fazla bilgi için 
-    <a href="/privacy-policy/" target="_blank" rel="noopener">
-    gizlilik politikamıza göz atabilirsiniz</a>.
+    '<a href="/privacy-policy/" target="_blank" rel="noopener"> gizlilik politikamıza göz atabilirsiniz</a>.'
+    
 
 
 meta: :PLATFORM ve :THEME teması

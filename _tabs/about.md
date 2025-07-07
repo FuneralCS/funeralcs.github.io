@@ -8,7 +8,7 @@ order: 4
 
 # 👋 Hakkımızda
 
-**FuneralCS**,Bilgisayar Bilimleri öğrencilerinin oluşturduğu bir blog sayfasıdır.
+**FuneralCS**, Bilgisayar Bilimleri öğrencilerinin oluşturduğu bir blog sayfasıdır.
 
 Bu sayfada;
 

@@ -12,6 +12,7 @@ layout: default
 {% endif %}
 
 <html lang="{{ page.lang | default: site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
   {% include head.html %}
 
   <body>

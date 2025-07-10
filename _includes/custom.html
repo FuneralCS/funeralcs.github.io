@@ -1,14 +1,9 @@
 <!-- _includes/custom.html -->
 <script type="module">
-  import { initializeApp }  from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-  import {
-    getDatabase,
-    ref,
-    onValue,
-    runTransaction
-  } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
 
-  // ① Firebase konfigürasyonun
+  // Firebase konfigürasyonu
   const firebaseConfig = {
     apiKey: "AIzaSyBuNnULimBcSpMhSH-6ZlSagp2tCtEu1uI",
     authDomain: "funeralcs-pageviews.firebaseapp.com",
@@ -18,31 +13,33 @@
     messagingSenderId: "386030303930",
     appId: "1:386030303930:web:a27f52f766c021276b2083"
   };
-  const app = initializeApp(firebaseConfig);
-  const db  = getDatabase(app);
 
-  // ② BaseURL kaldırma ve safeKey oluşturma
-  let rawPath = window.location.pathname;  
-  const base  = "{{ site.baseurl | default: '' }}";  // tek tırnakla default: ''
+  // Firebase app'i başlat
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  // URL'deki base kısmını kontrol et ve güvenli anahtar oluştur
+  let rawPath = window.location.pathname;
+  const base = "{{ site.baseurl | default: '' }}";
   if (base && rawPath.startsWith(base)) {
     rawPath = rawPath.slice(base.length);
   }
-  const safeKey = rawPath.replace(/\//g, "_");  // örn "_posts_islemciler_"
+  const safeKey = rawPath.replace(/\//g, "_");
 
-  // ③ Sayaç referansını tanımlıyoruz
-  const counter = ref(db, "pageviews/" + safeKey);
+  // Sayaç referansını tanımla
+  const counterRef = ref(db, "pageviews/" + safeKey);
 
-  // ④ Sadece ilk ziyarette +1
+  // İlk ziyaret +1 işlem yapılacak
   if (!localStorage.getItem("viewed_" + safeKey)) {
-    runTransaction(counter, v => (v || 0) + 1);
+    runTransaction(counterRef, (currentVal) => (currentVal || 0) + 1);
     localStorage.setItem("viewed_" + safeKey, "true");
   }
 
-  // ⑤ Firebase’den değeri okuyup DOM’a yaz
-  onValue(counter, snap => {
-    const n  = snap.val();
+  // Firebase'den değeri al ve DOM'a yaz
+  onValue(counterRef, (snap) => {
+    const n = snap.val();
     const el = document.getElementById("pageviews");
-    if (el && n != null) {
+    if (el && n !== null) {
       el.innerHTML = `<i class="fas fa-eye"></i> ${n} görüntüleme`;
     }
   });

@@ -44,15 +44,11 @@ script_includes:
       {% if page.image.lqip %}{% capture lqip %}lqip="{{ page.image.lqip }}"{% endcapture %}{% endif %}
 
       <div class="mt-3 mb-3">
-        {% if page.image and page.image.path %}
-          <img src="{{ page.image.path | relative_url }}" alt="{{ page.image.alt | escape }}">
-        {% endif %}
-
-
-    {% endif %}
+        <img fetchpriority="high" {{ src }} {{ class }} {{ alt }} width="1200" height="630" {{ lqip }}>
         {% if page.image.alt %}
         <figcaption class="text-center pt-2 pb-2">{{ page.image.alt }}</figcaption>
         {% endif %}
+
       </div>
       {% endif %}
 

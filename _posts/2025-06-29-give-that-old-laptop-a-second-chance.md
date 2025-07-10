@@ -5,7 +5,7 @@ categories: [technology, guide]
 tags: [laptop, linux, home server, self-hosting]
 author: kerim
 image:
-  path: /assets/img/06-29-2025-give-that-old-laptop-a-second-chance/Blog_kapakfoto.jpg
+  path: /assets/img/06-29-2025-give-that-old-laptop-a-second-chance/Blog_kapakfoto.webp
   alt: Blog Kapak Fotoğrafı
 description: "How to transform an old laptop into your personal cloud, media server, retro gaming console, and more—all in one comprehensive guide!"
 toc: true
@@ -40,7 +40,7 @@ As explained in videos by creators like Christian Lempa, the core advantages are
 
 Before we get to the advanced projects, let's quickly define a few terms you'll see.
 
-![Server VM Docker Gemini](/assets/img/06-29-2025-give-that-old-laptop-a-second-chance/Server_VM_Docker_Gemini_generated.jpg)
+![Server VM Docker Gemini](/assets/img/06-29-2025-give-that-old-laptop-a-second-chance/Server_VM_Docker_Gemini_generated.webp)
 
 * **Server:** A computer (in our case, the old laptop) dedicated to running applications and providing services to other computers on a network.
 * **Virtual Machine (VM):** Software that creates a complete virtual computer on your server. Each VM has its own operating system (like another Linux or even Windows) and is fully isolated.
@@ -64,7 +64,7 @@ Turn your old laptop into a Network Attached Storage (NAS). This becomes a centr
 
 Organize your movies, TV shows, and music into a beautiful library and stream it to your TV, phone, or tablet—anywhere in the world. It's like running your own personal Netflix, giving you total control over your media.
 
-![Jellyfin Media Server Interface](/assets/img/06-29-2025-give-that-old-laptop-a-second-chance/jellyfin.png)
+![Jellyfin Media Server Interface](/assets/img/06-29-2025-give-that-old-laptop-a-second-chance/jellyfin.webp)
 
 > **Great Software Choices:** `Plex`, `Jellyfin`, `Emby`.
 
@@ -98,14 +98,14 @@ Check out [Pewdiepie's video](https://www.youtube.com/watch?v=u_Lxkt50xOg) about
 
 ### 2. The Brain of Your Smart Home
 
-![Home Assistant PNG](/assets/img/06-29-2025-give-that-old-laptop-a-second-chance/Home%20Assistant.png)
+![Home Assistant PNG](/assets/img/06-29-2025-give-that-old-laptop-a-second-chance/Home%20Assistant.webp)
 
 Run a local controller to unify all your smart lights, plugs, sensors, and cameras. This improves speed, reliability, and privacy by removing the dependence on various company clouds. Home Assistant is a fantastic open-source choice for this.
 
 Here is a great example of how it can be used.
 
-![Home Assistant Dashboard](/assets/img/06-29-2025-give-that-old-laptop-a-second-chance/Home_Assistant1.jpeg)
-![Home Assistant Dashboard](/assets/img/06-29-2025-give-that-old-laptop-a-second-chance/Home_Assistant2.jpeg)
+![Home Assistant Dashboard](/assets/img/06-29-2025-give-that-old-laptop-a-second-chance/Home_Assistant1.webp)
+![Home Assistant Dashboard](/assets/img/06-29-2025-give-that-old-laptop-a-second-chance/Home_Assistant2.webp)
 
 > **Great Software Choices:** `Home Assistant`, `openHAB`.
 

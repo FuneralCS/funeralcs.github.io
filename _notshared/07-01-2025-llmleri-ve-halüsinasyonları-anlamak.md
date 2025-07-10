@@ -5,7 +5,7 @@ categories: [yapay zeka, derin öğrenme, büyük dil modelleri]
 tags: [llm, yapay zeka, halüsinasyon, doğal dil işleme, transformer]
 author: tunahan
 image:
-  path: /assets/img/07-01-2025-llmleri-ve-halüsinasyonları-anlamak/cover.png
+  path: /assets/img/07-01-2025-llmleri-ve-halüsinasyonları-anlamak/cover.webp
 description: "Büyük Dil Modellerini (LLM'leri) ile giderek artan etkileşimimizde karşılaştığımız önemli bir sorun olan halüsinasyonları, nedenlerini ve nasıl azaltılabileceğini keşfedin."
 toc: true
 math: false
@@ -32,7 +32,7 @@ Bu güçlü mimari, zamanla iki farklı yaklaşımın doğmasına neden oldu:
     
 2. **Anlama ve Üretme Odaklı Modeller:** **Google'ın** "_BERT_" modeli gibi diğer yapılar ise metni derinlemesine anlamayı hedefler. Bu amaçla, mimarinin hem **encoder** hem de **decoder** bloklarını çift yönlü (_bidirectional_) bir şekilde kullanırlar. Bu yapı, onları çeviri araçları gibi hem anlamanın hem de üretmenin kritik olduğu görevler için ideal kılar ^[6] .
 <figure>
-    <img src="/assets/img/07-01-2025-llmleri-ve-halüsinasyonları-anlamak/transformer.png" alt="Transformer Mimarisi Diyagramı" width="600">
+    <img src="/assets/img/07-01-2025-llmleri-ve-halüsinasyonları-anlamak/transformer.webp" alt="Transformer Mimarisi Diyagramı" width="600">
     <figcaption>Görsel: Transformer Mimarisi</figcaption>
 </figure>
 
@@ -46,28 +46,28 @@ Bu sorunun cevabı, modellerden beklentimizde gizli: **yaratıcılık**. Eğer b
 Diyelim ki ChatGPT'ye "İstanbul'un yakaları nelerdir?" dediniz. 
 
 <figure>
-    <img src="/assets/img/07-01-2025-llmleri-ve-halüsinasyonları-anlamak/istanbul-yakalar1.png" alt="ChatGPT'nin İstanbul'un yakaları sorusuna verdiği ilk yanıt." width="600">
+    <img src="/assets/img/07-01-2025-llmleri-ve-halüsinasyonları-anlamak/istanbul-yakalar1.webp" alt="ChatGPT'nin İstanbul'un yakaları sorusuna verdiği ilk yanıt." width="600">
     <figcaption>Görsel: ChatGPT'nin İstanbul'un yakaları sorusuna verdiği ilk yanıt.</figcaption>
 </figure>
 
 O da böyle bir yanıt verdi. Peki şimdi de "İstanbul'un yakalarından bir hikaye yazar mısın?" diyelim.
 
 <figure>
-    <img src="/assets/img/07-01-2025-llmleri-ve-halüsinasyonları-anlamak/istanbul-yakalar2.png" alt="ChatGPT'nin İstanbul'un yakaları ile ilgili hikaye isteğine verdiği ilk yanıt." width="600">
+    <img src="/assets/img/07-01-2025-llmleri-ve-halüsinasyonları-anlamak/istanbul-yakalar2.webp" alt="ChatGPT'nin İstanbul'un yakaları ile ilgili hikaye isteğine verdiği ilk yanıt." width="600">
     <figcaption>Görsel: ChatGPT'nin İstanbul'un yakaları ile ilgili hikaye isteğine verdiği ilk yanıt.</figcaption>
 </figure>
 
 Yeni bir sohbette tekrar isteyelim:
 
 <figure>
-    <img src="/assets/img/07-01-2025-llmleri-ve-halüsinasyonları-anlamak/istanbul-yakalar3.png" alt="ChatGPT'nin İstanbul'un yakaları ile ilgili hikaye isteğine yeni sohbette verdiği farklı yanıt." width="600">
+    <img src="/assets/img/07-01-2025-llmleri-ve-halüsinasyonları-anlamak/istanbul-yakalar3.webp" alt="ChatGPT'nin İstanbul'un yakaları ile ilgili hikaye isteğine yeni sohbette verdiği farklı yanıt." width="600">
     <figcaption>Görsel: ChatGPT'nin İstanbul'un yakaları ile ilgili hikaye isteğine yeni sohbette verdiği farklı yanıt.</figcaption>
 </figure>
 
 Beklediğimiz üzere farklı bir çıktı verdi.
 
 Peki tekrar "İstanbul'un yakaları nelerdir?" dediğimizde de mi farklı bir yanıt verecek?
-    <img src="/assets/img/07-01-2025-llmleri-ve-halüsinasyonları-anlamak/istanbul-yakalar4.png" alt="ChatGPT'nin İstanbul'un yakaları sorusuna tekrar verdiği aynı yanıt." width="600">
+    <img src="/assets/img/07-01-2025-llmleri-ve-halüsinasyonları-anlamak/istanbul-yakalar4.webp" alt="ChatGPT'nin İstanbul'un yakaları sorusuna tekrar verdiği aynı yanıt." width="600">
     <figcaption>Görsel: ChatGPT'nin İstanbul'un yakaları sorusuna tekrar verdiği aynı yanıt.</figcaption>
 </figure>
 
@@ -98,7 +98,7 @@ Model ne düşündüğünü, hatta çıktı verdiğini, hatta ve hatta çıktı 
 Yazıya başlamadan önce hepinizden ChatGPT'de (ama o serisi değil sebebini anlatacağım) yeni bir sohbet açıp ona "Türkiye kelimesinde kaç tane 'e' harfi vardır?" demenizi istiyorum. Biz de deneyelim:
 
 <figure>
-    <img src="/assets/img/07-01-2025-llmleri-ve-halüsinasyonları-anlamak/kac-e-var.png" alt="ChatGPT'nin Türkiye kelimesinde kaç 'e' var sorusuna verdiği müthiş yanıt" width="600">
+    <img src="/assets/img/07-01-2025-llmleri-ve-halüsinasyonları-anlamak/kac-e-var.webp" alt="ChatGPT'nin Türkiye kelimesinde kaç 'e' var sorusuna verdiği müthiş yanıt" width="600">
     <figcaption>Görsel: ChatGPT'nin Türkiye kelimesinde kaç 'e' var sorusuna verdiği müthiş yanıt.</figcaption>
 </figure>
 

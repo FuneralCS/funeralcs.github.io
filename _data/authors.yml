@@ -1,7 +1,7 @@
 tunahan:
   name: Tunahan Yardımcı
   description: İstanbul Üniversitesi Bilgisayar Bilimleri 1. sınıf öğrencisi. Aktif olarak yapay zekalar üzerine çalışmakta.
-  avatar: "/assets/img/tunahan.jpg"
+  avatar: "/assets/img/tunahan.webp"
   github: "https://github.com/Tunahanyrd"
   linkedin: "https://www.linkedin.com/in/tunahan-yard%C4%B1mc%C4%B1-ab846133b/"
   slug: "tunahan"
@@ -9,7 +9,7 @@ tunahan:
 yusuf:
   name: Yusuf Said Çöpçü
   description: İstanbul Üniversitesi Bilgisayar Bilimleri 1. sınıf öğrencisiyim. Yapay zeka ve makine öğrenmesi odaklı çalışmakta.
-  avatar: "/assets/img/yusuf.jpg"
+  avatar: "/assets/img/yusuf.webp"
   github: "https://github.com/yusuf-said"
   linkedin: "https://www.linkedin.com/in/yusuf-said"
   slug: "yusuf-said"
@@ -19,12 +19,12 @@ ibrahim:
   description: İstanbul Üniversitesi Bilgisayar Bilimleri öğrencisiyim.
   github: "https://github.com/satukbugra5"
   slug: "ibrahim"
-  avatar: "/assets/img/ibrahim.jpeg"
+  avatar: "/assets/img/ibrahim.webp"
 
 vladimirdelvis:
   name: Sezgin Tunay Sönmezocak
   description: İstanbul Üniversitesi Bilgisayar Bilimleri 1. sınıf öğrencisiyim. Linux, güvenlik ve mahremiyet odaklı çalışmalar yürütüyorum. Ayrıca siber güvenlik ve yazılım geliştirme konularına da meraklıyımdır.
-  avatar: "/assets/img/sezgin.jpg"
+  avatar: "/assets/img/sezgin.webp"
   github: "https://github.com/vladimirdelvis"
   instagram: "https://www.instagram.com/sezgin_snmzo"
   slug: "vladimirdelvis"
@@ -35,7 +35,7 @@ yunus:
   github: https://github.com/YunusEmreUrhan
   instagram: https://www.instagram.com/yunus_emre3451/ 
   Linkedin: https://www.linkedin.com/in/yunus-emre-urhan-97ab11336/
-  avatar: "/assets/img/yunus.jpg"
+  avatar: "/assets/img/yunus.webp"
   slug: "yunus"
   
 kerim:
@@ -44,6 +44,6 @@ kerim:
   github: https://github.com/kerim-ozek
   instagram: https://www.instagram.com/ozekkerim/
   Linkedin: www.linkedin.com/in/kerim-özek-4480a9247
-  avatar: "/assets/img/kerim.jpeg"
+  avatar: "/assets/img/kerim.webp"
   slug: "kerim"
 

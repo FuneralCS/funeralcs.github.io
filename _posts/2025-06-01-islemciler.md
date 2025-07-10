@@ -5,7 +5,7 @@ categories: [donanımlar]
 tags: [işlemci, bilgisayar, donanım]
 author: ibrahim
 image:
-  path: /assets/img/islemci_dokumani.png
+  path: /assets/img/islemci_dokumani.webp
   alt: İşlemci Dökümanı
 description: "İşlemciler hakkındaki en detaylı içerik"
 toc: true

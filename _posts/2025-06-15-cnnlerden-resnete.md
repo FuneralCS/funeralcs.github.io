@@ -5,7 +5,7 @@ categories: [derin öğrenme, resnet, lenet, görüntü işleme]
 tags: [derin öğrenme, resnet, lenet, yazılım, görüntü işleme]
 author: tunahan
 image:
-  path: /assets/img/cv.webp
+  path: /assets/img/cv/cv.webp
 description: "Bugün CNN’lerin doğuşundan itibaren ResNet mimarisine nasıl geldik. Tüm bunlara değineceğiz"
 toc: true
 math: false

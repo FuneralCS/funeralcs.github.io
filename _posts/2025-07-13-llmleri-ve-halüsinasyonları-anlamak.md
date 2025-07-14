@@ -198,16 +198,17 @@ Son olarak, **çıktı üretme mekanizmalarını iyileştirmek** de halüsinasyo
 
 
 # Kaynakça
-1. [Memorial Sağlık Grubu - Halüsinasyon ve Varsanı Nedir? Belirtileri Nelerdir?](https://www.memorial.com.tr/hastaliklar/halusinasyon-varsani-nedir-belirtileri-nelerdir)
-2. [Lakera.ai - The Beginner’s Guide to Hallucinations in Large Language Models](https://www.lakera.ai/blog/guide-to-hallucinations-in-large-language-models)
-3. [Google Cloud - Large Language Models powered by world-class Google AI](https://cloud.google.com/ai/llms)
-4. [Vaswani, A., et al. (2017). *Attention is all you need*. NeurIPS](https://arxiv.org/abs/1706.03762)
-5. [OpenAI — Understand Foundational Concepts of ChatGPT and cool stuff you can explore!](https://medium.com/@amol-wagh/open-ai-understand-foundational-concepts-of-chatgpt-and-cool-stuff-you-can-explore-a7a77baf0ee3#:~:text=OpenAI%20%E2%80%94%20Understand%20Foundational%20Concepts%20of%20ChatGPT%20and%20cool%20stuff%20you%20can%20explore!)
-6. [Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2018). *BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding*. NAACL](https://arxiv.org/abs/1810.04805)
-7. [Huang et al., 2024. _A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions_. ACM Transactions on Information Systems.](https://doi.org/10.1145/3703155)
-8. [Understanding OpenAI’s “Temperature” and “Top_p” Parameters in Language Models](https://medium.com/@1511425435311/understanding-openais-temperature-and-top-p-parameters-in-language-models-d2066504684f)
-9. [Wei et al., 2023. *Chain-of-Thought Prompting Elicits Reasoning in Large Language Models*. NeurIPS.](https://arxiv.org/abs/2201.11903)
-10. [The Delegated Chain of Thought Architecture](https://lab.scub.net/the-delegated-chain-of-thought-architecture-5dd5ab9ca88e)
+
+1. [Memorial Sağlık Grubu - Halüsinasyon ve Varsanı Nedir?][1]  
+2. [Lakera.ai - The Beginner’s Guide to Hallucinations in Large Language Models][2]  
+3. [Google Cloud - Large Language Models powered by world-class Google AI][3]  
+4. [Vaswani, A., et al. (2017). *Attention is all you need*. NeurIPS][4]  
+5. [OpenAI — Understand Foundational Concepts of ChatGPT and cool stuff you can explore!][5]  
+6. [Devlin, J., et al. (2018). *BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding*][6]  
+7. [Huang et al., 2024. _A Survey on Hallucination in Large Language Models_][7]  
+8. [Understanding OpenAI’s “Temperature” and “Top_p” Parameters in Language Models][8]  
+9. [Wei et al., 2023. *Chain-of-Thought Prompting Elicits Reasoning in Large Language Models*][9]  
+10. [The Delegated Chain of Thought Architecture][10]  
 
 [1]: https://www.memorial.com.tr/hastaliklar/halusinasyon-varsani-nedir-belirtileri-nelerdir
 [2]: https://www.lakera.ai/blog/guide-to-hallucinations-in-large-language-models

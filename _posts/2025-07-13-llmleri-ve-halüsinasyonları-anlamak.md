@@ -67,8 +67,9 @@ Yeni bir sohbette tekrar isteyelim:
 Beklediğimiz üzere farklı bir çıktı verdi.
 
 Peki tekrar "İstanbul'un yakaları nelerdir?" dediğimizde de mi farklı bir yanıt verecek?
+<figure>
     <img src="/assets/img/2025-07-13-llmleri-ve-halüsinasyonları-anlamak/istanbul-yakalar4.webp" alt="ChatGPT'nin İstanbul'un yakaları sorusuna tekrar verdiği aynı yanıt." width="600">
-    <figcaption>Görsel: ChatGPT'nin İstanbul'un yakaları sorusuna tekrar verdiği aynı yanıt.</figcaption>
+    <figcaption>Görsel: ChatGPT'nin İstanbul'un yakaları sorusuna tekrar verdiği aynı yanıt. </figcaption>
 </figure>
 
 Tabii ki de hayır aynı çıktıyı verecek ve vermeli de çünkü İstanbul'un iki yakası sabittir!

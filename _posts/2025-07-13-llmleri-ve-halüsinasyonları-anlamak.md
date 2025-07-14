@@ -21,16 +21,16 @@ Yapay zeka modelleri hayatımızın her alanına girerken, özellikle Büyük Di
 ---
 ## LLM'leri anlamak
 
-_LLM_'ler devasa verilerle, _NLP_ (Doğal dil işleme) yöntemleri sonucu oluşturulmuş modelleridir ^[3] .
+_LLM_'ler devasa verilerle, _NLP_ (Doğal dil işleme) yöntemleri sonucu oluşturulmuş modelleridir [3] .
 
-Dil modellerinin tarihi eskiye dayansa da, günümüzdeki _Büyük Dil Modelleri_ için bir dönüm noktası 2017 yılında Google Brain (günümüzde Google DeepMind) ekibinin yayımladığı "Attention is All You Need" başlıklı makale olmuştur ^[4] . Bu makale, 
+Dil modellerinin tarihi eskiye dayansa da, günümüzdeki _Büyük Dil Modelleri_ için bir dönüm noktası 2017 yılında Google Brain (günümüzde Google DeepMind) ekibinin yayımladığı "Attention is All You Need" başlıklı makale olmuştur [4] . Bu makale, 
 **"Transformers"** adı verilen ve "dikkat" (attention) mekanizmasını kullanan devrimci bir mimariyi tanıttı. Bu mimarinin temelinde, bir metni anlamak için **"encoder" (kodlayıcı)** ve yeni bir metin üretmek için **"decoder" (kod çözücü)** olmak üzere iki ana blok bulunur.
 
 Bu güçlü mimari, zamanla iki farklı yaklaşımın doğmasına neden oldu:
 
-1. **Üretim Odaklı Modeller:** GPT ve türevleri bu yaklaşıma en iyi örnektir. Adından da anlaşılacağı gibi ("_Generative Pretrained Transformer_"), bu modellerin temel amacı metin üretmektir. Bu nedenle Transformer yapısının yalnızca **"decoder" (üretici)** bloğunu kullanırlar ^[5] .
+1. **Üretim Odaklı Modeller:** GPT ve türevleri bu yaklaşıma en iyi örnektir. Adından da anlaşılacağı gibi ("_Generative Pretrained Transformer_"), bu modellerin temel amacı metin üretmektir. Bu nedenle Transformer yapısının yalnızca **"decoder" (üretici)** bloğunu kullanırlar [5] .
     
-2. **Anlama ve Üretme Odaklı Modeller:** **Google'ın** "_BERT_" modeli gibi diğer yapılar ise metni derinlemesine anlamayı hedefler. Bu amaçla, mimarinin hem **encoder** hem de **decoder** bloklarını çift yönlü (_bidirectional_) bir şekilde kullanırlar. Bu yapı, onları çeviri araçları gibi hem anlamanın hem de üretmenin kritik olduğu görevler için ideal kılar ^[6] .
+2. **Anlama ve Üretme Odaklı Modeller:** **Google'ın** "_BERT_" modeli gibi diğer yapılar ise metni derinlemesine anlamayı hedefler. Bu amaçla, mimarinin hem **encoder** hem de **decoder** bloklarını çift yönlü (_bidirectional_) bir şekilde kullanırlar. Bu yapı, onları çeviri araçları gibi hem anlamanın hem de üretmenin kritik olduğu görevler için ideal kılar [6] .
 <figure>
     <img src="/assets/img/2025-07-13-llmleri-ve-halüsinasyonları-anlamak/transformer.webp" alt="Transformer Mimarisi Diyagramı" width="600">
     <figcaption>Görsel: Transformer Mimarisi</figcaption>
@@ -39,7 +39,7 @@ Bu güçlü mimari, zamanla iki farklı yaklaşımın doğmasına neden oldu:
 
 Modelin, kavramları bir vektör uzayında nasıl grupladığını anlattık: "_kral_" ve "_prens_" gibi kelimeler bir araya gelirken, "_kraliçe_" ve "_prenses_" başka bir yerde kümelenir. Bu durum akla şu mantıklı soruyu getiriyor: Eğer model matematiksel olarak en yakın vektörleri seçiyorsa, aynı soruya neden her zaman birebir aynı cevabı vermiyor?
 
-Bu sorunun cevabı, modellerden beklentimizde gizli: **yaratıcılık**. Eğer bir model her defasında en olası, en "_doğru_" cevabı verseydi, deterministik ve sıkıcı olurdu. "Ama matematik deterministik değil mi?" diye düşünebilirsiniz. Evet, temelindeki matematik kurallara bağlıdır, ancak _LLM_'ler basit birer hesap makinesi değildir. Onlar, bir sonraki kelimeyi olasılıklara göre tahmin eden dil üreticileridir. İşte bu noktada devreye, modelin davranışına bilinçli olarak eklenen küçük bir **rastgelelik faktörü** giriyor. Bu faktör sayesinde model, her zaman en bariz yolu seçmek yerine, farklı ve yaratıcı metinler üretebiliyor. Meraklısı için "Temperature” ve “Top_p" terimlerine bakabilirler ^[8].
+Bu sorunun cevabı, modellerden beklentimizde gizli: **yaratıcılık**. Eğer bir model her defasında en olası, en "_doğru_" cevabı verseydi, deterministik ve sıkıcı olurdu. "Ama matematik deterministik değil mi?" diye düşünebilirsiniz. Evet, temelindeki matematik kurallara bağlıdır, ancak _LLM_'ler basit birer hesap makinesi değildir. Onlar, bir sonraki kelimeyi olasılıklara göre tahmin eden dil üreticileridir. İşte bu noktada devreye, modelin davranışına bilinçli olarak eklenen küçük bir **rastgelelik faktörü** giriyor. Bu faktör sayesinde model, her zaman en bariz yolu seçmek yerine, farklı ve yaratıcı metinler üretebiliyor. Meraklısı için "Temperature” ve “Top_p" terimlerine bakabilirler [8].
 
 ---
 
@@ -90,7 +90,7 @@ Sizin prompt'ta yazıp yazmadığınız nokta bile çıktıyı değiştirirken 1
 
 Ancak şunu eklemeden edemeyeceğim:
 Model ne düşündüğünü, hatta çıktı verdiğini, hatta ve hatta çıktı verip vermediğini bile bilmiyor (Ta ki siz yeni prompt girene kadar)
-> Ancak araştırılan ve geliştirilen mekanizmalarla bu durum değişebilir (ChatGPT "o" serisi bunun için var ^[9])
+> Ancak araştırılan ve geliştirilen mekanizmalarla bu durum değişebilir (ChatGPT "o" serisi bunun için var [9])
 
 ---
 # Halüsinasyonları anlamak
@@ -121,7 +121,7 @@ LLM'ler ise özellikle geliştikçe kendilerine aşırı güvenerek alakasız, u
 ---
 ##  Ai dünyası için halüsinasyon
 
-Elimden geldiğince basitleştirerek anlatmaya çalışacağım. Burada 24 Ocak 2025'de yayımlanan oldukça yoğun bir makaleden yaranlandım ^[7] .
+Elimden geldiğince basitleştirerek anlatmaya çalışacağım. Burada 24 Ocak 2025'de yayımlanan oldukça yoğun bir makaleden yaranlandım [7] .
 
 LLM'lerin halüsinasyonlarını iki ana kategoriye ayırabiliriz: **Gerçeklik Halüsinasyonları** ve **Sadakat Halüsinasyonları**. Gerçeklik halüsinasyonları, modelin gerçekte doğru olan bilgiyi yanlış sunması, yani 'gerçeklik çelişkisi' yaşamasıyla ortaya çıkar. Örneğin, 'Thomas Edison telefonun icadını yaptı' gibi yanlış bir ifade kullanması buna örnektir. Ya da, gerçek bir bilgiye tamamen uydurma, dışarıdan doğrulanamayan eklemeler yapabilir, buna da 'gerçeğe dayalı uydurma' denir. Modelin belirli bir kişi hakkında uydurma atıflar söylemesi bu kategoriye girer.
 
@@ -188,7 +188,7 @@ Son olarak, **çıktı üretme mekanizmalarını iyileştirmek** de halüsinasyo
 
 <figure>
     <img src="/assets/img/2025-07-13-llmleri-ve-halüsinasyonları-anlamak/chain.webp" alt="Chain-of-Thought Mimarisi" width="600">
-    <figcaption>Görsel: Chain-of-Thought Mimarisi ^[10] .</figcaption>
+    <figcaption>Görsel: Chain-of-Thought Mimarisi [10] .</figcaption>
 </figure>
 
 ---

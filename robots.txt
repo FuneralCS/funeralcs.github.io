@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Host: funeralcs.com
-Sitemap: https://funeralcs.com/sitemap
+Sitemap: https://funeralcs.com/sitemap.xml

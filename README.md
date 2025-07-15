@@ -1,3 +1,4 @@
+# funeralcs.com
 # 👋 Hakkımızda
 
 **FuneralCS**, Bilgisayar Bilimleri öğrencilerinin oluşturduğu bir blog sayfasıdır.

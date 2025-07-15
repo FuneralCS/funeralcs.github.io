@@ -190,3 +190,8 @@ jobs:
           else
             echo "✔️ Bildirim listesi değişmemiş."
           fi
+      
+      - name: Ping Google with sitemap
+        run: |
+          curl -s "https://www.google.com/ping?sitemap=https://funeralcs.com/sitemap.xml" || echo "⚠️ Google ping başarısız oldu ama deploy tamamlandı."
+

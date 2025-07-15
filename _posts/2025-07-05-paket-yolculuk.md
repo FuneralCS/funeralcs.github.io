@@ -6,7 +6,7 @@ tags: [internet, bilgisayar]
 author: vladimirdelvis
 image:
   path: /assets/img/2025-07-05-paket-yolculuk/2025-07-05-paket-yolculuk-kapak.webp
-description: "Paketlerin kısa yolculukları"
+description: "Bir internet sitesine girdiğinizde arka planda neler oluyor? DNS, IP, MAC adresi, OSI modeli ve NAT kavramlarıyla bir paketin yolculuğunu öğrenin."
 toc: true
 math: false
 mermaid: false

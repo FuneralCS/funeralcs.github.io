@@ -3,7 +3,8 @@ layout: page
 title: Gizlilik Politikası
 permalink: /privacy-policy/
 icon: fas fa-user-friends  
-order: 4                
+order: 4         
+noindex: false
 ---
 
 Bu blog, ziyaretçilere daha iyi hizmet sunmak amacıyla üçüncü taraf hizmetlerden (Google Analytics, Google AdSense) yararlanabilir.
@@ -15,4 +16,4 @@ Sitemizde, kullanıcı deneyimini geliştirmek amacıyla çerezler kullanılabil
 Bu site, Google AdSense reklamlarını içerebilir. Google, reklam gösterimi sırasında çerezlerden yararlanabilir. Daha fazla bilgi için: [Google Reklam Politikaları](https://policies.google.com/technologies/ads)
 
 ### İletişim
-Bu siteyle ilgili herhangi bir sorunuz varsa bizimle iletişime geçebilirsiniz: [funeralcsblog@gmail.com](mailto:funeralcsblog@gmail.com)
+Bu siteyle ilgili herhangi bir sorunuz varsa bizimle iletişime geçebilirsiniz: [contact@funeralcs.com](mailto:contact@funeralcs.com)

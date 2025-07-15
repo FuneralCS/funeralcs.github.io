@@ -35,7 +35,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: FuneralCS
-  email: funeralcsblog@gmail.com # change to your email address
+  email: contact@funeralcs.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/CSFuneral # change to your Twitter homepage
@@ -69,7 +69,7 @@ analytics:
     id: # fill in your Matomo ID
     domain: # fill in your Matomo domain
   cloudflare:
-    id: # fill in your Cloudflare Web Analytics token
+    id: 950b7d9b60d55eefe974bbbe82aae479
   fathom:
     id: # fill in your Fathom Site ID
 

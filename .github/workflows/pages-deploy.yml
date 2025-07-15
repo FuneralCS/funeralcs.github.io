@@ -192,6 +192,7 @@ jobs:
           fi
       
       - name: Ping Google with sitemap
-        run: |
-          curl -s "https://www.google.com/ping?sitemap=https://funeralcs.com/sitemap.xml" || echo "⚠️ Google ping başarısız oldu ama deploy tamamlandı."
-
+      run: |
+        echo " Google ping gönderiliyor..."
+        curl -w "\n HTTP Durumu: %{http_code}\n" "https://www.google.com/ping?sitemap=https://funeralcs.com/sitemap.xml"
+    

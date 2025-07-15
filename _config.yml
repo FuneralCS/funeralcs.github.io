@@ -229,7 +229,10 @@ defaults:
 
 sass:
   style: compressed
-
+  
+sitemap:
+  filename: sitemap.xml
+  
 compress_html:
   clippings: all
   comments: all

@@ -20,5 +20,5 @@ Bu sayfayı kurmamızdaki amaç;
 - Teknolojiye meraklı olanlara anlaşılır, sade ve doyurucu içerikler sunmaktır  
 
 ---
-[funeralcs.com](https://www.funeralcs.com/
+[funeralcs.com](https://www.funeralcs.com)
 > Keyifli okumalar dileriz!

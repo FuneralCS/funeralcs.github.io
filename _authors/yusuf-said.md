@@ -27,6 +27,11 @@ permalink: /authors/yusuf-said/
       <i class="fab fa-instagram"></i> Instagram
     </a>
   {% endif %}
+  {% if author.linkedin %}
+    <a href="{{ author.linkedin }}" target="_blank" class="social-link">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+  {% endif %}
 </div>
 <style>
   .author-links {

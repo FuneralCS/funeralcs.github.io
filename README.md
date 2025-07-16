@@ -1,7 +1,6 @@
-# funeralcs.com
 # 👋 Hakkımızda
 
-**FuneralCS**, Bilgisayar Bilimleri öğrencilerinin oluşturduğu bir blog sayfasıdır.
+**[FuneralCS](https://www.funeralcs.com/)**, Bilgisayar Bilimleri öğrencilerinin oluşturduğu bir blog sayfasıdır.
 
 Bu sayfada;
 
@@ -21,5 +20,5 @@ Bu sayfayı kurmamızdaki amaç;
 - Teknolojiye meraklı olanlara anlaşılır, sade ve doyurucu içerikler sunmaktır  
 
 ---
-
+[funeralcs.com](https://www.funeralcs.com/
 > Keyifli okumalar dileriz!

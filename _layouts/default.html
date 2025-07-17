@@ -92,20 +92,6 @@ layout: default
 
     {% include_cached search-loader.html lang=lang %}
 
-    {%- if jekyll.environment == "production" -%}
-      <!-- OneSignal Web Push (sadece prod’da) -->
-      <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" async></script>
-      <script>
-        window.OneSignal = window.OneSignal || [];
-        OneSignal.push(function () {
-          OneSignal.init({
-            appId: "eec1e0dc-646d-457d-b974-b4e2c2dcbcac",
-            notifyButton: { enable: true }
-          });
-        });
-      </script>
-    {%- endif -%}
-
     {% include custom.html %}
   </body>
 </html>

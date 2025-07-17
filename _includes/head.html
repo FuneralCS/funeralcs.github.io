@@ -1,4 +1,5 @@
 <head>
+
 <script>
   const host = window.location.hostname;
   if (host === "www.funeralcs.com" || host === "funeralcs.github.io") {
@@ -10,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://firebasedatabase.app">
+<link rel="manifest" href="/assets/manifest.json">
 
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -37,6 +39,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   {%- capture seo_tags -%}
     {% seo title=false %}
   {%- endcapture -%}
+
+
+
+  <!-- OneSignal Web Push (sadece prod’da) -->
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" async></script>
+  <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function () {
+      OneSignal.init({
+        appId: "eec1e0dc-646d-457d-b974-b4e2c2dcbcac",
+        notifyButton: { enable: true }
+      });
+    });
+  </script>
+
 
   <!-- Setup Open Graph image -->
 

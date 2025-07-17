@@ -140,12 +140,9 @@ assets:
 pwa:
   enabled: true # The option for PWA feature (installable)
   cache:
-    enabled: true # The option for PWA offline cache
+    enabled: false # The option for PWA offline cache
     # Paths defined here will be excluded from the PWA cache.
     deny_paths:
-      - /_includes/head.html
-      - /OneSignalSDKWorker.js
-
 
 paginate: 10
 

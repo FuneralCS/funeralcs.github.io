@@ -5,6 +5,7 @@
     window.location.href = "https://funeralcs.com" + window.location.pathname + window.location.search;
   }
 </script>
+{% if page.url == "/" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -29,6 +30,7 @@
   }
 }
 </script>
+{% endif %}
 
 {% if page.layout == "page" %}
 <script type="application/ld+json">

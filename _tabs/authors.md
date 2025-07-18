@@ -13,7 +13,7 @@ order: 4
   "name": "{{ author[1].name | escape }}",
   "description": "{{ author[1].description | escape }}",
   "url": "{{ site.url }}/authors/{{ author[1].slug }}/",
-  "image": "{{ author[1].avatar | prepend: site.url }}"
+  "image": "{{ author[1].avatar | prepend: site.url }}",
   "sameAs": [
     {% assign links = "" %}
     {% if author[1].github %}{{ links | append:'"' | append:author[1].github | append:'",' }}{% endif %}

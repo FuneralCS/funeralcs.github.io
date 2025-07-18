@@ -45,7 +45,6 @@
 </script>
 {% endif %}
 
-
 {% if page.layout == "post" %}
 <script type="application/ld+json">
 {
@@ -86,6 +85,25 @@
   "inLanguage": "tr"
 }
 </script>
+
+{% if page.url contains '/authors/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description | default: site.description }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  {% assign this_author = page.url | split: '/' | last | split: '.' | first %}
+  {% assign author = site.data.authors[this_author] %}
+  "image": "{{ site.url }}{{ author.avatar }}",
+  "sameAs": [
+    {% if author.github %}"{{ author.github }}"{% endif %}{% if author.twitter %}, "{{ author.twitter }}"{% endif %}{% if author.linkedin %}, "{{ author.linkedin }}"{% endif %}{% if author.instagram %}"{{ author.instagram }}"{% endif %}
+  ]
+}
+</script>
+{% endif %}
+
 {% endif %}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

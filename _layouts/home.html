@@ -123,6 +123,17 @@ refactor: true
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Ana Sayfa",
+  "url": "{{ site.url }}/",
+  "inLanguage": "tr"
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "{{ site.title }}",
   "url": "{{ site.url }}",
@@ -131,20 +142,8 @@ refactor: true
     "name": "{{ site.title }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ site.url }}/assets/img/logo.webp",
-      "width": 512,
-      "height": 512
+      "url": "{{ site.url }}/assets/img/logo.webp"
     }
   }
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Ana Sayfa",
-  "url": "{{ site.url }}/",
-  "inLanguage": "tr"
-}
-</script>
-

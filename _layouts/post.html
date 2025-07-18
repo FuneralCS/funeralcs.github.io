@@ -156,3 +156,74 @@ script_includes:
     </div>
   </div>
 </article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "headline": "{{ page.title | escape }}",
+  "description": "{{ page.description | escape }}",
+  {% if page.image %}
+  "image": "{{ site.url }}{{ page.image.path }}",
+  {% endif %}
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.data.authors[page.author].name | escape }}",
+    "url": "{{ site.url }}/authors/{{ site.data.authors[page.author].slug }}/",
+    "sameAs": [
+      {% assign links = "" %}
+      {% if site.data.authors[page.author].github %}{% assign links = links | append: '"' | append: site.data.authors[page.author].github | append: '",' %}{% endif %}
+      {% if site.data.authors[page.author].twitter %}{% assign links = links | append: '"' | append: site.data.authors[page.author].twitter | append: '",' %}{% endif %}
+      {% if site.data.authors[page.author].linkedin %}{% assign links = links | append: '"' | append: site.data.authors[page.author].linkedin | append: '",' %}{% endif %}
+      {{ links | strip | replace_last: ',', '' }}
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/assets/img/logo.webp",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "articleSection": "{{ page.categories | join: ', ' }}",
+  "keywords": "{{ page.tags | join: ', ' }}",
+  "isAccessibleForFree": "http://schema.org/True",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "inLanguage": "tr"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Ana Sayfa",
+      "item": "{{ site.url }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Yazılar",
+      "item": "{{ site.url }}/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ page.title | escape }}",
+      "item": "{{ site.url }}{{ page.url }}"
+    }
+  ]
+}
+</script>

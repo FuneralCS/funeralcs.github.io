@@ -18,3 +18,17 @@ layout: default
     {{ content }}
   {% endif %}
 </article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ page.title | escape }}",
+  "url": "{{ site.url }}{{ page.url | prepend: '/' }}",
+  {% if page.date %}
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  {% endif %}
+  "inLanguage": "tr"
+}
+</script>
+

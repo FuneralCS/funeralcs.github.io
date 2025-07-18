@@ -15,13 +15,14 @@ order: 4
   "url": "{{ site.url }}/authors/{{ author[1].slug }}/",
   "image": "{{ author[1].avatar | prepend: site.url }}",
   "sameAs": [
-    {% assign links = "" %}
-    {% if author[1].github %}{{ links | append:'"' | append:author[1].github | append:'",' }}{% endif %}
-    {% if author[1].twitter %}{{ links | append:'"' | append:author[1].twitter | append:'",' }}{% endif %}
-    {% if author[1].linkedin %}{{ links | append:'"' | append:author[1].linkedin | append:'",' }}{% endif %}
-    {% if author[1].instagram %}{{ links | append:'"' | append:author[1].instagram | append:'",' }}{% endif %}
-    {{ links | strip_trailing_commas }}
+  {% assign links = "" %}
+  {% if author[1].github %}{% assign links = links | append: '"' | append: author[1].github | append: '",' %}{% endif %}
+  {% if author[1].twitter %}{% assign links = links | append: '"' | append: author[1].twitter | append: '",' %}{% endif %}
+  {% if author[1].linkedin %}{% assign links = links | append: '"' | append: author[1].linkedin | append: '",' %}{% endif %}
+  {% if author[1].instagram %}{% assign links = links | append: '"' | append: author[1].instagram | append: '",' %}{% endif %}
+  {{ links | strip_newlines | strip | replace_last: ',', '' }}
   ]
+
 }
 </script>
 

@@ -32,15 +32,35 @@
 </script>
 {% endif %}
 
-{% if page.layout == "page" %}
+{% if page.url contains '/authors/' %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "{{ page.title | escape }}",
-  "url": "{{ site.url }}{{ page.url }}",
-  "datePublished": "{{ page.date | default: site.time | date_to_xmlschema }}",
-  "inLanguage": "tr"
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "{{ page.title }}",
+      "url": "{{ site.url }}{{ page.url }}",
+      "datePublished": "{{ page.date | default: site.time | date_to_xmlschema }}",
+      "inLanguage": "tr"
+    },
+    {
+      "@type": "Person",
+      "name": "{{ page.title }}",
+      "description": "{{ page.description | default: site.description }}",
+      "url": "{{ site.url }}{{ page.url }}",
+      {% assign this_author = page.url | split: '/' | last | split: '.' | first %}
+      {% assign author = site.data.authors[this_author] %}
+      "image": "{{ site.url }}{{ author.avatar }}",
+      "sameAs": [
+        {% assign sameas = "" %}
+        {% if author.github %}"{{ author.github }}"{% assign sameas = true %}{% endif %}
+        {% if author.twitter %}{% if sameas %}, {% endif %}"{{ author.twitter }}"{% assign sameas = true %}{% endif %}
+        {% if author.linkedin %}{% if sameas %}, {% endif %}"{{ author.linkedin }}"{% assign sameas = true %}{% endif %}
+        {% if author.instagram %}{% if sameas %}, {% endif %}"{{ author.instagram }}"{% endif %}
+      ]
+    }
+  ]
 }
 </script>
 {% endif %}
@@ -86,24 +106,17 @@
 }
 </script>
 
-{% if page.url contains '/authors/' %}
+{% if page.layout == "page" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "{{ page.title }}",
-  "description": "{{ page.description | default: site.description }}",
+  "@type": "WebPage",
+  "name": "{{ page.title | escape }}",
   "url": "{{ site.url }}{{ page.url }}",
-  {% assign this_author = page.url | split: '/' | last | split: '.' | first %}
-  {% assign author = site.data.authors[this_author] %}
-  "image": "{{ site.url }}{{ author.avatar }}",
-  "sameAs": [
-    {% if author.github %}"{{ author.github }}"{% endif %}{% if author.twitter %}, "{{ author.twitter }}"{% endif %}{% if author.linkedin %}, "{{ author.linkedin }}"{% endif %}{% if author.instagram %}"{{ author.instagram }}"{% endif %}
-  ]
+  "datePublished": "{{ page.date | default: site.time | date_to_xmlschema }}",
+  "inLanguage": "tr"
 }
 </script>
-{% endif %}
-
 {% endif %}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

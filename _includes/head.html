@@ -5,7 +5,8 @@
     window.location.href = "https://funeralcs.com" + window.location.pathname + window.location.search;
   }
 </script>
-{% if page.url == "/" %}
+{% assign current_url = page.url | default: page.permalink | default: "/" %}
+{% if current_url == "/" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

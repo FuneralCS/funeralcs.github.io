@@ -15,13 +15,16 @@ order: 4
   "url": "{{ site.url }}/authors/{{ author[1].slug }}/",
   "image": "{{ author[1].avatar | prepend: site.url }}",
   "sameAs": [
-  {% assign links = "" %}
-  {% if author[1].github %}{% assign links = links | append: '"' | append: author[1].github | append: '",' %}{% endif %}
-  {% if author[1].twitter %}{% assign links = links | append: '"' | append: author[1].twitter | append: '",' %}{% endif %}
-  {% if author[1].linkedin %}{% assign links = links | append: '"' | append: author[1].linkedin | append: '",' %}{% endif %}
-  {% if author[1].instagram %}{% assign links = links | append: '"' | append: author[1].instagram | append: '",' %}{% endif %}
-  {{ links | strip_newlines | strip | replace_last: ',', '' }}
-  ]
+  {% assign sameas = "" %}
+  {% if author[1].github %}{% assign sameas = sameas | append: author[1].github | append: '||' %}{% endif %}
+  {% if author[1].twitter %}{% assign sameas = sameas | append: author[1].twitter | append: '||' %}{% endif %}
+  {% if author[1].linkedin %}{% assign sameas = sameas | append: author[1].linkedin | append: '||' %}{% endif %}
+  {% if author[1].instagram %}{% assign sameas = sameas | append: author[1].instagram | append: '||' %}{% endif %}
+  {% assign links_array = sameas | split: '||' | compact %}
+  {% for link in links_array %}
+    "{{ link }}"{% unless forloop.last %}, {% endunless %}
+  {% endfor %}
+]
 
 }
 </script>

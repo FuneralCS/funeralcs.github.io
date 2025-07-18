@@ -10,16 +10,21 @@ order: 4
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "{{ author[1].name }}",
-  "description": "{{ author[1].description }}",
+  "name": "{{ author[1].name | escape }}",
+  "description": "{{ author[1].description | escape }}",
   "url": "{{ site.url }}/authors/{{ author[1].slug }}/",
+  "image": "{{ author[1].avatar | prepend: site.url }}"
   "sameAs": [
-    {% if author[1].github %}"{{ author[1].github }}",{% endif %}
-    {% if author[1].twitter %}"{{ author[1].twitter }}",{% endif %}
-    {% if author[1].linkedin %}"{{ author[1].linkedin }}"{% endif %}
+    {% assign links = "" %}
+    {% if author[1].github %}{{ links | append:'"' | append:author[1].github | append:'",' }}{% endif %}
+    {% if author[1].twitter %}{{ links | append:'"' | append:author[1].twitter | append:'",' }}{% endif %}
+    {% if author[1].linkedin %}{{ links | append:'"' | append:author[1].linkedin | append:'",' }}{% endif %}
+    {% if author[1].instagram %}{{ links | append:'"' | append:author[1].instagram | append:'",' }}{% endif %}
+    {{ links | strip_trailing_commas }}
   ]
 }
 </script>
+
 {% endfor %}
 
 <style>

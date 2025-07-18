@@ -1,21 +1,34 @@
 <head>
+<script>
+  const host = window.location.hostname;
+  if (host === "www.funeralcs.com" || host === "funeralcs.github.io") {
+    window.location.href = "https://funeralcs.com" + window.location.pathname + window.location.search;
+  }
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "{{ site.title }}",
   "url": "{{ site.url }}",
+  "inLanguage": "tr",
   "publisher": {
     "@type": "Organization",
     "name": "{{ site.title }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ site.url }}/assets/img/logo.webp"
+      "url": "{{ site.url }}/assets/img/logo.webp",
+      "width": 512,
+      "height": 512
     }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ site.url }}/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
   }
 }
 </script>
-
 
 {% if page.layout == "page" %}
 <script type="application/ld+json">
@@ -23,10 +36,13 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "{{ page.title | escape }}",
-  "url": "{{ site.url }}{{ page.url }}"
+  "url": "{{ site.url }}{{ page.url }}",
+  "datePublished": "{{ page.date | default: site.time | date_to_xmlschema }}",
+  "inLanguage": "tr"
 }
 </script>
 {% endif %}
+
 
 {% if page.layout == "post" %}
 <script type="application/ld+json">
@@ -39,31 +55,36 @@
   },
   "headline": "{{ page.title | escape }}",
   "description": "{{ page.description | escape }}",
+  {% if page.image %}
   "image": "{{ site.url }}{{ page.image.path }}",
+  {% endif %}
   "author": {
     "@type": "Person",
-    "name": "{{ site.data.authors[page.author].name }}"
+    "name": "{{ site.data.authors[page.author].name }}",
+    "url": "{{ site.url }}/authors/{{ site.data.authors[page.author].slug }}/",
+    "sameAs": [
+      {% if site.data.authors[page.author].github %}"{{ site.data.authors[page.author].github }}"{% endif %}{% if site.data.authors[page.author].twitter %}, "{{ site.data.authors[page.author].twitter }}"{% endif %}{% if site.data.authors[page.author].linkedin %}, "{{ site.data.authors[page.author].linkedin }}"{% endif %}
+    ]
   },
   "publisher": {
     "@type": "Organization",
     "name": "{{ site.title }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ site.url }}/assets/img/logo.webp"
+      "url": "{{ site.url }}/assets/img/logo.webp",
+      "width": 512,
+      "height": 512
     }
   },
+  "articleSection": "{{ page.categories | join: ', ' }}",
+  "keywords": "{{ page.tags | join: ', ' }}",
+  "isAccessibleForFree": "True",
   "datePublished": "{{ page.date | date_to_xmlschema }}",
-  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}"
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "inLanguage": "tr"
 }
 </script>
 {% endif %}
-
-<script>
-  const host = window.location.hostname;
-  if (host === "www.funeralcs.com" || host === "funeralcs.github.io") {
-    window.location.href = "https://funeralcs.com" + window.location.pathname + window.location.search;
-  }
-</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

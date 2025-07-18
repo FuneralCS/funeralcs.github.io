@@ -83,7 +83,7 @@
   "author": {
     "@type": "Person",
     "name": "{{ site.data.authors[page.author].name }}",
-    "url": "{{ site.url }}/authors/{{ site.data.authors[page.author].slug }}/",
+    "url": "{{ site.url }}/authors/{{ site.authors[page.author].slug }}/",
     "sameAs": [
       {% if site.data.authors[page.author].github %}"{{ site.data.authors[page.author].github }}"{% endif %}{% if site.data.authors[page.author].twitter %}, "{{ site.data.authors[page.author].twitter }}"{% endif %}{% if site.data.authors[page.author].linkedin %}, "{{ site.data.authors[page.author].linkedin }}"{% endif %}
     ]

@@ -172,6 +172,14 @@ collections:
     permalink: /authors/:name/
 
 defaults:
+
+  - scope:
+      path: page
+    values:
+      layout: page
+      robots: index
+      sitemap: true
+
   - scope:
       path: "" 
       type: posts
@@ -214,12 +222,6 @@ defaults:
 
   - scope:
       path: "authors"
-    values:
-      robots: index
-      sitemap: true
-
-  - scope:
-      path: "privacy-policy.md"
     values:
       robots: index
       sitemap: true

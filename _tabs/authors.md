@@ -5,6 +5,23 @@ permalink: /authors/
 icon: fas fa-user-friends
 order: 4
 ---
+{% for author in site.data.authors %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ author[1].name }}",
+  "description": "{{ author[1].description }}",
+  "url": "{{ site.url }}/authors/{{ author[1].slug }}/",
+  "sameAs": [
+    {% if author[1].github %}"{{ author[1].github }}",{% endif %}
+    {% if author[1].twitter %}"{{ author[1].twitter }}",{% endif %}
+    {% if author[1].linkedin %}"{{ author[1].linkedin }}"{% endif %}
+  ]
+}
+</script>
+{% endfor %}
+
 <style>
   /* ------------------------------
      1) GENEL / GRID YAPISI

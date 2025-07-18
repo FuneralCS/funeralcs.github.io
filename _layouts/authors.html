@@ -1,0 +1,76 @@
+---
+layout: default
+---
+
+{% include lang.html %}
+
+<article class="px-1">
+  {% if page.layout == 'page' or page.collection == 'tabs' %}
+    {% assign tab_key = page.title | downcase %}
+    {% assign title = site.data.locales[lang].tabs[tab_key] | default: page.title %}
+    <h1 class="dynamic-title">
+      {{ title }}
+    </h1>
+    <div class="content">
+      {{ content }}
+    </div>
+  {% else %}
+    {{ content }}
+  {% endif %}
+</article>
+
+{% assign sameas = "" %}
+{% if author.github %}{% assign sameas = sameas | append: author.github | append: '||' %}{% endif %}
+{% if author.twitter %}{% assign sameas = sameas | append: author.twitter | append: '||' %}{% endif %}
+{% if author.linkedin %}{% assign sameas = sameas | append: author.linkedin | append: '||' %}{% endif %}
+{% if author.instagram %}{% assign sameas = sameas | append: author.instagram | append: '||' %}{% endif %}
+{% assign links_array = sameas | split: '||' | compact %}
+{% assign sameas_output = "" %}
+{% for link in links_array %}
+  {% assign sameas_output = sameas_output | append: '"' | append: link | append: '"' %}
+  {% unless forloop.last %}{% assign sameas_output = sameas_output | append: ", " %}{% endunless %}
+{% endfor %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ page.title | escape }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "inLanguage": "tr",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "{{ author.name | escape }}",
+    "description": "{{ author.description | escape }}",
+    "url": "{{ site.url }}/authors/{{ slug }}/",
+    "image": "{{ site.url }}{{ author.avatar }}",
+    "sameAs": [{{ sameas_output }}]
+  }
+}
+</script>
+
+{% if page.url == "/authors/" %}
+  {% assign author_index = 1 %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Yazarlar",
+    "itemListElement": [
+      {% for key in site.data.authors %}
+        {
+          "@type": "ListItem",
+          "position": {{ author_index }},
+          "item": {
+            "@type": "Person",
+            "name": "{{ key[1].name | escape }}",
+            "url": "{{ site.url }}/authors/{{ key[1].slug }}/"
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% assign author_index = author_index | plus: 1 %}
+      {% endfor %}
+    ]
+  }
+  </script>
+{% endif %}

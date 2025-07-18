@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: authors
 title: Tunahan Yardımcı
 permalink: /authors/tunahan/
 ---

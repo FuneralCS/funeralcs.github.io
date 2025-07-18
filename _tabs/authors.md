@@ -1,35 +1,10 @@
 ---
-layout: page
+layout: authors
 title: Yazarlar
 permalink: /authors/
 icon: fas fa-user-friends
 order: 4
 ---
-{% for author in site.data.authors %}
-  {% assign sameas = "" %}
-  {% if author[1].github %}{% assign sameas = sameas | append: author[1].github | append: '||' %}{% endif %}
-  {% if author[1].twitter %}{% assign sameas = sameas | append: author[1].twitter | append: '||' %}{% endif %}
-  {% if author[1].linkedin %}{% assign sameas = sameas | append: author[1].linkedin | append: '||' %}{% endif %}
-  {% if author[1].instagram %}{% assign sameas = sameas | append: author[1].instagram | append: '||' %}{% endif %}
-  {% assign links_array = sameas | split: '||' | compact %}
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "{{ author[1].name | escape }}",
-  "description": "{{ author[1].description | escape }}",
-  "url": "{{ site.url }}/authors/{{ author[1].slug }}/",
-  "image": "{{ site.url }}{{ author[1].avatar }}",
-  "sameAs": [
-    {% for link in links_array %}
-      "{{ link }}"{% unless forloop.last %}, {% endunless %}
-    {% endfor %}
-  ]
-}
-</script>
-{% endfor %}
-
 
 <style>
   /* ------------------------------

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: authors
 title: Kerim Özek
 permalink: /authors/kerim/
 ---

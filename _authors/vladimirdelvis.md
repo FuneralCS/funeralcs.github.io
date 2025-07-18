@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: authors
 title: Sezgin Tunay Sönmezocak
 permalink: /authors/vladimirdelvis/
 ---

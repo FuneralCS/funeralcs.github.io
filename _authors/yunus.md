@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: authors
 title: Yunus Emre Urhan
 permalink: /authors/yunus/
 ---

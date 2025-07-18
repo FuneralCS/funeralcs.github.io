@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: authors
 title: Yusuf Said
 permalink: /authors/yusuf-said/
 ---

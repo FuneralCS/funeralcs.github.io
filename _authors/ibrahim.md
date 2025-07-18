@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: authors
 title: İbrahim Buğrahan Bilici
 permalink: /authors/ibrahim/
 ---

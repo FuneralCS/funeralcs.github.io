@@ -5,8 +5,7 @@
     window.location.href = "https://funeralcs.com" + window.location.pathname + window.location.search;
   }
 </script>
-{% assign current_url = page.url | default: page.permalink | default: "/" %}
-{% if current_url == "/" %}
+{% if page.layout == "home" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -33,7 +32,7 @@
 </script>
 {% endif %}
 
-{% if page.url contains '/authors/' %}
+{% if page.layout == "authors" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

@@ -157,6 +157,10 @@ script_includes:
   </div>
 </article>
 
+{% assign links = "" | split: "," %}
+{% if site.data.authors[page.author].github %}{% assign links = links | push: site.data.authors[page.author].github %}{% endif %}
+{% if site.data.authors[page.author].twitter %}{% assign links = links | push: site.data.authors[page.author].twitter %}{% endif %}
+{% if site.data.authors[page.author].linkedin %}{% assign links = links | push: site.data.authors[page.author].linkedin %}{% endif %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -175,11 +179,9 @@ script_includes:
     "name": "{{ site.data.authors[page.author].name | escape }}",
     "url": "{{ site.url }}/authors/{{ site.data.authors[page.author].slug }}/",
     "sameAs": [
-      {% assign links = "" %}
-      {% if site.data.authors[page.author].github %}{% assign links = links | append: '"' | append: site.data.authors[page.author].github | append: '",' %}{% endif %}
-      {% if site.data.authors[page.author].twitter %}{% assign links = links | append: '"' | append: site.data.authors[page.author].twitter | append: '",' %}{% endif %}
-      {% if site.data.authors[page.author].linkedin %}{% assign links = links | append: '"' | append: site.data.authors[page.author].linkedin | append: '",' %}{% endif %}
-      {{ links | strip | replace_last: ',', '' }}
+      {% for link in links %}
+        "{{ link }}"{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
     ]
   },
   "publisher": {

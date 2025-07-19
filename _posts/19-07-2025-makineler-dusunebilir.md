@@ -1,6 +1,6 @@
 ---
 title: "Makineler Düşünebilir mi?"
-date: 2025-07-13 11:00:00 +0300
+date: 2025-07-19 11:00:00 +0300
 categories: [yapay zeka,makine-ogrenmesi, felsefe,matematik]
 tags: [llm, yapay zeka, llm, makine öğrenmesi, cahit arf]
 authors: [yunus, yusuf-said]

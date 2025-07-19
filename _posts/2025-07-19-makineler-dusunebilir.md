@@ -2,11 +2,11 @@
 title: "Makineler Düşünebilir mi?"
 date: 2025-07-19 11:00:00 +0300
 categories: [yapay zeka,makine-ogrenmesi, felsefe,matematik]
-tags: [llm, yapay zeka, llm, makine öğrenmesi, cahit arf]
+tags: [matematik , yapay zeka, llm, makine öğrenmesi, cahit arf]
 authors: [yunus, yusuf-said]
 image:
   path: /assets/img/cahit_arf/arf.webp
-description: "Cahit Arf'ın 1959 yılında yayınladığı makalenin günümüzce nasıl bir öneme sahip oılduğu ve felsefi incelemesi."
+description: "Cahit Arf'ın 1959 yılında yayınladığı makalenin günümüzce nasıl bir öneme sahip olduğu ve felsefi incelemesi."
 toc: true
 math: false
 mermaid: false
@@ -88,7 +88,7 @@ Cahit Arf, 1958/59'da Erzurum'da verdiği "Makine Düşünebilir mi ve Nasıl D�
 Yukarıdaki tablo, 1950’lerden itibaren yapay zekâ tarihinin dönüm noktalarını ve bu bağlamda Cahit Arf’ın 1958–59’daki konferansıyla bu akıma nasıl entegre olduğunu göstermektedir.
 
 Makalenin bu kısmında Cahit Arf'ın makinelerin düşünme kısmını nasıl ele aldığı ve ne tür bir düşünme zinciri içinde olduğu ele alacağız. Birtakım felsefi ve ortak olayları beraber ele alacağız.
-
+# "Makineler Düşünebilir mi?"  Makalesine Felsefi bakış
 ## 5.  Cahit Arf ve Alan Turing'in Bakış Açısı
 Cahit Arf makalesinde makinelerin bir düşünce mekanizmasına sahip olup olayamacağı hakkında bir takım fikirler öne sürmüş ve çağına ve o zamanın Türkiye'sinde konuşulmasına şaşırılacak konuyu ele almıştır. Alan Turing ve benzer bilim insanlarının aksine mekanizma olarak değil de düşünce ve bilinç yapısına göre ele almıştır. Alan Turing genellikle yapay zekayı insan kadar iş yapabilecek veya insanların bilişsel gücüyle elde ettiği ve davranışsal olarak ''insana yakınlaşabilir mi?'' diye sormuştur. Cahit Arf ise makinelerin insanlar belirsiz durumlarda belirli bir karar yapısına sahip olup olamayacağı, sanatsal(estetik) olarak bir fikir belirtip belirtemeyeceği üzerine sorular yöneltmiştir. Arf ve Turing ortak olarak hesaplama mekanizmasına sahip olduğu ve insanlar göre daha hızlı işlem yapma gücüne sahip olduğunu belirtmiştir.
 

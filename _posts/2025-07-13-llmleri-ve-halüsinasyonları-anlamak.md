@@ -18,7 +18,7 @@ pin: false
 
 Bölümü dinlemek için 👇️👇️👇️👇
 
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/0KorJDtNsoh5wSDy5FAYQ9?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/0KorJDtNsoh5wSDy5FAYQ9?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 Yapay zeka modelleri hayatımızın her alanına girerken, özellikle Büyük Dil Modelleri (LLM'ler) ile etkileşimimiz giderek artıyor. Ancak bu devrimsel teknolojinin ardında, zaman zaman karşımıza çıkan ve kullanıcı deneyimini doğrudan etkileyen önemli bir sorun var: Halüsinasyonlar. Bu yazıda, LLM'lerin derinliklerine inip onları anlamaya çalışacak ve ardından bu "uydurma" davranışın nedenlerini ve nasıl azaltılabileceğini keşfedeceğiz
 

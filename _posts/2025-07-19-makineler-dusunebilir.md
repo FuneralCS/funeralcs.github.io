@@ -14,7 +14,8 @@ comments: true
 pin: false
 ---
 Yazımızın ilk kısmında Türk matematikçi ve bilim insanı olan Cahit Arf'ın matematik ve entelektüel derinliğini, ayrıca yapay zeka ve makine öğrenimi konusunda düşüncelerini ve katkılarını inceleyeceğiz.
-
+Bu makaleyi podcast olarak da dinleyebilirsiniz.
+<iframe src="https://creators.spotify.com/pod/profile/funeralcs/embed/episodes/Makineler-Dnebilir-mi--Cahit-Arf-anlamak-e35ojs4/a-ac2d8et" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
 ## 1. Matematiksel ve Entelektüel Derinlik
 
 ### 1.1 Matematiksel Çalışmaları

@@ -147,8 +147,6 @@ Bundan sebeple; Cahit Arf’ın yaklaşımı, teknolojik gelişmelere rağmen g�
 
 # Kaynakça
 
-## 📚 Kaynakça
-
 1. [TRTA Dergisi - Makine Düşünebilir mi? (Cahit Arf, 1958-59)](https://dergipark.org.tr/tr/pub/trta/issue/65181/962940)
 2. [Vikipedi - Cahit Arf](https://tr.wikipedia.org/wiki/Cahit_Arf)
 3. [Futurizm.org - Cahit Arf: Makine Düşünebilir mi ve Nasıl Düşünebilir?](https://futurizm.org/cahit-arf-makine-dusunebilir-mi-ve-nasil-dusunebilir-1958-59/)

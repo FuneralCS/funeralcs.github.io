@@ -58,9 +58,9 @@ Cahit Arf, makineleri yalnızca hesap yapan araçlar olarak değil; dil kullanab
 
 ---
 
-## 3. Tarihsel Bağlam: Yapay Zekanın Küresel Doğuşu ve Arf’ın Paralel Katkısı
+## Tarihsel Bağlam: Yapay Zekanın Küresel Doğuşu ve Arf’ın Paralel Katkısı
 
-### 3.1 - Yapay Zekanın Küresel Doğuşu
+### 3. Yapay Zekanın Küresel Doğuşu
 
 Yapay zekanın fark edilebilir bir çalışma alanı olarak doğuşu 1950'lerin başında gerçekleşmiştir. Bu döneme İngiliz matematikçi ve mantıkçı Alan Turing'in çalışmaları damgasını vurmuştur.
 

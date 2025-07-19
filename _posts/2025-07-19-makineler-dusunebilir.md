@@ -65,10 +65,8 @@ Cahit Arf, makineleri yalnızca hesap yapan araçlar olarak değil; dil kullanab
 Yapay zekanın fark edilebilir bir çalışma alanı olarak doğuşu 1950'lerin başında gerçekleşmiştir. Bu döneme İngiliz matematikçi ve mantıkçı Alan Turing'in çalışmaları damgasını vurmuştur.
 
 - **1950:** Alan Turing, 1950 yılında, **Turing Testi** olarak bilinen makine zekâsı kavramını tanıtmıştır. Test, bir makinenin insanınkine eşdeğer veya ondan ayırt edilemeyen akıllı davranış sergileme yeteneğini değerlendirmek için tasarlanmıştır. Turing'in fikirleri, yapay zekânın bilimsel bir disiplin olarak gelişmesine zemin hazırlamıştır.
-</figure>
 <img src="https://coderspace-storage-prod.s3.eu-central-1.amazonaws.com/media/blog/post/content_images/9703c6d9-5f12-4442-8c02-756f53495cf4.webp" alt="makaleden bir fotograf." width="600">
 <figcaption>Görsel 1</figcaption>
-</figure>
 
 - **1952:** Bilgisayar bilimcisi Arthur Samuel, dama oynayan bir bilgisayar programı geliştirmiştir; bağımsız olarak oyun oynamayı öğrenen ilk program olmuştur.
 
@@ -97,10 +95,8 @@ Makalenin bu kısmında Cahit Arf'ın makinelerin düşünme kısmını nasıl e
 Cahit Arf makalesinde makinelerin bir düşünce mekanizmasına sahip olup olayamacağı hakkında bir takım fikirler öne sürmüş ve çağına ve o zamanın Türkiye'sinde konuşulmasına şaşırılacak konuyu ele almıştır. Alan Turing ve benzer bilim insanlarının aksine mekanizma olarak değil de düşünce ve bilinç yapısına göre ele almıştır. Alan Turing genellikle yapay zekayı insan kadar iş yapabilecek veya insanların bilişsel gücüyle elde ettiği ve davranışsal olarak ''insana yakınlaşabilir mi?'' diye sormuştur. Cahit Arf ise makinelerin insanlar belirsiz durumlarda belirli bir karar yapısına sahip olup olamayacağı, sanatsal(estetik) olarak bir fikir belirtip belirtemeyeceği üzerine sorular yöneltmiştir. Arf ve Turing ortak olarak hesaplama mekanizmasına sahip olduğu ve insanlar göre daha hızlı işlem yapma gücüne sahip olduğunu belirtmiştir.
 
 Ayriyeten Cahit Arf, makinelerin düşünce yapısına sahip olabilmesi için insan zihnine benzer bir yapıda olması gerektiği ve şu şekil bir şemaya halinde olmasını belirtmiştir.(sf. 99-103):
-</figure>
 <img src="assets/img/cahit_arf/sekil1.webp" alt="makaleden bir fotograf." width="600">
 <figcaption>Görsel 2</figcaption>
-</figure>
 
 ### 5.1 Cahit Arf ve Alan Turing'in Makine Zekası Üzerine Görüşlerinin Karşılaştırmalı Analizi
 

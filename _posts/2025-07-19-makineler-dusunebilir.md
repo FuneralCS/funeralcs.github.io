@@ -23,11 +23,11 @@ Cahit Arf, cebir konusundaki çalışmalarıyla dünyaca ün kazanmıştır. Sen
 
 Cahit Arf, matematiği bir meslek dalı olarak değil, bir yaşam tarzı olarak görmüştür. Öğrencilerine sürekli: *"Matematiği ezberlemeyin, kendiniz yapın ve anlayın."* demiştir.
 
-### *1.2 Entelektüel Derinlik*
+### 1.2 Entelektüel Derinlik
 
 Arf'ın entelektüel merakı, saf matematiğin ötesine geçerek zekânın doğası ve makinelerin potansiyeli gibi daha geniş bilimsel ve felsefi soruları kapsamıştır. Arf'ın öncelikle soyut matematik alanındaki önemli keşifleriyle tanınmasına rağmen, 1958-1959 yıllarında *"Makine Düşünebilir mi?"* sorusuyla yapay zeka gibi o dönemde yeni gelişmekte olan ve gelecekte disiplinlerarası bir alan haline gelecek bir konuya eğilmesi dikkat çekicidir. Bu durum, Arf'ın sadece bir uzman değil, aynı zamanda yükselen teknolojilerin ve felsefi soruların geniş kapsamlı etkilerini kavrayan bir polimat olduğunu göstermektedir. Onun bu interdisipliner yaklaşımı, yapay zeka gibi karmaşık olguları anlamak için matematik, felsefe ve mühendislik arasındaki köprülerin ne kadar önemli olduğunu ortaya koymaktadır.
 
-### 1.3 *“Makine Düşünebilir mi ve Nasıl Düşünebilir?” (1959) Çalışmasının Önemi ve Bağlamı*
+### 1.3 “Makine Düşünebilir mi ve Nasıl Düşünebilir?” (1959) Çalışmasının Önemi ve Bağlamı
 
 Bu çalışma, **Cahit Arf’ın 1959 yılında Erzurum’da verdiği “Makine Düşünebilir mi ve Nasıl Düşünebilir?”** başlıklı konferans metnini felsefi bir perspektifle incelemektedir. Arf, tarihsel bağlamda makinelerin düşünme kapasitesi tartışmasının **ilk kez Alan M. Turing tarafından 1950’de açıkça dile getirildiğini**, ancak bu sorunun Türkiye'de ve halka açık olarak **Arf tarafından 1958–59’da** ortaya konduğunu belirtmiştir.
 

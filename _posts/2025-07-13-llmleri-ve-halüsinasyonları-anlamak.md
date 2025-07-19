@@ -16,6 +16,10 @@ pin: false
 
 ## LLM'ler
 
+Bölümü dinlemek için 👇️👇️👇️👇
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/0KorJDtNsoh5wSDy5FAYQ9?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
 Yapay zeka modelleri hayatımızın her alanına girerken, özellikle Büyük Dil Modelleri (LLM'ler) ile etkileşimimiz giderek artıyor. Ancak bu devrimsel teknolojinin ardında, zaman zaman karşımıza çıkan ve kullanıcı deneyimini doğrudan etkileyen önemli bir sorun var: Halüsinasyonlar. Bu yazıda, LLM'lerin derinliklerine inip onları anlamaya çalışacak ve ardından bu "uydurma" davranışın nedenlerini ve nasıl azaltılabileceğini keşfedeceğiz
 
 ---
@@ -196,7 +200,12 @@ Son olarak, **çıktı üretme mekanizmalarını iyileştirmek** de halüsinasyo
 
 > "Bu büyük dil modelleri, bizlere hem bilginin sonsuzluğunu hem de yanılgının kaçınılmazlığını gösteriyor. Onlarla kurduğumuz diyalog, aslında kendi "doğruluk" arayışımızın bir yansımasıdır; geleceğin dijital dünyasında bilgelik, bu sorgulamadan doğacaktır."
 
+Kavram haritası 👇️👇️👇️
 
+<figure>
+    <img src="/assets/img/2025-07-13-llmleri-ve-halüsinasyonları-anlamak/kavram.webp" loading="lazy" alt="Yazının kavram haritası" width="100%">
+    <figcaption>Görsel: Chain-of-Thought Mimarisi [10] .</figcaption>
+</figure>
 
 # Kaynakça
 

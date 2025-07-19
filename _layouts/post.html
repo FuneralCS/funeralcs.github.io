@@ -157,63 +157,84 @@ script_includes:
   </div>
 </article>
 
-{%- assign author_ids = page.authors | default: page.author | split: ',' -%}
-{%- assign authors_struct = "" | split: "|" -%}
+{%- comment -%}
+  1) Önce yazar anahtarlarını alıyoruz:
+     - Eğer page.authors bir dizi ise (front-matter’da authors: [“yunus”,“yusuf”])
+     - Yoksa page.author string’ini virgülden bölerek diziye dönüştürüyoruz
+{%- endcomment -%}
+{%- if page.authors -%}
+  {%- assign author_keys = page.authors -%}
+{%- elsif page.author -%}
+  {%- assign author_keys = page.author | split: ',' -%}
+{%- else -%}
+  {%- assign author_keys = "" | split: "" -%}
+{%- endif -%}
 
-{%- for author_id in author_ids -%}
-  {%- assign slug = author_id | strip | slugify -%}
-  {%- assign a = site.data.authors[slug] -%}
-  {%- assign links = "" | split: "," -%}
-  {%- if a.github   %}{%- assign links = links | push: a.github   %}{%- endif -%}
-  {%- if a.twitter  %}{%- assign links = links | push: a.twitter  %}{%- endif -%}
-  {%- if a.linkedin %}{%- assign links = links | push: a.linkedin %}{%- endif -%}
+{%- comment -%}
+  2) Her yazar için JSON-LD bloğu üretip bir listeye itiyoruz
+{%- endcomment -%}
+{%- assign authors_json = "" | split: "|" -%}
+{%- for key in author_keys -%}
+  {%- assign key = key | strip -%}
+  {%- assign a   = site.data.authors[key] -%}
+  {%- if a -%}
+    {%- assign slug  = a.slug | default: key -%}
+    {%- assign links = "" | split: "," -%}
+    {%- if a.github   %}{%- assign links = links | push: a.github   %}{%- endif -%}
+    {%- if a.twitter  %}{%- assign links = links | push: a.twitter  %}{%- endif -%}
+    {%- if a.linkedin %}{%- assign links = links | push: a.linkedin %}{%- endif -%}
 
-  {%- capture author_block -%}
-    {
-      "@type": "Person",
-      "name":   "{{ a.name  | default: slug | escape }}",
-      "url":    "{{ site.url }}/authors/{{ a.slug }}/",
-      "sameAs": [
-        {%- for link in links -%}
-          "{{ link }}"{{ "," unless forloop.last }}
-        {%- endfor -%}
-      ]
-    }
-  {%- endcapture -%}
+    {%- capture block -%}
+{
+  "@type": "Person",
+  "name":   "{{ a.name  | escape }}",
+  "url":    "{{ site.url }}/authors/{{ slug }}/"{% if links.size > 0 %},
+  "sameAs": [
+    {%- for link in links -%}
+      "{{ link }}"{% unless forloop.last %}, {% endunless %}
+    {%- endfor -%}
+  ]{% endif %}
+}
+    {%- endcapture -%}
 
-  {%- assign authors_struct = authors_struct | push: author_block -%}
+    {%- assign authors_json = authors_json | push: block -%}
+  {%- endif -%}
 {%- endfor -%}
 
+{%- comment -%}
+  3) En sonunda JSON-LD script’ini basıyoruz
+{%- endcomment -%}
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ site.url }}{{ page.url }}"
+  "@context":        "https://schema.org",
+  "@type":           "BlogPosting",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"{{ site.url }}{{ page.url }}"
   },
-  "headline":       "{{ page.title       | escape }}",
-  "description":    "{{ page.description | escape }}",
+  "headline":        "{{ page.title       | escape }}",
+  "description":     "{{ page.description | escape }}"{% if page.image %},{% endif %}
   {%- if page.image -%}
-  "image":          "{{ site.url }}{{ page.image.path }}",
+  "image":           "{{ site.url }}{{ page.image.path }}",
   {%- endif -%}
   "author": [
-    {{ authors_struct | join: ", " }}
+    {{ authors_json | join: ", " }}
   ],
   "publisher": {
     "@type": "Organization",
-    "name": "{{ site.title }}",
+    "name":   "{{ site.title }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ site.url }}/assets/img/logo.webp"
+      "url":    "{{ site.url }}/assets/img/logo.webp"
     }
   },
-  "articleSection": "{{ page.categories | join: ', ' }}",
-  "keywords":       "{{ page.tags       | join: ', ' }}",
+  "articleSection":      "{{ page.categories | join: ', ' }}",
+  "keywords":            "{{ page.tags       | join: ', ' }}",
   "isAccessibleForFree": "http://schema.org/True",
-  "datePublished":  "{{ page.date            | date_to_xmlschema }}",
-  "dateModified":   "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
-  "inLanguage":     "tr"
+  "datePublished":       "{{ page.date            | date_to_xmlschema }}",
+  "dateModified":        "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "inLanguage":          "tr"
 }
 </script>
+
 

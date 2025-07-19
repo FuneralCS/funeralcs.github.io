@@ -65,6 +65,7 @@ Cahit Arf, makineleri yalnızca hesap yapan araçlar olarak değil; dil kullanab
 Yapay zekanın fark edilebilir bir çalışma alanı olarak doğuşu 1950'lerin başında gerçekleşmiştir. Bu döneme İngiliz matematikçi ve mantıkçı Alan Turing'in çalışmaları damgasını vurmuştur.
 
 - **1950:** Alan Turing, 1950 yılında, **Turing Testi** olarak bilinen makine zekâsı kavramını tanıtmıştır. Test, bir makinenin insanınkine eşdeğer veya ondan ayırt edilemeyen akıllı davranış sergileme yeteneğini değerlendirmek için tasarlanmıştır. Turing'in fikirleri, yapay zekânın bilimsel bir disiplin olarak gelişmesine zemin hazırlamıştır.
+<img src="https://coderspace-storage-prod.s3.eu-central-1.amazonaws.com/media/blog/post/content_images/9703c6d9-5f12-4442-8c02-756f53495cf4.webp" alt="makaleden bir fotograf." width="600">
 
 - **1952:** Bilgisayar bilimcisi Arthur Samuel, dama oynayan bir bilgisayar programı geliştirmiştir; bağımsız olarak oyun oynamayı öğrenen ilk program olmuştur.
 
@@ -144,16 +145,19 @@ Cahit Arf'ın ortaya attığı çoğu görüş hala geçerliliğini korusa da, b
 Bundan sebeple; Cahit Arf’ın yaklaşımı, teknolojik gelişmelere rağmen günümüzdeki yapay zekâ sistemlerinin sınırlarını sorgulamak için hâlâ geçerli bir felsefi çerçeve sunmaktadır. Özellikle bilinç, anlam üretimi ve estetik değerlendirme gibi alanlarda yapay zekânın hâlâ yetersiz kalması, Arf’ın insan bilinci ve zihninin  eşsizliğine yaptığı yönlendirmenin güncelliğini koruduğunu göstermektedir.
 
 
-# Kaynakça (oktay kaynakça :d )
+# Kaynakça
 
-https://dergipark.org.tr/tr/pub/trta/issue/65181/962940
-https://tr.wikipedia.org/wiki/Cahit_Arf
-https://futurizm.org/cahit-arf-makine-dusunebilir-mi-ve-nasil-dusunebilir-1958-59/
-https://www.academia.edu/43391857/Alan_Turing_ve_Cahit_Arfta_D%C3%BC%C5%9F%C3%BCnen_Makine_M%C3%BCmk%C3%BCn_m%C3%BCd%C3%BCr?utm_source=chatgpt.com
-https://coderspace.io/blog/yapay-zekanin-tarihi-dunden-bugune-yapay-zeka/
-https://web.archive.org/web/20101006062424/http://www.biltek.tubitak.gov.tr/bdergi/ozel/arf/bilhan.html
-https://web.archive.org/web/20200702025035/https://www.milliyet.com.tr/egitim/cahit-arf-kimdir-kisaca-hayati-eserleri-buluslari-ve-sozleri-6237005
-https://web.archive.org/web/20150503061610/https://www.tcmb.gov.tr/wps/wcm/connect/c8304f9e-1ea7-4ab2-b616-5945b265fc4d/CahitArf.pdf?MOD=AJPERES
-https://en.wikipedia.org/wiki/Chinese_room
-https://mbkaya.com/makine-dusunebilir-mi-cahit-arf/
-https://evrimagaci.org/makineler-dusunebilir-mi-alan-turingin-1950-tarihli-hesaplama-makineleri-ve-zeka-makalesinin-turkce-tam-cevirisi-17573
+## 📚 Kaynakça
+
+1. [TRTA Dergisi - Makine Düşünebilir mi? (Cahit Arf, 1958-59)](https://dergipark.org.tr/tr/pub/trta/issue/65181/962940)
+2. [Vikipedi - Cahit Arf](https://tr.wikipedia.org/wiki/Cahit_Arf)
+3. [Futurizm.org - Cahit Arf: Makine Düşünebilir mi ve Nasıl Düşünebilir?](https://futurizm.org/cahit-arf-makine-dusunebilir-mi-ve-nasil-dusunebilir-1958-59/)
+4. [Academia.edu - Alan Turing ve Cahit Arf'ta Düşünen Makine Mümkün müdür?](https://www.academia.edu/43391857/Alan_Turing_ve_Cahit_Arfta_D%C3%BC%C5%9F%C3%BCnen_Makine_M%C3%BCmk%C3%BCn_m%C3%BCd%C3%BCr?utm_source=chatgpt.com)
+5. [Coderspace Blog - Yapay Zekânın Tarihi: Dünden Bugüne Yapay Zeka](https://coderspace.io/blog/yapay-zekanin-tarihi-dunden-bugune-yapay-zeka/)
+6. [TÜBİTAK Bilim ve Teknik Özel Sayı (Wayback Machine)](https://web.archive.org/web/20101006062424/http://www.biltek.tubitak.gov.tr/bdergi/ozel/arf/bilhan.html)
+7. [Milliyet Arşiv - Cahit Arf Kimdir? (Wayback Machine)](https://web.archive.org/web/20200702025035/https://www.milliyet.com.tr/egitim/cahit-arf-kimdir-kisaca-hayati-eserleri-buluslari-ve-sozleri-6237005)
+8. [TCMB Resmi Biyografi PDF (Wayback Machine)](https://web.archive.org/web/20150503061610/https://www.tcmb.gov.tr/wps/wcm/connect/c8304f9e-1ea7-4ab2-b616-5945b265fc4d/CahitArf.pdf?MOD=AJPERES)
+9. [Wikipedia - Chinese Room (John Searle'ın Deneyi)](https://en.wikipedia.org/wiki/Chinese_room)
+10. [Mustafa Burak Kaya - Makine Düşünebilir mi? (Cahit Arf Yorumu)](https://mbkaya.com/makine-dusunebilir-mi-cahit-arf/)
+11. [Evrim Ağacı - Alan Turing’in “Makine Düşünebilir mi?” Makalesinin Türkçe Tam Çevirisi](https://evrimagaci.org/makineler-dusunebilir-mi-alan-turingin-1950-tarihli-hesaplama-makineleri-ve-zeka-makalesinin-turkce-tam-cevirisi-17573)
+

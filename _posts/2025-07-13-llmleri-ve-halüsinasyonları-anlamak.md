@@ -204,7 +204,7 @@ Kavram haritası 👇️👇️👇️
 
 <figure>
     <img src="/assets/img/2025-07-13-llmleri-ve-halüsinasyonları-anlamak/kavram.webp" loading="lazy" alt="Yazının kavram haritası" width="100%">
-    <figcaption>Görsel: Chain-of-Thought Mimarisi [10] .</figcaption>
+    <figcaption>Görsel: Yazının kavram haritası.</figcaption>
 </figure>
 
 # Kaynakça

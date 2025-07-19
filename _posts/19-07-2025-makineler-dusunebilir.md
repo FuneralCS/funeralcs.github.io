@@ -3,7 +3,7 @@ title: "Makineler Düşünebilir mi?"
 date: 2025-07-13 11:00:00 +0300
 categories: [yapay zeka,makine-ogrenmesi, felsefe,matematik]
 tags: [llm, yapay zeka, llm, makine öğrenmesi, cahit arf]
-authors: [y]
+authors: [yunus, yusuf-said]
 image:
   path: /assets/img/cahit_arf/arf.webp
 description: "Cahit Arf'ın 1959 yılında yayınladığı makalenin günümüzce nasıl bir öneme sahip oılduğu ve felsefi incelemesi."

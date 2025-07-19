@@ -1,4 +1,18 @@
-
+---
+title: "Makineler Düşünebilir mi?"
+date: 2025-07-13 11:00:00 +0300
+categories: [yapay zeka,makine-ogrenmesi, felsefe,matematik]
+tags: [llm, yapay zeka, llm, makine öğrenmesi, cahit arf]
+authors: [y]
+image:
+  path: /assets/img/cahit_arf/arf.webp
+description: "Cahit Arf'ın 1959 yılında yayınladığı makalenin günümüzce nasıl bir öneme sahip oılduğu ve felsefi incelemesi."
+toc: true
+math: false
+mermaid: false
+comments: true
+pin: false
+---
 Yazımızın ilk kısmında Türk matematikçi ve bilim insanı olan Cahit Arf'ın matematik ve entelektüel derinliğini, ayrıca yapay zeka ve makine öğrenimi konusunda düşüncelerini ve katkılarını inceleyeceğiz.
 
 # 1. Matematiksel ve Entelektüel Derinlik
@@ -80,8 +94,7 @@ Cahit Arf makalesinde makinelerin bir düşünce mekanizmasına sahip olup olaya
 
 Ayriyeten Cahit Arf, makinelerin düşünce yapısına sahip olabilmesi için insan zihnine benzer bir yapıda olması gerektiği ve şu şekil bir şemaya halinde olmasını belirtmiştir.(sf. 99-103):
 
-![[sekil1.png]]
-
+<img src="assets/img/cahit_arf/sekil1.webp" alt="makaleden bir fotograf." width="600">
 
 # 5.1 Cahit Arf ve Alan Turing'in Makine Zekası Üzerine Görüşlerinin Karşılaştırmalı Analizi
 

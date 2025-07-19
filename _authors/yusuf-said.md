@@ -59,7 +59,7 @@ permalink: /authors/yusuf-said/
 <h3 style="margin-top: 2rem;">Yazıları</h3>
 <ul>
   {% for post in site.posts %}
-    {% if post.author == "yusuf-said" %}
+  {% if post.authors contains "yusuf-said" or post.author == "yusuf-said" %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}

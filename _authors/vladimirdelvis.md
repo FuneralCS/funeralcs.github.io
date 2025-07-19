@@ -57,7 +57,7 @@ permalink: /authors/vladimirdelvis/
 <h3 style="margin-top: 2rem;">Yazıları</h3>
 <ul>
   {% for post in site.posts %}
-  {% if post.author == "vladimirdelvis" %}
+  {% if post.authors contains "vladimirdelvis" or post.author == "vladimirdelvis" %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}

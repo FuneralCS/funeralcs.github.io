@@ -58,7 +58,7 @@ permalink: /authors/yunus/
 <h3 style="margin-top: 2rem;">Yazıları</h3>
 <ul>
   {% for post in site.posts %}
-    {% if post.author == "yunus" %}
+  {% if post.authors contains "yunus" or post.author == "yunus" %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}

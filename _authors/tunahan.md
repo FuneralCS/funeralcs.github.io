@@ -59,7 +59,7 @@ permalink: /authors/tunahan/
 <h3 style="margin-top: 2rem;">Yazıları</h3>
 <ul>
   {% for post in site.posts %}
-    {% if post.author == "tunahan" %}
+  {% if post.authors contains "tunahan" or post.author == "tunahan" %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}

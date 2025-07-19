@@ -56,7 +56,7 @@ permalink: /authors/kerim/
 <h3 style="margin-top: 2rem;">Yazıları</h3>
 <ul>
   {% for post in site.posts %}
-  {% if post.author == "kerim" %}
+  {% if post.authors contains "kerim" or post.author == "kerim" %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}

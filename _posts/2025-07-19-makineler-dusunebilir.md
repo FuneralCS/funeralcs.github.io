@@ -2,7 +2,7 @@
 title: "Makineler Düşünebilir mi?"
 date: 2025-07-19 11:00:00 +0300
 categories: [yapay zeka,makine-ogrenmesi, felsefe,matematik]
-tags: [matematik , yapay zeka, llm, makine öğrenmesi, cahit arf]
+tags: [cahit arf, makineler düşünebilir mi, yapay zeka, alan turing, turing testi, türkiye yapay zeka, bilinç]
 authors: [yunus, yusuf-said]
 image:
   path: /assets/img/cahit_arf/arf.webp

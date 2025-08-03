@@ -139,7 +139,7 @@ Düzenli dillerin tanımlanmasında kullanılan yöntemlerden biri olan bu yapı
 
 
 <p align="center">
-  <img src="assets/img/2025-08-03-otomata-teorisi-nedir.md/12312.webp" alt="" width="400"/>
+  <img src="assets/img/2025-08-03-otomata-teorisi-nedir/12312.webp" alt="" width="400"/>
 </p>
 
 Noam Chomsky tarafından 1956'da ortaya atılmıştır. Amacı farklı gramer türlerinin ne kadar güçlü olduğunu göstermektir.

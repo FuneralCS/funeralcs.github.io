@@ -160,7 +160,7 @@ Bu gramerler bağlamdan bağımsız dilleri üretir. Tanımlanan diller yığıt
 
 Bu gramerler düzenli dilleri üreti. Sonlu otomatlar tarafından tanınabilir. Bu hiyerarşideki en kısıtlı ancak en verimli sınıftır.
 
-# Kaynakça
+# Sonuç
 Sonuç olarak otomata teorisi bilgisayar bilimlerinin temel yapı taşlarından biridir.
 Çünkü dillerin nasıl tanındığı, yazılım sistemlerinin çalışma şekli ve algoritmaların neler yapıp yapamayacağını anlamamıza yardımcı olur. Bir derleyicinin programı analiz edebilmesi veya bir sistemin doğru girişleri kabul edip hatalı olanları reddetmesi arkada bir otomat sisteminin çalıştığının göstergesidir.
 

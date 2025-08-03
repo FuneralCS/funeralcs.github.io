@@ -5,7 +5,7 @@ categories: [matematik, bilgisayar bilimi]
 tags: [otomata teorisi, sonlu otomat, düzenli diller, bağlamdan bağımsız gramer, chomsky hiyerarşisi]
 author: İbrahim Buğrahan Bilici
 image:
-  path: /assets/img/2025-08-03-otomata-teorisi-nedir.md/otomata_kapak.webp
+  path: /assets/img/2025-08-03-otomata-teorisi-nedir/otomata_kapak.webp
   alt: Otomata Teorisi Kapak Görseli
 description: "Otomata teorisinin temellerini, sonlu otomatları, düzenli dilleri, yığıtlı otomasyonları ve Chomsky Hiyerarşisi’ni inceleyen kapsamlı bir giriş yazısı."
 toc: true

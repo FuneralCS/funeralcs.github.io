@@ -133,7 +133,7 @@ Düzenli dillerin tanımlanmasında kullanılan yöntemlerden biri olan bu yapı
 - DSO sabit bellek kullanır, yığıtlı otomasyon buna ek olarak yığıt kullanır
 - DSO düzenli dilleri tanır, yığıtlı otomasyon bağlamdan bağımsız dilleri tanır
 - Yığıtlı otomasyon yığıt sayesinde geriye bakma yeteneğine sahiptir,DSO için böyle durum söz konusu değildir.
--
+
 # Chomsky Hiyerarşisi
 
 <figure>

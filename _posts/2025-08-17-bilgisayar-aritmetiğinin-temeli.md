@@ -94,7 +94,7 @@ Eğer bu çarpmalar sonucunda 1'e asla ulaşamıyorsak mantissa kısmını 23 (t
 
 ##### Çevirme işlemi (2. adım)
 
-Elde ettiğimiz iki değeri birleştirelim *101011.01* şeklinde olacaktır. Şimdi virgülü 1'in sağında gelecek şekilde 5 basamak sola kaydıralım. Sayımız sonunda *1.0101101 \* 2^5^* şekline gelecektir. Sayımızı 5 basamak sola kaydırdığımız için Buradaki 2'nin üssüne tek duyarlıklı için 127, çift duyarlıklı için 1023 eklenir. Çıkan sonuç tekrardan ikili sisteme çevrilir ve bu kısıma exponent kısım denir.
+Elde ettiğimiz iki değeri birleştirelim *101011.01* şeklinde olacaktır. Şimdi virgülü 1'in sağında gelecek şekilde 5 basamak sola kaydıralım. Sayımız sonunda *1.0101101 \* 2^5* şekline gelecektir. Sayımızı 5 basamak sola kaydırdığımız için Buradaki 2'nin üssüne tek duyarlıklı için 127, çift duyarlıklı için 1023 eklenir. Çıkan sonuç tekrardan ikili sisteme çevrilir ve bu kısıma exponent kısım denir.
 
 ```
 Exponent: 5 + 127 = 132

@@ -6,7 +6,7 @@ tags: [binary, matematik, bit, elektronik, sayılar, mantıksal kapılar, işlem
 authors: [vladimirdelvis]
 image:
   path: /assets/img/2025-08-17-bilgisayar-aritmeti%C4%9Finin-temeli/banner.webp
-description: "Bilgisayarın nasıl hesap yaptığını merak ettiniz mi? Tahmin mi ediyorlar? Yoksa içine tüm olası kombinasyonları kodladık mı? Tabi ki de bu iki sorunun cevabı hayır."
+description: "Bilgisayarın nasıl hesap yaptığını merak ettiniz mi? Tahmin mi ediyorlar? Yoksa içine tüm olası kombinasyonları kodladık mı? Tabii ki de bu iki sorunun cevabı, Hayır."
 toc: true
 math: true
 mermaid: false

@@ -1,5 +1,5 @@
 ---
-title: "Bilgisayarlardaki aritmetiğinin temeli"
+title: "Bilgisayarlardaki aritmetiğin temeli"
 date: 2025-08-17 13:30:00 +0300
 categories: [matematik, bilgisayar, donanım, işlemci, elektronik, algoritma, mantık]
 tags: [binary, matematik, bit, elektronik, sayılar, mantıksal kapılar, işlemler, hesap, ieee]

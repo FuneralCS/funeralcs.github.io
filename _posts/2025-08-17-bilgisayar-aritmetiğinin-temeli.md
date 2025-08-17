@@ -8,7 +8,7 @@ image:
   path: /assets/img/2025-08-17-bilgisayar-aritmeti%C4%9Finin-temeli/banner.webp
 description: "Bilgisayarın nasıl hesap yaptığını merak ettiniz mi? Tahmin mi ediyorlar? Yoksa içine tüm olası kombinasyonları kodladık mı? Tabi ki de bu iki sorunun cevabı hayır."
 toc: true
-math: false
+math: true
 mermaid: false
 comments: true
 pin: false

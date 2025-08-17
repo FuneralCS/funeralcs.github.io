@@ -282,7 +282,7 @@ Farkedeceğiniz üzere half adder ve full adder devreleri birbirlerine benzerler
     <figcaption>Görsel: Full adderlar kullanılarak yapılmış bir byte toplayıcı diyagramı</figcaption>
 </figure>
 
-burada A0,A1,A2,...,A8 girişleri için A0 en anlamsız biti temsil ederken A8 en anlamlı biti temsil eder. Aynısı B0,B1,B2,...,B8 için de geçerlidir. Cin girişi, giriş eldesidir (INPUT CARRY).
+burada A0,A1,A2,...,A7 girişleri için A0 en anlamsız biti temsil ederken A8 en anlamlı biti temsil eder. Aynısı B0,B1,B2,...,B7 için de geçerlidir. Cin girişi, giriş eldesidir (INPUT CARRY).
 Cout çıkışı, çıkış eldesidir (OUTPUT CARRY).
 
 Nihayet işlemcilerin içinde bulunan ALU komponentinin nasıl toplama işlemi yaptığını anladık.

@@ -395,7 +395,7 @@ Bu yazıları yazma sebebim sizin bu algoritmaları ezberlemeniz veya sayılar i
 
 [SSCE-Shift-Mult](https://users.utcluj.ro/~baruch/book_ssce/SSCE-Shift-Mult.pdf)
 
-[Booth Algorithm. with an example | by Jetnipit Kulrativid | Medium](https://medium.com/@jetnipit54/booth-algorithm-e6b8a6c5b8d)
+[Booth Algorithm Medium](https://medium.com/@jetnipit54/booth-algorithm-e6b8a6c5b8d)
 
 # Kaynakça
 

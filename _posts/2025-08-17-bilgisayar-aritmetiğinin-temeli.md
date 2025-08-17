@@ -399,15 +399,15 @@ Bu yazıları yazma sebebim sizin bu algoritmaları ezberlemeniz veya sayılar i
 
 # Kaynakça
 
-\[1]: https://tr.wikipedia.org/wiki/Bit_(bili%C5%9Fim)
+\[1]: <https://tr.wikipedia.org/wiki/Bit_(bili%C5%9Fim)>
 
-\[2]: https://en.wikipedia.org/wiki/Bit_numbering
+\[2]: <https://en.wikipedia.org/wiki/Bit_numbering>
 
-\[3]: https://en.wikipedia.org/wiki/Floating-point_unit#cite_ref-1
+\[3]: <https://en.wikipedia.org/wiki/Floating-point_unit#cite_ref-1>
 
-\[4]: https://www.ieee.org/about-ieee
+\[4]: <https://www.ieee.org/about-ieee>
 
-\[5]: https://en.cppreference.com/w/c/io/fprintf.html
+\[5]: <https://en.cppreference.com/w/c/io/fprintf.html>
 
 [1]: https://tr.wikipedia.org/wiki/Bit_(bili%C5%9Fim)
 

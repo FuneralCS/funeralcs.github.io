@@ -1,18 +1,32 @@
 ---
-title: "Entropiyi Anlamak, Karmaşanın Matematiği"
+layout: post
+title: "Entropiyi Anlamak - Karmaşanın Matematiği"
 date: 2025-08-23 22:00:00 +0300
-categories: [bilgi teorisi, yapay zeka]
-tags: [entropi, termodinamik, shannon entropisi, bilgi teorisi, yapay zeka, karar ağaçları, cross entropy, pca, makine öğrenmesi, açıklanabilir yapay zeka]
+categories:
+  - bilgi teorisi
+  - yapay zeka
+tags:
+  - entropi
+  - termodinamik
+  - "shannon entropisi"
+  - "bilgi teorisi"
+  - "yapay zeka"
+  - "karar ağaçları"
+  - "cross entropy"
+  - pca
+  - "makine öğrenmesi"
+  - "açıklanabilir yapay zeka"
 author: tunahan
 image:
   path: /assets/img/2025-08-24-entropiyi-anlamak/cover.webp
-description: Entropinin Termodinamik, Shannon entropisi, bilgi teorisi ve yapay zekâdaki rolü: karar ağaçları, cross-entropy loss ve PCA örnekleriyle karmaşanın matematiği.
+description: "Entropinin termodinamikten Shannon entropisine ve yapay zekâya uzanan rolü: karar ağaçları, cross-entropy loss ve PCA örnekleriyle karmaşanın matematiği."
 toc: true
 math: true
 mermaid: false
 comments: true
 pin: false
 ---
+
 # Entropiyi Anlamak: Karmaşanın Matematiği
 Neden sürekli oturmak ve iş yapmamak isteriz? Çünkü otururken görece daha az enerji harcarız ama bu sefer de hiçbir iş yapmadığımız için hayatımız daha düzensiz bir hal almaya başlar. Entropi, bir sistemin düzensizliğinin ve rastgeleliğinin ölçüsü olarak tanımlanabilir. Evrende her şey, kendini minimum serbest enerjiye çekmek ister. Bu da yanında düzensizliği getirir (ve tam tersi de). Bu bilim dünyasında kuantum mekaniği ile birlikte en çok araştırılan husus olmuştur.
 
@@ -121,15 +135,15 @@ $H(P,Q) = -[1 \cdot \log 0.8 + 0 \cdot \log 0.15 + 0 \cdot \log 0.05] = -\log 0.
 Cross-entropy, Shannon entropisinin makine öğrenmesindeki uyarlaması gibi çalışıyor. Yani “modelin tahmin dağılımı ile gerçeğin dağılımı arasındaki belirsizlik farkı”nı ölçüyor. 
 Örneğin on sınıflı bir problemde modelin en kötü durumu (yani her sınıfa %10 şans verdiği durumda):  $-\log(10) = ~2.3$'tür.
 
- ## **Sonuç**
+## **Sonuç**
 Entropi, bir kavram olarak fizikteki başlangıcından, bilginin soyut dünyasına ve modern yapay zekânın karmaşık algoritmalarına kadar uzanan etkileyici bir yolculuk geçirmiştir. Bu yolculuk boyunca entropi, termodinamiğin evrenin kaderini belirleyen bir yasası olmaktan, enformasyonun kendisini ölçen bir araca ve nihayetinde makine öğrenmesi algoritmalarının temelini oluşturan bir optimizasyon ve güvenilirlik prensibine dönüşmüştür.
 
-|                               |                               |                                                          |                                                   |                                   |                                  |
-| ----------------------------- | ----------------------------- | -------------------------------------------------------- | ------------------------------------------------- | --------------------------------- | -------------------------------- |
-| Tanım                         | Formül                        | Birim                                                    | Kavramsal Anlam                                   | Örnek                             | Uygulama Alanı                   |
-| Termodinamik Entropi          | $$ \Delta S = \delta Q / T $$ | J/K                                                      | Faydasız enerji veya iş potansiyeli kaybı         | Sıcak bir nesnenin soğuması       | Termodinamik, Kimya Mühendisliği |
-| İstatistiksel Mekanik Entropi | $$ S = k \ln W $$             | J/K                                                      | Olası mikroskobik durumların sayısı / Düzensizlik | Bir odada yayılan gaz molekülleri | İstatistiksel Fizik              |
-| Enformasyon Kuramı Entropisi  | $$ H = - \sum p_i \log p_i $$ | bit $(log₂)$ tabanında ölçüm, nat $(ln$ tabanında ölçüm) | Bir olayın belirsizliği / Bilgi miktarı           | Bir yazı tura atışının sonucu     | Bilgi Teorisi, Bilgisayar Bilimi |
+| Tanım                         | Formül                            | Birim            | Kavramsal Anlam                                   | Örnek                           | Uygulama Alanı                   |
+| ----------------------------- | --------------------------------- | ---------------- | ------------------------------------------------ | ------------------------------- | -------------------------------- |
+| Termodinamik Entropi          | $\Delta S = \dfrac{\delta Q}{T}$  | J/K              | Faydasız enerji veya iş potansiyeli kaybı         | Sıcak bir nesnenin soğuması     | Termodinamik, Kimya Mühendisliği |
+| İstatistiksel Mekanik Entropi | $S = k \ln W$                     | J/K              | Olası mikroskobik durumların sayısı / Düzensizlik | Bir odada yayılan gaz molekülleri | İstatistiksel Fizik              |
+| Enformasyon Kuramı Entropisi  | $H = - \sum p_i \log p_i$         | bit (log₂ tabanı), nat (ln tabanı) | Bir olayın belirsizliği / Bilgi miktarı | Bir yazı tura atışının sonucu | Bilgi Teorisi, Bilgisayar Bilimi |
+
 # Kaynakça:
 
 1. [britannica - thermodynamics][1] 

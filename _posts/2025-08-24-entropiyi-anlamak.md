@@ -13,6 +13,7 @@ mermaid: false
 comments: true
 pin: false
 ---
+# Entropiyi Anlamak: Karmaşanın Matematiği
 Neden sürekli oturmak ve iş yapmamak isteriz? Çünkü otururken görece daha az enerji harcarız ama bu sefer de hiçbir iş yapmadığımız için hayatımız daha düzensiz bir hal almaya başlar. Entropi, bir sistemin düzensizliğinin ve rastgeleliğinin ölçüsü olarak tanımlanabilir. Evrende her şey, kendini minimum serbest enerjiye çekmek ister. Bu da yanında düzensizliği getirir (ve tam tersi de). Bu bilim dünyasında kuantum mekaniği ile birlikte en çok araştırılan husus olmuştur.
 
 *Önce bu işin kalbine yani termodinamiğe bir bakış atalım.*

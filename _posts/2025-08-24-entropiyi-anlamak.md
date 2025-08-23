@@ -1,5 +1,5 @@
 ---
-title: "Entropiyi Anlamak: Karmaşanın Matematiği"
+title: "Entropiyi Anlamak, Karmaşanın Matematiği"
 date: 2025-08-23 22:00:00 +0300
 categories: [bilgi teorisi, yapay zeka]
 tags: [entropi, termodinamik, shannon entropisi, bilgi teorisi, yapay zeka, karar ağaçları, cross entropy, pca, makine öğrenmesi, açıklanabilir yapay zeka]

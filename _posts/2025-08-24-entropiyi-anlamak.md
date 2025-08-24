@@ -156,13 +156,11 @@ Entropi, bir kavram olarak fizikteki başlangıcından, bilginin soyut dünyası
 1. [britannica - thermodynamics][1] 
 2. [Wikipedia - Entropi][2]
 3. [sciencedirect - Shannon Entropisi][3] 
-4. [IBM - What is a decision tree?][4] 
-5. [OpenAI — Understand Foundational Concepts of ChatGPT and cool stuff you can explore!][5] 
-6. [Wikipedia - Information theory][6]
+4. [IBM - What is a decision tree?][4]  
+5. [Wikipedia - Information theory][5]
 
 [1]: https://www.britannica.com/science/thermodynamics
 [2]: https://tr.wikipedia.org/wiki/Entropi
 [3]: https://www.sciencedirect.com/topics/engineering/shannon-entropy
 [4]: https://www.ibm.com/think/topics/decision-trees#:~:text=A%20decision%20tree%20is%20a,internal%20nodes%20and%20leaf%20nodes.
-[5]: https://medium.com/@amol-wagh/open-ai-understand-foundational-concepts-of-chatgpt-and-cool-stuff-you-can-explore-a7a77baf0ee3#:~:text=OpenAI%20%E2%80%94%20Understand%20Foundational%20Concepts%20of%20ChatGPT%20and%20cool%20stuff%20you%20can%20explore!
-[6]: https://en.wikipedia.org/wiki/Information_theory
+[5]: https://en.wikipedia.org/wiki/Information_theory

@@ -130,7 +130,14 @@ Kazancı (Information Gain)** hesaplanır ve bu algoritma bilgi kazancını maks
 
 Örneğin, bir modelin kedi, köpek ve kuş sınıflarını içeren bir görseli sınıflandırdığını düşünelim. Eğer görsel bir kedi ise gerçek etiket dağılımı P = [1, 0, 0] olacaktır. Model iyi bir tahmin yapıp Q = [0.8, 0.15, 0.05] olasılıklarını üretirse, çapraz entropi kaybı düşük olacaktır. Ancak, model kötü bir tahmin yaparak Q = [0.25, 0.6, 0.15] (köpeğe yüksek olasılık) gibi bir dağılım üretirse, çapraz entropi kaybı daha yüksek çıkar ve model bu hatayı minimize etmek için ağırlıklarını ayarlar. Bu, modelin sadece doğru cevabı bulmasını değil, aynı zamanda doğru cevaba ne kadar güvenle yaklaştığını da öğrenmesini sağlar. 
 
-$H(P,Q) = -[1 \cdot \log 0.8 + 0 \cdot \log 0.15 + 0 \cdot \log 0.05] = -\log 0.8 \approx 0.22$
+$$
+\begin{aligned}
+H(P,Q) &= -\Big[ 1\cdot\log 0.8 \\
+        &\quad + 0\cdot\log 0.15 \\
+        &\quad + 0\cdot\log 0.05 \Big] \\
+       &= -\log 0.8 \approx 0.22
+\end{aligned}
+$$
 
 Cross-entropy, Shannon entropisinin makine öğrenmesindeki uyarlaması gibi çalışıyor. Yani “modelin tahmin dağılımı ile gerçeğin dağılımı arasındaki belirsizlik farkı”nı ölçüyor. 
 Örneğin on sınıflı bir problemde modelin en kötü durumu (yani her sınıfa %10 şans verdiği durumda):  $-\log(10) = ~2.3$'tür.

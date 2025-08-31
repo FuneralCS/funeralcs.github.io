@@ -170,7 +170,7 @@ Bu durumda da CoT'un sağladığı şeffaflık ve güvenlik avantajları tamamen
     <img src="assets/img/2025-08-31-düşünme-zinciri-güvenliği/latent.webp" alt="Latent reasoning için görselleştirme" width="600">
     <figcaption>Latent reasoning için görselleştirme</figcaption>
 </figure>
-Explicit Reasoning, bugün GPT’lerde gördüğümüz klasik **Chain of Thought** yaklaşımı iken, Latent Reasoning ise modelin aklından geçenler **kelimeye dökülmeden**, kendi içinde gizli (latent) temsil olarak kalıyor. Bu içsel bilgi taşıma kapasitesi (bant genişliği) makaleye göre 40960 bit'e kadar çıkmakta. Ama bu durumda açıklanabilirlikten ödün verip, verimliliğe pay veriyoruz. [8]
+Explicit Reasoning, bugün GPT’lerde gördüğümüz klasik **Chain of Thought** yaklaşımı iken, Latent Reasoning ise modelin aklından geçenler **kelimeye dökülmeden**, kendi içinde gizli (latent) temsil olarak kalıyor. Nasıl çok çalıştığımız bir gün sonunda gece yatmadan önce aklımızdan aşırı hızlı bir şekilde anlamsız düşünceler geçiyorsa, latent reasoning de modelin aklından çok hızlı şekilde -ama bu sefer anlamlı (?)- düşünceler geçiyor. Öyle ki bu içsel bilgi taşıma kapasitesi (bant genişliği) makaleye göre 40960 bit'e kadar çıkmakta. Ama bu durumda açıklanabilirlikten ödün verip, verimliliğe pay veriyoruz. [8]
 
 ## 7. Kapanış
 > “Düşünme zincirleri, bize yapay zekânın şeffaflık vaadini fısıldarken aynı anda onun kırılganlığını da açığa vuruyor. İç seslerini duyduğumuz sürece kontrol bizdeymiş gibi hissediyoruz; ama sustuklarında kimin gerçekten düşündüğünü bilemeyeceğiz. Geleceğin güvenliği belki de tam bu ince çizgide şekillenecek: neyi görmek istediğimizle, neleri asla göremeyeceğimiz arasında.”

@@ -50,11 +50,14 @@ Son kullanıcının modelin cevap olarak sunduğu argümanın arka planındaki n
 
 ---
 
-#### XAI Nasıl geliştirilir [6]:
+#### XAI Nasıl geliştirilir:
+
 1. Dikkat Mekanizmaları: Modelin girdi metninin hangi kısımlarına odaklandığını görselleştirir.
 2. Saliency Haritaları/Özellik Atfı: Hangi kelime veya ifadelerin modelin kararı üzerinde en çok etkisi olduğunu vurgular.
 3. Karşı Olgusal Açıklamalar: Girdideki küçük değişikliklerin modelin çıktısını nasıl etkileyeceğini gösterir.
-4. Katman Bazında Alaka Yayılımı (LRP): Sinir ağı tahminlerini katman katman parçalayarak bilgi akışını izler.
+4. Katman Bazında Alaka Yayılımı (LRP): Sinir ağı tahminlerini katman katman parçalayarak bilgi akışını izler.[6]
+
+
 
 ---
 

@@ -5,7 +5,7 @@ categories: [yapay zeka, güvenlik]
 tags: [chain-of-thought, CoT, latent reasoning, süreç gözetimi, process supervision, rationale distillation, XAI, açıklanabilir yapay zekâ, yapay zeka güvenliği, monitorability]
 authors: ["tunahan", "ibrahim"]
 image:
-  path: /assets/img/2025-08-31-cot-kirilganlik/cover.webp
+  path: /assets/img/2025-08-31-düşünme-zinciri-güvenliği/cover.webp
 description: CoT’nin (düşünme zinciri) güvenlik ve açıklanabilirlikteki rolü, latent reasoning’in yükselişi ve süreç gözetimi/gerekçe damıtımı gibi tekniklerle şeffaflığın neden kırılganlaşabileceği.
 toc: true
 math: false

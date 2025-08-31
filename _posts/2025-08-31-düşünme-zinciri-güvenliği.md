@@ -30,7 +30,8 @@ Temmuz ayında [OpenAI](https://openai.com/) , [Google DeepMind](https://deepm
 ---
 
 <figure>
-    <img src="assets/img/2025-08-31-düşünme-zinciri-güvenliği/surreal.webp" width="600">
+    <img src="assets/img/2025-08-31-düşünme-zinciri-güvenliği/surreal.webp" alt="Modellerin neden böyle düşündüğünü okumanın tek yolu: CoT" width="600">
+    <figcaption>Modellerin neden böyle düşündüğünü okumanın tek yolu: CoT</figcaption>
 </figure>
 ## 1. İnsan-yapay zeka etkileşiminde güven ve açıklanabilir Yapay Zeka
 

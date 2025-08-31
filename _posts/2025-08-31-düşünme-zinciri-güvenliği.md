@@ -20,20 +20,7 @@ Temmuz ayında [OpenAI](https://openai.com/) , [Google DeepMind](https://deepm
 
 > Düşünce zincirinin sadakati ve yorumlanabilirliğinin potansiyeli beni son derece heyecanlandırıyor. Bu potansiyel, o1-preview ile başlayarak, akıl yürütme modellerimizin tasarımını önemli ölçüde etkiledi. ~ Jakub Pachocki — OpenAI
 
-1. İnsan makine etkileşiminde güven ve açıklanabilir Yapay Zeka
-2. Chain of Thought-Modelin aklından geçenler
-3. Güvenlik açısından değeri nedir? Kötü niyeti nasıl yakalayabiliyoruz?
-4. CoT’un geleceği neden kırılgan? Ne bozar, ne yok eder?
-5. Bilerek iç seslerini gizlemeleri mümkün mü veya gizlemeden bizlere "-mış" gibi yapabilirler mi?
-6. CoT'un yeterlilikleri, yetersizlikleri ve alternatifleri
-7. Kapanış
-
 ---
-
-<figure>
-    <img src="assets/img/2025-08-31-düşünme-zinciri-güvenliği/surreal.webp" alt="Modellerin neden böyle düşündüğünü okumanın tek yolu: CoT" width="600">
-    <figcaption>Modellerin neden böyle düşündüğünü okumanın tek yolu: CoT</figcaption>
-</figure>
 ## 1. İnsan-yapay zeka etkileşiminde güven ve açıklanabilir Yapay Zeka
 
 ### 1.1 İnsan makine etkileşiminde güven

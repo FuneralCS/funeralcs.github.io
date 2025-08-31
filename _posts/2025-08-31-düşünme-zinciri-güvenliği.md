@@ -36,7 +36,7 @@ Temmuz ayında [OpenAI](https://openai.com/) , [Google DeepMind](https://deepm
 </figure>
 ## 1. İnsan-yapay zeka etkileşiminde güven ve açıklanabilir Yapay Zeka
 
-### 1.1 **İnsan makine etkileşiminde güven**
+### 1.1 İnsan makine etkileşiminde güven
 
 [Cornelia Becker ve Mahsa Fischer][3]'ın çalışmalarına göre büyük dil modelleri, insan benzeri yanıtlar üretme ve doğal sohbetler yürütme kapasiteleriyle dikkat çekmekte ve güven insan-makine etkileşiminde güvenin temel bir unsur olduğu vurgulanmaktadır. Uzun süreli etkileşimlerde, LLM'lerin giderek kişiselleşmesi ve "insanlaşması" kullanıcıların daha fazla güven duymasına yol açabilir. Bazı kullanıcılar, yapay zeka ile sohbet ettikçe bir "kimlik" ile konuştuklarını hissettiklerini belirtmiştir [4]. Ayrıca ilk promptun, LLM'nin bir kişilik veya rol üstlenmesini sağlayarak, yanıtların stilini, tonunu ve odak noktasını belirlemeye yardımcı olduğu da bilinmekte[9]. 
 
@@ -51,7 +51,7 @@ Sohbet yapay zekalarında güven oluşturan faktörler [3]:
 - Antropomorfizm (Sistemin insan benzeri özellikler sergilemesi)
 - Güvenlik
  ---
-### **1.2 Açıklanabilir Yapay Zeka (XAI)**
+### 1.2 Açıklanabilir Yapay Zeka (XAI)
 
 Son kullanıcının modelin cevap olarak sunduğu argümanın arka planındaki nedeni bilmemeleri güven kırmakta ve ön yargılara neden olmakta. Buna jargonda kara kutu problemi denmekte ve XAI, bu kara kutu problemini ele almakta.
 
@@ -63,7 +63,7 @@ Son kullanıcının modelin cevap olarak sunduğu argümanın arka planındaki n
 
 ---
 
-#### **XAI Nasıl geliştirilir** [6]:
+#### XAI Nasıl geliştirilir [6]:
 1. Dikkat Mekanizmaları: Modelin girdi metninin hangi kısımlarına odaklandığını görselleştirir.
 2. Saliency Haritaları/Özellik Atfı: Hangi kelime veya ifadelerin modelin kararı üzerinde en çok etkisi olduğunu vurgular.
 3. Karşı Olgusal Açıklamalar: Girdideki küçük değişikliklerin modelin çıktısını nasıl etkileyeceğini gösterir.
@@ -173,7 +173,7 @@ Düşünce Zinciri'nin keşfi halihazırda insan diliyle konuşan yapay zekanın
 
 ---
 
-### **Yeni mimari yaklaşımları**[7]
+### Yeni mimari yaklaşımları [7]
 Şu anki büyük dil modelleri, çok adımlı karmaşık düşünmeleri ancak CoT kullanarak yapabiliyor.
 Ancak araştırmacılar, modellerin iç düşüncelerini dil yerine sürekli matematiksel temsillerle (latent space, _temsil/gizli uzay_) ifade ettiği yeni mimari yaklaşımlar üzerinde çalışıyorlar.
 Bu latent reasoning modelleri, düşüncelerini hiç kelimelere dökmeden muhakeme yapabilir.
@@ -187,20 +187,22 @@ Explicit Reasoning, bugün GPT’lerde gördüğümüz klasik **Chain of Thought
 
 # *Kaynakça*
 1. [What is chain of thought (CoT) prompting?][1]  
-2. [OpenAI, Google DeepMind and Anthropic sound alarm: ‘We may be losing the ability to understand AI’][2]
-3. [Factors of Trust Building in Conversational AI Systems: A Literature Review][3]
-4. [Can LLMs and humans be friends? Uncovering factors affecting human-AI intimacy formation][4]
-5. [LLMs in Explainable AI: Refining Explanations and Evaluating Narratives][5]
-6. [XAI Meets LLM: Bridging the Gap Between Transparency and Intelligence][6]
-7. [Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety][7]
-8. [A Survey on Latent Reasoning][8]
-9. [Role Prompting - Learn Prompting][9]
-[1]:https://www.ibm.com/think/topics/chain-of-thoughts#:~:text=Chain%20of%20thought%20(CoT)%20is,complex%20tasks%20involving%20multistep%20reasoning
-[2]:https://venturebeat.com/ai/openai-google-deepmind-and-anthropic-sound-alarm-we-may-be-losing-the-ability-to-understand-ai/
-[3]:https://www.researchgate.net/publication/381254304_Factors_of_Trust_Building_in_Conversational_AI_Systems_A_Literature_Review
-[4]:https://arxiv.org/html/2505.24658v1
-[5]:https://blog.gopenai.com/llms-in-explainable-ai-refining-explanations-and-evaluating-narratives-57ae9f1e1252
-[6]:https://medium.com/@jainultrivedi55555/xai-meets-llm-bridging-the-gap-between-transparency-and-intelligence-844debe41b02
-[7]:https://tomekkorbak.com/cot-monitorability-is-a-fragile-opportunity/cot_monitoring.pdf
-[8]:https://doi.org/10.48550/arXiv.2507.06203
-[9]:https://learnprompting.org/docs/advanced/zero_shot/role_prompting
+2. [OpenAI, Google DeepMind and Anthropic sound alarm: ‘We may be losing the ability to understand AI’][2]  
+3. [Factors of Trust Building in Conversational AI Systems: A Literature Review][3]  
+4. [Can LLMs and humans be friends? Uncovering factors affecting human-AI intimacy formation][4]  
+5. [LLMs in Explainable AI: Refining Explanations and Evaluating Narratives][5]  
+6. [XAI Meets LLM: Bridging the Gap Between Transparency and Intelligence][6]  
+7. [Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety][7]  
+8. [A Survey on Latent Reasoning][8]  
+9. [Role Prompting - Learn Prompting][9]  
+
+[1]: https://www.ibm.com/think/topics/chain-of-thoughts#:~:text=Chain%20of%20thought%20(CoT)%20is,complex%20tasks%20involving%20multistep%20reasoning  
+[2]: https://venturebeat.com/ai/openai-google-deepmind-and-anthropic-sound-alarm-we-may-be-losing-the-ability-to-understand-ai/  
+[3]: https://www.researchgate.net/publication/381254304_Factors_of_Trust_Building_in_Conversational_AI_Systems_A_Literature_Review  
+[4]: https://arxiv.org/html/2505.24658v1  
+[5]: https://blog.gopenai.com/llms-in-explainable-ai-refining-explanations-and-evaluating-narratives-57ae9f1e1252  
+[6]: https://medium.com/@jainultrivedi55555/xai-meets-llm-bridging-the-gap-between-transparency-and-intelligence-844debe41b02  
+[7]: https://tomekkorbak.com/cot-monitorability-is-a-fragile-opportunity/cot_monitoring.pdf  
+[8]: https://doi.org/10.48550/arXiv.2507.06203  
+[9]: https://learnprompting.org/docs/advanced/zero_shot/role_prompting  
+

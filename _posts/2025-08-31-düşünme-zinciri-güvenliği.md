@@ -36,7 +36,7 @@ Temmuz ayında [OpenAI](https://openai.com/) , [Google DeepMind](https://deepm
 </figure>
 ## 1. İnsan-yapay zeka etkileşiminde güven ve açıklanabilir Yapay Zeka
 
-###  1.1 **İnsan makine etkileşiminde güven**
+### 1.1 **İnsan makine etkileşiminde güven**
 
 [Cornelia Becker ve Mahsa Fischer][3]'ın çalışmalarına göre büyük dil modelleri, insan benzeri yanıtlar üretme ve doğal sohbetler yürütme kapasiteleriyle dikkat çekmekte ve güven insan-makine etkileşiminde güvenin temel bir unsur olduğu vurgulanmaktadır. Uzun süreli etkileşimlerde, LLM'lerin giderek kişiselleşmesi ve "insanlaşması" kullanıcıların daha fazla güven duymasına yol açabilir. Bazı kullanıcılar, yapay zeka ile sohbet ettikçe bir "kimlik" ile konuştuklarını hissettiklerini belirtmiştir [4]. Ayrıca ilk promptun, LLM'nin bir kişilik veya rol üstlenmesini sağlayarak, yanıtların stilini, tonunu ve odak noktasını belirlemeye yardımcı olduğu da bilinmekte[9]. 
 
@@ -60,13 +60,17 @@ Son kullanıcının modelin cevap olarak sunduğu argümanın arka planındaki n
 2. **Hesap Verebilirlik ve Sorumluluk Sağlama**
 3. **Hata Ayıklama ve İyileştirmeyi Kolaylaştırma**
 4. **İnsan-Yapay Zeka İş Birliğinin Geliştirilmesi**
+
 ---
+
 #### **XAI Nasıl geliştirilir** [6]:
 1. Dikkat Mekanizmaları: Modelin girdi metninin hangi kısımlarına odaklandığını görselleştirir.
 2. Saliency Haritaları/Özellik Atfı: Hangi kelime veya ifadelerin modelin kararı üzerinde en çok etkisi olduğunu vurgular.
 3. Karşı Olgusal Açıklamalar: Girdideki küçük değişikliklerin modelin çıktısını nasıl etkileyeceğini gösterir.
 4. Katman Bazında Alaka Yayılımı (LRP): Sinir ağı tahminlerini katman katman parçalayarak bilgi akışını izler.
+
 ---
+
 ## 2. Chain of Thought-Modelin aklından geçenler
 Aslında düşünme zinciri bir prompt mühendisliği ürünüdür.  
 - Ne katman sayısı arttı
@@ -77,7 +81,7 @@ Yani modele şöyle dendi:
 
 > “Aşağıdaki matematik sorusunu adım adım düşünerek çöz.”  
 
-Antrparantez: mevcut teorik ve bazı yeni teknikleri saymazsak (bkz. _process supervision (süreç gözetimi/denetimi)_ / _rationale distillation (gerekçe/akıl yürütme damıtımı)_). Ancak temelinde CoT bir prompt mühendisliğidir. Az önce belirttiğim teknikler ise CoT olarak planlanan modellerin eğitim teknikleridir.
+**Antrparantez**: mevcut teorik ve bazı yeni teknikleri saymazsak (bkz. _process supervision (süreç gözetimi/denetimi)_ / _rationale distillation (gerekçe/akıl yürütme damıtımı)_). Ancak temelinde CoT bir prompt mühendisliğidir. Az önce belirttiğim teknikler ise CoT olarak planlanan modellerin eğitim teknikleridir.
 <figure>
     <img src="assets/img/2025-08-31-düşünme-zinciri-güvenliği/abcx.webp" alt="Düşünme zinciri basamakları" width="600">
     <figcaption>Düşünme zinciri basamakları</figcaption>
@@ -104,7 +108,9 @@ Düşünme sırasında ise bizlere aklından geçenleri yazıyor. Peki ya tüm b
     <img src="assets/img/2025-08-31-düşünme-zinciri-güvenliği/cot.webp" alt="Düşünme zinciri için görselleştirme" width="600">
     <figcaption>Düşünme zinciri için görselleştirme</figcaption>
 </figure>
+
 ---
+
 ## 3. Güvenlik açısından değeri nedir? Kötü niyeti nasıl yakalayabiliyoruz?
 CoT’un güvenlik açısından avantajı, akıl yürütmeyi görünür kılmasıdır. Yani;
 
@@ -120,7 +126,9 @@ Yine de unutmamak gerekir ki CoT izleme güvenliğe katkıda bulunsa da kusursuz
 - Adım-çıktı tutarlılığı: Gidilen adımlar ile çıkan sonuçta verilen çıktı farklıysa mantık hatası veya aldatıcı açıklama olabilir.
 
 - Çapraz Sorgu ve varyant üretimi: Aynı soru farklı prompt stillerinde çelişiyorsa hikaye yazmış olabilir ya da saklıyor olabilir. XAI yazınında anlatı açıklamaları doğruluk/sadakat açısından ölçülmelidir.
+
 ---
+
 ## 4- CoT’un geleceği neden kırılgan? Ne bozar, ne yok eder?
 
 CoT’un geleceği hakkında en önemli gelişmelerden biri OpenAI, DeepMind, Anthropic ve Meta’dan kırk kişiden fazla araştırmacının uyarısıdır: “Bugün CoT şeffaflığı geçici olabilir, gelecekteki modeller iç seslerini gizleyebilir[2]”. Yani CoT'nin şeffaflığını kaybetme olasılığından bahsediliyor burada. Şimdi biraz daha detaylı şekilde bunun nedenlerine bakalım:
@@ -134,7 +142,9 @@ Bu durum CoT için güvenilirliği zedeliyor.
 - Ekonomik ve teknik zorluklar: IBM’in analizine göre uzun CoT, daha fazla hesaplama istediği için maliyeti de daha yüksek oluyor[1]. Şirketler bu maliyetten kaçınmak için kısa ve hızlı akıl yürütmeye kayıyor ancak bunu yaparken şeffaflıktan ödün veriyorlar. 
 
 - Kötü niyetli bypass: Kullanıcı veya modelin CoT’u atlatma ihtimali vardır. "Düşünce ve adımları saklayıp sadece cevabı ver" benzeri promptlarla sistemleri manipüle etmek mümkündür. [7] Bu durumlarda CoT güvenlik için devre dışı kalmış olur, bu da geleceğinin kırılgan olmasında önemli bir etken oluşturur.
+
 ---
+
 ## 5. Bilerek iç seslerini gizlemeleri mümkün mü veya gizlemeden bizlere "-mış" gibi yapabilirler mi?
 
 Bir önceki başlıkta aslında bu sorulara cevap vermiş olduk. Modellerin;
@@ -146,6 +156,7 @@ Model sahte bir adım zinciri oluşturabiliyor. [6] (XAI literatüründe **plaus
 Yani evet, iç seslerini gizleyebilirler veya gizlemeden bizlere “-mış” gibi yapabilirler. Bu nedenle CoT’a olan güveni “kırılgan” olarak niteleyebiliriz.
 
 ---
+
 ## 6. CoT'un yeterlilikleri, yetersizlikleri ve alternatifleri[7]
 Düşünce Zinciri'nin keşfi halihazırda insan diliyle konuşan yapay zekanın daha da açıklanabilir olması umudu güçlendirdi. Modellerin yüksek sesle düşünmesini sağlamak, yeteneklerini geliştirirken aynı zamanda doğal dilde gerçekleşen ilgili hesaplamaların oranını da artırır. Ancak yukarıda da saydığımız hususlardan kaynaklı CoT modellerinin de yetersizlikleri oldukça fazladır. Aşağıda bu zinciri kıran bazı sorunlar bulunmaktadır:
 
@@ -159,7 +170,9 @@ Düşünce Zinciri'nin keşfi halihazırda insan diliyle konuşan yapay zekanın
 	Bu tür denetimler, CoT’ların **modelin gerçek düşünce sürecini yansıtmasını bozabilir.** Öte yandan bunlar yaşanmayıp fayda da sağlayabilir. Daha fazla araştırmaya ihtiyacımız var.
 	
 3. CoT doğrudan ödüllendirilmemiş olsa bile, eğitim süreci dolaylı olarak zinciri de etkileyebilir. Örneğin çıktılar bir tercih modeline (preference model, bu insanların feedbacki de olabilir) göre optimize edilirse bu model üzerinde baskı yaratır. Bu sorun çok basit bir şekilde de olabilir. Örneğin model hile yapmaya çalışırken hile önlense de bu model üzerinde baskı yaratır.
+
 ---
+
 ### **Yeni mimari yaklaşımları**[7]
 Şu anki büyük dil modelleri, çok adımlı karmaşık düşünmeleri ancak CoT kullanarak yapabiliyor.
 Ancak araştırmacılar, modellerin iç düşüncelerini dil yerine sürekli matematiksel temsillerle (latent space, _temsil/gizli uzay_) ifade ettiği yeni mimari yaklaşımlar üzerinde çalışıyorlar.
@@ -171,6 +184,7 @@ Bu durumda da CoT'un sağladığı şeffaflık ve güvenlik avantajları tamamen
     <figcaption>Latent reasoning için görselleştirme</figcaption>
 </figure>
 Explicit Reasoning, bugün GPT’lerde gördüğümüz klasik **Chain of Thought** yaklaşımı iken, Latent Reasoning ise modelin aklından geçenler **kelimeye dökülmeden**, kendi içinde gizli (latent) temsil olarak kalıyor. Bu içsel bilgi taşıma kapasitesi (bant genişliği) makaleye göre 40960 bit'e kadar çıkmakta. Ama bu durumda açıklanabilirlikten ödün verip, verimliliğe pay veriyoruz. [8]
+
 # *Kaynakça*
 1. [What is chain of thought (CoT) prompting?][1]  
 2. [OpenAI, Google DeepMind and Anthropic sound alarm: ‘We may be losing the ability to understand AI’][2]

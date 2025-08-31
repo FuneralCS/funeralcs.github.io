@@ -173,8 +173,8 @@ Düşünce Zinciri'nin keşfi halihazırda insan diliyle konuşan yapay zekanın
 
 ---
 
-### Yeni mimari yaklaşımları [7]
-Şu anki büyük dil modelleri, çok adımlı karmaşık düşünmeleri ancak CoT kullanarak yapabiliyor.
+### Yeni mimari yaklaşımları 
+Şu anki büyük dil modelleri, çok adımlı karmaşık düşünmeleri ancak CoT kullanarak yapabiliyor. [7]
 Ancak araştırmacılar, modellerin iç düşüncelerini dil yerine sürekli matematiksel temsillerle (latent space, _temsil/gizli uzay_) ifade ettiği yeni mimari yaklaşımlar üzerinde çalışıyorlar.
 Bu latent reasoning modelleri, düşüncelerini hiç kelimelere dökmeden muhakeme yapabilir.
 Bu durumda da CoT'un sağladığı şeffaflık ve güvenlik avantajları tamamen ortadan kalkabilir.
@@ -187,7 +187,6 @@ Explicit Reasoning, bugün GPT’lerde gördüğümüz klasik **Chain of Thought
 
 ## 7. Kapanış
 > “Düşünme zincirleri, bize yapay zekânın şeffaflık vaadini fısıldarken aynı anda onun kırılganlığını da açığa vuruyor. İç seslerini duyduğumuz sürece kontrol bizdeymiş gibi hissediyoruz; ama sustuklarında kimin gerçekten düşündüğünü bilemeyeceğiz. Geleceğin güvenliği belki de tam bu ince çizgide şekillenecek: neyi görmek istediğimizle, neleri asla göremeyeceğimiz arasında.”
-
 
 # *Kaynakça*
 1. [What is chain of thought (CoT) prompting?][1]  

@@ -27,6 +27,7 @@ Temmuz ayında [OpenAI](https://openai.com/) , [Google DeepMind](https://deepm
 5. Bilerek iç seslerini gizlemeleri mümkün mü veya gizlemeden bizlere "-mış" gibi yapabilirler mi?
 6. CoT'un yeterlilikleri, yetersizlikleri ve alternatifleri
 7. Kapanış
+
 ---
 
 <figure>

@@ -185,6 +185,10 @@ Bu durumda da CoT'un sağladığı şeffaflık ve güvenlik avantajları tamamen
 </figure>
 Explicit Reasoning, bugün GPT’lerde gördüğümüz klasik **Chain of Thought** yaklaşımı iken, Latent Reasoning ise modelin aklından geçenler **kelimeye dökülmeden**, kendi içinde gizli (latent) temsil olarak kalıyor. Bu içsel bilgi taşıma kapasitesi (bant genişliği) makaleye göre 40960 bit'e kadar çıkmakta. Ama bu durumda açıklanabilirlikten ödün verip, verimliliğe pay veriyoruz. [8]
 
+## 7. Kapanış
+> “Düşünme zincirleri, bize yapay zekânın şeffaflık vaadini fısıldarken aynı anda onun kırılganlığını da açığa vuruyor. İç seslerini duyduğumuz sürece kontrol bizdeymiş gibi hissediyoruz; ama sustuklarında kimin gerçekten düşündüğünü bilemeyeceğiz. Geleceğin güvenliği belki de tam bu ince çizgide şekillenecek: neyi görmek istediğimizle, neleri asla göremeyeceğimiz arasında.”
+
+
 # *Kaynakça*
 1. [What is chain of thought (CoT) prompting?][1]  
 2. [OpenAI, Google DeepMind and Anthropic sound alarm: ‘We may be losing the ability to understand AI’][2]  

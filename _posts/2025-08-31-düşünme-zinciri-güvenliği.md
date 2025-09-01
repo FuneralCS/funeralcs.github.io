@@ -28,6 +28,7 @@ Temmuz ayında [OpenAI](https://openai.com/) , [Google DeepMind](https://deepm
 [Cornelia Becker ve Mahsa Fischer][3]'ın çalışmalarına göre büyük dil modelleri, insan benzeri yanıtlar üretme ve doğal sohbetler yürütme kapasiteleriyle dikkat çekmekte ve güven insan-makine etkileşiminde güvenin temel bir unsur olduğu vurgulanmaktadır. Uzun süreli etkileşimlerde, LLM'lerin giderek kişiselleşmesi ve "insanlaşması" kullanıcıların daha fazla güven duymasına yol açabilir. Bazı kullanıcılar, yapay zeka ile sohbet ettikçe bir "kimlik" ile konuştuklarını hissettiklerini belirtmiştir [4]. Ayrıca ilk promptun, LLM'nin bir kişilik veya rol üstlenmesini sağlayarak, yanıtların stilini, tonunu ve odak noktasını belirlemeye yardımcı olduğu da bilinmekte[9]. 
 
 ---
+
 Sohbet yapay zekalarında güven oluşturan faktörler [3]:
 - Kontrol Edilebilirlik
 - Uyarlanabilirlik
@@ -37,16 +38,18 @@ Sohbet yapay zekalarında güven oluşturan faktörler [3]:
 - Etkileşim
 - Antropomorfizm (Sistemin insan benzeri özellikler sergilemesi)
 - Güvenlik
+
  ---
+
 ### 1.2 Açıklanabilir Yapay Zeka (XAI)
 
 Son kullanıcının modelin cevap olarak sunduğu argümanın arka planındaki nedeni bilmemeleri güven kırmakta ve ön yargılara neden olmakta. Buna jargonda kara kutu problemi denmekte ve XAI, bu kara kutu problemini ele almakta.
 
 #### XAI neden önemli:
-1. **Güven Ortamı Oluşturma**
-2. **Hesap Verebilirlik ve Sorumluluk Sağlama**
-3. **Hata Ayıklama ve İyileştirmeyi Kolaylaştırma**
-4. **İnsan-Yapay Zeka İş Birliğinin Geliştirilmesi**
+1. Güven Ortamı Oluşturma
+2. Hesap Verebilirlik ve Sorumluluk Sağlama
+3. Hata Ayıklama ve İyileştirmeyi Kolaylaştırma
+4. İnsan-Yapay Zeka İş Birliğinin Geliştirilmesi
 
 ---
 
@@ -56,8 +59,6 @@ Son kullanıcının modelin cevap olarak sunduğu argümanın arka planındaki n
 2. Saliency Haritaları/Özellik Atfı: Hangi kelime veya ifadelerin modelin kararı üzerinde en çok etkisi olduğunu vurgular.
 3. Karşı Olgusal Açıklamalar: Girdideki küçük değişikliklerin modelin çıktısını nasıl etkileyeceğini gösterir.
 4. Katman Bazında Alaka Yayılımı (LRP): Sinir ağı tahminlerini katman katman parçalayarak bilgi akışını izler.[6]
-
-
 
 ---
 

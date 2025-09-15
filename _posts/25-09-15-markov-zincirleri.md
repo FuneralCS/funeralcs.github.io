@@ -8,7 +8,7 @@ image:
   path: /assets/img/2025-09-15-markov-zincirleri/cover.webp
 description: Markov Zincirlerinin tarihi ve günümüzde nasıl bir öneme sahip olduğu
 toc: true
-math: false
+math: true
 mermaid: false
 comments: true
 pin: false

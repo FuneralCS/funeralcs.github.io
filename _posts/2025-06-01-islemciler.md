@@ -3,7 +3,7 @@ title: "CPU Nedir, Ne İşe Yarar"
 date: 2025-06-01 15:37:00 +0300
 categories: [donanımlar]
 tags: [işlemci, bilgisayar, donanım]
-authors: [ibrahim,tunahan]
+authors: [ibrahim]
 image:
   path: /assets/img/cpu/islemci_dokumani.webp
   alt: İşlemci Dökümanı

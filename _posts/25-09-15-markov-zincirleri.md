@@ -1,4 +1,3 @@
-
 ---
 title: "Markov Zincirleri (Markov Chains)"
 date: 2025-09-15 18:00:00 +0300

@@ -1,7 +1,7 @@
 
 ---
 title: "Markov Zincirleri (Markov Chains)"
-date: 2025-08-31 21:00:00 +0300
+date: 2025-09-15 18:00:00 +0300
 categories: [yapay zeka, matematik]
 tags: [nlp, matematik, yapay zeka, math, science, markov chains, chain]
 authors: "yusuf-said"

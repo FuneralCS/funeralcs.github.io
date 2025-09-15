@@ -20,8 +20,8 @@ pin: false
 
 
 <figure>
-    <img src="/assets/img/2025-09-15-markov-zincirleri/2.webp" width="600">
-
+    <img src="/assets/img/2025-09-15-markov-zincirleri/2.webp" width="600" alt="">
+ 
 </figure>
 
 
@@ -109,7 +109,7 @@ Yani uzun vadede günlerin yaklaşık %67’si güneşli, %33’ü yağmurlu olu
 # 3.Markov Zincirlerinin Kullanım alanları
 ## 3.1 Fizik ve Atom altı parçacıklar:
 <figure>
-    <img src="/assets/img/2025-09-15-markov-zincirleri/1.webp" width="600">
+    <img src="/assets/img/2025-09-15-markov-zincirleri/1.webp" alt="" width="600">
 </figure>
 
 Markov zincirleri, atom altı parçacıkların nasıl davrandığı ve nasıl olasılıklar içinde hangi orbitalden hangi orbitale atlama olasılıklarını simüle etmek için kullanılır. Ayriyeten çekirdekteki saçılma ve enerji durumlarını tespit etmek için de kullanılır.

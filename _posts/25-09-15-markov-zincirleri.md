@@ -13,7 +13,7 @@ mermaid: false
 comments: true
 pin: false
 ---
-
+Bu yazımızda Markov Zincirlerini inceleyeceğiz
 # 1. Markov Zincirleri Nedir? ve Kökeni ve Yapısı
 
 **Markov Zincirleri**, adını Rus matematikçi **Andrey Markov**’dan alır. Bu zincirler, stokastik yapıya sahip matematik ve istatistik tabanlı bir olasılık modelidir. Markov zincirleri, şuanki durumu temel alarak gelecekteki durumların olasılıklarını tahmin etmek için kullanılır. Temel varsayımı şudur: Gelecek yalnızca şuanki duruma bağlıdır, geçmişin doğrudan bir etkisi yoktur. Bu özelliğe **belleksizlik (memorylessness)** denir ve Markov zincirlerinin temelini oluşturur.
@@ -26,15 +26,15 @@ pin: false
 
 
 
-Temelleri 20. yüzyılın başına dayanmaktadır ve Andrey Markov tarafından ele alınmıştır. Keşfedilme süreci, Pavel Nekrasov’un Büyük Sayılar Yasası’nı dini bir temele oturtarak her şeyin belirli bir düzende gerçekleştiğini ve bağımsız olduğunu iddia etmesiyle başlamıştır. Markov ise bunun böyle olmadığını, olayların tamamen bağımsız değil, aksine şuanki yaşanan durumla bağlantılı ve rastgele bir biçimde birbirine bağlı olduğunu savunmuştur. Bunu ispatlamak içinse **Alexander Puşkin’in “Yevgeni Onegin”** şiirindeki harf ve kelime dağılımlarını incelemiştir. İlk önce şiiri incelemek için ilk yirmi bin kelimesini kendine data olarak hazırlıyor, harfleri **sesliler(V)** ve **sessizler(C)** diye ayırıyor. Bu ayırma sonucunda metnin %43'ünün sesli, %57'sinin sessiz harflerden oluştuğunu tespit ediyor. Daha sonra farklı kombinasyonlarla bir araya gelen(CC, CV, VC, VV) harf çiftleri saymış ve bu rakamlar üzerinden geçiş olasılıkları hesaplarını hesapladı. Örneğin, bir sesli harften sonra tekrar sesli harf gelme olasılığı %13, sessiz harf gelme olasılığı ise %87 olarak bulunmuştur. Benzer biçimde, bir sessiz harften sonra sesli gelme olasılığı yaklaşık %67, tekrar sessiz gelme olasılığı ise %33’tür.
+Temelleri 20. yüzyılın başına dayanmaktadır ve Andrey Markov tarafından ele alınmıştır. Keşfedilme süreci, Pavel Nekrasov’un Büyük Sayılar Yasası’nı dini bir temele oturtarak her şeyin belirli bir düzende gerçekleştiğini ve bağımsız olduğunu iddia etmesiyle başlamıştır. Markov ise bunun böyle olmadığını, olayların tamamen bağımsız değil, aksine şuanki yaşanan durumla bağlantılı ve rastgele bir biçimde birbirine bağlı olduğunu savunmuştur. Bunu ispatlamak içinse **Alexander Puşkin’in “Yevgeni Onegin”** şiirindeki harf ve kelime dağılımlarını incelemiştir. İlk önce şiiri incelemek için ilk yirmi bin kelimesini kendine data olarak hazırlıyor, harfleri **sesliler(V)** ve **sessizler(C)** diye ayırıyor. Bu ayırma sonucunda metnin %43'ünün sesli, %57'sinin sessiz harflerden oluştuğunu tespit ediyor. Daha sonra farklı kombinasyonlarla bir araya gelen(CC, CV, VC, VV) harf çiftleri saymış ve bu rakamlar üzerinden geçiş olasılıklarını hesapladı. Örneğin, bir sesli harften sonra tekrar sesli harf gelme olasılığı %13, sessiz harf gelme olasılığı ise %87 olarak bulunmuştur. Benzer biçimde, bir sessiz harften sonra sesli gelme olasılığı yaklaşık %67, tekrar sessiz gelme olasılığı ise %33’tür.
 
 Bu oranlar bir **geçiş matrisi** halinde düzenlenmiş ve böylece iki durumlu bir olasılık modeli, yani bugün “**Markov zinciri**” olarak bilinen yapı kurulmuştur. Markov, bu zinciri kullanarak rastgele başlanan bir harf dizisinin uzun vadede yine metindeki genel dağılıma (%43 sesli, %57 sessiz) yakınsadığını göstermiştir. Bu yapının Nekrasov'un söylediği gibi her şeyin bir düzen içinde değil bir Rastgeliklerin ve bağımlı durumların bir araya gelmesiyle bir yakınsama durumu haline gelebileceğini kanıtlamıştır.
 
 Bir sonraki kısımda matematiksel olarak temel gösterimi anlatmak istedik. Tabii ki burada amacımız matematiksel ispatına veya temsillerine odaklanmak değil sadece felsefi ve sezgisel bir anlatım yapmak.
 
-# 2. Markov Zincirlerinin Matematiksel Temelleri
+## 2. Markov Zincirlerinin Matematiksel Temelleri
 
-## 2.1. Tanım
+### 2.1. Tanım
 Bir **Markov zinciri**, ayrık zamanlı bir stokastik süreçtir:
 
 $$
@@ -54,7 +54,7 @@ Yani gelecek sadece bugüne bağlıdır; geçmişin etkisi yoktur.
 
 ---
 
-## 2.2. Geçiş Olasılıkları
+### 2.2. Geçiş Olasılıkları
 Geçişler bir **geçiş matrisi** $P$ ile tanımlanır:
 $$
 P = [p_{ij}],\qquad p_{ij} = P(X_{n+1}=j \mid X_n=i)
@@ -78,7 +78,7 @@ $$
 
 ---
 
-## 2.3. Başlangıç Dağılımı
+### 2.3. Başlangıç Dağılımı
 Başlangıçtaki olasılık dağılımı:
 $$
 \boldsymbol{\pi}^{(0)}=[\pi^{(0)}_1,\pi^{(0)}_2,\dots,\pi^{(0)}_m],\qquad \sum_i \pi^{(0)}_i=1
@@ -91,7 +91,7 @@ $$
 
 ---
 
-## 2.4. Durağan Dağılım
+### 2.4. Durağan Dağılım
 Markov Zincirleri belirli sayıda tekrarlandıktan sonra sabit bir dağılıma ulaşır. BU dağılım $\boldsymbol{\pi}$, **durağan (denge)** dağılımdır.
 Eğer aşağıdaki denklem çözülürse bir genel dağılım ve stabil değer elde edilir. :
 $$
@@ -106,8 +106,8 @@ $$
 Yani uzun vadede günlerin yaklaşık %67’si güneşli, %33’ü yağmurlu olur.
 
 
-# 3.Markov Zincirlerinin Kullanım alanları
-## 3.1 Fizik ve Atom altı parçacıklar:
+## 3.Markov Zincirlerinin Kullanım alanları
+### 3.1 Fizik ve Atom altı parçacıklar:
 <figure>
     <img src="/assets/img/2025-09-15-markov-zincirleri/1.webp" alt="" width="600">
 </figure>
@@ -117,7 +117,7 @@ Markov zincirleri, atom altı parçacıkların nasıl davrandığı ve nasıl ol
 II. Dünya Savaşı döneminde John von Neumann, Stanislaw Ulam ile birlikte **Monte Carlo yöntemini** geliştirmiş ve Manhattan Projesi kapsamında nötron taşınımı ile zincirleme reaksiyonların modellenmesinde kullanmıştır. Bu süreçte, nötronların bağımsız hareket etmediği, her adımın bir önceki duruma bağlı olduğu fark edilmiş ve bu nedenle sürecin **Markov zincirleri** üzerinden modellenmesi gerektiği ortaya çıkmıştır. Von Neumann ve Stanislaw Ulam, bu zincirleri **ENIAC** üzerinde simüle ederek Monte Carlo metodunu bulmuşlardır. Bununla beraber ilerideki yıllarda bu araştırmaların üzerinde giderek Monte Carlo ve Markov Zincirlerinin birleştirilmiş hali olan MCMC keşfedilmiştir.
 
 
-## 3.2 NLP (Doğal Dil İşleme)
+### 3.2 NLP (Doğal Dil İşleme)
 
 <figure>
     <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230503183646/Markov-Chains-in-NLP.webp" alt="Düşünme zinciri basamakları" width="600">
@@ -129,18 +129,18 @@ II. Dünya Savaşı döneminde John von Neumann, Stanislaw Ulam ile birlikte **M
 Markov Zincirleri, NLP'nin temelini oluşturur. İlkel NLP modellerinde olasılık hesapları yani bir kelimeden sonra hangi kelimenin geleceği veya basit metin üretimi için kullanılmıştır. Ama Markov Zincirleri kısa bellekli olduğu için günümüzde n-gram(Markov zincirlerinin gelişmiş hali) ve Transformers mimarisi, Markov zincirlerinin yerine almıştır.
 
 
-## 3.3 Google Aramaları ve PageRank
+### 3.3 Google Aramaları ve PageRank
 
 PageRank, Google'ın arama algoritmasının temeli olan ve web sayfalarının önem derecesini belirlemek için 1996'da geliştirilen bir algoritmadır.
 
 Web sitelerini gezen hayali bir rastgele kullanıcıyı düşünelim. Bu kullanıcı herhangi bir sayfaya girer ve sayfada bulunan bağlantılardan birini seçerek diğer sayfaya geçer. Bu geçişler yalnızca web sitelerinin bağlantı yapısına dayanır. Elde edilen bu geçişler ve web siteleri bir **graf yapısı** üzerinde modellenir. Graf üzerindeki her düğüm birer **state (durum)** olarak Markov zincirine eklenir. Bu durum defalarca tekrarlandığı zaman zincir, zamanla **durağan-stabil bir hale** ulaşır. Bu elde edilen durum , günümüzde Google gibi arama motorlarının temelini oluşturan **PageRank algoritmasının** ortaya çıkmasını sağladı.
 
-## 3.4 Biyoinformatik ve Biyolojik Yapıların Modellenmesi
+### 3.4 Biyoinformatik ve Biyolojik Yapıların Modellenmesi
 
 Markov zincirleri biyoinformatikte yaygın olarak DNA, RNA ve protein dizilerindeki istatistiksel bağıntıları modellemek için kullanılır. Gen tahmini, dizilerde motif arama, protein ailelerinin belirlenmesi, splice site tespiti ve filogenetik analizlerde önemli rol oynarlar. Ayrıca gizli Markov modelleri (HMM) ["gizli bağlanltıları ve ilişkileri yakalamak için özelleşmiş markov zincirleri"] özellikle genom anotasyonu ve protein dizilerinin sınıflandırılmasında temel yöntemlerden biridir.
 ## Yapay Zeka
 Markov Zincirleri NLP'de kullanıldığından bahsetmiştik. Yapay zekanın çeşitli kısımlarında kullanımı mevcuttur. Örneğin Reinforcement Learning'de (Markov Decision Process, Partially Observable MDP), Görüntü İşleme(Markov Random Fields), Zaman Serileri(Markov Switch Models), Bayesian Metotlarda kullanılır.
-# 4.Markov Zincirlerinin Zayıflıkları 
+## 4.Markov Zincirlerinin Zayıflıkları 
 
 * **Belleksizlik**: Markov Zincirleri sadece şuanki zamanı hesapladığı geçmişin önemli olduğu durumlarda olasılık hesaplarını imkansız kılar.
 * **Sınırlı Açıklama Yeteneği**: Markov zincirleri olayların neden ve niçin olduğunu açıklayamaz. Sadece olayların sonucunu tahmin etmemizi sağlar. Bu durum tıp ve mühendislikteki sorunların temeline inmeyi ve açıklamamızı engeller.
@@ -150,13 +150,13 @@ Markov Zincirleri NLP'de kullanıldığından bahsetmiştik. Yapay zekanın çe�
 
 ## 5. Markov Zincirlerinin Gelişmiş ve Özelleşmiş Modelleri
 
-## Monte Carlo Markov Zincirleri (MCMC)
+### Monte Carlo Markov Zincirleri (MCMC)
 Daha önce yukarıda bu MCMC'lerden bahsetmiştik. MCMC'lerin özellikleri doğrudan yakalanması ve modellenmesi zor ilişkileri modellleyerek ve hesaplayarak olasılıkların ortaya koyulmasını sağlar. 1953 yılında Metropolis algoritmasıyla beraber geliştirilmiştir. Atom altı parçacık davranışlarının modellemesi için kullanılır.
 
-## Gizli Markov Modeli (HMM)
+### Gizli Markov Modeli (HMM)
 **Gizli Markov Modelleri (HMM)**, gözlenemeyen (gizli) durumların ve bu durumlara bağlı olarak ortaya çıkan gözlemlerin bulunduğu olasılıksal modellerdir. Temelinde Markov zincirine dayanır, her bir gizli durum yalnızca bir önceki duruma bağlıdır. Ancak bu gizli durumlar doğrudan gözlemlenmez. Onların etkisi, gözlenebilir çıktılar üzerinden dolaylı şekilde görülür. Konuşma tanıma, biyoinformatik ve finans gibi alanlarda  kullanılır.
 
-## Markov Zincirlerini İçeren Tablo
+### Markov Zincirlerini İçeren Tablo
 
 |Model|Açıklama|Kullanım Alanları|
 |---|---|---|
@@ -171,14 +171,14 @@ Daha önce yukarıda bu MCMC'lerden bahsetmiştik. MCMC'lerin özellikleri doğr
 |**Kalman Filter (Linear-Gaussian State Space Model)**|HMM’nin lineer ve Gauss dağılımlı özel hali.|Sensör füzyonu, robotik, finans|
 |**Particle Filters**|Sürekli ve karmaşık durumları partiküllerle yaklaşık olarak takip eder.|Non-lineer, non-Gaussian sistemlerde izleme|
 
-# Kapanış
+## Kapanış
 
 Markov Zincirleri halen kullanılmakta olan en etkileyici istatistik metotlarından biridir. Kelimelerden atoma insanlığın ve doğanın yapısını anlamamızı ve gerçeklere farklı boyutta algılamamızı sağlıyor.
 
 Okuduğunuz için teşekkürler!
 
 
-# Kaynakça
+## Kaynakça
 
 - Eckhardt, R. (1987). *Stan Ulam, John von Neumann, and the Monte Carlo method*. Los Alamos Science, (15), 131–141. Los Alamos National Laboratory.  
   Erişim: [PDF](https://mcnp.lanl.gov/pdf_files/Article_1987_LAS_Eckhardt_131--141.pdf)

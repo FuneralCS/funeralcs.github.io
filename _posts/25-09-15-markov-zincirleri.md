@@ -138,7 +138,7 @@ Web sitelerini gezen hayali bir rastgele kullanıcıyı düşünelim. Bu kullan�
 ### 3.4 Biyoinformatik ve Biyolojik Yapıların Modellenmesi
 
 Markov zincirleri biyoinformatikte yaygın olarak DNA, RNA ve protein dizilerindeki istatistiksel bağıntıları modellemek için kullanılır. Gen tahmini, dizilerde motif arama, protein ailelerinin belirlenmesi, splice site tespiti ve filogenetik analizlerde önemli rol oynarlar. Ayrıca gizli Markov modelleri (HMM) ["gizli bağlanltıları ve ilişkileri yakalamak için özelleşmiş markov zincirleri"] özellikle genom anotasyonu ve protein dizilerinin sınıflandırılmasında temel yöntemlerden biridir.
-## Yapay Zeka
+### 3.5 Yapay Zeka
 Markov Zincirleri NLP'de kullanıldığından bahsetmiştik. Yapay zekanın çeşitli kısımlarında kullanımı mevcuttur. Örneğin Reinforcement Learning'de (Markov Decision Process, Partially Observable MDP), Görüntü İşleme(Markov Random Fields), Zaman Serileri(Markov Switch Models), Bayesian Metotlarda kullanılır.
 ## 4.Markov Zincirlerinin Zayıflıkları 
 

@@ -208,3 +208,4 @@ Okuduğunuz için teşekkürler!
 
 - Görsel 1: GeeksforGeeks. (2023). *Markov Chains in NLP* [Görsel].  
   Erişim: [https://media.geeksforgeeks.org/wp-content/uploads/20230503183646/Markov-Chains-in-NLP.webp](https://media.geeksforgeeks.org/wp-content/uploads/20230503183646/Markov-Chains-in-NLP.webp)
+- **Kaynakçada belirtilmeyen görseller yapay zeka tarafından üretilmiştir.**

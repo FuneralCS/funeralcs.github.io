@@ -14,7 +14,7 @@ comments: true
 pin: false
 ---
 Bu yazımızda Markov Zincirlerini inceleyeceğiz
-# 1. Markov Zincirleri Nedir? ve Kökeni ve Yapısı
+## 1. Markov Zincirleri Nedir? ve Kökeni ve Yapısı
 
 **Markov Zincirleri**, adını Rus matematikçi **Andrey Markov**’dan alır. Bu zincirler, stokastik yapıya sahip matematik ve istatistik tabanlı bir olasılık modelidir. Markov zincirleri, şuanki durumu temel alarak gelecekteki durumların olasılıklarını tahmin etmek için kullanılır. Temel varsayımı şudur: Gelecek yalnızca şuanki duruma bağlıdır, geçmişin doğrudan bir etkisi yoktur. Bu özelliğe **belleksizlik (memorylessness)** denir ve Markov zincirlerinin temelini oluşturur.
 

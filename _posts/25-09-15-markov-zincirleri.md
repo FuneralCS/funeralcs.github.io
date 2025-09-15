@@ -20,7 +20,7 @@ pin: false
 
 
 <figure>
-    <img src="assets/img/2025-09-15-markov-zincirleri/2.webp" width="600">
+    <img src="/assets/img/2025-09-15-markov-zincirleri/2.webp" width="600">
 
 </figure>
 

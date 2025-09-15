@@ -190,7 +190,7 @@ Okuduğunuz için teşekkürler!
   Erişim: [https://math.libretexts.org/Bookshelves/Linear_Algebra/Understanding_Linear_Algebra_(Austin)/04%3A_Eigenvalues_and_eigenvectors/4.05%3A_Markov_chains_and_Google's_PageRank_algorithm](https://math.libretexts.org/Bookshelves/Linear_Algebra/Understanding_Linear_Algebra_(Austin)/04%3A_Eigenvalues_and_eigenvectors/4.05%3A_Markov_chains_and_Google's_PageRank_algorithm)
 
 - Page, L., Brin, S., Motwani, R., & Winograd, T. (1999). *The PageRank citation ranking: Bringing order to the web*. Stanford InfoLab Technical Report.  
-  Erişim: [http://infolab.stanford.edu/~backrub/google.html](http://infolab.stanford.edu/~backrub/google.html)
+  Erişim: http://infolab.stanford.edu/~backrub/google.html](http://infolab.stanford.edu/~backrub/google.html
 
 - StackExchange. (2015). *Markov Chains vs HMM*. Cross Validated (StackExchange).  
   Erişim: [https://stats.stackexchange.com/questions/148023/markov-chains-vs-hmm](https://stats.stackexchange.com/questions/148023/markov-chains-vs-hmm)

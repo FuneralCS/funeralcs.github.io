@@ -1,8 +1,8 @@
 ---
 title: "Markov Zincirleri (Markov Chains)"
 date: 2025-09-15 18:00:00 +0300
-categories: [yapay zeka, matematik]
-tags: [nlp, matematik, yapay zeka, math, science, markov chains, chain]
+categories: [yapay zeka, matematik,olasılık]
+tags: [nlp, matematik, yapay zeka, math, science, markov chains, chain,istatistik,olasılık, llm]
 authors: yusuf-said
 image:
   path: /assets/img/2025-09-15-markov-zincirleri/cover.webp
@@ -190,7 +190,7 @@ Okuduğunuz için teşekkürler!
   Erişim: [https://math.libretexts.org/Bookshelves/Linear_Algebra/Understanding_Linear_Algebra_(Austin)/04%3A_Eigenvalues_and_eigenvectors/4.05%3A_Markov_chains_and_Google's_PageRank_algorithm](https://math.libretexts.org/Bookshelves/Linear_Algebra/Understanding_Linear_Algebra_(Austin)/04%3A_Eigenvalues_and_eigenvectors/4.05%3A_Markov_chains_and_Google's_PageRank_algorithm)
 
 - Page, L., Brin, S., Motwani, R., & Winograd, T. (1999). *The PageRank citation ranking: Bringing order to the web*. Stanford InfoLab Technical Report.  
-  Erişim: [https://web.archive.org/web/20250331133043/http://infolab.stanford.edu/~backrub/google.html]
+  Erişim: [https://web.archive.org/web/20250331133043/http://infolab.stanford.edu/~backrub/google.html](https://web.archive.org/web/20250331133043/http://infolab.stanford.edu/~backrub/google.html)
 - StackExchange. (2015). *Markov Chains vs HMM*. Cross Validated (StackExchange).  
   Erişim: [https://stats.stackexchange.com/questions/148023/markov-chains-vs-hmm](https://stats.stackexchange.com/questions/148023/markov-chains-vs-hmm)
 

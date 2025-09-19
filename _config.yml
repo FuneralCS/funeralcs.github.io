@@ -16,10 +16,9 @@ timezone: Europe/Istanbul
 
 title: FuneralCS # the main title
 
-tagline: CompSci is our passion # it will display as the subtitle
+tagline: Özgün bilgisayar bilimi içerikleri # it will display as the subtitle
 
-description: >- # used by seo meta and the atom feed
-  İnternet, bilgisayarlar ve dahası teknoloji hakkında her şey
+description: Klişelere karşı duran FuneralCS, bilgisayar bilimlerinde Türkçe’de bulunmayan konuları ele alarak teknoloji meraklılarına yeni ufuklar açıyor
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -42,7 +41,7 @@ social:
     - https://github.com/FuneralCS # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+     - https://www.linkedin.com/company/funeralcs
 
 # Site Verification Settings
 webmaster_verifications:

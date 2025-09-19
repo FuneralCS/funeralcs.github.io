@@ -1,3 +1,11 @@
+---
+layout: page
+title: PoE
+permalink: /poe/  
+order: 4         
+noindex: true
+---
+
 Proof of Egg (PoE) Konsensüs Mekanizması ve Biyolojik Veri Kümelerinin Finansal Entegrasyonu
 
 Özet (Abstract)

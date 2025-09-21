@@ -3,7 +3,11 @@
     {%- if lang == site.active_lang -%}
       <span class="active" aria-current="page">{{ lang | upcase }}</span>
     {%- else -%}
-      <a href="/{{ lang }}/" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
+      {%- if lang == site.default_lang -%}
+        <a href="/" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
+      {%- else -%}
+        <a href="/{{ lang }}/" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
+      {%- endif -%}
     {%- endif -%}
   {%- endfor -%}
 </div>

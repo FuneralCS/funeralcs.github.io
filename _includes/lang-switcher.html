@@ -1,56 +1,15 @@
-{%- comment -%}
-  Classic Language Switcher (Jekyll Polyglot)
-  - TR default at root (/), EN at /en/
-  - If alternate doesn't exist, fall back to TR (avoid broken links)
-  - Never outputs empty <a>
-{%- endcomment -%}
+<button onclick="toggleLang()">EN / TR</button>
 
-{%- assign langs = site.languages | default: "tr,en" -%}
-{%- if langs contains "," or langs contains " " -%}
-  {%- assign langs = langs | split: "," | join:" " | split:" " | uniq -%}
-{%- endif -%}
+<script>
+function toggleLang() {
+  let url = window.location.pathname;
 
-{%- assign active = page.lang | default: site.active_lang | default: site.default_lang -%}
-{%- assign def_in_sub = site.polyglot.default_lang_in_subdir -%}
-{%- if def_in_sub == nil -%}{% assign def_in_sub = true %}{% endif -%}
-
-{%- assign url_no_lang = page.url | default:"/" -%}
-{%- capture active_prefix -%}/{{ active }}/{%- endcapture -%}
-{%- if url_no_lang != "/" and url_no_lang contains active_prefix -%}
-  {%- assign url_no_lang = url_no_lang | replace_first: active_prefix, "/" -%}
-{%- endif -%}
-
-<nav class="lang-switcher" aria-label="Language switcher">
-  {%- for lang in langs -%}
-    {%- assign href = nil -%}
-
-    {%- comment -%} 1) En doğrusu: Polyglot'un verdiği alternate URL {%- endcomment -%}
-    {%- if page.alternate_urls and page.alternate_urls[lang] -%}
-      {%- assign href = page.alternate_urls[lang] -%}
-    {%- else -%}
-      {%- comment -%} 2) Yoksa üret → EN için sayfa yoksa TR fallback {%- endcomment -%}
-      {%- if lang == site.default_lang -%}
-        {%- if def_in_sub == false -%}
-          {%- assign href = url_no_lang -%}             {# TR kökte #}
-        {%- else -%}
-          {%- assign href = "/" | append: lang | append: url_no_lang -%}
-        {%- endif -%}
-      {%- else -%}
-        {%- comment -%} EN (veya diğer diller) mevcut değilse TR'de bırak {%- endcomment -%}
-        {%- if def_in_sub == false -%}
-          {%- assign href = url_no_lang -%}             {# TR kökte fallback #}
-        {%- else -%}
-          {%- assign href = "/" | append: site.default_lang | append: url_no_lang -%}
-        {%- endif -%}
-      {%- endif -%}
-    {%- endif -%}
-
-    {%- if lang == active -%}
-      <span lang="{{ lang }}" aria-current="page">{{ lang | upcase }}</span>
-    {%- else -%}
-      <a href="{{ href | relative_url }}" hreflang="{{ lang }}" lang="{{ lang }}">{{ lang | upcase }}</a>
-    {%- endif -%}
-
-    {%- unless forloop.last -%} · {%- endunless -%}
-  {%- endfor -%}
-</nav>
+  if (url.startsWith('/en/')) {
+    // İngilizcedeyken TR'ye döner
+    window.location.pathname = url.replace(/^\/en/, '') || '/';
+  } else {
+    // Türkçedeyken EN'e geçer
+    window.location.pathname = '/en' + url;
+  }
+}
+</script>

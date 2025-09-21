@@ -1,5 +1,5 @@
 ---
 layout: home
-# Index page
+title: "Home"
 lang: tr
 ---

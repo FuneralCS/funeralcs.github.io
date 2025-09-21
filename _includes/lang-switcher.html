@@ -1,43 +1,33 @@
+{%- comment -%}
+  Simple language switcher
+  - Aktif dil: <span> (asla link değil)
+  - Diğer diller: "/" veya "/<lang>/" (default_lang_in_subdir kontrolü)
+{%- endcomment -%}
+
 {%- assign active = site.active_lang | default: site.default_lang -%}
 {%- assign def_in_sub = site.polyglot.default_lang_in_subdir | default: true -%}
 
-<div class="lang-switcher" role="navigation" aria-label="Language switcher">
+<div class="lang-switcher" role="navigation" aria-label="Language selector">
   {%- for lang in site.languages -%}
     {%- assign is_active = (lang == active) -%}
 
     {%- if is_active -%}
-      <span class="pill active" aria-current="page">{{ lang | upcase }}</span>
+      <span class="lang-pill active" aria-current="page" lang="{{ lang }}">{{ lang | upcase }}</span>
     {%- else -%}
       {%- if lang == site.default_lang and def_in_sub == false -%}
-        <a class="pill" href="/" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
+        <a class="lang-pill" href="/" lang="{{ lang }}" hreflang="{{ lang }}" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
       {%- else -%}
-        <a class="pill" href="/{{ lang }}/" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
+        <a class="lang-pill" href="/{{ lang }}/" lang="{{ lang }}" hreflang="{{ lang }}" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
       {%- endif -%}
     {%- endif -%}
   {%- endfor -%}
 </div>
 
 <style>
-.lang-switcher {
-  display: flex;
-  gap: .5rem;
-  margin: .8rem 0;
-}
-.lang-switcher .pill {
-  padding: .35rem .7rem;
-  border-radius: 999px;
-  border: 1px solid rgba(0,0,0,.1);
-  font-weight: 600;
-  font-size: .9rem;
-  text-decoration: none;
-  color: inherit;
-  transition: all .2s ease;
-}
-.lang-switcher .pill:hover {
-  background: rgba(0,0,0,.05);
-}
-.lang-switcher .pill.active {
-  background: rgba(0,0,0,.15);
-  box-shadow: inset 0 -2px rgba(0,0,0,.08);
-}
+.lang-switcher{display:flex;gap:.5rem;align-items:center;margin:.6rem 0}
+.lang-pill{display:inline-flex;align-items:center;justify-content:center;
+  padding:.35rem .65rem;border-radius:999px;border:1px solid rgba(0,0,0,.08);
+  text-decoration:none;font-weight:700;font-size:.88rem;color:inherit}
+.lang-pill:hover{background:rgba(0,0,0,.04)}
+.lang-pill.active{background:rgba(0,0,0,.12);box-shadow:inset 0 -2px rgba(0,0,0,.06)}
 </style>

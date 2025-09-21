@@ -98,16 +98,21 @@
   </div>
   <!-- .sidebar-bottom -->
 <div style="display:flex; gap:6px; margin:0.8rem 0;">
-  <a href="{{ site.baseurl }}/"
-     style="padding:4px 8px; border-radius:6px; font-weight:600; text-decoration:none;
-            color:#fff; background:{% if page.lang == 'tr' or page.lang == nil %}#444{% else %}transparent{% endif %};">
-    TR
-  </a>
-  <a href="{{ site.baseurl }}/en/"
-     style="padding:4px 8px; border-radius:6px; font-weight:600; text-decoration:none;
-            color:#fff; background:{% if page.lang == 'en' %}#444{% else %}transparent{% endif %};">
-    EN
-  </a>
+  {% assign langs = site.languages %}
+  {% for lang in langs %}
+    {% if lang == page.lang or (page.lang == nil and lang == site.default_lang) %}
+      <a style="padding:4px 8px; border-radius:6px; font-weight:600;
+                text-decoration:none; color:#fff; background:#444;">
+        {{ lang | upcase }}
+      </a>
+    {% else %}
+      <a href="{{ page.alternate_urls[lang] | default: site.baseurl }}"
+         style="padding:4px 8px; border-radius:6px; font-weight:600;
+                text-decoration:none; color:#fff; background:transparent;">
+        {{ lang | upcase }}
+      </a>
+    {% endif %}
+  {% endfor %}
 </div>
 
 </aside>

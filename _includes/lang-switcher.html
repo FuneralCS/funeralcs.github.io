@@ -1,0 +1,80 @@
+{%- comment -%}
+  Robust Language Switcher (Jekyll Polyglot, htmlproofer-safe)
+  - Aktif dil: <span> (asla link değil)
+  - Diğer diller: her zaman dolu href (boş link asla yok)
+  - URL üretimi: mevcut yolun dil öneksiz hali + hedef dil öneki
+  - default_lang_in_subdir true/false destekli
+  - 404/root gibi özel sayfalarda güvenli fallback
+{%- endcomment -%}
+
+{%- assign langs = site.languages | default: "tr,en" -%}
+{%- if langs contains "," -%}{% assign langs = langs | split: "," %}{% endif -%}
+
+{%- assign active = site.active_lang | default: page.lang | default: site.default_lang -%}
+{%- assign def_in_sub = site.polyglot.default_lang_in_subdir -%}
+{%- if def_in_sub == nil -%}{% assign def_in_sub = true %}{% endif -%}
+
+{%- comment -%} mevcut sayfanın yolu {%- endcomment -%}
+{%- assign path = page.url | default: "/" -%}
+{%- if path == "" -%}{% assign path = "/" %}{% endif -%}
+
+{%- comment -%} güvenlik: path mutlaka / ile başlasın {%- endcomment -%}
+{%- assign firstchar = path | slice: 0,1 -%}
+{%- unless firstchar == "/" -%}{% assign path = "/" | append: path %}{% endunless -%}
+
+{%- comment -%} dil önekini temizleyip dil-öneksiz yol çıkaralım {%- endcomment -%}
+{%- assign path_no_lang = path -%}
+{%- for L in langs -%}
+  {%- capture pref %}/{{ L }}/{% endcapture -%}
+  {%- if path_no_lang != "/" and path_no_lang contains pref -%}
+    {%- assign path_no_lang = path_no_lang | replace_first: pref, "/" -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- comment -%} 404 gibi sayfalarda varyant garanti olmayabilir → köke indir {%- endcomment -%}
+{%- if page.url == "/404.html" or page.layout == "404" -%}
+  {%- assign path_no_lang = "/" -%}
+{%- endif -%}
+
+<style>
+.lang-switcher{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0}
+.lang-switcher .pill{display:inline-flex;align-items:center;gap:.4rem;
+  padding:.35rem .7rem;border-radius:999px;border:1px solid rgba(0,0,0,.08);
+  text-decoration:none;font-weight:700;font-size:.9rem;line-height:1}
+.lang-switcher .pill:hover{background:rgba(0,0,0,.05)}
+.lang-switcher .pill.active{background:rgba(0,0,0,.12);box-shadow:inset 0 -2px rgba(0,0,0,.06)}
+</style>
+
+<div class="lang-switcher" role="navigation" aria-label="Language switcher">
+  {%- for lang in langs -%}
+    {%- assign is_active = (lang == active) -%}
+
+    {%- if is_active -%}
+      <span class="pill active" aria-current="page" lang="{{ lang }}">{{ lang | upcase }}</span>
+    {%- else -%}
+      {%- comment -%} hedef URL'i hesapla {%- endcomment -%}
+      {%- if lang == site.default_lang and def_in_sub == false -%}
+        {%- assign target = path_no_lang -%}          {# varsayılan dil kökte #}
+      {%- else -%}
+        {%- capture target %}/{{ lang }}{% endcapture -%}
+        {%- assign target = target | append: path_no_lang -%}
+      {%- endif -%}
+
+      {%- comment -%} son güvenlik: target boşsa kök fallback {%- endcomment -%}
+      {%- if target == nil or target == "" -%}
+        {%- if lang == site.default_lang and def_in_sub == false -%}
+          {%- assign target = "/" -%}
+        {%- else -%}
+          {%- capture target %}/{{ lang }}/{% endcapture -%}
+        {%- endif -%}
+      {%- endif -%}
+
+      {%- comment -%} baseurl ile birleştir (relative_url kullanmıyoruz) {%- endcomment -%}
+      {%- assign href_final = (site.baseurl | default: "") | append: target -%}
+
+      <a class="pill" lang="{{ lang }}" hreflang="{{ lang }}" href="{{ href_final }}" title="Switch to {{ lang | upcase }}">
+        {{ lang | upcase }}
+      </a>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

@@ -190,27 +190,7 @@
 .lang-switcher .flag{font-size:1rem;line-height:1;display:inline-block}
 </style>
 
-{%- assign active = site.active_lang | default: site.default_lang -%}
-{%- assign def_in_sub = site.polyglot.default_lang_in_subdir | default: true -%}
-
-<div class="lang-switcher" role="navigation" aria-label="Language switcher">
-  {%- for lang in site.languages -%}
-    {%- if lang == site.default_lang and def_in_sub == false -%}
-      {%- assign alt = "/" -%}
-    {%- else -%}
-      {%- assign alt = "/" | append: lang | append: page.url | default:'/' -%}
-    {%- endif -%}
-
-    {%- assign is_active = (lang == active) -%}
-    {%- capture label -%}{{ lang | upcase }}{%- endcapture -%}
-
-    {%- if is_active -%}
-      <span class="pill active" aria-current="page">{{ label }}</span>
-    {%- else -%}
-      <a class="pill" href="{{ alt }}" title="Switch to {{ label }}">{{ label }}</a>
-    {%- endif -%}
-  {%- endfor -%}
-</div>
+{% include lang-switcher.html %}
 
 </aside>
 <!-- #sidebar -->

@@ -124,11 +124,12 @@ refactor: true
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Ana Sayfa",
-  "url": "{{ site.url }}/",
-  "inLanguage": "tr"
+  "name": "{{ site.data.locales[lang].home.title | default: 'Home' }}",
+  "url": "{{ site.url }}/{{ lang }}/",
+  "inLanguage": "{{ lang }}"
 }
 </script>
+
 
 
 <script type="application/ld+json">

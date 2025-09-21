@@ -196,6 +196,8 @@
 
 <div class="lang-switcher" role="navigation" aria-label="Language switcher">
   {%- for lang in site.languages -%}
+    {%- assign alt = nil -%}
+
     {%- if page.alternate_urls and page.alternate_urls[lang] -%}
       {%- assign alt = page.alternate_urls[lang] -%}
     {%- else -%}
@@ -217,7 +219,7 @@
       {%- endif -%}
     {%- endif -%}
 
-    {%- comment -%} son garanti: alt boşsa root fallback {%- endcomment -%}
+    {%- comment -%} kesin fallback {%- endcomment -%}
     {%- if alt == nil or alt == '' -%}
       {%- if lang == site.default_lang and def_in_sub == false -%}
         {%- assign alt = '/' -%}
@@ -239,10 +241,13 @@
     {%- if is_active -%}
       <span class="pill active" aria-current="page"><span class="flag">{{ flag }}</span> {{ label }}</span>
     {%- else -%}
-      <a class="pill" href="{{ alt | relative_url }}" title="Switch to {{ label }}"><span class="flag">{{ flag }}</span> {{ label }}</a>
+      <a class="pill" href="{{ alt | default:'/' | relative_url }}" title="Switch to {{ label }}">
+        <span class="flag">{{ flag }}</span> {{ label }}
+      </a>
     {%- endif -%}
   {%- endfor -%}
 </div>
+
 
 </aside>
 <!-- #sidebar -->

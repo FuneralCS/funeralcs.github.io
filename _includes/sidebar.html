@@ -130,13 +130,36 @@
 }
 </style>
 
+{%- comment -%}
+  Language switcher (Jekyll Polyglot)
+  - Aktif dili <span> ile gösterir (boş href hatası yok)
+  - Diğer diller için page.alternate_urls varsa onu kullanır
+  - Yoksa / veya /en/ fallback üretir
+{%- endcomment -%}
+
+{%- assign current_lang = page.lang | default: site.default_lang -%}
+{%- assign langs = site.languages -%}
+
+<style>
+.lang-switcher { display:inline-flex; gap:0.4rem; align-items:center; margin:0.8rem 0; }
+.lang-switcher a, .lang-switcher span {
+  padding:0.28rem 0.6rem;
+  border-radius:6px;
+  font-weight:600;
+  font-size:0.88rem;
+  text-decoration:none;
+  color:inherit;
+  border:1px solid rgba(0,0,0,0.06);
+}
+.lang-switcher a:hover { background: rgba(0,0,0,0.04); }
+.lang-switcher .active {
+  background: rgba(0,0,0,0.12);
+  box-shadow: inset 0 -2px rgba(0,0,0,0.06);
+}
+</style>
+
 <div class="lang-switcher" role="navigation" aria-label="Language switcher">
   {%- for lang in langs -%}
-    {%- assign lang = lang | strip -%}
-
-    {%- comment -%}
-      Build language root fallback (respect default_lang_in_subdir)
-    {%- endcomment -%}
     {%- assign def_in_sub = site.polyglot.default_lang_in_subdir -%}
     {%- if def_in_sub == nil -%}
       {%- assign def_in_sub = true -%}
@@ -148,19 +171,12 @@
       {%- assign lang_root = site.baseurl | append: '/' | append: lang | append: '/' -%}
     {%- endif -%}
 
-    {%- comment -%}
-      Prefer page.alternate_urls[lang] when available, otherwise use lang_root.
-    {%- endcomment -%}
-    {%- assign alt = "" -%}
-    {%- if page.alternate_urls and page.alternate_urls[lang] %}
+    {%- if page.alternate_urls and page.alternate_urls[lang] -%}
       {%- assign alt = page.alternate_urls[lang] -%}
     {%- else -%}
       {%- assign alt = lang_root -%}
     {%- endif -%}
 
-    {%- comment -%}
-      Output: active -> span (no empty href). other -> anchor with href.
-    {%- endcomment -%}
     {%- if lang == current_lang -%}
       <span class="active" aria-current="page">{{ lang | upcase }}</span>
     {%- else -%}
@@ -168,6 +184,7 @@
     {%- endif -%}
   {%- endfor -%}
 </div>
+
 
 </aside>
 <!-- #sidebar -->

@@ -1,6 +1,6 @@
 ---
 layout: home
-# Index page
+title: "Ana Sayfa"
 lang: tr
 permalink: /
 ---

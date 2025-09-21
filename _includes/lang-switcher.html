@@ -1,18 +1,6 @@
-{%- comment -%}
-  Solid Language Switcher (works even on tag/author/archive pages)
-  - active lang detection order:
-    1) site.active_lang
-    2) page.lang
-    3) URL prefix (/en/, /tr/)
-    4) site.default_lang
-  - default_lang_in_subdir respected
-  - active lang is <span>, others are <a>
-{%- endcomment -%}
-
 {%- assign langs = site.languages -%}
-{%- assign def_in_sub = site.polyglot.default_lang_in_subdir | default: true -%}
-
 {%- assign active = site.active_lang | default: page.lang -%}
+
 {%- if active == nil or active == '' -%}
   {%- assign p = page.url | default:'/' -%}
   {%- assign seg = p | split:'/' | slice:1,1 | first -%}
@@ -28,7 +16,7 @@
     {%- if lang == active -%}
       <span class="pill active" aria-current="page" lang="{{ lang }}">{{ lang | upcase }}</span>
     {%- else -%}
-      {%- if lang == site.default_lang and def_in_sub == false -%}
+      {%- if lang == site.default_lang -%}
         {%- assign href = '/' -%}
       {%- else -%}
         {%- assign href = '/' | append: lang | append: '/' -%}

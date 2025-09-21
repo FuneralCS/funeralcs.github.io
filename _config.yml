@@ -173,7 +173,7 @@ collections:
 defaults:
 
   - scope:
-      path: page
+      path: "_pages"
     values:
       layout: page
       robots: index

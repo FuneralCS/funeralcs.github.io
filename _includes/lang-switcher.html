@@ -1,28 +1,26 @@
 <div class="lang-switcher" role="navigation" aria-label="Language switcher">
-  {%- for lang in site.languages -%}
+  {%- for lang in langs -%}
+    {%- assign def_in_sub = site.polyglot.default_lang_in_subdir -%}
+    {%- if def_in_sub == nil -%}
+      {%- assign def_in_sub = true -%}
+    {%- endif -%}
+
+    {%- if lang == site.default_lang and def_in_sub == false -%}
+      {%- assign lang_root = site.baseurl | append: '/' -%}
+    {%- else -%}
+      {%- assign lang_root = site.baseurl | append: '/' | append: lang | append: '/' -%}
+    {%- endif -%}
+
+    {%- if page.alternate_urls and page.alternate_urls[lang] -%}
+      {%- assign alt = page.alternate_urls[lang] -%}
+    {%- else -%}
+      {%- assign alt = lang_root -%}
+    {%- endif -%}
+
     {%- if lang == site.active_lang -%}
       <span class="active" aria-current="page">{{ lang | upcase }}</span>
     {%- else -%}
-      {%- if lang == site.default_lang -%}
-        <a href="/" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
-      {%- else -%}
-        <a href="/{{ lang }}/" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
-      {%- endif -%}
+      <a href="{{ alt | relative_url }}" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
     {%- endif -%}
   {%- endfor -%}
 </div>
-
-<style>
-.lang-switcher{display:flex;gap:.5rem;margin:.6rem 0}
-.lang-switcher a,.lang-switcher span{
-  padding:.3rem .6rem;
-  border-radius:6px;
-  font-weight:600;
-  font-size:.9rem;
-  text-decoration:none;
-  border:1px solid rgba(0,0,0,.1);
-  color:inherit
-}
-.lang-switcher a:hover{background:rgba(0,0,0,.05)}
-.lang-switcher .active{background:rgba(0,0,0,.15)}
-</style>

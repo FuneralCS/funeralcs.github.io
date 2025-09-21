@@ -195,26 +195,10 @@
 
 <div class="lang-switcher" role="navigation" aria-label="Language switcher">
   {%- for lang in site.languages -%}
-    {%- assign alt = nil -%}
-
-    {%- if page.alternate_urls and page.alternate_urls[lang] -%}
-      {%- assign alt = page.alternate_urls[lang] -%}
-    {%- elsif page.url and page.url != '' -%}
-      {%- assign url_no_lang = page.url -%}
-      {%- if lang == site.default_lang and def_in_sub == false -%}
-        {%- assign alt = url_no_lang -%}
-      {%- else -%}
-        {%- assign alt = '/' | append: lang | append: url_no_lang -%}
-      {%- endif -%}
-    {%- endif -%}
-
-    {%- comment -%} kesin fallback {%- endcomment -%}
-    {%- if alt == nil or alt == '' -%}
-      {%- if lang == site.default_lang and def_in_sub == false -%}
-        {%- assign alt = '/' -%}
-      {%- else -%}
-        {%- assign alt = '/' | append: lang | append: '/' -%}
-      {%- endif -%}
+    {%- if lang == site.default_lang and def_in_sub == false -%}
+      {%- assign alt = "/" -%}
+    {%- else -%}
+      {%- assign alt = "/" | append: lang | append: page.url | default:'/' -%}
     {%- endif -%}
 
     {%- assign is_active = (lang == active) -%}
@@ -227,5 +211,6 @@
     {%- endif -%}
   {%- endfor -%}
 </div>
+
 </aside>
 <!-- #sidebar -->

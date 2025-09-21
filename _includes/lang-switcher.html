@@ -1,33 +1,30 @@
-{%- comment -%}
-  Simple language switcher
-  - Aktif dil: <span> (asla link değil)
-  - Diğer diller: "/" veya "/<lang>/" (default_lang_in_subdir kontrolü)
-{%- endcomment -%}
-
-{%- assign active = site.active_lang | default: site.default_lang -%}
-{%- assign def_in_sub = site.polyglot.default_lang_in_subdir | default: true -%}
-
-<div class="lang-switcher" role="navigation" aria-label="Language selector">
+<div class="lang-switcher" role="navigation" aria-label="Language switcher">
   {%- for lang in site.languages -%}
-    {%- assign is_active = (lang == active) -%}
+    {%- assign def_in_sub = site.polyglot.default_lang_in_subdir -%}
+    {%- if def_in_sub == nil -%}
+      {%- assign def_in_sub = true -%}
+    {%- endif -%}
 
-    {%- if is_active -%}
-      <span class="lang-pill active" aria-current="page" lang="{{ lang }}">{{ lang | upcase }}</span>
+    {%- if lang == site.default_lang and def_in_sub == false -%}
+      {%- assign lang_root = site.baseurl | append: '/' -%}
     {%- else -%}
-      {%- if lang == site.default_lang and def_in_sub == false -%}
-        <a class="lang-pill" href="/" lang="{{ lang }}" hreflang="{{ lang }}" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
-      {%- else -%}
-        <a class="lang-pill" href="/{{ lang }}/" lang="{{ lang }}" hreflang="{{ lang }}" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
-      {%- endif -%}
+      {%- assign lang_root = site.baseurl | append: '/' | append: lang | append: '/' -%}
+    {%- endif -%}
+
+    {%- if lang == site.active_lang -%}
+      <span class="pill active" aria-current="page">{{ lang | upcase }}</span>
+    {%- else -%}
+      <a class="pill" href="{{ lang_root | relative_url }}" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
     {%- endif -%}
   {%- endfor -%}
 </div>
 
 <style>
 .lang-switcher{display:flex;gap:.5rem;align-items:center;margin:.6rem 0}
-.lang-pill{display:inline-flex;align-items:center;justify-content:center;
-  padding:.35rem .65rem;border-radius:999px;border:1px solid rgba(0,0,0,.08);
-  text-decoration:none;font-weight:700;font-size:.88rem;color:inherit}
-.lang-pill:hover{background:rgba(0,0,0,.04)}
-.lang-pill.active{background:rgba(0,0,0,.12);box-shadow:inset 0 -2px rgba(0,0,0,.06)}
+.lang-switcher .pill{padding:.35rem .65rem;border-radius:999px;
+  border:1px solid rgba(0,0,0,.08);font-weight:700;font-size:.88rem;
+  text-decoration:none;color:inherit}
+.lang-switcher .pill:hover{background:rgba(0,0,0,.05)}
+.lang-switcher .pill.active{background:rgba(0,0,0,.12);
+  box-shadow:inset 0 -2px rgba(0,0,0,.06)}
 </style>

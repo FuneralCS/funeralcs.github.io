@@ -10,5 +10,17 @@
     {%- else -%}
       {%- assign lang_root = site.baseurl | append: '/' | append: lang | append: '/' -%}
     {%- endif -%}
+
+    {%- if page.alternate_urls and page.alternate_urls[lang] -%}
+      {%- assign alt = page.alternate_urls[lang] -%}
+    {%- else -%}
+      {%- assign alt = lang_root -%}
+    {%- endif -%}
+
+    {%- if lang == site.active_lang -%}
+      <span class="active" aria-current="page">{{ lang | upcase }}</span>
+    {%- else -%}
+      <a href="{{ alt | relative_url }}" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
+    {%- endif -%}
   {%- endfor -%}
 </div>

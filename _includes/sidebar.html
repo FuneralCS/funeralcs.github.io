@@ -97,22 +97,77 @@
     {% endfor %}
   </div>
   <!-- .sidebar-bottom -->
-<div style="display:flex; gap:6px; margin:0.8rem 0;">
-  {% assign langs = site.languages %}
-  {% for lang in langs %}
-    {% if lang == page.lang or (page.lang == nil and lang == site.default_lang) %}
-      <span style="padding:4px 8px; border-radius:6px; font-weight:600;
-                   background:#444; color:#fff;">
-        {{ lang | upcase }}
-      </span>
-    {% else %}
-      <a href="{{ page.alternate_urls[lang] | default: site.baseurl }}"
-         style="padding:4px 8px; border-radius:6px; font-weight:600;
-                text-decoration:none; color:#fff; background:transparent;">
-        {{ lang | upcase }}
-      </a>
-    {% endif %}
-  {% endfor %}
+{%- comment -%}
+  Robust language switcher
+  - avoids empty <a>
+  - uses page.alternate_urls when present
+  - falls back to language root (handles default_lang_in_subdir)
+{%- endcomment -%}
+
+{%- assign current_lang = page.lang | default: site.default_lang -%}
+{%- assign langs = site.languages | default: "tr,en" -%}
+{%- if langs contains "," -%}
+  {%- assign langs = langs | split: "," -%}
+{%- else -%}
+  {%- assign langs = langs | split: " " -%}
+{%- endif -%}
+
+<style>
+.lang-switcher { display:inline-flex; gap:0.4rem; align-items:center; }
+.lang-switcher a, .lang-switcher span {
+  padding:0.28rem 0.6rem;
+  border-radius:6px;
+  font-weight:600;
+  font-size:0.88rem;
+  text-decoration:none;
+  color:inherit;
+  border:1px solid rgba(0,0,0,0.06);
+}
+.lang-switcher a:hover { background: rgba(0,0,0,0.04); }
+.lang-switcher .active {
+  background: rgba(0,0,0,0.12);
+  box-shadow: inset 0 -2px rgba(0,0,0,0.06);
+}
+</style>
+
+<div class="lang-switcher" role="navigation" aria-label="Language switcher">
+  {%- for lang in langs -%}
+    {%- assign lang = lang | strip -%}
+
+    {%- comment -%}
+      Build language root fallback (respect default_lang_in_subdir)
+    {%- endcomment -%}
+    {%- assign def_in_sub = site.polyglot.default_lang_in_subdir -%}
+    {%- if def_in_sub == nil -%}
+      {%- assign def_in_sub = true -%}
+    {%- endif -%}
+
+    {%- if lang == site.default_lang and def_in_sub == false -%}
+      {%- assign lang_root = site.baseurl | append: '/' -%}
+    {%- else -%}
+      {%- assign lang_root = site.baseurl | append: '/' | append: lang | append: '/' -%}
+    {%- endif -%}
+
+    {%- comment -%}
+      Prefer page.alternate_urls[lang] when available, otherwise use lang_root.
+    {%- endcomment -%}
+    {%- assign alt = "" -%}
+    {%- if page.alternate_urls and page.alternate_urls[lang] %}
+      {%- assign alt = page.alternate_urls[lang] -%}
+    {%- else -%}
+      {%- assign alt = lang_root -%}
+    {%- endif -%}
+
+    {%- comment -%}
+      Output: active -> span (no empty href). other -> anchor with href.
+    {%- endcomment -%}
+    {%- if lang == current_lang -%}
+      <span class="active" aria-current="page">{{ lang | upcase }}</span>
+    {%- else -%}
+      <a href="{{ alt | relative_url }}" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
+    {%- endif -%}
+  {%- endfor -%}
 </div>
+
 </aside>
 <!-- #sidebar -->

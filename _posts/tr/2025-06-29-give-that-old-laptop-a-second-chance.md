@@ -5,7 +5,7 @@ categories: [teknoloji, rehber]
 tags: [dizüstü bilgisayar, linux, ev sunucusu, kendi kendine barındırma]
 author: kerim
 image:
-    path: /assets/img/06-29-2025-o-eski-dizüstü-bilgisayara-ikinci-şans-verin/Blog_kapakfoto.webp
+    path: /assets/img/2025-06-29-give-that-old-laptop-a-second-chance/Blog_kapakfoto.webp
     alt: Blog Kapak Fotoğrafı
 description: "Eski bir dizüstü bilgisayarı kişisel bulutunuza, medya sunucunuza, retro oyun konsolunuza ve daha fazlasına nasıl dönüştürebilirsiniz? Hepsi tek bir kapsamlı kılavuzda!"
 toc: true

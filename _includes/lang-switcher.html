@@ -1,30 +1,11 @@
 <div class="lang-switcher" role="navigation" aria-label="Language switcher">
-  {%- for lang in site.languages -%}
+  {%- for lang in langs -%}
     {%- assign def_in_sub = site.polyglot.default_lang_in_subdir -%}
     {%- if def_in_sub == nil -%}
       {%- assign def_in_sub = true -%}
     {%- endif -%}
-
     {%- if lang == site.default_lang and def_in_sub == false -%}
       {%- assign lang_root = site.baseurl | append: '/' -%}
     {%- else -%}
       {%- assign lang_root = site.baseurl | append: '/' | append: lang | append: '/' -%}
     {%- endif -%}
-
-    {%- if lang == site.active_lang -%}
-      <span class="pill active" aria-current="page">{{ lang | upcase }}</span>
-    {%- else -%}
-      <a class="pill" href="{{ lang_root | relative_url }}" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
-    {%- endif -%}
-  {%- endfor -%}
-</div>
-
-<style>
-.lang-switcher{display:flex;gap:.5rem;align-items:center;margin:.6rem 0}
-.lang-switcher .pill{padding:.35rem .65rem;border-radius:999px;
-  border:1px solid rgba(0,0,0,.08);font-weight:700;font-size:.88rem;
-  text-decoration:none;color:inherit}
-.lang-switcher .pill:hover{background:rgba(0,0,0,.05)}
-.lang-switcher .pill.active{background:rgba(0,0,0,.12);
-  box-shadow:inset 0 -2px rgba(0,0,0,.06)}
-</style>

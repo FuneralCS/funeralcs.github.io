@@ -5,7 +5,7 @@ categories: [teknoloji, rehber]
 tags: [dizüstü bilgisayar, linux, ev sunucusu, kendi kendine barındırma]
 author: kerim
 image:
-    path: /assets/img/2025-06-29-give-that-old-laptop-a-second-chance/Blog_kapakfoto.webp
+    path: /assets/img/06-29-2025-give-that-old-laptop-a-second-chance/Blog_kapakfoto.webp
     alt: Blog Kapak Fotoğrafı
 description: "Eski bir dizüstü bilgisayarı kişisel bulutunuza, medya sunucunuza, retro oyun konsolunuza ve daha fazlasına nasıl dönüştürebilirsiniz? Hepsi tek bir kapsamlı kılavuzda!"
 toc: true
@@ -52,7 +52,6 @@ Christian Lempa gibi içerik üreticilerinin videolarında açıkladığı gibi 
 
 * **Docker Konteyneri:** Sanal makinelerden daha hafif ve verimli bir teknolojidir. Konteynerler, bir uygulamayı ve tüm bileşenlerini bir arada paketler, ancak sunucunun ana işletim sistemini paylaşır. Anında başlarlar ve tek bir sunucuda çakışma olmadan birçok farklı uygulamayı çalıştırmak için mükemmeldirler.
 
- 
 ---  
 
 ## Herkes İçin Pratik Kullanımlar
@@ -170,14 +169,9 @@ Eski bir dizüstü bilgisayar, kendi kendine barındırma dünyasına açılan e
 
 ### **Referanslar ve İleri Öğrenim**
 
-* **TechHut:** [ HERKESİN ev sunucusuna ihtiyacı olmasının 5 nedeni ](https://www.youtube.com/watch?v=vQ-Eam9IZJY)
-
-* **TechHut:** [Ev Sunucumda Neler Var?? MUTLAKA OLMALI Hizmetler!](https://www.youtube.com/watch?v=yUyxJr2xboI)
-
-* **Pewdiepie:** [Google'la işim bitti.](https://www.youtube.com/watch?v=u_Lxkt50xOg)
-
-* **Linus Teknoloji İpuçları:** [ HER ŞEYE ERİŞMEK İÇİN KİŞİSEL BİR VPN OLUŞTURDUM… VE SİZ DE YAPABİLİRSİNİZ! ](https://www.youtube.com/watch?v=St-Itlk0W50)
-
-* **TechDweeb:** [Dizüstü Bilgisayarda Retro Oyunlar Nasıl Oynanır (REHBER)](https://www.youtube.com/watch?v=S5Kxc26FQkI)
-
-* **Micro Center:** [Raspberry Pi ile Pi-Hole Kullanarak Reklamları Nasıl Engellersiniz](https://www.youtube.com/watch?v=oX4NqFisC5Y)
+* **TechHut:** [ 5 reasons EVERYONE needs a home server ](https://www.youtube.com/watch?v=vQ-Eam9IZJY)
+* **TechHut:** [What's on my Home Server?? MUST HAVE Services!](https://www.youtube.com/watch?v=yUyxJr2xboI)
+* **Pewdiepie:** [I'm done with Google.](https://www.youtube.com/watch?v=u_Lxkt50xOg)
+* **Linus Tech Tips:** [ I Made a Personal VPN to Access EVERYTHING… and You Can Too! ](https://www.youtube.com/watch?v=St-Itlk0W50)
+* **TechDweeb:** [How to Play Retro Games on a Laptop (GUIDE)](https://www.youtube.com/watch?v=S5Kxc26FQkI)
+* **Micro Center:** [How to Block Ads Using a Pi-Hole With A Raspberry Pi](https://www.youtube.com/watch?v=oX4NqFisC5Y)

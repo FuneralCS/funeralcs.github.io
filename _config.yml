@@ -261,3 +261,9 @@ jekyll-archives:
     category: /categories/:name/
 custom_css:
   - assets/css/custom.css
+
+plugins:
+  - jekyll-polyglot
+
+languages: ["tr", "en"]     # ya da senin istediğin diller
+default_lang: "tr"          # varsayılan dil

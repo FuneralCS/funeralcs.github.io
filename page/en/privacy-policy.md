@@ -5,6 +5,7 @@ permalink: /privacy-policy/
 icon: fas fa-user-friends  
 order: 4         
 noindex: false
+lang: en
 ---
 
 This blog may use third-party services (Google Analytics, Google AdSense) to provide visitors with better service.

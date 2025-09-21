@@ -4,6 +4,7 @@ title: Yazarlar
 permalink: /authors/
 icon: fas fa-user-friends
 order: 4
+lang: tr
 ---
 
 <style>

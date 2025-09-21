@@ -151,17 +151,12 @@ Siber güvenlikle ilgilenen herkes için eski bir dizüstü bilgisayar, etik hac
 
 Eski bir dizüstü bilgisayar kullanmak, başlamak için harika ve düşük maliyetli bir yoldur. Özgürce deneyebilir ve hangi hizmetlerin sizin için değerli olduğunu keşfedebilirsiniz. Bir hizmetin artık vazgeçilmez hale geldiğini düşünüyorsanız, daha kalıcı, enerji tasarruflu ve amaca yönelik bir çözüm düşünebilirsiniz.
 
-| Çözüm | Artıları | Eksileri |
-
-| :- ...------------------------------------------------------------------------------------------------------------------
-
-| **Eski Dizüstü Bilgisayar** | - **Ücretsiz / Zaten Sahip Olunan**<br>- Dahili ekran, klavye ve UPS (pil)<br>- Deneyler için mükemmel | - Güç açısından verimsiz olabilir<br>- Diğer seçeneklerden daha hantal<br>- Eski donanım daha az güvenilir olabilir |
-
-| **Raspberry Pi / Mini PC** | - **Son Derece Güç Verimliliği**<br>- Çok küçük ayak izi<br>- Sessiz çalışma | - Modern masaüstü bilgisayarlardan daha az güçlü olabilir<br>- Daha fazla ilk kurulum gerektirebilir<br>- Genellikle microSD veya harici depolamaya dayanır|
-
-| **Özel NAS Cihazı** | - **Depolama ve Güvenilirlik için Optimize Edildi**<br>- Kullanıcı dostu yazılım<br>- 7/24 çalışma için tasarlandı | - Daha yüksek ilk maliyet<br>- Depolama dışı görevler için daha az esnek<br>- Tescilli donanım/yazılım |
-
-| **Bulut VPS** | - **Her yerden erişilebilir**<br>- Yönetilecek donanım yok<br>- Yüksek güvenilirlik ve çalışma süresi | - **Yinelenen aylık maliyet**<br>- Veriler üçüncü taraf bir sunucuda bulunur<br>- Uygun şekilde güvenliğini sağlamak karmaşık olabilir |
+| Çözüm                 | Artıları                                                                                                    | Eksileri                                                                                      |
+|------------------------|-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| **Eski Dizüstü Bilgisayar** | - **Ücretsiz / Zaten Sahip Olunan**<br>- Dahili ekran, klavye ve UPS (pil)<br>- Deneyler için mükemmel       | - Güç açısından verimsiz olabilir<br>- Daha hantal olabilir<br>- Eski donanım güvenilir olmayabilir |
+| **Raspberry Pi / Mini PC** | - **Son Derece Güç Verimliliği**<br>- Çok küçük ayak izi<br>- Sessiz çalışma                               | - Masaüstünden daha az güçlü<br>- Daha fazla kurulum gerekebilir<br>- microSD/harici depolama sınırlı |
+| **Özel NAS Cihazı**         | - **Depolama ve Güvenilirlik için Optimize Edildi**<br>- Kullanıcı dostu yazılım<br>- 7/24 çalışmaya uygun | - Yüksek ilk maliyet<br>- Depolama dışı görevlerde esnek değil<br>- Tescilli donanım/yazılım    |
+| **Bulut VPS**               | - **Her yerden erişim**<br>- Donanım yönetimi yok<br>- Yüksek güvenilirlik ve uptime                      | - **Aylık maliyet**<br>- Veriler üçüncü tarafta<br>- Güvenlik ayarları daha karmaşık            |
 
 Eski bir dizüstü bilgisayar, kendi kendine barındırma dünyasına açılan en önemli kapıdır. Kurmanıza, bozmanıza ve öğrenmenize olanak tanıyan risksiz bir sanal ortamdır. Öyleyse o eski makineyi bulun, Linux kurun ve bugün internette kendi köşenizi oluşturmaya başlayın.
 

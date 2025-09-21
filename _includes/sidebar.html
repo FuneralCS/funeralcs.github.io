@@ -219,13 +219,8 @@
       {%- endif -%}
     {%- endif -%}
 
-    {%- comment -%} kesin fallback {%- endcomment -%}
     {%- if alt == nil or alt == '' -%}
-      {%- if lang == site.default_lang and def_in_sub == false -%}
-        {%- assign alt = '/' -%}
-      {%- else -%}
-        {%- assign alt = '/' | append: lang | append: '/' -%}
-      {%- endif -%}
+      {%- assign alt = '/' -%}
     {%- endif -%}
 
     {%- assign is_active = (lang == active) -%}
@@ -241,7 +236,7 @@
     {%- if is_active -%}
       <span class="pill active" aria-current="page"><span class="flag">{{ flag }}</span> {{ label }}</span>
     {%- else -%}
-      <a class="pill" href="{{ alt | default:'/' | relative_url }}" title="Switch to {{ label }}">
+      <a class="pill" href="{{ alt | relative_url }}" title="Switch to {{ label }}">
         <span class="flag">{{ flag }}</span> {{ label }}
       </a>
     {%- endif -%}

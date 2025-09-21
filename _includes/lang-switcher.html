@@ -1,26 +1,18 @@
+{%- assign active = site.active_lang | default: site.default_lang -%}
+{%- assign def_in_sub = site.polyglot.default_lang_in_subdir | default: true -%}
+
 <div class="lang-switcher" role="navigation" aria-label="Language switcher">
   {%- for lang in site.languages -%}
-    {%- assign def_in_sub = site.polyglot.default_lang_in_subdir -%}
-    {%- if def_in_sub == nil -%}
-      {%- assign def_in_sub = true -%}
-    {%- endif -%}
+    {%- assign is_active = (lang == active) -%}
 
-    {%- if lang == site.default_lang and def_in_sub == false -%}
-      {%- assign lang_root = site.baseurl | append: '/' -%}
-    {%- else -%}
-      {%- assign lang_root = site.baseurl | append: '/' | append: lang | append: '/' -%}
-    {%- endif -%}
-
-    {%- if page.alternate_urls and page.alternate_urls[lang] -%}
-      {%- assign alt = page.alternate_urls[lang] -%}
-    {%- else -%}
-      {%- assign alt = lang_root -%}
-    {%- endif -%}
-
-    {%- if lang == site.active_lang -%}
+    {%- if is_active -%}
       <span class="pill active" aria-current="page">{{ lang | upcase }}</span>
     {%- else -%}
-      <a class="pill" href="{{ alt | relative_url }}" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
+      {%- if lang == site.default_lang and def_in_sub == false -%}
+        <a class="pill" href="/" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
+      {%- else -%}
+        <a class="pill" href="/{{ lang }}/" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
+      {%- endif -%}
     {%- endif -%}
   {%- endfor -%}
 </div>

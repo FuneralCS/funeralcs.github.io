@@ -196,12 +196,22 @@
     {%- if page.alternate_urls and page.alternate_urls[lang] -%}
       {%- assign alt = page.alternate_urls[lang] -%}
     {%- else -%}
-      {%- comment -%} 2) Fallback: mevcut yolun dil öneksiz hali + hedef dil öneki {%- endcomment -%}
-      {%- if lang == site.default_lang and def_in_sub == false -%}
-        {%- assign alt = url_no_lang -%} {# varsayılan dil kökte #}
+      {%- assign url_no_lang = page.url | default: "/" -%}
+
+      {%- comment -%} root durumunda varsayılan / diğerleri /xx/ {%- endcomment -%}
+      {%- if url_no_lang == "/" -%}
+        {%- if lang == site.default_lang and def_in_sub == false -%}
+          {%- assign alt = "/" -%}
+        {%- else -%}
+          {%- assign alt = "/" | append: lang | append: "/" -%}
+        {%- endif -%}
       {%- else -%}
-        {%- capture prefix -%}/{{ lang }}{%- endcapture -%}
-        {%- assign alt = prefix | append: url_no_lang -%}
+        {%- if lang == site.default_lang and def_in_sub == false -%}
+          {%- assign alt = url_no_lang -%}
+        {%- else -%}
+          {%- capture prefix -%}/{{ lang }}{%- endcapture -%}
+          {%- assign alt = prefix | append: url_no_lang -%}
+        {%- endif -%}
       {%- endif -%}
     {%- endif -%}
 
@@ -224,8 +234,6 @@
     {%- endif -%}
   {%- endfor -%}
 </div>
-
-
 
 </aside>
 <!-- #sidebar -->

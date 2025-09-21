@@ -13,6 +13,7 @@ math: false
 mermaid: false
 comments: true
 pin: false
+lang: tr
 ---
 
 ## Geleceği Kuran İttifak: Bulut Bilişim ve Yapay Zeka

@@ -25,6 +25,7 @@ math: true
 mermaid: false
 comments: true
 pin: false
+lang: tr
 ---
 
 # Entropiyi Anlamak: Karmaşanın Matematiği

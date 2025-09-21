@@ -12,6 +12,7 @@ math: false
 mermaid: false
 comments: true
 pin: false
+lang: tr
 ---
 
 ## LLM'ler

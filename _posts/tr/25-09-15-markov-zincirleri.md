@@ -12,6 +12,7 @@ math: true
 mermaid: false
 comments: true
 pin: false
+lang: tr
 ---
 Bu yazımızda Markov Zincirlerini inceleyeceğiz
 ## 1. Markov Zincirleri Nedir? ve Kökeni ve Yapısı

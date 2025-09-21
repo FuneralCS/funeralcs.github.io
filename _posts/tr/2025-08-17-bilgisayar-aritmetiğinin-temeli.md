@@ -12,6 +12,7 @@ math: true
 mermaid: false
 comments: true
 pin: false
+lang: tr
 ---
 Hiç bilgisayarların nasıl hesap yaptığını merak ettiniz mi? Çoğu insan bu sorunun cevabı olarak üstü kapalı olarak *işlemci* deyip geçecektir. Ancak sorunun cevabı bu değildir. Çoğu kişi işlemcileri basitçe çok hızlı hesap makinelerine benzetir. Ancak bu benzetme tam anlamıyla doğru değildir. Bu benzetme işlemcinin içerisindeki ALU (Arithmetic-Logic Unit) için doğru olabilir; fakat işlemcilerin içerisinde sadece ALU bulunmaz. İşlemcilerin içerisinde CU (Control Unit), ALU (Arithmetic-Logic Unit), Registerlar, Önbellek gibi komponentler bulunur.
 

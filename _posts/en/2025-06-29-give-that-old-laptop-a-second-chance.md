@@ -13,6 +13,7 @@ math: false
 mermaid: false
 comments: true
 pin: false
+lang: en
 ---
 
 # Give That Old Laptop a Second Chance - Build Your Own Private Digital Empire

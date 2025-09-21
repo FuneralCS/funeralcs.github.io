@@ -13,6 +13,7 @@ math: false
 mermaid: false
 comments: true
 pin: false
+lang: tr
 ---
 
 # Eski Dizüstü Bilgisayarınıza İkinci Bir Şans Verin - Kendi Özel Dijital İmparatorluğunuzu Kurun 

@@ -13,6 +13,7 @@ math: false
 mermaid: false
 comments: true
 pin: false
+lang: tr
 ---
 
 # İşlemcilerin Temel Bilgileri ve Tarihsel Gelişimi

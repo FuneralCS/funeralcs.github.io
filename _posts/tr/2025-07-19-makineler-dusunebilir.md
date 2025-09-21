@@ -12,6 +12,7 @@ math: false
 mermaid: false
 comments: true
 pin: false
+lang: tr
 ---
 Yazımızın ilk kısmında Türk matematikçi ve bilim insanı olan Cahit Arf'ın matematik ve entelektüel derinliğini, ayrıca yapay zeka ve makine öğrenimi konusunda düşüncelerini ve katkılarını inceleyeceğiz.
 Bu makaleyi podcast olarak da dinleyebilirsiniz.

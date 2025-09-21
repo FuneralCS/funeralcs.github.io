@@ -12,6 +12,7 @@ math: false
 mermaid: false
 comments: true
 pin: false
+lang: tr
 ---
 
 > İnsan dilinde “düşünen” yapay zeka sistemleri, yapay zeka güvenliği için benzersiz bir fırsat sunar: bu sistemlerin düşünce zincirlerini (CoT) izleyerek kötü niyetli davranışları tespit edebiliriz. Diğer tüm bilinen yapay zeka denetim yöntemleri gibi, CoT izleme de kusursuz değildir ve bazı kötü niyetli davranışların fark edilmeden kalmasına izin verir. ~ [Chain of Thought Monitorability, arXiv:2507.11473](https://doi.org/10.48550/arXiv.2507.11473)

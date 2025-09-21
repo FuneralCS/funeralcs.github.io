@@ -158,32 +158,73 @@
 }
 </style>
 
+{%- comment -%}
+  === Language Switcher (Jekyll Polyglot, robust) ===
+  - Önce aktif dil önekini current URL'den temizler (url_no_lang)
+  - Sonra her dil için:
+      * page.alternate_urls varsa onu kullanır
+      * yoksa url_no_lang üzerine doğru dil önekini ekler
+  - default_lang_in_subdir=false ise varsayılan dil kökte kalır (/)
+{%- endcomment -%}
+
+{%- assign langs = site.languages | default: "tr,en" -%}
+{%- if langs contains "," -%}{% assign langs = langs | split: "," %}{% endif -%}
+{%- assign active = site.active_lang | default: site.default_lang -%}
+
+{%- assign def_in_sub = site.polyglot.default_lang_in_subdir -%}
+{%- if def_in_sub == nil -%}{% assign def_in_sub = true %}{% endif -%}
+
+{%- assign url_no_lang = page.url | default: "/" -%}
+{%- capture active_prefix -%}/{{ active }}/{%- endcapture -%}
+{%- if url_no_lang != "/" and url_no_lang contains active_prefix -%}
+  {%- assign url_no_lang = url_no_lang | replace_first: active_prefix, "/" -%}
+{%- endif -%}
+
+<style>
+.lang-switcher{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0}
+.lang-switcher .pill{display:inline-flex;align-items:center;gap:.4rem;
+  padding:.35rem .7rem;border-radius:999px;border:1px solid rgba(0,0,0,.08);
+  text-decoration:none;font-weight:700;font-size:.9rem;line-height:1}
+.lang-switcher .pill:hover{background:rgba(0,0,0,.05)}
+.lang-switcher .pill.active{background:rgba(0,0,0,.12);box-shadow:inset 0 -2px rgba(0,0,0,.06)}
+.lang-switcher .flag{font-size:1rem;line-height:1;display:inline-block}
+</style>
+
 <div class="lang-switcher" role="navigation" aria-label="Language switcher">
   {%- for lang in langs -%}
-    {%- assign def_in_sub = site.polyglot.default_lang_in_subdir -%}
-    {%- if def_in_sub == nil -%}
-      {%- assign def_in_sub = true -%}
-    {%- endif -%}
-
-    {%- if lang == site.default_lang and def_in_sub == false -%}
-      {%- assign lang_root = site.baseurl | append: '/' -%}
-    {%- else -%}
-      {%- assign lang_root = site.baseurl | append: '/' | append: lang | append: '/' -%}
-    {%- endif -%}
-
+    {%- comment -%} 1) Öncelik: Polyglot’un ürettiği alternate URL {%- endcomment -%}
     {%- if page.alternate_urls and page.alternate_urls[lang] -%}
       {%- assign alt = page.alternate_urls[lang] -%}
     {%- else -%}
-      {%- assign alt = lang_root -%}
+      {%- comment -%} 2) Fallback: mevcut yolun dil öneksiz hali + hedef dil öneki {%- endcomment -%}
+      {%- if lang == site.default_lang and def_in_sub == false -%}
+        {%- assign alt = url_no_lang -%} {# varsayılan dil kökte #}
+      {%- else -%}
+        {%- capture prefix -%}/{{ lang }}{%- endcapture -%}
+        {%- assign alt = prefix | append: url_no_lang -%}
+      {%- endif -%}
     {%- endif -%}
 
-    {%- if lang == site.active_lang -%}
-      <span class="active" aria-current="page">{{ lang | upcase }}</span>
+    {%- assign is_active = (lang == active) -%}
+    {%- capture label -%}{{ lang | upcase }}{%- endcapture -%}
+
+    {%- comment -%} Basit flag emojileri (istersen kaldır) {%- endcomment -%}
+    {%- capture flag -%}
+      {%- case lang -%}
+        {%- when 'tr' -%}🇹🇷
+        {%- when 'en' -%}🇬🇧
+        {%- else -%}🏳️
+      {%- endcase -%}
+    {%- endcapture -%}
+
+    {%- if is_active -%}
+      <span class="pill active" aria-current="page"><span class="flag">{{ flag }}</span> {{ label }}</span>
     {%- else -%}
-      <a href="{{ alt | relative_url }}" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
+      <a class="pill" href="{{ alt | relative_url }}" title="Switch to {{ label }}"><span class="flag">{{ flag }}</span> {{ label }}</a>
     {%- endif -%}
   {%- endfor -%}
 </div>
+
 
 
 </aside>

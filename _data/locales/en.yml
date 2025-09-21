@@ -28,19 +28,22 @@ panel:
   toc: Contents
 
 copyright:
-  # Shown at the bottom of the post
   license:
-    template: This post is licensed under :LICENSE_NAME by the author.
-    name: CC BY 4.0
-    link: https://creativecommons.org/licenses/by/4.0/
+    template: This post is licensed under the :LICENSE_NAME license.
+    name: Creative Commons Attribution 4.0 International (CC BY 4.0)
+    link: https://creativecommons.org/licenses/by/4.0/deed.tr
 
-  # Displayed in the footer
   brief: Some rights reserved.
+  tooltip: Content on this site is licensed under CC BY 4.0. For details, see the privacy policy.
   verbose: >-
-    Except where otherwise noted, the blog posts on this site are licensed
-    under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.
+    Unless otherwise stated, the content on this site is licensed under the
+    <a href="https://creativecommons.org/licenses/by/4.0/deed.tr" target="_blank" rel="noopener">
+    Creative Commons Attribution 4.0 International (CC BY 4.0)</a> license.
+    You may share and modify it by providing the page link.
+    For our privacy practices,
+    you can review the <a href="https://funeralcs.com/privacy-policy" target="_blank" rel="noopener">privacy policy</a>.
 
-meta: Using the :THEME theme for :PLATFORM.
+meta: :PLATFORM and :THEME theme
 
 not_found:
   statement: Sorry, we've misplaced that URL or it's pointing to something that doesn't exist.

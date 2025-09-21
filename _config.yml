@@ -171,14 +171,13 @@ collections:
     permalink: /authors/:name/
 
 defaults:
-
   - scope:
       path: "_pages"
+      type: pages
     values:
       layout: page
       robots: index
       sitemap: true
-
   - scope:
       path: "" 
       type: posts

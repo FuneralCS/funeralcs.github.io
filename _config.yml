@@ -173,15 +173,15 @@ collections:
 
 defaults:
   - scope:
-    path: "pages"
-    type: pages
-   values:
-    layout: page
-    robots: index
-    sitemap: true
+      path: "pages"
+      type: pages
+    values:
+      layout: page
+      robots: index
+      sitemap: true
 
   - scope:
-      path: "" 
+      path: ""
       type: posts
     values:
       layout: post
@@ -190,7 +190,7 @@ defaults:
       permalink: /posts/:title/
 
   - scope:
-      path: _drafts
+      path: "_drafts"
     values:
       comments: false
 
@@ -200,7 +200,6 @@ defaults:
     values:
       layout: page
       permalink: /:title/
-
 
   - scope:
       path: "archives"

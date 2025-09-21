@@ -193,15 +193,14 @@
 {%- assign active = site.active_lang | default: site.default_lang -%}
 {%- assign def_in_sub = site.polyglot.default_lang_in_subdir -%}
 {%- if def_in_sub == nil -%}{% assign def_in_sub = true %}{% endif -%}
+
 <div class="lang-switcher" role="navigation" aria-label="Language switcher">
-  {%- for lang in langs -%}
-    {%- comment -%} 1) Öncelik: Polyglot’un ürettiği alternate URL {%- endcomment -%}
+  {%- for lang in site.languages -%}
     {%- if page.alternate_urls and page.alternate_urls[lang] -%}
       {%- assign alt = page.alternate_urls[lang] -%}
     {%- else -%}
       {%- assign url_no_lang = page.url | default: "/" -%}
 
-      {%- comment -%} root durumunda varsayılan / diğerleri /xx/ {%- endcomment -%}
       {%- if url_no_lang == "/" -%}
         {%- if lang == site.default_lang and def_in_sub == false -%}
           {%- assign alt = "/" -%}
@@ -218,10 +217,17 @@
       {%- endif -%}
     {%- endif -%}
 
+    {%- comment -%} son garanti: alt boşsa root fallback {%- endcomment -%}
+    {%- if alt == nil or alt == '' -%}
+      {%- if lang == site.default_lang and def_in_sub == false -%}
+        {%- assign alt = '/' -%}
+      {%- else -%}
+        {%- assign alt = '/' | append: lang | append: '/' -%}
+      {%- endif -%}
+    {%- endif -%}
+
     {%- assign is_active = (lang == active) -%}
     {%- capture label -%}{{ lang | upcase }}{%- endcapture -%}
-
-    {%- comment -%} Basit flag emojileri (istersen kaldır) {%- endcomment -%}
     {%- capture flag -%}
       {%- case lang -%}
         {%- when 'tr' -%}🇹🇷

@@ -191,8 +191,7 @@
 </style>
 
 {%- assign active = site.active_lang | default: site.default_lang -%}
-{%- assign def_in_sub = site.polyglot.default_lang_in_subdir -%}
-{%- if def_in_sub == nil -%}{% assign def_in_sub = true %}{% endif -%}
+{%- assign def_in_sub = site.polyglot.default_lang_in_subdir | default: true -%}
 
 <div class="lang-switcher" role="navigation" aria-label="Language switcher">
   {%- for lang in site.languages -%}
@@ -200,49 +199,33 @@
 
     {%- if page.alternate_urls and page.alternate_urls[lang] -%}
       {%- assign alt = page.alternate_urls[lang] -%}
-    {%- else -%}
-      {%- assign url_no_lang = page.url | default: "/" -%}
-
-      {%- if url_no_lang == "/" -%}
-        {%- if lang == site.default_lang and def_in_sub == false -%}
-          {%- assign alt = "/" -%}
-        {%- else -%}
-          {%- assign alt = "/" | append: lang | append: "/" -%}
-        {%- endif -%}
+    {%- elsif page.url and page.url != '' -%}
+      {%- assign url_no_lang = page.url -%}
+      {%- if lang == site.default_lang and def_in_sub == false -%}
+        {%- assign alt = url_no_lang -%}
       {%- else -%}
-        {%- if lang == site.default_lang and def_in_sub == false -%}
-          {%- assign alt = url_no_lang -%}
-        {%- else -%}
-          {%- capture prefix -%}/{{ lang }}{%- endcapture -%}
-          {%- assign alt = prefix | append: url_no_lang -%}
-        {%- endif -%}
+        {%- assign alt = '/' | append: lang | append: url_no_lang -%}
       {%- endif -%}
     {%- endif -%}
 
+    {%- comment -%} kesin fallback {%- endcomment -%}
     {%- if alt == nil or alt == '' -%}
-      {%- assign alt = '/' -%}
+      {%- if lang == site.default_lang and def_in_sub == false -%}
+        {%- assign alt = '/' -%}
+      {%- else -%}
+        {%- assign alt = '/' | append: lang | append: '/' -%}
+      {%- endif -%}
     {%- endif -%}
 
     {%- assign is_active = (lang == active) -%}
     {%- capture label -%}{{ lang | upcase }}{%- endcapture -%}
-    {%- capture flag -%}
-      {%- case lang -%}
-        {%- when 'tr' -%}🇹🇷
-        {%- when 'en' -%}🇬🇧
-        {%- else -%}🏳️
-      {%- endcase -%}
-    {%- endcapture -%}
 
     {%- if is_active -%}
-      <span class="pill active" aria-current="page"><span class="flag">{{ flag }}</span> {{ label }}</span>
+      <span class="pill active" aria-current="page">{{ label }}</span>
     {%- else -%}
-      <a class="pill" href="{{ alt | relative_url }}" title="Switch to {{ label }}">
-        <span class="flag">{{ flag }}</span> {{ label }}
-      </a>
+      <a class="pill" href="{{ alt }}" title="Switch to {{ label }}">{{ label }}</a>
     {%- endif -%}
   {%- endfor -%}
 </div>
-
-
 </aside>
 <!-- #sidebar -->

@@ -1,48 +1,69 @@
-<!-- The Side Bar -->
+<!-- The Side Bar (rewritten) -->
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+
+  {%- assign current_lang = page.lang | default: site.default_lang -%}
+
+  {%- comment -%}
+    page_url_no_lang: aktif dil önekini URL'den sökeriz ki
+    tab karşılaştırmaları dil-agnostik olsun.
+  {%- endcomment -%}
+  {%- assign page_url_no_lang = page.url | default:'/' -%}
+  {%- capture lang_prefix -%}/{{ current_lang }}/{%- endcapture -%}
+  {%- if page_url_no_lang != '/' and page_url_no_lang contains lang_prefix -%}
+    {%- assign page_url_no_lang = page_url_no_lang | replace_first: lang_prefix, '/' -%}
+  {%- endif -%}
+
   <header class="profile-wrapper">
     <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
       {%- if site.avatar != empty and site.avatar -%}
-        {%- capture avatar_url -%}
-          {% include media-url.html src=site.avatar %}
-        {%- endcapture -%}
+        {%- capture avatar_url -%}{% include media-url.html src=site.avatar %}{%- endcapture -%}
         <img src="{{- avatar_url -}}" width="112" height="112" alt="avatar"
-            loading="lazy"
-            onerror="this.style.display='none'"
-            class="avatar-img">
+             loading="lazy" onerror="this.style.display='none'" class="avatar-img">
       {%- endif -%}
     </a>
 
     <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
   </header>
-  <!-- .profile-wrapper -->
 
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
-      <!-- home -->
-      <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
+      <!-- Home -->
+      <li class="nav-item{% if page_url_no_lang == '/' %} active{% endif %}">
         <a href="{{ '/' | relative_url }}" class="nav-link">
           <i class="fa-fw fas fa-home"></i>
-          <span>{{ site.data.locales[page.lang | default: site.default_lang].tabs.home | upcase }}</span>
+          <span>{{ site.data.locales[current_lang].tabs.home | default: 'Home' | upcase }}</span>
         </a>
       </li>
 
-      <!-- the real tabs -->
-      {% for tab in site.tabs %}
-        <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
-          <a href="{{ tab.url | relative_url }}" class="nav-link">
+      <!-- Tabs -->
+      {%- for tab in site.tabs -%}
+        {%- assign tab_url = tab.url -%}
+
+        {%- comment -%}
+          tab_key: URL'nin son boş olmayan segmenti ("/posts/" -> "posts")
+          split-last boş dönebileceği için manuel dolaşıyoruz.
+        {%- endcomment -%}
+        {%- assign tab_key = '' -%}
+        {%- assign segs = tab_url | split:'/' -%}
+        {%- for s in segs -%}{% if s != '' %}{% assign tab_key = s %}{% endif %}{%- endfor -%}
+
+        {%- comment -%}
+          Aktiflik: dil öneksiz sayfa URL'si sekme URL'siyle eşitse
+          veya onunla başlıyorsa "active".
+        {%- endcomment -%}
+        {%- assign is_active = false -%}
+        {%- if page_url_no_lang == tab_url or page_url_no_lang contains tab_url -%}
+          {%- assign is_active = true -%}
+        {%- endif -%}
+
+        <li class="nav-item{% if is_active %} active{% endif %}">
+          <a href="{{ tab_url | relative_url }}" class="nav-link">
             <i class="fa-fw {{ tab.icon }}"></i>
-            {% assign tab_key = tab.url | split: '/' | last %}
-            <span>
-              {{ site.data.locales[page.lang | default: site.default_lang].tabs[tab_key]
-                 | default: tab.title
-                 | upcase }}
-            </span>
+            <span>{{ site.data.locales[current_lang].tabs[tab_key] | default: tab.title | upcase }}</span>
           </a>
         </li>
-        <!-- .nav-item -->
-      {% endfor %}
+      {%- endfor -%}
     </ul>
   </nav>
 
@@ -51,7 +72,6 @@
       <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
         <i class="fas fa-adjust"></i>
       </button>
-
       {% if site.data.contact.size > 0 %}
         <span class="icon-border"></span>
       {% endif %}
@@ -60,14 +80,10 @@
     {% for entry in site.data.contact %}
       {% case entry.type %}
         {% when 'github', 'twitter' %}
-          {%- capture url -%}
-            https://{{ entry.type }}.com/{{ site[entry.type].username }}
-          {%- endcapture -%}
+          {%- capture url -%}https://{{ entry.type }}.com/{{ site[entry.type].username }}{%- endcapture -%}
         {% when 'email' %}
           {% assign email = site.social.email | split: '@' %}
-          {%- capture url -%}
-            javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@')
-          {%- endcapture -%}
+          {%- capture url -%}javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@'){%- endcapture -%}
         {% when 'rss' %}
           {% assign url = '/feed.xml' | relative_url %}
         {% else %}
@@ -75,31 +91,17 @@
       {% endcase %}
 
       {% if url %}
-        <a
-          href="{{ url }}"
-          aria-label="{{ entry.type }}"
-          {% assign link_types = '' %}
-
-          {% unless entry.noblank %}
-            target="_blank"
-            {% assign link_types = 'noopener noreferrer' %}
-          {% endunless %}
-
-          {% if entry.type == 'mastodon' %}
-            {% assign link_types = link_types | append: ' me' | strip %}
-          {% endif %}
-
-          {% unless link_types == empty %}
-            rel="{{ link_types }}"
-          {% endunless %}
-        >
+        <a href="{{ url }}" aria-label="{{ entry.type }}"
+           {% assign link_types = '' %}
+           {% unless entry.noblank %}target="_blank"{% assign link_types = 'noopener noreferrer' %}{% endunless %}
+           {% if entry.type == 'mastodon' %}{% assign link_types = link_types | append: ' me' | strip %}{% endif %}
+           {% unless link_types == empty %}rel="{{ link_types }}"{% endunless %}>
           <i class="{{ entry.icon }}"></i>
         </a>
       {% endif %}
     {% endfor %}
   </div>
 
-  <!-- dil değiştirici -->
+  <!-- Language switcher (expects robust fallback in lang-switcher.html) -->
   {% include lang-switcher.html %}
 </aside>
-<!-- #sidebar -->

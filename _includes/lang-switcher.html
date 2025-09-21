@@ -1,93 +1,56 @@
 {%- comment -%}
-  === Language Switcher (Jekyll Polyglot, robust) ===
-  - Aktif dil önekini URL'den söker (url_no_lang)
-  - Varsa page.alternate_urls[lang] kullanır
-  - Yoksa:
-      * default_lang_in_subdir == false  → varsayılan dil kökte (/)
-      * Diğer diller /<lang>/ + url_no_lang
-      * Alternatif yine de yoksa → TR (varsayılan dile) fallback
+  Classic Language Switcher (Jekyll Polyglot)
+  - TR default at root (/), EN at /en/
+  - If alternate doesn't exist, fall back to TR (avoid broken links)
+  - Never outputs empty <a>
 {%- endcomment -%}
 
 {%- assign langs = site.languages | default: "tr,en" -%}
-{%- if langs contains "," -%}{% assign langs = langs | split: "," %}{% endif -%}
+{%- if langs contains "," or langs contains " " -%}
+  {%- assign langs = langs | split: "," | join:" " | split:" " | uniq -%}
+{%- endif -%}
 
 {%- assign active = page.lang | default: site.active_lang | default: site.default_lang -%}
 {%- assign def_in_sub = site.polyglot.default_lang_in_subdir -%}
 {%- if def_in_sub == nil -%}{% assign def_in_sub = true %}{% endif -%}
 
-{%- assign url_no_lang = page.url | default: "/" -%}
+{%- assign url_no_lang = page.url | default:"/" -%}
 {%- capture active_prefix -%}/{{ active }}/{%- endcapture -%}
 {%- if url_no_lang != "/" and url_no_lang contains active_prefix -%}
   {%- assign url_no_lang = url_no_lang | replace_first: active_prefix, "/" -%}
 {%- endif -%}
 
-{%- comment -%} Varsayılan dil (TR) için kök/folder tabanı {%- endcomment -%}
-{%- if def_in_sub == false -%}
-  {%- assign default_base = "" -%}
-{%- else -%}
-  {%- assign default_base = "/" | append: site.default_lang -%}
-{%- endif -%}
-{%- assign default_fallback_url = default_base | append: url_no_lang -%}
-
-<style>
-.lang-switcher{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0}
-.lang-switcher .pill{display:inline-flex;align-items:center;gap:.4rem;
-  padding:.35rem .7rem;border-radius:999px;border:1px solid rgba(0,0,0,.08);
-  text-decoration:none;font-weight:700;font-size:.9rem;line-height:1}
-.lang-switcher .pill:hover{background:rgba(0,0,0,.05)}
-.lang-switcher .pill.active{background:rgba(0,0,0,.12);box-shadow:inset 0 -2px rgba(0,0,0,.06)}
-.lang-switcher .flag{font-size:1rem;line-height:1;display:inline-block}
-</style>
-
-<div class="lang-switcher" role="navigation" aria-label="Language switcher">
+<nav class="lang-switcher" aria-label="Language switcher">
   {%- for lang in langs -%}
-    {%- comment -%} 1) Polyglot alternate varsa direkt onu al {%- endcomment -%}
-    {%- assign alt = nil -%}
-    {%- if page.alternate_urls and page.alternate_urls[lang] -%}
-      {%- assign alt = page.alternate_urls[lang] -%}
-    {%- endif -%}
+    {%- assign href = nil -%}
 
-    {%- comment -%} 2) Yoksa hesapla (default → kök veya /tr; diğer diller → /<lang> + url_no_lang) {%- endcomment -%}
-    {%- if alt == nil -%}
+    {%- comment -%} 1) En doğrusu: Polyglot'un verdiği alternate URL {%- endcomment -%}
+    {%- if page.alternate_urls and page.alternate_urls[lang] -%}
+      {%- assign href = page.alternate_urls[lang] -%}
+    {%- else -%}
+      {%- comment -%} 2) Yoksa üret → EN için sayfa yoksa TR fallback {%- endcomment -%}
       {%- if lang == site.default_lang -%}
         {%- if def_in_sub == false -%}
-          {%- assign alt = url_no_lang -%}             {# TR kökte #}
+          {%- assign href = url_no_lang -%}             {# TR kökte #}
         {%- else -%}
-          {%- assign alt = "/" | append: lang | append: url_no_lang -%}
+          {%- assign href = "/" | append: lang | append: url_no_lang -%}
         {%- endif -%}
       {%- else -%}
-        {%- assign alt = "/" | append: lang | append: url_no_lang -%}
+        {%- comment -%} EN (veya diğer diller) mevcut değilse TR'de bırak {%- endcomment -%}
+        {%- if def_in_sub == false -%}
+          {%- assign href = url_no_lang -%}             {# TR kökte fallback #}
+        {%- else -%}
+          {%- assign href = "/" | append: site.default_lang | append: url_no_lang -%}
+        {%- endif -%}
       {%- endif -%}
     {%- endif -%}
 
-    {%- comment -%} 3) EN gibi diller için sayfa yoksa → TR (varsayılan dil) fallback {%- endcomment -%}
-    {%- assign is_real_alt = true -%}
-    {%- if page.alternate_urls and page.alternate_urls[lang] == nil and lang != site.default_lang -%}
-      {%- assign alt = default_fallback_url -%}
-      {%- assign is_real_alt = false -%}
-    {%- endif -%}
-
-    {%- assign is_active = (lang == active) -%}
-
-    {%- capture label -%}{{ lang | upcase }}{%- endcapture -%}
-    {%- capture flag -%}
-      {%- case lang -%}
-        {%- when 'tr' -%}🇹🇷
-        {%- when 'en' -%}🇬🇧
-        {%- else -%}🏳️
-      {%- endcase -%}
-    {%- endcapture -%}
-
-    {%- if is_active -%}
-      <span class="pill active" aria-current="page"><span class="flag">{{ flag }}</span> {{ label }}</span>
+    {%- if lang == active -%}
+      <span lang="{{ lang }}" aria-current="page">{{ lang | upcase }}</span>
     {%- else -%}
-      <a class="pill"
-         href="{{ alt | relative_url }}"
-         hreflang="{{ lang }}"
-         lang="{{ lang }}"
-         {% unless is_real_alt %}data-fallback="true" title="Not available in {{ label }} — showing TR"{% else %}title="Switch to {{ label }}"{% endunless %}>
-        <span class="flag">{{ flag }}</span> {{ label }}
-      </a>
+      <a href="{{ href | relative_url }}" hreflang="{{ lang }}" lang="{{ lang }}">{{ lang | upcase }}</a>
     {%- endif -%}
+
+    {%- unless forloop.last -%} · {%- endunless -%}
   {%- endfor -%}
-</div>
+</nav>

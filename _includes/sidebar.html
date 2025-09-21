@@ -190,6 +190,9 @@
 .lang-switcher .flag{font-size:1rem;line-height:1;display:inline-block}
 </style>
 
+{%- assign active = site.active_lang | default: site.default_lang -%}
+{%- assign def_in_sub = site.polyglot.default_lang_in_subdir -%}
+{%- if def_in_sub == nil -%}{% assign def_in_sub = true %}{% endif -%}
 <div class="lang-switcher" role="navigation" aria-label="Language switcher">
   {%- for lang in langs -%}
     {%- comment -%} 1) Öncelik: Polyglot’un ürettiği alternate URL {%- endcomment -%}

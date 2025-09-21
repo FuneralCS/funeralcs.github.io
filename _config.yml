@@ -269,3 +269,4 @@ default_lang: "tr"          # varsayılan dil
 polyglot:
   default_lang_in_subdir: false
   lang_vars: ["lang"]
+  lang_from_path: true

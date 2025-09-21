@@ -101,10 +101,10 @@
   {% assign langs = site.languages %}
   {% for lang in langs %}
     {% if lang == page.lang or (page.lang == nil and lang == site.default_lang) %}
-      <a style="padding:4px 8px; border-radius:6px; font-weight:600;
-                text-decoration:none; color:#fff; background:#444;">
+      <span style="padding:4px 8px; border-radius:6px; font-weight:600;
+                   background:#444; color:#fff;">
         {{ lang | upcase }}
-      </a>
+      </span>
     {% else %}
       <a href="{{ page.alternate_urls[lang] | default: site.baseurl }}"
          style="padding:4px 8px; border-radius:6px; font-weight:600;
@@ -114,6 +114,5 @@
     {% endif %}
   {% endfor %}
 </div>
-
 </aside>
 <!-- #sidebar -->

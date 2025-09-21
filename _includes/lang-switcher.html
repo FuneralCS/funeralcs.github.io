@@ -1,84 +1,49 @@
 {%- comment -%}
-  Robust Language Switcher (Jekyll Polyglot, htmlproofer-safe)
-  - Aktif dil: <span> (link değil)
-  - Öncelik: page.alternate_urls[lang] -> varsa onu kullan
-  - Yoksa: güvenli fallback olarak dil kökü (lang_root)
-  - İstersen aynı sayfa yolu için (riskli 404 ihtimali): same_path_when_no_alt=true yap
+  Solid Language Switcher (works even on tag/author/archive pages)
+  - active lang detection order:
+    1) site.active_lang
+    2) page.lang
+    3) URL prefix (/en/, /tr/)
+    4) site.default_lang
+  - default_lang_in_subdir respected
+  - active lang is <span>, others are <a>
 {%- endcomment -%}
 
-{%- assign langs = include.langs | default: site.languages -%}
-{%- assign active = site.active_lang | default: site.default_lang -%}
-{%- assign def_in_sub = site.polyglot.default_lang_in_subdir -%}
-{%- if def_in_sub == nil -%}{% assign def_in_sub = true %}{% endif -%}
+{%- assign langs = site.languages -%}
+{%- assign def_in_sub = site.polyglot.default_lang_in_subdir | default: true -%}
 
-{%- comment -%} Ayar: alternate yoksa aynı path'e mi gidelim? (false = güvenli kök) {%- endcomment -%}
-{%- assign same_path_when_no_alt = include.same_path_when_no_alt | default: false -%}
-
-{%- assign path = page.url | default: "/" -%}
-{%- if path == "" -%}{% assign path = "/" %}{% endif -%}
-{%- if path != "/" and path contains "/index.html" -%}{% assign path = path | replace: "index.html","" %}{% endif -%}
-
-{%- comment -%} path_no_lang: mevcut path'in dil önekini temizle {%- endcomment -%}
-{%- assign path_no_lang = path -%}
-{%- for L in langs -%}
-  {%- capture pref %}/{{ L }}/{% endcapture -%}
-  {%- if path_no_lang != "/" and path_no_lang contains pref -%}
-    {%- assign path_no_lang = path_no_lang | replace_first: pref, "/" -%}
+{%- assign active = site.active_lang | default: page.lang -%}
+{%- if active == nil or active == '' -%}
+  {%- assign p = page.url | default:'/' -%}
+  {%- assign seg = p | split:'/' | slice:1,1 | first -%}
+  {%- if langs contains seg -%}
+    {%- assign active = seg -%}
+  {%- else -%}
+    {%- assign active = site.default_lang -%}
   {%- endif -%}
-{%- endfor -%}
-
-
-<style>
-.lang-switcher{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.6rem 0}
-.lang-switcher .pill{display:inline-flex;align-items:center;justify-content:center;
-  padding:.35rem .65rem;border-radius:999px;border:1px solid rgba(0,0,0,.1);
-  text-decoration:none;font-weight:700;font-size:.9rem;color:inherit}
-.lang-switcher .pill:hover{background:rgba(0,0,0,.05)}
-.lang-switcher .pill.active{background:rgba(0,0,0,.15);box-shadow:inset 0 -2px rgba(0,0,0,.08)}
-</style>
+{%- endif -%}
 
 <div class="lang-switcher" role="navigation" aria-label="Language switcher">
   {%- for lang in langs -%}
-    {%- assign is_active = (lang == active) -%}
-
-    {%- comment -%} Her dil için kök (lang_root) hesapla {%- endcomment -%}
-    {%- if lang == site.default_lang and def_in_sub == false -%}
-      {%- assign lang_root = "/" -%}
-    {%- else -%}
-      {%- capture lang_root %}/{{ lang }}/{% endcapture -%}
-    {%- endif -%}
-
-    {%- if is_active -%}
+    {%- if lang == active -%}
       <span class="pill active" aria-current="page" lang="{{ lang }}">{{ lang | upcase }}</span>
     {%- else -%}
-      {%- assign target = nil -%}
-
-      {%- comment -%} 1) varsa Polyglot alternate URL'si {%- endcomment -%}
-      {%- if page.alternate_urls and page.alternate_urls[lang] -%}
-        {%- assign target = page.alternate_urls[lang] -%}
+      {%- if lang == site.default_lang and def_in_sub == false -%}
+        {%- assign href = '/' -%}
+      {%- else -%}
+        {%- assign href = '/' | append: lang | append: '/' -%}
       {%- endif -%}
-
-      {%- comment -%} 2) alternate yoksa: güvenli / dil kökü ya da (isteğe bağlı) aynı path {%- endcomment -%}
-      {%- if target == nil or target == "" -%}
-        {%- if same_path_when_no_alt == true and path_no_lang != "/" -%}
-          {%- if lang == site.default_lang and def_in_sub == false -%}
-            {%- assign target = path_no_lang -%}
-          {%- else -%}
-            {%- assign target = "/" | append: lang | append: path_no_lang -%}
-          {%- endif -%}
-        {%- else -%}
-          {%- assign target = lang_root -%}
-        {%- endif -%}
-      {%- endif -%}
-
-      {%- comment -%} 3) Son güvenlik: target asla boş kalmasın {%- endcomment -%}
-      {%- if target == nil or target == "" -%}
-        {%- assign target = lang_root -%}
-      {%- endif -%}
-
-      <a class="pill" lang="{{ lang }}" hreflang="{{ lang }}" href="{{ target | relative_url }}" title="Switch to {{ lang | upcase }}">
-        {{ lang | upcase }}
-      </a>
+      <a class="pill" href="{{ href }}" lang="{{ lang }}" hreflang="{{ lang }}" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
     {%- endif -%}
   {%- endfor -%}
 </div>
+
+<style>
+.lang-switcher{display:flex;gap:.5rem;margin:.6rem 0}
+.lang-switcher .pill{
+  padding:.35rem .65rem;border-radius:999px;border:1px solid rgba(0,0,0,.1);
+  font-weight:600;font-size:.9rem;text-decoration:none;color:inherit
+}
+.lang-switcher .pill:hover{background:rgba(0,0,0,.05)}
+.lang-switcher .pill.active{background:rgba(0,0,0,.15);box-shadow:inset 0 -2px rgba(0,0,0,.08)}
+</style>

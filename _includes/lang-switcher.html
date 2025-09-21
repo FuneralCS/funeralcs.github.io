@@ -1,7 +1,7 @@
 {%- assign langs = site.languages -%}
 {%- assign active = page.lang | default: site.default_lang -%}
-
 {%- assign url_no_lang = page.url | default: "/" -%}
+
 {%- capture active_prefix -%}/{{ active }}/{%- endcapture -%}
 {%- if url_no_lang != "/" and url_no_lang contains active_prefix -%}
   {%- assign url_no_lang = url_no_lang | replace_first: active_prefix, "/" -%}
@@ -12,11 +12,19 @@
     {%- if lang == active -%}
       <span class="pill active" aria-current="page" lang="{{ lang }}">{{ lang | upcase }}</span>
     {%- else -%}
-      {%- if lang == site.default_lang -%}
-        {%- assign href = url_no_lang -%}
+      {%- if page.alternate_urls and page.alternate_urls[lang] -%}
+        {%- assign href = page.alternate_urls[lang] -%}
       {%- else -%}
-        {%- assign href = '/' | append: lang | append: url_no_lang -%}
+        {%- if lang == site.default_lang -%}
+          {%- assign href = url_no_lang -%}
+        {%- else -%}
+          {%- comment -%}
+            fallback: TR sürümünde bırakıyoruz
+          {%- endcomment -%}
+          {%- assign href = url_no_lang -%}
+        {%- endif -%}
       {%- endif -%}
+
       <a class="pill" href="{{ href }}" lang="{{ lang }}" hreflang="{{ lang }}" title="Switch to {{ lang | upcase }}">{{ lang | upcase }}</a>
     {%- endif -%}
   {%- endfor -%}

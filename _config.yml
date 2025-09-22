@@ -265,8 +265,8 @@ custom_css:
 plugins:
   - jekyll-polyglot
 
-languages: ["tr", "en"]     # ya da senin istediğin diller
-default_lang: "tr"          # varsayılan dil
+languages: ["tr-TR", "en"]     # ya da senin istediğin diller
+default_lang: "tr-TR"          # varsayılan dil
 polyglot:
   default_lang_in_subdir: false
   lang_vars: ["lang"]

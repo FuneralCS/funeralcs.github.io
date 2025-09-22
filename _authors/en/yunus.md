@@ -12,7 +12,7 @@ lang: en
 
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
-  İstanbul Üniversitesi Bilgisayar Bilimleri 2. sınıf öğrencisiyim. Yapay zeka,makine öğrenmesi alanlarında kendimi geliştirmekteyim.Araştırmayı ve yeni şeyler öğrenmeyi severim.
+  I am a second-year student in Computer Science at Istanbul University. I am developing my skills in the fields of artificial intelligence and machine learning. I enjoy research and learning new things.
 </p>
 
 <!-- Sosyal ikonlar -->

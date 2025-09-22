@@ -1,17 +1,19 @@
 ---
 layout: authors
-title: Yunus Emre Urhan
-permalink: /authors/yunus/
+title: Yusuf Said
+permalink: /authors/yusuf-said/
+lang: tr-TR
 ---
 
-{% assign author = site.data.authors.yunus %}
+{% assign author = site.data.authors.yusuf-said %}
 {% if author.avatar %}
-  <img alt="{{ author.name }}"  src="{{ author.avatar }}"  style="width:150px;border-radius:50%;margin-bottom:1rem;">
+  <img alt="{{ author.name }}" src="{{ author.avatar }}"  style="width:150px;border-radius:50%;margin-bottom:1rem;">
 {% endif %}
 
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
-  İstanbul Üniversitesi Bilgisayar Bilimleri 2. sınıf öğrencisiyim. Yapay zeka,makine öğrenmesi alanlarında kendimi geliştirmekteyim.Araştırmayı ve yeni şeyler öğrenmeyi severim.
+  Merhaba, ben Yusuf Said. İstanbul Üniversitesi BB Bölümü 2. sınıf öğrencisiyim.
+  Yapay zeka ve makine öğrenmesi odaklı bir kariyer planlıyorum.
 </p>
 
 <!-- Sosyal ikonlar -->
@@ -58,7 +60,7 @@ permalink: /authors/yunus/
 <h3 style="margin-top: 2rem;">Yazıları</h3>
 <ul>
   {% for post in site.posts %}
-  {% if post.authors contains "yunus" or post.author == "yunus" %}
+  {% if post.authors contains "yusuf-said" or post.author == "yusuf-said" %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}

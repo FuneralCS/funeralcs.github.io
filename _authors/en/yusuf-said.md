@@ -2,6 +2,7 @@
 layout: authors
 title: Yusuf Said
 permalink: /authors/yusuf-said/
+lang: en
 ---
 
 {% assign author = site.data.authors.yusuf-said %}
@@ -11,8 +12,8 @@ permalink: /authors/yusuf-said/
 
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
-  Merhaba, ben Yusuf Said. İstanbul Üniversitesi BB Bölümü 2. sınıf öğrencisiyim.
-  Yapay zeka ve makine öğrenmesi odaklı bir kariyer planlıyorum.
+  Hello, my name is Yusuf Said. I am a second-year student in the BB Department at Istanbul University.
+  I am planning a career focused on artificial intelligence and machine learning.
 </p>
 
 <!-- Sosyal ikonlar -->

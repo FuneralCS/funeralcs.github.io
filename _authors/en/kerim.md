@@ -1,19 +1,18 @@
 ---
 layout: authors
-title: İbrahim Buğrahan Bilici
-permalink: /authors/ibrahim/
+title: Kerim Özek
+permalink: /authors/kerim/
+lang: en
 ---
 
-{% assign author = site.data.authors.ibrahim %}
+{% assign author = site.data.authors.kerim %}
 {% if author.avatar %}
   <img alt="{{ author.name }}" src="{{ author.avatar }}"  style="width:150px;border-radius:50%;margin-bottom:1rem;">
 {% endif %}
 
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
-  İstanbul Üniversitesi Bilgisayar Bilimleri öğrencisiyim. Bu arada arch kullanıyorum. babajum marjinellik yeah
-</p>
-
+  Second-year Computer Science student at Istanbul University, with a keen interest in cloud computing and artificial intelligence.</p>
 <!-- Sosyal ikonlar -->
 <div class="author-links">
   {% if author.github %}
@@ -58,7 +57,7 @@ permalink: /authors/ibrahim/
 <h3 style="margin-top: 2rem;">Yazıları</h3>
 <ul>
   {% for post in site.posts %}
-  {% if post.authors contains "ibrahim" or post.author == "ibrahim" %}
+  {% if post.authors contains "kerim" or post.author == "kerim" %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}

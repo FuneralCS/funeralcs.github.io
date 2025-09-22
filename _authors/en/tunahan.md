@@ -11,8 +11,8 @@ permalink: /authors/tunahan/
 
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
-  Merhaba, ben Tunahan. İstanbul Üniversitesi Bilgisayar Bilimleri 2. sınıf öğrencisiyim.  
-  Aktif olarak makine öğrenmesi çalışıyorum aynı zamanda ekibim ile birlikte çeşitli çalışmalar yapmaktayım.
+  Hello, my name is Tunahan. I am a second-year student in Computer Science at Istanbul University.
+  I am actively working on machine learning and also conducting various studies with my team.
 </p>
 
 <!-- Sosyal ikonlar -->

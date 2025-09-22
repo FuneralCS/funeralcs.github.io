@@ -2,6 +2,7 @@
 layout: authors
 title: Kerim Özek
 permalink: /authors/kerim/
+lang: tr-TR
 ---
 
 {% assign author = site.data.authors.kerim %}
@@ -11,8 +12,9 @@ permalink: /authors/kerim/
 
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
-  Second-year Computer Science student at Istanbul University, with a keen interest in cloud computing and artificial intelligence.</p>
-<!-- Sosyal ikonlar -->
+  İstanbul Üniversitesi Bilgisayar Bilimleri Bölümü ikinci sınıf öğrencisi, bulut bilişim ve yapay zeka alanlarına yoğun ilgi duymaktadır.
+</p
+  <!-- Sosyal ikonlar -->
 <div class="author-links">
   {% if author.github %}
     <a href="{{ author.github }}" target="_blank" class="social-link">

@@ -1,18 +1,20 @@
 ---
 layout: authors
-title: Sezgin Tunay Sönmezocak
-permalink: /authors/vladimirdelvis/
+title: İbrahim Buğrahan Bilici
+permalink: /authors/ibrahim/
+lang: en
 ---
 
-{% assign author = site.data.authors.vladimirdelvis %}
+{% assign author = site.data.authors.ibrahim %}
 {% if author.avatar %}
   <img alt="{{ author.name }}" src="{{ author.avatar }}"  style="width:150px;border-radius:50%;margin-bottom:1rem;">
 {% endif %}
 
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
-  İstanbul Üniversitesi Bilgisayar Bilimleri 2. sınıf öğrencisiyim. Linux, güvenlik ve mahremiyet odaklı çalışmalar yürütüyorum. 
-  Ayrıca siber güvenlik ve yazılım geliştirme konularına da meraklıyımdır.</p>
+    I am a Computer Science student at Istanbul University. By the way, I use Arch. daaadd marginality yeah
+</p>
+
 <!-- Sosyal ikonlar -->
 <div class="author-links">
   {% if author.github %}
@@ -57,7 +59,7 @@ permalink: /authors/vladimirdelvis/
 <h3 style="margin-top: 2rem;">Yazıları</h3>
 <ul>
   {% for post in site.posts %}
-  {% if post.authors contains "vladimirdelvis" or post.author == "vladimirdelvis" %}
+  {% if post.authors contains "ibrahim" or post.author == "ibrahim" %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}

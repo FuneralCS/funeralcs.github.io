@@ -4,7 +4,7 @@ title: Hakkımızda
 permalink: /about/
 icon: fas fa-info-circle
 order: 4
-lang: tr
+lang: tr-TR
 ---
 
 **[FuneralCS](https://www.funeralcs.com/)**, Bilgisayar Bilimleri öğrencilerinin oluşturduğu bir blog sayfasıdır.

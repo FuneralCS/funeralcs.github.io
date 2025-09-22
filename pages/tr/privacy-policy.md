@@ -5,7 +5,7 @@ permalink: /privacy-policy/
 icon: fas fa-user-friends  
 order: 4         
 noindex: false
-lang: tr
+lang: tr-TR
 ---
 
 Bu blog, ziyaretçilere daha iyi hizmet sunmak amacıyla üçüncü taraf hizmetlerden (Google Analytics, Google AdSense) yararlanabilir.

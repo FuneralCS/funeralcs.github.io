@@ -4,7 +4,7 @@ title: PoE
 permalink: /poe/  
 order: 4         
 noindex: true
-lang: tr
+lang: tr-TR
 ---
 
 Proof of Egg (PoE) Konsensüs Mekanizması ve Biyolojik Veri Kümelerinin Finansal Entegrasyonu

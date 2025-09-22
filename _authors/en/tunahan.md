@@ -2,6 +2,7 @@
 layout: authors
 title: Tunahan Yardımcı
 permalink: /authors/tunahan/
+lang: en
 ---
 
 {% assign author = site.data.authors.tunahan %}

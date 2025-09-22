@@ -13,7 +13,7 @@ lang: tr-TR
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
   İstanbul Üniversitesi Bilgisayar Bilimleri Bölümü ikinci sınıf öğrencisi, bulut bilişim ve yapay zeka alanlarına yoğun ilgi duymaktadır.
-</p
+</p>
   <!-- Sosyal ikonlar -->
 <div class="author-links">
   {% if author.github %}

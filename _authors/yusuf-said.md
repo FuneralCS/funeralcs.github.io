@@ -4,14 +4,14 @@ title: Yusuf Said
 permalink: /authors/yusuf-said/
 ---
 
-{% assign author = site.data.authors.yusuf %}
+{% assign author = site.data.authors.yusuf-said %}
 {% if author.avatar %}
   <img alt="{{ author.name }}" src="{{ author.avatar }}"  style="width:150px;border-radius:50%;margin-bottom:1rem;">
 {% endif %}
 
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
-  Merhaba, ben Yusuf Said. İstanbul Üniversitesi BB Bölümü 2. sınıf öğrencisiyim.  
+  Merhaba, ben Yusuf Said. İstanbul Üniversitesi BB Bölümü 2. sınıf öğrencisiyim.
   Yapay zeka ve makine öğrenmesi odaklı bir kariyer planlıyorum.
 </p>
 

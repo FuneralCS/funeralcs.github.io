@@ -134,8 +134,8 @@ lang: en
           <div class="author-avatar"></div>
         {% endif %}
 
-        <h3>{{ author[1].name | default: "Bilinmeyen Yazar" }}</h3>
-        <p>{{ author[1].description | default: "Açıklama bulunamadı." }}</p>
+        <h3>{{ author[1].name | default: "Unknown Author" }}</h3>
+        <p>{{ author[1].description | default: "No description found" }}</p>
 
         {% if author[1].url %}
           <p><a href="{{ author[1].url }}" target="_blank">Profil</a></p>
@@ -163,7 +163,7 @@ lang: en
             </a>
           {% endif %}
           {% if author[1].slug %}
-            <a href="/authors/{{ author[1].slug }}/" title="Detaylı Bilgi">
+            <a href="/authors/{{ author[1].slug }}/" title="Detailed Information">
               <i class="fas fa-info-circle"></i>
             </a>
           {% endif %}

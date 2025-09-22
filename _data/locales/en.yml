@@ -1,7 +1,7 @@
 # The layout text of site
 
 # ----- Commons label -----
-
+tagline: "Original computer science content"
 layout:
   post: Post
   category: Category

@@ -1,7 +1,7 @@
 # The layout text of site
 
 # ----- Commons label -----
-
+tagline: "Özgün bilgisayar bilimi içerikleri"
 layout:
   post: Gönderi
   category: Kategorik

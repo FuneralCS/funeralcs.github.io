@@ -23,7 +23,9 @@
     </a>
 
     <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
+    <p class="site-subtitle fst-italic mb-0">
+      {{ site.data.locales[current_lang].tagline | default: site.tagline }}
+    </p>
   </header>
 
   <nav class="flex-column flex-grow-1 w-100 ps-0">

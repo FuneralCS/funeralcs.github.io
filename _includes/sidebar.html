@@ -1,7 +1,15 @@
 <!-- The Side Bar (rewritten) -->
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
 
-  {%- assign current_lang = page.lang | default: site.active_lang | default: site.default_lang -%}
+  {%- assign current_lang = page.lang | default: site.default_lang -%}
+  <script>
+    // Eğer path /en/ ile başlıyorsa, sidebar'ın dili zorla EN olsun
+    if (window.location.pathname.startsWith('/en/')) {
+      document.querySelectorAll('#sidebar [data-i18n-en]').forEach(el => {
+        el.innerHTML = el.getAttribute('data-i18n-en');
+      });
+    }
+  </script>
 
   {%- comment -%}
     page_url_no_lang: aktif dil önekini URL'den sökeriz ki

@@ -11,7 +11,7 @@ permalink: /authors/tunahan/
 
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
-  Merhaba, ben Tunahan. İstanbul Üniversitesi Bilgisayar Bilimleri 1. sınıf öğrencisiyim.  
+  Merhaba, ben Tunahan. İstanbul Üniversitesi Bilgisayar Bilimleri 2. sınıf öğrencisiyim.  
   Aktif olarak makine öğrenmesi çalışıyorum aynı zamanda ekibim ile birlikte çeşitli çalışmalar yapmaktayım.
 </p>
 

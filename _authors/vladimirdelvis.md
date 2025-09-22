@@ -11,7 +11,7 @@ permalink: /authors/vladimirdelvis/
 
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
-  İstanbul Üniversitesi Bilgisayar Bilimleri 1. sınıf öğrencisiyim. Linux, güvenlik ve mahremiyet odaklı çalışmalar yürütüyorum. 
+  İstanbul Üniversitesi Bilgisayar Bilimleri 2. sınıf öğrencisiyim. Linux, güvenlik ve mahremiyet odaklı çalışmalar yürütüyorum. 
   Ayrıca siber güvenlik ve yazılım geliştirme konularına da meraklıyımdır.</p>
 <!-- Sosyal ikonlar -->
 <div class="author-links">

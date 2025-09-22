@@ -11,7 +11,7 @@ permalink: /authors/kerim/
 
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
-  First-year Computer Science student at Istanbul University, with a keen interest in cloud computing and artificial intelligence.</p>
+  Second-year Computer Science student at Istanbul University, with a keen interest in cloud computing and artificial intelligence.</p>
 <!-- Sosyal ikonlar -->
 <div class="author-links">
   {% if author.github %}

@@ -11,7 +11,7 @@ permalink: /authors/yusuf-said/
 
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
-  Merhaba, ben Yusuf Said. İstanbul Üniversitesi BB Bölümü 1. sınıf öğrencisiyim.  
+  Merhaba, ben Yusuf Said. İstanbul Üniversitesi BB Bölümü 2. sınıf öğrencisiyim.  
   Yapay zeka ve makine öğrenmesi odaklı bir kariyer planlıyorum.
 </p>
 

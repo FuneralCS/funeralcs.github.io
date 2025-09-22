@@ -4,7 +4,7 @@
 
 layout:
   post: Gönderi
-  category: Kategori
+  category: Kategorik
   tag: Etiket
 
 # The tabs of sidebar
@@ -15,6 +15,7 @@ tabs:
   tags: Etiketler
   archives: Arşiv
   authors: Yazarlar
+  about: Hakkımızda
 
 
 # the text displayed in the search bar & search results

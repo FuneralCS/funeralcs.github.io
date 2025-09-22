@@ -149,6 +149,7 @@ We mentioned MCMCs earlier. The properties of MCMCs enable the modeling and calc
 **Hidden Markov Models (HMM)** are probabilistic models that involve unobservable (hidden) states and the observations that arise from these states. It is based on a Markov chain, where each hidden state depends only on the previous state. However, these hidden states cannot be directly observed. Their effect is seen indirectly through observable outputs. It is used in areas such as speech recognition, bioinformatics, and finance.
 
 ### Table Containing Markov Chains
+
 | Model                                                 | Description                                                                                                                                        | Applications                                                             |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | **Hidden Markov Models (HMM)**                        | Establishes probabilistic relationships between hidden states and observations. The state is not directly observed, only inferred through outputs. | Speech recognition, natural language processing, bioinformatics, finance |

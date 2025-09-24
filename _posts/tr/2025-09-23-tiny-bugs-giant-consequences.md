@@ -16,6 +16,9 @@ pin: false
 lang: tr
 ---
 
+## Tiny Bugs, Giant Consequences  
+English version ➤ [Tiny Bugs, Giant Consequences](https://funeralcs.com/en/posts/tiny-bugs-giant-consequences/)
+
 Yazılımlar nadiren tek bir satırlık hatalı koddan dolayı çöker. Asıl çöküş; insan faktörleri, eksik güvenlik kilitleri, sessiz kullanıcı arayüzleri ve test edilmemiş varsayımlar bu kodun etkisini bir felakete dönüştürdüğünde yaşanır. Aşağıda, en küçük dijital hataların gerçek dünyada nasıl en büyük sonuçlara yol açabileceğini görmek için üç gerçek olayı ele alacağız: Therac-25, Patriot füzesinin zaman kayması ve Mars Climate Orbiter.
 
 ### Vaka Çalışması: Arıza 54: Ölümcül Hale Gelen Hata Kodu

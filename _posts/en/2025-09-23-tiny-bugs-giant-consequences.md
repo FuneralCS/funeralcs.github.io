@@ -16,6 +16,10 @@ pin: false
 lang: en
 ---
 
+## Küçük Hatalar, Dev Sonuçlar  
+Türkçe versiyon için ➤ [Küçük Hatalar, Dev Sonuçlar](https://funeralcs.com/posts/tiny-bugs-giant-consequences/)
+
+
 Software rarely collapses from a single line of bad code. It collapses when human factors, missing interlocks, silent UIs, and untested assumptions _amplify_ that code. In what follows, we’ll look at three real incidents—Therac-25, the Patriot missile time drift, and the Mars Climate Orbiter to see how the smallest  of digital errors can have the largest of real-world consequences.
 
 ### Case Study: Malfunction 54: The Error Code That **Became Lethal**:

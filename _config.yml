@@ -235,6 +235,9 @@ compress_html:
   ignore:
     envs: [development]
 
+sitemap:
+  filename: sitemap.xml
+
 exclude:
   - "*.gem"
   - "*.gemspec"
@@ -267,10 +270,12 @@ polyglot:
   lang_vars: ["lang"]
   lang_from_path: true
   generate_sitemap: true
-  exclude_from_localization:
+exclude_from_localization:
   - "robots.txt"
   - "assets"
   - "node_modules"
   - "tags"
   - "categories"
+  - "sitemap"
   - "robots"
+  - "sitemap.xml"

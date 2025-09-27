@@ -273,8 +273,6 @@ exclude_from_localization:
   - "robots.txt"
   - "assets"
   - "node_modules"
-  - "tags"
-  - "categories"
   - "sitemap"
   - "robots"
   - "sitemap.xml"

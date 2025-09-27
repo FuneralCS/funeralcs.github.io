@@ -226,9 +226,6 @@ defaults:
 sass:
   style: compressed
   
-sitemap:
-  filename: sitemap.xml
-  
 compress_html:
   clippings: all
   comments: all
@@ -262,10 +259,18 @@ custom_css:
 
 plugins:
   - jekyll-polyglot
-
+  - jekyll-sitemap
 languages: ["tr-TR", "en"]     # ya da senin istediğin diller
 default_lang: "tr-TR"          # varsayılan dil
 polyglot:
   default_lang_in_subdir: false
   lang_vars: ["lang"]
   lang_from_path: true
+  generate_sitemap: true
+  exclude_from_localization:
+  - "robots.txt"
+  - "assets"
+  - "node_modules"
+  - "tags"
+  - "categories"
+  - "robots"

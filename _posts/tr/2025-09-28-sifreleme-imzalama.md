@@ -35,7 +35,7 @@ Bu özel anahtar şifrelemesi olarak da bilinir. Şifreleme için kullanılan an
 ##### Simetrik Şifreleme Algoritmalarına Genel Bakış
 
 1. **DES** (Data Encryption Standard): Dünyada en çok kullanılan simetrik şifreleme algoritmalarından birisidir. [Feistel şifreleme](https://tr.wikipedia.org/wiki/Feistel_%C5%9Fifresi) metodunu kullanır. Blok şifreleme kullanan DES, işlem sırasında 64 bitlik veriyi 56 bitlik anahtar kullanarak şifreler. Anahtar uzunluğunun kısa olması nedeniyle kırılmıştır.
-2.  **AES** (Advanced Encrption Standard): DES kırıldıktan sonra yeni bir arayışa girilmiş ve AES simetrik şifreleme algoritması oluşturulmuştur. DES’in zayıf yönleri kuvvetlendirilmiş halidir ve blok şifreleme algoritmasını kullanır. DES’e göre daha hızlı ve güvenlidir. Uzunluk olarak 128, 192 ve 256 bit anahtarları destekler.
+2.  **AES** (Advanced Encryption Standard): DES kırıldıktan sonra yeni bir arayışa girilmiş ve AES simetrik şifreleme algoritması oluşturulmuştur. DES’in zayıf yönleri kuvvetlendirilmiş halidir ve blok şifreleme algoritmasını kullanır. DES’e göre daha hızlı ve güvenlidir. Uzunluk olarak 128, 192 ve 256 bit anahtarları destekler.
 
 <figure>
     <img src="/assets/img/2025-09-28-sifreleme-imzalama/simetrik.webp" width="650" alt="Görsel: Simetrik Şifreleme">
@@ -62,7 +62,7 @@ Klasik şifreleme (Simetrik Şifreleme) tek bir anahtar kullanırken asimetrik �
 >Windows'da Pretty Good Privacy ve Linux'te GnuPG kullanarak dosyalarınızı asimetrik veya simetrik olarak şifreleyebilir ve dosyalarınızı imzalayabilirsiniz. 
 {: .prompt-info }
 
->Antrparantez: Gününümüzdeki whatsapp gibi uygulamalar signal protokolü kullanır. Bu signal protokolü ise hem asimetrik hem de simetrik şifrelemeyi bir arada kullanır. Asimetrik şifrelemeyi "güvenli bir el sıkışma ve gizli bir anahtar oluşturma" için, simetrik şifrelemeyi ise bu anahtarı kullanarak "asıl sohbeti hızlı ve verimli bir şekilde şifrelemek" için kullanır.
+>Antrparantez: Gününümüzdeki Whatsapp gibi uygulamalar signal protokolü kullanır. Bu signal protokolü ise hem asimetrik hem de simetrik şifrelemeyi bir arada kullanır. Asimetrik şifrelemeyi "güvenli bir el sıkışma ve gizli bir anahtar oluşturma" için, simetrik şifrelemeyi ise bu anahtarı kullanarak "asıl sohbeti hızlı ve verimli bir şekilde şifrelemek" için kullanır.
 
 ##### Asimetrik Şifreleme Algoritmalarına Genel Bakış
 
@@ -93,7 +93,7 @@ Bir verinin şifrelenmesinden sonra en önemli diğer durağı imzalamadır. Bu 
 <center><strong>GÜNÜMÜZDEKİ UYGULAMALARI</strong></center>
 
 1. Örnek: [ProtonMail](https://proton.me/mail) veya [Tuta](https://tuta.com/) gibi e-posta hizmetleri asimetrik şifreleme ve simetrik şifrelemeyi bir arada kullanır. Birine posta yollayacakken alıcının genel anahtarı ile posta şifrelenir ve bizim özel anahtarımız ile imzalanır. Alıcı ise ilk önce özel anahtarı ile şifresini çözer sonra kaynağın ortak anahtarı ile imzayı doğrular.
-2. Örnek: Whatsapp, signal gibi uçtan uca şifreleme kullanan uygulamalar.
+2. Örnek: Whatsapp, Signal gibi uçtan uca şifreleme kullanan uygulamalar.
 3. Örnek: HTTPS için sitenin imzası ve aradaki güvenli haberleşme yine bu algoritmalar sayesinde gerçekleşir.
 4. Örnek: VPN.
 5. Örnek: Secure boot, code signing, yazılım güncellemeleri.
@@ -113,7 +113,7 @@ Bir verinin şifrelenmesinden sonra en önemli diğer durağı imzalamadır. Bu 
 1. [SIMETRIK VE ASIMETRIK SIFRELEME - MEDIUM](https://medium.com/@hicranozkan/simetrik-ve-asimetrik-anahtarl%C4%B1-%C5%9Fifreleme-algoritmalar%C4%B1-a60a4e0eb079)
 2. [SIFRELEME - WIKIPEDIA](https://tr.wikipedia.org/wiki/%C5%9Eifreleme)
 3. [SIFRELEME - KASPERKSY](https://www.kaspersky.com.tr/resource-center/definitions/encryption)
-4. [ADVANCED ENCRPYTION STANDARD - NATIONAL INSTITUTE OF STANDARDS AND TECHNOLOGY](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197-upd1.pdf)
+4. [ADVANCED ENCRYPTION STANDARD - NATIONAL INSTITUTE OF STANDARDS AND TECHNOLOGY](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197-upd1.pdf)
 5. [SIMETRIK VE ASIMETRIK SIFRELEME - KERTERIZ](https://kerteriz.net/modern-sifreleme-yontemleri-simetrik-asimetrik-sifreleme/)
 6. [KRIPTOGRAFIK OZET FONKSIYONLARI - WIKIPEDIA](https://en.wikipedia.org/wiki/Cryptographic_hash_function)
 7. [UCTAN UCA SIFRELEME VE WHATSAPP - WHATSAPP](https://faq.whatsapp.com/820124435853543#business-messaging-whatsapp-security)

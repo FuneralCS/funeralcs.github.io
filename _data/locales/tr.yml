@@ -17,7 +17,6 @@ tabs:
   authors: Yazarlar
   about: Hakkımızda
 
-
 # the text displayed in the search bar & search results
 search:
   hint: Ara...

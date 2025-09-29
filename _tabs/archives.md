@@ -2,5 +2,6 @@
 layout: archives
 icon: fas fa-archive
 order: 3
-lang: tr-TR
+lang: tr
+title: Arşiv
 ---

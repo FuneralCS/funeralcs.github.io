@@ -1,25 +1,4 @@
-<!-- The Side Bar (rewritten) -->
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
-
-  {%- assign current_lang = page.lang | default: site.default_lang -%}
-  <script>
-    // Eğer path /en/ ile başlıyorsa, sidebar'ın dili zorla EN olsun
-    if (window.location.pathname.startsWith('/en/')) {
-      document.querySelectorAll('#sidebar [data-i18n-en]').forEach(el => {
-        el.innerHTML = el.getAttribute('data-i18n-en');
-      });
-    }
-  </script>
-
-  {%- comment -%}
-    page_url_no_lang: aktif dil önekini URL'den sökeriz ki
-    tab karşılaştırmaları dil-agnostik olsun.
-  {%- endcomment -%}
-  {%- assign page_url_no_lang = page.url | default:'/' -%}
-  {%- capture lang_prefix -%}/{{ current_lang }}/{%- endcapture -%}
-  {%- if page_url_no_lang != '/' and page_url_no_lang contains lang_prefix -%}
-    {%- assign page_url_no_lang = page_url_no_lang | replace_first: lang_prefix, '/' -%}
-  {%- endif -%}
 
   <header class="profile-wrapper">
     <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
@@ -32,45 +11,26 @@
 
     <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <p class="site-subtitle fst-italic mb-0">
-      {{ site.data.locales[current_lang].tagline | default: site.tagline }}
+      {{ site.tagline }}
     </p>
   </header>
 
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
       <!-- Home -->
-      <li class="nav-item{% if page_url_no_lang == '/' %} active{% endif %}">
+      <li class="nav-item{% if page.url == '/' %} active{% endif %}">
         <a href="{{ '/' | relative_url }}" class="nav-link">
           <i class="fa-fw fas fa-home"></i>
-          <span>{{ site.data.locales[current_lang].tabs.home | default: 'Home' | upcase }}</span>
+          <span>HOME</span>
         </a>
       </li>
 
       <!-- Tabs -->
       {%- for tab in site.tabs -%}
-        {%- assign tab_url = tab.url -%}
-
-        {%- comment -%}
-          tab_key: URL'nin son boş olmayan segmenti ("/posts/" -> "posts")
-          split-last boş dönebileceği için manuel dolaşıyoruz.
-        {%- endcomment -%}
-        {%- assign tab_key = '' -%}
-        {%- assign segs = tab_url | split:'/' -%}
-        {%- for s in segs -%}{% if s != '' %}{% assign tab_key = s %}{% endif %}{%- endfor -%}
-
-        {%- comment -%}
-          Aktiflik: dil öneksiz sayfa URL'si sekme URL'siyle eşitse
-          veya onunla başlıyorsa "active".
-        {%- endcomment -%}
-        {%- assign is_active = false -%}
-        {%- if page_url_no_lang == tab_url or page_url_no_lang contains tab_url -%}
-          {%- assign is_active = true -%}
-        {%- endif -%}
-
-        <li class="nav-item{% if is_active %} active{% endif %}">
-          <a href="{{ tab_url | relative_url }}" class="nav-link">
+        <li class="nav-item{% if page.url == tab.url or page.url contains tab.url %} active{% endif %}">
+          <a href="{{ tab.url | relative_url }}" class="nav-link">
             <i class="fa-fw {{ tab.icon }}"></i>
-            <span>{{ site.data.locales[current_lang].tabs[tab_key] | default: tab.title | upcase }}</span>
+            <span>{{ tab.title | upcase }}</span>
           </a>
         </li>
       {%- endfor -%}
@@ -93,7 +53,7 @@
           {%- capture url -%}https://{{ entry.type }}.com/{{ site[entry.type].username }}{%- endcapture -%}
         {% when 'email' %}
           {% assign email = site.social.email | split: '@' %}
-          {%- capture url -%}javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@'){%- endcapture -%}
+          {%- capture url -%}mailto:{{ email[0] }}@{{ email[1] }}{%- endcapture -%}
         {% when 'rss' %}
           {% assign url = '/feed.xml' | relative_url %}
         {% else %}
@@ -102,16 +62,11 @@
 
       {% if url %}
         <a href="{{ url }}" aria-label="{{ entry.type }}"
-           {% assign link_types = '' %}
-           {% unless entry.noblank %}target="_blank"{% assign link_types = 'noopener noreferrer' %}{% endunless %}
-           {% if entry.type == 'mastodon' %}{% assign link_types = link_types | append: ' me' | strip %}{% endif %}
-           {% unless link_types == empty %}rel="{{ link_types }}"{% endunless %}>
+           {% unless entry.noblank %}target="_blank" rel="noopener noreferrer"{% endunless %}>
           <i class="{{ entry.icon }}"></i>
         </a>
       {% endif %}
     {% endfor %}
   </div>
 
-  <!-- Language switcher (expects robust fallback in lang-switcher.html) -->
-  {% include lang-switcher.html %}
 </aside>

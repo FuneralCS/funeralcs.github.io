@@ -1,22 +1,20 @@
 ---
 layout: authors
-title: Yusuf Said
-permalink: /authors/yusuf-said/
+title: Kerim Özek
+permalink: /authors/kerim/
 lang: en
 ---
 
-{% assign author = site.data.authors.yusuf-said %}
+{% assign author = site.data.authors.kerim %}
 {% if author.avatar %}
   <img alt="{{ author.name }}" src="{{ author.avatar }}"  style="width:150px;border-radius:50%;margin-bottom:1rem;">
 {% endif %}
 
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
-  Hello, my name is Yusuf Said. I am a second-year student in the BB Department at Istanbul University.
-  I am planning a career focused on artificial intelligence and machine learning.
+  Second-year Computer Science student at Istanbul University, with a keen interest in cloud computing and artificial intelligence.
 </p>
-
-<!-- Sosyal ikonlar -->
+  <!-- Sosyal ikonlar -->
 <div class="author-links">
   {% if author.github %}
     <a href="{{ author.github }}" target="_blank" class="social-link">
@@ -60,7 +58,7 @@ lang: en
 <h3 style="margin-top: 2rem;">Yazıları</h3>
 <ul>
   {% for post in site.posts %}
-  {% if post.authors contains "yusuf-said" or post.author == "yusuf-said" %}
+  {% if post.authors contains "kerim" or post.author == "kerim" %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}

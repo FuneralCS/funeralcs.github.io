@@ -6,7 +6,7 @@ theme: jekyll-theme-chirpy
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
-lang: tr-TR
+lang: tr
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
 timezone: Europe/Istanbul
@@ -259,20 +259,4 @@ jekyll-archives:
     category: /categories/:name/
 custom_css:
   - assets/css/custom.css
-
-plugins:
-  - jekyll-polyglot
-languages: ["tr-TR", "en"]     # ya da senin istediğin diller
-default_lang: "tr-TR"          # varsayılan dil
-polyglot:
-  default_lang_in_subdir: false
-  lang_vars: ["lang"]
-  lang_from_path: true
-  generate_sitemap: true
-exclude_from_localization:
-  - "robots.txt"
-  - "assets"
-  - "node_modules"
-  - "sitemap"
-  - "robots"
-  - "sitemap.xml"
+languages: ["tr-TR"]

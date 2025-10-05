@@ -12,7 +12,7 @@ lang: tr-TR
 
 <!-- BURASI CV / TANITIM ALANI -->
 <p>
-  İstanbul Üniversitesi Bilgisayar Bilimleri öğrencisiyim. Bu arada arch kullanıyorum. babajum marjinellik yeah
+  İstanbul Üniversitesi Bilgisayar Bilimleri öğrencisiyim. 
 </p>
 
 <!-- Sosyal ikonlar -->

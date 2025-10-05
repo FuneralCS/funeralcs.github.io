@@ -1,6 +1,6 @@
 ---
 title: Formula ve Veri Bilimi
-date: 2025-10-05 15:37:00 +0300
+date: 2025-10-05 15:30:00 +0300
 categories:
   - teknoloji
   - yapay zeka

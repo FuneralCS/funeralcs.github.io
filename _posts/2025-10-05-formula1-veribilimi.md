@@ -8,13 +8,11 @@ categories:
   - makine-ogrenmesi
   - olasılık
 tags:
-  - istatistik
   - matematik
   - yazılım
   - science
 authors:
   - ibrahim
-image: '{"path":"/assets/img/2025-10-05-formula1-veribilimi/f1-kapak.webp"}'
 description: Formula 1 ve Veri bilimi ilişkisi üzerine.
 toc: true
 math: true
@@ -22,6 +20,9 @@ mermaid:
 comments: true
 pin:
 lang: tr
+image:
+  path: /assets/img/2025-10-05-formula1-veribilimi/f1-kapak.webp
+  alt: "Formula 1 veri bilimi kapak görseli"
 ---
 Formula 1, doğası gereği rekabetin, riskin ve öngörülemez pek çok değişkenin bir arada bulunduğu, yüksek teknolojiye dayalı bir spor dalıdır. Son yıllarda gelişen dijital teknolojilerle birlikte veri bilimi, bu sporun en kritik bileşenlerinden biri haline gelmiştir. Takımlar; yapay zeka, makine öğrenmesi ve telemetri gibi ileri teknolojileri entegre ederek performans analizinden stratejik karar süreçlerine kadar geniş bir alanda veri odaklı yaklaşımlar benimsemektedir. Bu yazıda, veri biliminin Formula 1’deki rolünü, kullanım alanlarını ve geleceğe yönelik olası etkilerini inceleyeceğiz.
 ## Formula 1'de Veri Bilimi Nerelerde Kullanılır?

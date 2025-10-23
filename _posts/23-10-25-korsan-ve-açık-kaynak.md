@@ -1,3 +1,20 @@
+---
+title: "Korsan ve Açık Kaynak"
+date: 2025-10-23 19:00:00 +0300
+categories: [yazılım,internet,özgür yazılım]
+tags: [açık kaynak,korsan,korsan yazılım]
+authors: [yunus]
+image:
+description: "Yazılım Korsanlığı ve Açık Kaynak Farkı: Hukuki, Etik ve Güvenlik Analizi"
+toc: true
+math: false
+mermaid: false
+comments: true
+pin: false
+lang: tr
+---
+
+
 # Yazılım Korsanlığı ve Açık Kaynak Farkı: Hukuki, Etik ve Güvenlik Analizi
 ## Giriş
  

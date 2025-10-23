@@ -1,10 +1,10 @@
 ---
-title: "Korsan ve Açık Kaynak"
+title: "Yazılım Korsanlığı ve Açık Kaynak Farkı: Hukuki, Etik ve Güvenlik Analizi"
 date: 2025-10-23 19:00:00 +0300
 categories: [yazılım,internet,özgür yazılım]
-tags: [açık kaynak,korsan,korsan yazılım]
+tags: [açık kaynak,korsan,korsan yazılım,telif hakkı,FSEK,GPL,MIT]
 authors: [yunus]
-description: "Yazılım Korsanlığı ve Açık Kaynak Farkı: Hukuki, Etik ve Güvenlik Analizi"
+description: "Yazılım korsanlığı ile Açık Kaynak arasındaki devasa farkı öğrenin. Korsan yazılımın hukuki risklerini, Açık Kaynak'ın yasal ve etik güvenlik avantajlarını keşfedin."
 toc: true
 math: false
 mermaid: false
@@ -13,24 +13,24 @@ pin: false
 lang: tr
 ---
 
-
 # Yazılım Korsanlığı ve Açık Kaynak Farkı: Hukuki, Etik ve Güvenlik Analizi
+
 ## Giriş
  
- Yazılımın "ücretsiz" olabileceği fikri, dijital dünyada birbirinden farklı kapıya çıkar: Biri yasal risklerle dolu bir çıkmaza, diğeri ise işbirliğine dayalı özgür bir dünyaya götürür bizi.
+Yazılımın "ücretsiz" olabileceği fikri, dijital dünyada birbirinden farklı kapıya çıkar: Biri yasal risklerle dolu bir çıkmaza, diğeri ise işbirliğine dayalı özgür bir dünyaya götürür bizi.
 
 Çoğu zaman insanlar, telif hakkıyla korunan bir programı kırmayı ve izinsiz kullanmayı ifade eden **yazılım korsanlığı** ile, kaynak kodunun yasal lisanslarla herkesin kullanımına açıldığı **Açık Kaynak (Open Source)** çözümlerini karıştırır. Sonuçta, ikisi de "bedava" değil midir?
 
 Ne yazık ki öyle değil. Bu iki kavramın arasındaki ayrım, etik, hukuki ve teknolojik güvenlik zemininde de devasadır. Birini tercih etmek sizi yasal bir suçlu yaparken, diğerini tercih etmek sizi küresel bir geliştirme topluluğunun parçası yapar.
 
-Bu yazıda bu konuyu ele alarak ikisi arasındaki farkı açıklayacağım. Kısaca bahsetmek gerekirse yazılım korsanlığı **telif hakkı kanunlarının açık bir ihlalidir ve bir çeşit "hırsızlık**"olarak kabul edilir. Buna karşın Açık Kaynak, yaratıcının **yasal bir lisansla** (MIT, GPL gibi) size belirli özgürlükler tanıması demektir. Amacımız: bu temel hukuki ve etik farklılıkları netleştirerek, sizi bilinçli ve yasal yazılım kullanımına yönlendirmektir.
+Bu yazıda bu konuyu ele alarak ikisi arasındaki farkı açıklayacağım. Kısaca bahsetmek gerekirse yazılım korsanlığı **telif hakkı kanunlarının açık bir ihlalidir ve bir çeşit "hırsızlık"** olarak kabul edilir. Buna karşın Açık Kaynak, yaratıcının **yasal bir lisansla** (MIT, GPL gibi) size belirli özgürlükler tanıması demektir. Amacımız: bu temel hukuki ve etik farklılıkları netleştirerek, sizi bilinçli ve yasal yazılım kullanımına yönlendirmektir.
 
 ## Korsanlık: Telif Hakkı Kanununun İhlali
 
 ### Tanım
-**Korsan Yazılım**, lisanslı ve telif hakkına sahip ücretli yazılımların izinsiz olarak, herhangi bir bedel ödemeden kullanılan haline denir. Bilgisayarımız içerisinde kullandığımız yazılımların hemen hemen tamamı farklı lisans koşullarıyla kullanıcılara sunulmaktadır. Örneğin bazı yazılımlar ücretsiz kullanım ve açık kaynak kodla birlikte yayınlarken bazılarıysa lisans anahtarı karşılığında sunulabilmektedir. 
+**Korsan Yazılım**, lisanslı ve telif hakkına sahip ücretli yazılımların izinsiz olarak, herhangi bir bedel ödemeden kullanılan haline denir. Bilgisayarımız içerisinde kullandığımız yazılımların hemen hemen tamamı farklı lisans koşullarıyla kullanıcılara sunulmaktadır. Örneğin bazı yazılımlar ücretsiz kullanım ve açık kaynak kodla birlikte yayınlarken bazılarıysa lisans anahtarı karşılığında sunulabilmektedir. 
 
-Lisans karşılığı sunulan bir yazılımı geçerli bir anahtar haricinde farklı bir yöntemle kullandığımız anda **korsan yazılım** kullanıcısı olmuş oluruz. Korsan yazılımlar, bir aracı yazılım veya crack dosyası yardımıyla kırılır ve lisans anahtarı olmaksızın herkese dağıtılabilir.Bu eylem, yazılımı geliştiren kişinin **emeğini ve mali hakkını** hiçe saymaktır.
+Lisans karşılığı sunulan bir yazılımı geçerli bir anahtar haricinde farklı bir yöntemle kullandığımız anda **korsan yazılım** kullanıcısı olmuş oluruz. Korsan yazılımlar, bir aracı yazılım veya crack dosyası yardımıyla kırılır ve lisans anahtarı olmaksızın herkese dağıtılabilir. Bu eylem, yazılımı geliştiren kişinin **emeğini ve mali hakkını** hiçe saymaktır.
 ### Yasaya uygunluk
 Bir telif hakkı ihlali olan korsan ürün çoğunlukla bir insanlık suçu olarak kabul edilmekte ve cezalandırılmaktadır. Korsan ürün faaliyetlerine karşı uygulanan kanunlar ve yaptırımlar ülkeden ülkeye büyük çeşitlilikler gösterebilir. Türkiye'de bu tür eylemler, 5846 sayılı **Fikir ve Sanat Eserleri Kanunu (FSEK)** kapsamında **suç** teşkil eder.
 
@@ -64,15 +64,17 @@ Görüldüğü gibi, Açık Kaynak bir yazılım kullanıcısı veya geliştiric
 
 İki model arasındaki en kesin ayrım, eylemin yasalar karşısındaki durumudur.
 
-| **Kriter**       | **Yazılım Korsanlığı**                                                                                              | **Açık Kaynak Kullanımı**                                                                                                   |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Kriter | Yazılım Korsanlığı | Açık Kaynak Kullanımı |
+|:---|:---|:---|
 | **Hukuki Durum** | **Yasa Dışı Eylem.** Telif hakkı sahibinin mali haklarının ihlalidir ve FSEK kapsamında cezai yaptırımlara tabidir. | **Yasal Eylem.** Yazılımın yaratıcısı tarafından yasal bir lisans (GPL, MIT vb.) ile izin verilmiştir. Hukuki risk taşımaz. |
-| **İzin Durumu**  | Yaratıcının izni olmadan, korumaları yasa dışı yollarla (crack) atlayarak kullanmak.                                | Yaratıcının **açık ve yazılı izni** ile lisans koşulları dahilinde kullanmak.                                               |
+| **İzin Durumu** | Yaratıcının izni olmadan, korumaları yasa dışı yollarla (crack) atlayarak kullanmak. | Yaratıcının **açık ve yazılı izni** ile lisans koşulları dahilinde kullanmak. |
+
 ### Fark 2: Etik Durum ve Geliştiriciye Etkisi
 
-| **Kriter**                    | **Yazılım Korsanlığı**                                                                                    | **Açık Kaynak Kullanımı**                                                                                   |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Kriter | Yazılım Korsanlığı | Açık Kaynak Kullanımı |
+|:---|:---|:---|
 | **Geliştiriciye Karşı Duruş** | **Sömürü.** Geliştiricinin emeğini ve iş modelini hiçe sayar. Maliyetini düşürür, inovasyona zarar verir. | **İşbirliği ve Katkı.** Kullanıcılar hata bildirimi, kod katkısı veya geri bildirimle yazılıma değer katar. |
+
 ### Fark 3: Risk ve Güvenlik
 
 - **Korsan Yazılımın Riskleri:**

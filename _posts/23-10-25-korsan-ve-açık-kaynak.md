@@ -5,6 +5,7 @@ categories: [yazılım,internet,özgür yazılım]
 tags: [açık kaynak,korsan,korsan yazılım]
 authors: [yunus]
 image:
+  path:
 description: "Yazılım Korsanlığı ve Açık Kaynak Farkı: Hukuki, Etik ve Güvenlik Analizi"
 toc: true
 math: false

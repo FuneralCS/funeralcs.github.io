@@ -31,7 +31,7 @@ Deprem, fay hattı boyunca kayaların aniden kırılıp yer değiştirmesiyle or
 
 <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px;">
     <figure style="flex: 0 0 300px; margin: 0;">
-        <img src="assets/img/xx-xx-xx-derpem-uyari-sistemi/p_s.webp"
+        <img src="/assets/img/xx-xx-xx-derpem-uyari-sistemi/p_s.webp"
              alt="P ve S dalgaları için AI üretimi bir temsil"
              width="300" style="max-width: 100%; height: auto;">
         <figcaption>P ve S dalgaları için AI üretimi bir temsil</figcaption>
@@ -70,7 +70,7 @@ Android Deprem Uyarı Sistemi (AEA), aslında klasik sismoloji prensiplerini kul
 Bu sayede telefonlar, aslında cebimizde taşıdığımız minik birer sismograf gibi davranıyor
 
 <figure>
-    <img src="assets/img/xx-xx-xx-derpem-uyari-sistemi/bulut.webp" 
+    <img src="/assets/img/xx-xx-xx-derpem-uyari-sistemi/bulut.webp" 
          alt="Sistem" width="512">
     <figcaption>Sistem</figcaption>
 </figure>  
@@ -82,7 +82,7 @@ Bu sayede telefonlar, aslında cebimizde taşıdığımız minik birer sismograf
 > AEA’nın yaygınlaştırılması, 11 Ağustos 2020’de Kaliforniya’da **ShakeAlert** tarafından üretilen uyarıların iletilmesiyle başladı. Android telefonlarının kendi tespitlerine dayalı uyarılar ise ilk olarak **28 Nisan 2021’de Yeni Zelanda ve Yunanistan’da** devreye girdi, ardından **15 Haziran 2021’de Türkiye, Filipinler ve Orta Asya’ya** genişletildi. 2022’de sistem, uyarıların verilmesine izin verilen diğer yüksek riskli ülkelere de yayıldı. 2022 sonunda **93 ülkede**, 2023 sonunda ise **98 ülkede** AEA uyarıları gönderiliyordu. ~ Makaleden
 
 <figure>
-    <img src="assets/img/xx-xx-xx-derpem-uyari-sistemi/harita.webp" 
+    <img src="/assets/img/xx-xx-xx-derpem-uyari-sistemi/harita.webp" 
          alt="Tespit edilen ve uyarı verilen depremlerin küresel dağılımı." width="600">
     <figcaption>Tespit edilen ve uyarı verilen depremlerin küresel dağılımı</figcaption>
 </figure>  
@@ -107,7 +107,7 @@ Prensipten az önce de bahsetmiştim klasik sismoloji ile birebir aynı mantıkt
 İyileşme nedeni ise **bölgesel tahmin modelleri** olarak yazılmış makalede. (farklı tektonik koşullar, zemin türleri, bina tipleri ve telefon modellerine göre ayarlamalar).
 
 <figure>
-    <img src="assets/img/xx-xx-xx-derpem-uyari-sistemi/hata.webp" 
+    <img src="/assets/img/xx-xx-xx-derpem-uyari-sistemi/hata.webp" 
          alt="AEA Hata oranları" width="600">
     <figcaption>AEA Hata oranları. Türkçeye çevirmek gerekirse:
 - <b>Number of events</b>: İncelenen deprem sayısı  
@@ -182,7 +182,7 @@ Aynı veriler bugünkü sistemle işlendiğinde:
 Depremler gerçeğimiz, acılarıyla ve kayıplarıyla hep içimizde. Bilim ve teknoloji bize saniyeler kazandırabilir, hayatlar kurtarabilir. Ama unutmamalıyız ki ölüm de hayatın bir parçası. Bizim görevimiz, bu dünyada yaşarken birbirimizin hayatına sahip çıkmak, böylesi felaketleri bir daha yaşamamak. Deprem gerçeğini değiştiremeyiz ama bilgiyi paylaşarak, bilimi yayarak ve teknolojiyi kullanarak daha güvenli bir gelecek kurabiliriz. Okumak okutmak, yaşamak ve yaşatmak...
 
 <figure>
-    <img src="assets/img/xx-xx-xx-derpem-uyari-sistemi/grafikler.webp" 
+    <img src="/assets/img/xx-xx-xx-derpem-uyari-sistemi/grafikler.webp" 
          alt="Tespit edilen ve uyarı verilen depremlerin küresel dağılımı." width="600">
     <figcaption>Uyarı alan kullanıcıların geri bildirimleri. 5 Şubat 2023 ile 30 Nisan 2024 tarihleri arasında kullanıcı anketine toplam 1.555.006 yanıt toplandı. Bu süre zarfında, AEA tarafından tespit edilen 1042 deprem için uyarılar yayınlandı. </figcaption>
 </figure>  

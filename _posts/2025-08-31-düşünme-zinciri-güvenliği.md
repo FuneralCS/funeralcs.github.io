@@ -75,7 +75,7 @@ Yani modele şöyle dendi:
 
 **Antrparantez**: mevcut teorik ve bazı yeni teknikleri saymazsak (bkz. _process supervision (süreç gözetimi/denetimi)_ / _rationale distillation (gerekçe/akıl yürütme damıtımı)_). Ancak temelinde CoT bir prompt mühendisliğidir. Az önce belirttiğim teknikler ise CoT olarak planlanan modellerin eğitim teknikleridir.
 <figure>
-    <img src="assets/img/2025-08-31-düşünme-zinciri-güvenliği/abcx.webp" alt="Düşünme zinciri basamakları" width="600">
+    <img src="/assets/img/2025-08-31-düşünme-zinciri-güvenliği/abcx.webp" alt="Düşünme zinciri basamakları" width="600">
     <figcaption>Düşünme zinciri basamakları</figcaption>
 </figure>
 
@@ -97,7 +97,7 @@ Düşünme zinciri ile eğitilen modeller (yani en başından modele böyle bir 
 Peki şu "1 dakika boyunca düşündü" çıktısı? Bu gecikme aslında token üretiminden kaynaklanıyor; model yazıyor ama biz ilk token gelene kadar hiçbir şey görmüyoruz. İlk token üretilmeden önce biz bir şey görmeyiz ama model aslında arkada cevabı hazırlıyor. Hatta bazen bir anda önünüze 1 sayfa cevap fırlatabiliyor sistem. 
 Düşünme sırasında ise bizlere aklından geçenleri yazıyor. Peki ya tüm bunlar bir blöf ise? Buna 5. bölümde değineceğiz öncesinde biraz daha ön bilgi verelim. 
 <figure>
-    <img src="assets/img/2025-08-31-düşünme-zinciri-güvenliği/cot.webp" alt="Düşünme zinciri için görselleştirme" width="600">
+    <img src="/assets/img/2025-08-31-düşünme-zinciri-güvenliği/cot.webp" alt="Düşünme zinciri için görselleştirme" width="600">
     <figcaption>Düşünme zinciri için görselleştirme</figcaption>
 </figure>
 
@@ -172,7 +172,7 @@ Bu latent reasoning modelleri, düşüncelerini hiç kelimelere dökmeden muhake
 Bu durumda da CoT'un sağladığı şeffaflık ve güvenlik avantajları tamamen ortadan kalkabilir.
 
 <figure>
-    <img src="assets/img/2025-08-31-düşünme-zinciri-güvenliği/latent.webp" alt="Latent reasoning için görselleştirme" width="600">
+    <img src="/assets/img/2025-08-31-düşünme-zinciri-güvenliği/latent.webp" alt="Latent reasoning için görselleştirme" width="600">
     <figcaption>Latent reasoning için görselleştirme</figcaption>
 </figure>
 Explicit Reasoning, bugün GPT’lerde gördüğümüz klasik **Chain of Thought** yaklaşımı iken, Latent Reasoning ise modelin aklından geçenler **kelimeye dökülmeden**, kendi içinde gizli (latent) temsil olarak kalıyor. Nasıl çok çalıştığımız bir gün sonunda gece yatmadan önce aklımızdan aşırı hızlı bir şekilde anlamsız düşünceler geçiyorsa, latent reasoning de modelin aklından çok hızlı şekilde -ama bu sefer anlamlı (?)- düşünceler geçiyor. Öyle ki bu içsel bilgi taşıma kapasitesi (bant genişliği) makaleye göre 40960 bit'e kadar çıkmakta. Ama bu durumda açıklanabilirlikten ödün verip, verimliliğe pay veriyoruz. [8]

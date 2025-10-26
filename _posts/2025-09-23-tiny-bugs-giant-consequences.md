@@ -128,8 +128,8 @@ The final prediction of where the Scud would be was off by over **600 meters**. 
 {: .prompt-info }
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 8px;">
-  <img src="./assets/img/2025-09-23-tiny-bugs-giant-consequences/Mars_Climate_Orbiter_-_launch_configuration.webp" alt="Mars Climate Orbiter Diagramı" style="width: 350px; height: 390px; object-fit: cover;">
-  <img src="./assets/img/2025-09-23-tiny-bugs-giant-consequences/Mars-Climate-Orbiter-launch.webp" alt="Mars Climate Orbiter Fırlatma Anı" style="width: 350px; height: 390px; object-fit: cover;">
+  <img src="/assets/img/2025-09-23-tiny-bugs-giant-consequences/Mars_Climate_Orbiter_-_launch_configuration.webp" alt="Mars Climate Orbiter Diagramı" style="width: 350px; height: 390px; object-fit: cover;">
+  <img src="/assets/img/2025-09-23-tiny-bugs-giant-consequences/Mars-Climate-Orbiter-launch.webp" alt="Mars Climate Orbiter Fırlatma Anı" style="width: 350px; height: 390px; object-fit: cover;">
 </div>
 
 #### The Root Cause: A Simple Mismatch in Units

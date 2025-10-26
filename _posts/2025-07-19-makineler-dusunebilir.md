@@ -97,7 +97,7 @@ Makalenin bu kısmında Cahit Arf'ın makinelerin düşünme kısmını nasıl e
 Cahit Arf makalesinde makinelerin bir düşünce mekanizmasına sahip olup olayamacağı hakkında bir takım fikirler öne sürmüş ve çağına ve o zamanın Türkiye'sinde konuşulmasına şaşırılacak konuyu ele almıştır. Alan Turing ve benzer bilim insanlarının aksine mekanizma olarak değil de düşünce ve bilinç yapısına göre ele almıştır. Alan Turing genellikle yapay zekayı insan kadar iş yapabilecek veya insanların bilişsel gücüyle elde ettiği ve davranışsal olarak ''insana yakınlaşabilir mi?'' diye sormuştur. Cahit Arf ise makinelerin insanlar belirsiz durumlarda belirli bir karar yapısına sahip olup olamayacağı, sanatsal(estetik) olarak bir fikir belirtip belirtemeyeceği üzerine sorular yöneltmiştir. Arf ve Turing ortak olarak hesaplama mekanizmasına sahip olduğu ve insanlar göre daha hızlı işlem yapma gücüne sahip olduğunu belirtmiştir.
 
 Ayriyeten Cahit Arf, makinelerin düşünce yapısına sahip olabilmesi için insan zihnine benzer bir yapıda olması gerektiği ve şu şekil bir şemaya halinde olmasını belirtmiştir.(sf. 99-103):
-<img src="assets/img/cahit_arf/sekil1.webp" alt="makaleden bir fotograf." width="600">
+<img src="/assets/img/cahit_arf/sekil1.webp" alt="makaleden bir fotograf." width="600">
 <figcaption>Görsel 2</figcaption>
 
 ### 5.1 Cahit Arf ve Alan Turing'in Makine Zekası Üzerine Görüşlerinin Karşılaştırmalı Analizi

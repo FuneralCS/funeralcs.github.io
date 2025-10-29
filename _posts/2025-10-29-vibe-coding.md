@@ -1,4 +1,4 @@
-⁹---
+---
 title: "Kodlamayı (ve yazarlığı da) Bırakın: Bir Sistemi 0 Kodla Nasıl Kurduk? (Evrensel Yazıcı Sihirbazı)"
 date: 2025-10-29 21:30:00 +0300
 categories: [yapay zeka, yazılım mimarisi, felsefe, güvenlik]

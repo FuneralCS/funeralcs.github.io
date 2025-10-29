@@ -9,14 +9,13 @@ image:
   alt: "Bir insanın klavyesiz, sadece düşünerek yapay zeka aracılığıyla karmaşık bir sistemi inşa etmesini temsil eden bir görsel."
 description: "Bu makale, Evrensel Yazıcı Sihirbazı projesinin nasıl kod yazılmadan, sadece 'Vibe' (vizyon) verilerek inşa edildiğini anlatıyor. Hata ayıklamadan CI/CD'ye ve kurumsal dokümantasyona kadar AI'ın rolünü, 'Düşünme Zinciri' ve 'Halüsinasyon' kavramlarıyla inceliyoruz."
 toc: true
-math: false
+math: trye
 mermaid: false
 comments: true
 pin: false
 lang: tr
 ---
-> ### 📌 Yayıncıdan Not (Ara Yazı)
->
+
 > **Tunahan'ın Notu:**
 > Bu hafta normal yayın akışımızın dışında, üzerinde çalıştığım bir $\text{AI}$ destekli geliştirme sürecinin felsefi ve teknik özetini paylaşmak istedim. Bu, haftalık düzenli yazı serimizin dışındadır. Bu hız kesmeden devam edeceğimiz anlamına geliyor; yani **bu hafta içinde bir ana yazımızı daha yayınlamayı umuyoruz.** $\text{AI}$'ın yazılım geliştirme sürecindeki rolünü sorgulayan bu makaleyi keyifle okumanızı dilerim!
 

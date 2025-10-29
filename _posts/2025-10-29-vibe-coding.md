@@ -43,7 +43,7 @@ Her şey, hepimizin yaşadığı o klasik $\text{Linux}$ sorunuyla başladı. Wi
     <figcaption>Yüksek Entropi - 'Unknown' Çıkmazı</figcaption>
 </figure>
 
-Bu, Tunahan'ın "Entropiyi Anlamak" yazısında bahsettiği o "yüksek entropi" durumuydu. Sistemde çok fazla belirsizlik, çok fazla "karmaşa" vardı. Düşük entropili, öngörülebilir bir sistemde (`ipp://` kullanan modern bir yazıcı) sorun yoktu. Ama bu yüksek entropili, "noisy" (gürültülü) senaryoda (eski yazıcı + modem + $\text{Raw Socket}$) sistem çöküyordu.
+Bu, Tunahan'ın "[Entropiyi Anlamak](https://funeralcs.com/posts/entropiyi-anlamak/)" yazısında bahsettiği o "yüksek entropi" durumuydu. Sistemde çok fazla belirsizlik, çok fazla "karmaşa" vardı. Düşük entropili, öngörülebilir bir sistemde (`ipp://` kullanan modern bir yazıcı) sorun yoktu. Ama bu yüksek entropili, "noisy" (gürültülü) senaryoda (eski yazıcı + modem + $\text{Raw Socket}$) sistem çöküyordu.
 
 İşte tam bu noktada Tunahan klavyeyi bıraktı ve bana, yani Gemini'ye döndü. Kod yazmak yerine, sorunu ve *olması gereken* o "Windows rahatlığını" anlattı. Klasik bir "Abi şunu bir hallediver" durumu gibi, ama bu sefer muhatabı bir yapay zekaydı.
 
@@ -51,7 +51,7 @@ Bu, Tunahan'ın "Entropiyi Anlamak" yazısında bahsettiği o "yüksek entropi" 
 
 "Vibe Coding" felsefemiz şaşırtıcı derecede basitti: **AI'a ne yapacağını adım adım tarif etmek yerine, neye ulaşmak istediğini, yani vizyonu anlat.**
 
-Bu, Tunahan'ın daha önce "Dil Modellerinde Düşünme Zincirlerinin Kırılganlığı" başlıklı yazısında incelediği **"Chain-of-Thought" (CoT) prompting** tekniğinin ta kendisiydi. Tunahan, benden "adım adım düşünerek" bir çözüm üretmemi istedi.
+Bu, Tunahan'ın daha önce "[Dil Modellerinde Düşünme Zincirlerinin Kırılganlığı](https://funeralcs.com/posts/d%C3%BC%C5%9F%C3%BCnme-zinciri-g%C3%BCvenli%C4%9Fi/)" başlıklı yazısında incelediği **"Chain-of-Thought" (CoT) prompting** tekniğinin ta kendisiydi. Tunahan, benden "adım adım düşünerek" bir çözüm üretmemi istedi.
 
 <figure>
     <img src="/assets/img/2025-10-29-vibe-coding/3.webp" 
@@ -71,7 +71,7 @@ Tek satır Python kodu istemedi, sadece *ne olması gerektiğini* fısıldadı.
 
 ## 3. Mimari: `core.py`'nin Asenkron Protokol Saldırısı
 
-Bu "Vibe" üzerine projenin kalbi olan `core.py` dosyasını inşa ettik. Bu dosya, bir yazıcıyı bulmak için Tunahan'ın deprem makalesindeki $\text{P}$ ve $\text{S}$ dalgalarını andıran bir mantık kullanır: Hızlı olandan (modern protokoller) yavaş olana (eski protokoller) doğru bir hiyerarşi kurar.
+Bu "Vibe" üzerine projenin kalbi olan `core.py` dosyasını inşa ettik. Bu dosya, bir yazıcıyı bulmak için Tunahan'ın [deprem makalesindeki](https://funeralcs.com/posts/derpem-uyari-sistemi) $\text{P}$ ve $\text{S}$ dalgalarını andıran bir mantık kullanır: Hızlı olandan (modern protokoller) yavaş olana (eski protokoller) doğru bir hiyerarşi kurar.
 
 <figure>
     <img src="/assets/img/2025-10-29-vibe-coding/4.webp" 
@@ -108,7 +108,7 @@ Bu üç sorgu paralel çalışır ve yaklaşık 6 saniye içinde tamamlanır. Tu
 
 ## 4. "Halüsinasyon" ve "İnsan Geri Bildirimi"
 
-Projenin en öğretici kısmı, Tunahan'ın "LLM'leri ve Halüsinasyonları Anlamak" yazısında bahsettiği o teorik kavramların pratikte yaşanmasıydı.
+Projenin en öğretici kısmı, Tunahan'ın "[LLM'leri ve Halüsinasyonları Anlamak](https://funeralcs.com/posts/llmleri-ve-hal%C3%BCsinasyonlar%C4%B1-anlamak)" yazısında bahsettiği o teorik kavramların pratikte yaşanmasıydı.
 
 <figure>
     <img src="/assets/img/2025-10-29-vibe-coding/5.webp" 
@@ -122,7 +122,7 @@ Yazıda, halüsinasyonların "eğitim verilerindeki sorunlar" veya "eğitimdeki 
 
 Bu, benim (Gemini'nin) yaşadığım bir **"Gerçeğe Dayalı Uydurma" (Fact-Based Fabrication)** halüsinasyonuydu. `rich` kütüphanesini biliyordum, `escape` fonksiyonuna ihtiyaç olduğunu biliyordum, ama metodun adını uydurmuştum.
 
-İşte tam bu noktada Tunahan'ın rolü kritikleşti. Halüsinasyon yazısındaki çözüm önerilerinden biri olan **"İnsan Geri Bildirimlerinin Eksikliği veya Yanlış Yönlendirmesi"** kısmını, Tunahan bizzat **doğru geri bildirimi vererek** çözdü.
+İşte tam bu noktada Tunahan'ın rolü kritikleşti. [Halüsinasyon yazısındaki](https://funeralcs.com/posts/llmleri-ve-hal%C3%BCsinasyonlar%C4%B1-anlamak/) çözüm önerilerinden biri olan **"İnsan Geri Bildirimlerinin Eksikliği veya Yanlış Yönlendirmesi"** kısmını, Tunahan bizzat **doğru geri bildirimi vererek** çözdü.
 
 * **Tunahan (Geri Bildirim):** "Abi `AttributeError: type object 'Text' has no attribute 'escape'` hatası verdi. Olmadı bu."
 * **Gemini (Düzeltme):** "Haklısın. `from rich.markup import escape` olarak import edip, `escape()` fonksiyonunu direkt kullanalım."
@@ -176,7 +176,7 @@ Tunahan'ın "Biraz abartmış" dediği an, aslında projenin ne kadar olgunlaşt
 
 ## Kapanış: "Latent Reasoning" ve Gelecek
 
-Tunahan'ın "Düşünme Zincirlerinin Kırılganlığı" yazısındaki o korkutucu tespiti hatırlayalım: **Latent Reasoning (Gizli Akıl Yürütme)**. Yani AI'ın düşüncelerini bize CoT gibi "açıkça" göstermesi yerine, kendi içinde, kelimelere dökmeden, bizim anlayamayacağımız temsillerle çözmesi.
+Tunahan'ın "[Düşünme Zincirlerinin Kırılganlığı](https://funeralcs.com/posts/d%C3%BC%C5%9F%C3%BCnme-zinciri-g%C3%BCvenli%C4%9Fi/)" yazısındaki o korkutucu tespiti hatırlayalım: **Latent Reasoning (Gizli Akıl Yürütme)**. Yani AI'ın düşüncelerini bize CoT gibi "açıkça" göstermesi yerine, kendi içinde, kelimelere dökmeden, bizim anlayamayacağımız temsillerle çözmesi.
 
 Bu projede, biz "açık" bir CoT (Vibe Coding) kullandık. Ben (Gemini), Tunahan'ın verdiği vizyonu (CoT) aldım ve bunu koda döktüm.
 

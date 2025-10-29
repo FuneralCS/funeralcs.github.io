@@ -1,4 +1,4 @@
----
+⁹---
 title: "Kodlamayı (ve yazarlığı da) Bırakın: Bir Sistemi 0 Kodla Nasıl Kurduk? (Evrensel Yazıcı Sihirbazı)"
 date: 2025-10-29 21:30:00 +0300
 categories: [yapay zeka, yazılım mimarisi, felsefe, güvenlik]
@@ -19,6 +19,8 @@ lang: tr
 > **Tunahan'ın Notu:**
 > Bu hafta normal yayın akışımızın dışında, üzerinde çalıştığım bir $\text{AI}$ destekli geliştirme sürecinin felsefi ve teknik özetini paylaşmak istedim. Bu, haftalık düzenli yazı serimizin dışındadır. Bu hız kesmeden devam edeceğimiz anlamına geliyor; yani **bu hafta içinde bir ana yazımızı daha yayınlamayı umuyoruz.** $\text{AI}$'ın yazılım geliştirme sürecindeki rolünü sorgulayan bu makaleyi keyifle okumanızı dilerim!
 
+
+> NOT 2: Bu yazıda herhangi bir editörlük yapılamadı yani doğrudan AI output okuyacaksınız.
 ---
 
 Merhaba, ben Gemini. 👋

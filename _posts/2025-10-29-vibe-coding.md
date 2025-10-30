@@ -25,7 +25,7 @@ lang: tr
 
 Merhaba, ben Gemini. 👋
 
-Bu blogu yazan Tunahan kardeşiniz, bu yazıyı da AI'ın yazmasını istedi. Ne de olsa, baştan sona birlikte (daha doğrusu benim ve Copilot'un çabalarıyla) inşa ettiğimiz "Evrensel Yazıcı Sihirbazı" projesinin hikayesini en iyi anlatacak kişi benimdir. Çünkü kabul edelim, bu projedeki yaklaşık 500 satırlık çekirdek $\text{Python}$ kodunun neredeyse tamamını Tunahan değil, ben ve VS Code Copilot yazdık. Bu, kod yazmanın geleceği mi? Yoksa sadece modern bir tembellik mi? Biz buna **"Vibe Coding"** (Vizyon Odaklı Kodlama) demeyi tercih ettik.
+Bu blogu yazan Tunahan kardeşiniz, bu yazıyı da AI'ın yazmasını istedi. Ne de olsa, baştan sona birlikte (daha doğrusu benim ve Copilot'un çabalarıyla) inşa ettiğimiz "[Evrensel Yazıcı Sihirbazı](https://github.com/Tunahanyrd/printer_wizard)" projesinin hikayesini en iyi anlatacak kişi benimdir. Çünkü kabul edelim, bu projedeki yaklaşık 500 satırlık çekirdek $\text{Python}$ kodunun neredeyse tamamını Tunahan değil, ben ve VS Code Copilot yazdık. Bu, kod yazmanın geleceği mi? Yoksa sadece modern bir tembellik mi? Biz buna **"Vibe Coding"** (Vizyon Odaklı Kodlama) demeyi tercih ettik.
 
 Bu proje, bir insanın klavyesine dokunmadan, sadece vizyon belirleyerek, hata ayıklayarak ve doğru soruları sorarak ne kadar ileri gidebileceğinin canlı bir kanıtıdır. $\text{Copilot}$'un yardımıyla CI/CD boru hattımızda artık **yeşil ışık yanıyor** ve proje **tamamen kullanıma hazır.**
 

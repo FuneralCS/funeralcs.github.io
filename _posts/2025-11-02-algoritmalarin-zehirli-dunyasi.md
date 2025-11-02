@@ -49,7 +49,10 @@ Genel tanımları verdiğimize göre yazının geri kalanında algoritmaların y
 ## Ayrımcılık ve Sosyal Adaletsizlik
 
 ### Amazon'un İşe Alım Süreçleri
-![[assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim2.webp]]
+<figure>
+    <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim2.webp" width="600" alt="">
+ 
+</figure>
 2015'te Amazon'un yazılım ekibi, iş başvurularına gelen özgeçmişleri inceleyen bir yapay zeka sistemine geçti. Yapay zeka modeli on yıllık verileri ele alarak eğitilmişti. Bundan dolayı yazılım/bilgisayar alanı gibi hızlı değişim ve cinsiyet eşitsizliğini olduğu bir alanda dengesiz bir veri üzerinden eğitilmişti. Bundan dolayı kadın olarak işe başvuran bireyleri erkek bireylere göre daha az tercih edecek şekilde bir ön yargı geliştirmişti. Ön yargı konusunda bir erkek başvuranın özgeçmişinde "Kadın Satranç Kulübü Kaptanı" yazmasından dolayı kriterleri sağlamasına rağmen elemiştir. Bu olay 2015'e sürmüş olup Amazon'da çalışan mühendisler bu olaya müdahale ederek durmuştur. Ama ne kadar bir önlem alındığı veya ne kadar önüne geçilebileceği bir muamma olup sorunlar olduğundan dolayı bu uygulamayı 2017'de sona erdirmişler.[^1]
 
 
@@ -62,8 +65,10 @@ Amerikalı Mahkemelerde [COMPAS](https://en.wikipedia.org/wiki/COMPAS_(software)
 
 ### Cambridge Analytica ve Facebook Faciası
 
-![[assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim3.webp]]
-
+<figure>
+    <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim3.webp" width="600" alt="">
+ 
+</figure>
 
 2018'de ortaya çıkan bilgilere göre İngiltere Merkezli şirket olan Cambridge-Analytica, 2014 yılında Facebook üzerinden bir uygulama sunuyor. Uygulamanın adı _thisisyourdigitallife_. Bu uygulama aracılığıyla kişiler kişisel bilgilerini ve arkadaşlık verilerini girerek bir karakter testi yapıyor. Bu testin illegal olarak veri toplayıp 2016-ABD seçimleri ve 2018-Brexit seçimlerinde kişilere siyasi-hedefli reklam verme amacıyla kullandığı ortaya çıkıyor. Bu durumu 2015'te fark eden Facebook hiçbir önlem almıyor. 2018'de bu yapı ortaya çıktıktan sonra, FTC incelemeler yapıp Facebook'a gerekli önlemleri almadığında dolayı 5 Milyar USD ceza veriyor. Cambridge Analytica'nın yaklaşık 50 milyon kişinin verisini çektiği tespit edilmiş. Bu olayların başında fonlayan kili Trump'ın danışmanı Steve Bunnon ve Cambridge Üniversitesinde bu verileri toplayan  ve işleyerek araştırmalar yapan Aleksandr Kogan olduğu biliniyor. [^4] [^5]
 [^6]
@@ -79,16 +84,20 @@ Bunun yanı sıra bu kameralar ve yüz tanıma sistemleri toplum üzerinde de ba
 
 ### Elon Musk'ın Twitter'ı Satın Alması
 
-![[assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim4.webp]]
-
+<figure>
+    <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim4.webp" width="600" alt="">
+ 
+</figure>
 Kasım 2022'de Elon Musk Twitter'ı 45 Milyar USD'ye satın aldı. Ve satın almasının amacının ifade özgürlüğünü ve şeffaflığı artırmak için olduğunu söylemişti. Ama alındıktan kısa süre sonra platformda bir takım problemler meydana geldi. Bot ve zararlı içeriğin engellenemesi, ırkçı ve nefret söyleminin artması, mavi tik üzerinden kazanç vaadiyle ölü internet teorisini doğrulayan bir platforma dönüştürdü. Ve mavi tıka sahip olan hesaplarının önerilerde daha fazla önerilmesini ve öne çıkmasını sağlamıştır. 2024 Amerika Seçimlerinde Trump'ın yanında yer alması platformun bağımsız ve tarafsızlığına gölge düşürdü. Ayrıyeten öneri algoritmasının şeffaf olmaması en büyük problemlerden birisi. Fransa Mahkemeleri, X'in otomatik veri işleme sisteminin şeffaf olmaması gerekçesiyle soruşturma başlattı. Soruşturmada algoritmanın bağımsız bir önerme yapmadığı genellikle aşırı sağ ve ırkçı gönderilerinin öne çıkarıldığını iddia edilmiştir.
 Grok'un ise kontrolden çıkıp nefret söyleminde bulunması da ayrı bir olaydır.[^8] [^9] [^10][^11]
 
 ## Kişiselleştirilmiş Öneriler
 
 ### Kısa Videolar ve Dikkat Süresinin Azalması
-![[assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim5.webp]]
-
+<figure>
+    <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim5.webp" width="600" alt="">
+ 
+</figure>
 Belki de aralarında en çok maruz kaldığımız ve bize en çok zarar veren algoritma sistemleri sosyal medya kısa video öneri sistemler... İlk türevleri Vine-2013'e dayansa da özellikle Çinli sosyal medya platformu TikTokun 2018'de piyasaya girmesiyle ön plana çıktı. Kullanıcıların 15-30 saniyelik videolar izlemesiyle dopamin reseptörlerinin bozulmasına bağımlılık geliştirmesine ve dikkat süresinin azalmasında belirgin sebep olmuştur.[^12] Bu tür algoritmalar kişinin sadece dikkat süresini ve dopamin reseptörlerini bozmakla kalmıyor. Ayrıca uyku düzenini , benmerkezcil algısını, özgüvenini de yıkıyor. Bireylerin daha fazla ekrana bağlı kalıp hiçbir şey yapmadığı ve çevresiyle zayıf iletişimi olan pasif bir bireye dönüştürüyor. 
 
 ### Kişileştirilmiş Reklamlar
@@ -97,8 +106,10 @@ Yazının bu kısmında kişiselleştirilmiş reklam algoritmalarını ele alaca
 Bu yüzden cookie kullanımı azaltmak ve [reklam engelleyicileri](https://en.wikipedia.org/wiki/Ad_blocking) hayatınıza dahil ederek hem temiz bir internet hem de mahremiyet dostu bir deneyim elde edersiniz.
 
 ## Finansal Sistemler
-![[assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim6.webp]]
-Bankalar ve sigorta şirketleri, müşterilerine kredi vermek, risklerini hesaplamak ve finansal ürünler sunmak için  makine öğrenmesi algoritmaları kullanıyor. Bu algoritmalar veriyi çok hızlı işleyip karar vermeyi kolaylaştırsa da birtakım sorunları ve hatalara sebep olabiliyor.
+<figure>
+    <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim6.webp" width="600" alt="">
+ 
+</figure>Bankalar ve sigorta şirketleri, müşterilerine kredi vermek, risklerini hesaplamak ve finansal ürünler sunmak için  makine öğrenmesi algoritmaları kullanıyor. Bu algoritmalar veriyi çok hızlı işleyip karar vermeyi kolaylaştırsa da birtakım sorunları ve hatalara sebep olabiliyor.
 ### Algoritmaların Riskleri
 
 1. **Hatalı karar ve model riski**  

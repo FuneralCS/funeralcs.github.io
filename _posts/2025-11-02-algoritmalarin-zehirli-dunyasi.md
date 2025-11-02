@@ -5,7 +5,7 @@ categories: [yapay zeka, hukuk,bankacılık]
 tags: [hukuk, reklam, yapay zeka, science, bias, data-driven,data,bigdata, sigorta,sosyal eşitlik]
 authors: yusuf-said
 image:
-  path: assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/cover.webp
+  path: /assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/cover.webp
 description: Günümüzde Algoritmaların topluma ve bireye verdiği zararlar.
 toc: true
 math: true

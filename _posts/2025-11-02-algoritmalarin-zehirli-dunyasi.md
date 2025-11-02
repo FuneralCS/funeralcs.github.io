@@ -144,7 +144,7 @@ Göreceğiniz üzere algoritmaların ne kadar insanlık yararına katkıları ol
 
 
 
-
+## Kaynakça
 [^1] Dastin, J. (2018, October 10). [*Amazon scraps secret AI recruiting tool that showed bias against women.*](https://www.reuters.com/article/world/insight-amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK0AG/) Reuters.
 
 [^2] O’Neil, C. (2020). *Matematiksel İmha Silahları: Büyük Veri, Eşitsizliği Nasıl Artırıyor ve Demokrasiyi Nasıl Tehdit Ediyor?* (Çev. A. E. Pilgir). İstanbul: Tellekt Yayınları. ISBN: 978-6058043398.

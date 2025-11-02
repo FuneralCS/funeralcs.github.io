@@ -135,42 +135,48 @@ Bir başka problem ise İmage-Gen teknolojileri. Bunlar üzerinden realistik fot
 Göreceğiniz üzere algoritmaların ne kadar insanlık yararına katkıları olsa da günümüzde hem ayrımcılığa hem yalan bilgiye sebep olabiliyorlar. Kişisel verilerimizde ayrıyeten bir tehdit. Bunun için bu sistemleri kullanırken dikkatli olmalıyız. Kişisel verilerin paylaşımına dikkat etmeli ve sosyal medya platformlarını kısıtlı ve dikkatli kullanmalıyız.
 
 # İleri Okumalar
-Cal Newport - Pürdikkat
-Johann Hari - Çalınan Dikkat
-Cathy O'Neil - Matematiksel İmha Silahları
+* Cal Newport - Pürdikkat
+* Johann Hari - Çalınan Dikkat
+* Cathy O'Neil - Matematiksel İmha Silahları
 
 
 
-# Kaynakça
-[^1]-Dastin, J. (2018, October 10). _Amazon scraps secret AI recruiting tool that showed bias against women._ Reuters. https://www.reuters.com/article/world/insight-amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK0AG/
-[^2]-O’Neil, C. (2020). _Matematiksel İmha Silahları: Büyük Veri, Eşitsizliği Nasıl Artırıyor ve Demokrasiyi Nasıl Tehdit Ediyor?_ (Çev. A. E. Pilgir). İstanbul: Tellekt Yayınları. ISBN: 978-6058043398.
-[^3]-**National Legal Research Group. (2017).** _Criminal Law: Use of Risk Assessment Tools in Sentencing Upheld... for Now._ Charlottesville, VA: National Legal Research Group. [https://www.nlrg.com/criminal-law-legal-research/criminal-law-use-of-risk-assessment-tools-in-sentencing-upheld-.-.-.-for-now](https://www.nlrg.com/criminal-law-legal-research/criminal-law-use-of-risk-assessment-tools-in-sentencing-upheld-.-.-.-for-now?utm_source=chatgpt.com)
-
-[^4]-Cadwalladr, C., & Graham‑Harrison, E. (2018, March 17). _Revealed: 50 million Facebook profiles harvested for Cambridge Analytica in major data breach._ _The Guardian.[https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election](https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election?utm_source=chatgpt.com)
-
-[^5]-Wikipedia contributors. (n.d.). _Aleksandr Kogan (scientist)._ In _Wikipedia._ https://en.wikipedia.org/wiki/Aleksandr_Kogan_(scientist)](https://en.wikipedia.org/wiki/Aleksandr_Kogan_\(scientist\)
-
-[^6]-Federal Trade Commission. (2019, July 24). _FTC imposes $5 billion penalty and sweeping new privacy restrictions on Facebook._  [https://www.ftc.gov/news-events/news/press-releases/2019/07/ftc-imposes-5-billion-penalty-sweeping-new-privacy-restrictions-facebook](https://www.ftc.gov/news-events/news/press-releases/2019/07/ftc-imposes-5-billion-penalty-sweeping-new-privacy-restrictions-facebook?utm_source=chatgpt.com)
-
-[^7] Aytekin, E. (2023, 8 Ağustos). _Çin, yüz tanıma teknolojisinin kullanımına düzenleme getirecek._ Anadolu Ajansı. https://www.aa.com.tr/tr/bilim-teknoloji/cin-yuz-tanima-teknolojisinin-kullanimina-duzenleme-getirecek-/2963871/
-
-[^8] **Harwell, D. (2019, January 15).** _In China, facial recognition, public shaming, and control go hand in hand._ CNET [https://www.cnet.com/news/politics/in-china-facial-recognition-public-shaming-and-control-go-hand-in-hand/
-
-[^9]-Leloup, D., Untersinger, M., & Defer, A. (2025, February 7). _French prosecutors open investigation into X’s algorithms._ _Le Monde._ https://www.lemonde.fr/en/pixels/article/2025/02/07/paris-prosecutors-open-investigation-into-x-s-algorithms_6737910_13.html
-
- [^10]-Vekaria, Y., Shafiq, Z., & Zannettou, S. (2023). _Before Blue Birds Became X-tinct: Understanding the Effect of Regime Change on Twitter's Advertising and Compliance of Advertising Policies._ arXiv preprint arXiv:2309.12591. https://arxiv.org/abs/2309.12591
-
-[^11]-_Twitter under Elon Musk._ (n.d.). In _Wikipedia._ https://en.wikipedia.org/wiki/Twitter_under_Elon_Musk
-
-[^12]-Qin, Y., Omar, B., & Musetti, A. (2022, September 6). _The addiction behavior of short‑form video app TikTok: The information quality and system quality perspective._ Frontiers in Psychology, 13. https://doi.org/10.3389/fpsyg.2022.932805
-
-[^13]-Google Play Developer Support. (n.d.). _Reklam kimliği (Advertising ID) hakkında._ Google Play Hizmetleri resmi yardım sayfası. https://support.google.com/googleplay/android-developer/answer/6048248?hl=tr
-
-[^14]-BIS. (2020). _Financial Stability Institute Insights No. 63: Machine learning in financial services._ https://www.bis.org/fsi/publ/insights63.pdf  
-[^15]-BFA Global. (2020). _Algorithmic Risk in Financial Services._ https://bfaglobal.com/wp-content/uploads/2020/01/R2AWhitePaper-1.pdf
-[^16]-MDPI. (2021). _Algorithmic Decision-Making in Finance._ https://www.mdpi.com/2227-9091/7/1/29
 
 
-[^17]-Dastin, J. (2025, July 9). _Chatbot Grok doesn’t glitch — it reflects X_. Tech Policy Press. https://techpolicy.press/chatbot-grok-doesnt-glitch-it-reflects-x
 
-[^18]-Harwell, D. (2025, July 10). _Grok Is Spewing Antisemitic Garbage on X_. _Wired_. https://www.wired.com/story/grok-antisemitic-posts-x-xai/
+[^1] Dastin, J. (2018, October 10). [*Amazon scraps secret AI recruiting tool that showed bias against women.*](https://www.reuters.com/article/world/insight-amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK0AG/) Reuters.
+
+[^2] O’Neil, C. (2020). *Matematiksel İmha Silahları: Büyük Veri, Eşitsizliği Nasıl Artırıyor ve Demokrasiyi Nasıl Tehdit Ediyor?* (Çev. A. E. Pilgir). İstanbul: Tellekt Yayınları. ISBN: 978-6058043398.
+
+[^3] **National Legal Research Group.** (2017). [*Criminal Law: Use of Risk Assessment Tools in Sentencing Upheld... for Now.*](https://www.nlrg.com/criminal-law-legal-research/criminal-law-use-of-risk-assessment-tools-in-sentencing-upheld-.-.-.-for-now) Charlottesville, VA.
+
+[^4] Cadwalladr, C., & Graham-Harrison, E. (2018, March 17). [*Revealed: 50 million Facebook profiles harvested for Cambridge Analytica in major data breach.*](https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election) *The Guardian.*
+
+[^5] Wikipedia contributors. (n.d.). [*Aleksandr Kogan (scientist).*](https://en.wikipedia.org/wiki/Aleksandr_Kogan_%28scientist%29) In *Wikipedia.*
+
+[^6] Federal Trade Commission. (2019, July 24). [*FTC imposes $5 billion penalty and sweeping new privacy restrictions on Facebook.*](https://www.ftc.gov/news-events/news/press-releases/2019/07/ftc-imposes-5-billion-penalty-sweeping-new-privacy-restrictions-facebook)
+
+[^7] Aytekin, E. (2023, 8 Ağustos). [*Çin, yüz tanıma teknolojisinin kullanımına düzenleme getirecek.*](https://www.aa.com.tr/tr/bilim-teknoloji/cin-yuz-tanima-teknolojisinin-kullanimina-duzenleme-getirecek-/2963871/) Anadolu Ajansı.
+
+[^8] Harwell, D. (2019, January 15). [*In China, facial recognition, public shaming, and control go hand in hand.*](https://www.cnet.com/news/politics/in-china-facial-recognition-public-shaming-and-control-go-hand-in-hand/) CNET.
+
+[^9] Leloup, D., Untersinger, M., & Defer, A. (2025, February 7). [*French prosecutors open investigation into X’s algorithms.*](https://www.lemonde.fr/en/pixels/article/2025/02/07/paris-prosecutors-open-investigation-into-x-s-algorithms_6737910_13.html) *Le Monde.*
+
+[^10] Vekaria, Y., Shafiq, Z., & Zannettou, S. (2023). [*Before Blue Birds Became X-tinct: Understanding the Effect of Regime Change on Twitter's Advertising and Compliance of Advertising Policies.*](https://arxiv.org/abs/2309.12591) arXiv preprint arXiv:2309.12591.
+
+[^11] *Twitter under Elon Musk.* (n.d.). In [*Wikipedia.*](https://en.wikipedia.org/wiki/Twitter_under_Elon_Musk)
+
+[^12] Qin, Y., Omar, B., & Musetti, A. (2022, September 6). [*The addiction behavior of short-form video app TikTok: The information quality and system quality perspective.*](https://doi.org/10.3389/fpsyg.2022.932805) *Frontiers in Psychology, 13.*
+
+[^13] Google Play Developer Support. (n.d.). [*Reklam kimliği (Advertising ID) hakkında.*](https://support.google.com/googleplay/android-developer/answer/6048248?hl=tr) Google Play Hizmetleri resmi yardım sayfası.
+
+[^14] BIS. (2020). [*Financial Stability Institute Insights No. 63: Machine learning in financial services.*](https://www.bis.org/fsi/publ/insights63.pdf)
+
+[^15] BFA Global. (2020). [*Algorithmic Risk in Financial Services.*](https://bfaglobal.com/wp-content/uploads/2020/01/R2AWhitePaper-1.pdf)
+
+[^16] MDPI. (2021). [*Algorithmic Decision-Making in Finance.*](https://www.mdpi.com/2227-9091/7/1/29)
+
+[^17] Dastin, J. (2025, July 9). [*Chatbot Grok doesn’t glitch — it reflects X.*](https://techpolicy.press/chatbot-grok-doesnt-glitch-it-reflects-x) *Tech Policy Press.*
+
+[^18] Harwell, D. (2025, July 10). [*Grok Is Spewing Antisemitic Garbage on X.*](https://www.wired.com/story/grok-antisemitic-posts-x-xai/) *Wired.*
+

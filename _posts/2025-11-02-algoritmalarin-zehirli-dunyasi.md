@@ -1,6 +1,6 @@
 ---
 title: "Algoritmaların Zehirli Dünyası"
-date: 2025-11-02 18:00:00 +0300
+date: 2025-11-02 11:00:00 +0300
 categories: [yapay zeka, hukuk,bankacılık]
 tags: [hukuk, reklam, yapay zeka, science, bias, data-driven,data,bigdata, sigorta,sosyal eşitlik]
 authors: yusuf-said

@@ -50,7 +50,7 @@ Genel tanımları verdiğimize göre yazının geri kalanında algoritmaların y
 
 ### Amazon'un İşe Alım Süreçleri
 <figure>
-    <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim2.webp" width="600" alt="">
+    <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim2.webp" width="600" alt="resim1">
  
 </figure>
 2015'te Amazon'un yazılım ekibi, iş başvurularına gelen özgeçmişleri inceleyen bir yapay zeka sistemine geçti. Yapay zeka modeli on yıllık verileri ele alarak eğitilmişti. Bundan dolayı yazılım/bilgisayar alanı gibi hızlı değişim ve cinsiyet eşitsizliğini olduğu bir alanda dengesiz bir veri üzerinden eğitilmişti. Bundan dolayı kadın olarak işe başvuran bireyleri erkek bireylere göre daha az tercih edecek şekilde bir ön yargı geliştirmişti. Ön yargı konusunda bir erkek başvuranın özgeçmişinde "Kadın Satranç Kulübü Kaptanı" yazmasından dolayı kriterleri sağlamasına rağmen elemiştir. Bu olay 2015'e sürmüş olup Amazon'da çalışan mühendisler bu olaya müdahale ederek durmuştur. Ama ne kadar bir önlem alındığı veya ne kadar önüne geçilebileceği bir muamma olup sorunlar olduğundan dolayı bu uygulamayı 2017'de sona erdirmişler.[^1]
@@ -66,7 +66,7 @@ Amerikalı Mahkemelerde [COMPAS](https://en.wikipedia.org/wiki/COMPAS_(software)
 ### Cambridge Analytica ve Facebook Faciası
 
 <figure>
-    <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim3.webp" width="600" alt="">
+    <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim3.webp" width="600" alt="resim2">
  
 </figure>
 
@@ -85,7 +85,7 @@ Bunun yanı sıra bu kameralar ve yüz tanıma sistemleri toplum üzerinde de ba
 ### Elon Musk'ın Twitter'ı Satın Alması
 
 <figure>
-    <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim4.webp" width="600" alt="">
+    <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim4.webp" width="600" alt="resim3">
  
 </figure>
 Kasım 2022'de Elon Musk Twitter'ı 45 Milyar USD'ye satın aldı. Ve satın almasının amacının ifade özgürlüğünü ve şeffaflığı artırmak için olduğunu söylemişti. Ama alındıktan kısa süre sonra platformda bir takım problemler meydana geldi. Bot ve zararlı içeriğin engellenemesi, ırkçı ve nefret söyleminin artması, mavi tik üzerinden kazanç vaadiyle ölü internet teorisini doğrulayan bir platforma dönüştürdü. Ve mavi tıka sahip olan hesaplarının önerilerde daha fazla önerilmesini ve öne çıkmasını sağlamıştır. 2024 Amerika Seçimlerinde Trump'ın yanında yer alması platformun bağımsız ve tarafsızlığına gölge düşürdü. Ayrıyeten öneri algoritmasının şeffaf olmaması en büyük problemlerden birisi. Fransa Mahkemeleri, X'in otomatik veri işleme sisteminin şeffaf olmaması gerekçesiyle soruşturma başlattı. Soruşturmada algoritmanın bağımsız bir önerme yapmadığı genellikle aşırı sağ ve ırkçı gönderilerinin öne çıkarıldığını iddia edilmiştir.
@@ -95,7 +95,7 @@ Grok'un ise kontrolden çıkıp nefret söyleminde bulunması da ayrı bir olayd
 
 ### Kısa Videolar ve Dikkat Süresinin Azalması
 <figure>
-    <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim5.webp" width="600" alt="">
+    <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim5.webp" width="600" alt="resim4">
  
 </figure>
 Belki de aralarında en çok maruz kaldığımız ve bize en çok zarar veren algoritma sistemleri sosyal medya kısa video öneri sistemler... İlk türevleri Vine-2013'e dayansa da özellikle Çinli sosyal medya platformu TikTokun 2018'de piyasaya girmesiyle ön plana çıktı. Kullanıcıların 15-30 saniyelik videolar izlemesiyle dopamin reseptörlerinin bozulmasına bağımlılık geliştirmesine ve dikkat süresinin azalmasında belirgin sebep olmuştur.[^12] Bu tür algoritmalar kişinin sadece dikkat süresini ve dopamin reseptörlerini bozmakla kalmıyor. Ayrıca uyku düzenini , benmerkezcil algısını, özgüvenini de yıkıyor. Bireylerin daha fazla ekrana bağlı kalıp hiçbir şey yapmadığı ve çevresiyle zayıf iletişimi olan pasif bir bireye dönüştürüyor. 
@@ -107,7 +107,7 @@ Bu yüzden cookie kullanımı azaltmak ve [reklam engelleyicileri](https://en.wi
 
 ## Finansal Sistemler
 <figure>
-    <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim6.webp" width="600" alt="">
+    <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim6.webp" width="600" alt="resim5">
  
 </figure>Bankalar ve sigorta şirketleri, müşterilerine kredi vermek, risklerini hesaplamak ve finansal ürünler sunmak için  makine öğrenmesi algoritmaları kullanıyor. Bu algoritmalar veriyi çok hızlı işleyip karar vermeyi kolaylaştırsa da birtakım sorunları ve hatalara sebep olabiliyor.
 ### Algoritmaların Riskleri

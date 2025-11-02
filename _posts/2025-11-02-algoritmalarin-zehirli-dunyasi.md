@@ -22,33 +22,34 @@ Bu yazımızda kullandığımız teknolojilerin kalbinde yatan algoritmalar ve b
 
 Yazıda, genel olarak 21.yy'da yaşanmış olayları ele alarak günümüze ve güncel yaşananlara odaklanacağız. Hazırsanız başlayalım. İlk olarak algoritma nedir? Ve genel tanımlara odaklanalım.
 
-# 1. Algoritma ve Genel Tanımlar
-## 1.1 Algoritma Nedir?
+## 1. Algoritma ve Genel Tanımlar
+### 1.1 Algoritma Nedir?
 İsmini ünlü Pers Matematikçi **[Harezmi](https://en.wikipedia.org/wiki/Al-Khwarizmi)**'den alan algoritma kavramı, genellikle _bilgisayar bilimleri_, matematik ve günlük hayatta karşımıza çıkar. Bir problemin çözümünün adımlarının basitleştirilmiş ve açık şekilde anlatılmasına genellikle **[algoritma](https://www.youtube.com/watch?v=cDA3_5982h8)** deriz. Algoritmalar bir yazılımın veya programın kalbini oluşturan esas parçadır. Algoritmalar sayesinde çözümü istenen problemi doğal dilden dijital sistemlere aktararak günümüzde bilgisayarlar vb. sistemleri günlük hayata uyarlamamızı ve kullanmamızı sağlar.
 
-## 1.2 Genel Tanımlar
-### **Bias (Ön yargı)**:
+### 1.2 Genel Tanımlar
+#### **Bias (Ön yargı)**:
 Algoritmaların -özellikle yapay zekanın- belirli grup veya sosyal olarak dezavantajı olan gruplara (kadın, çocuk ,engelli, azınlık gruplar vb.) karşı ön yargı geliştirmesi. Örneğin engelli veya kadınların iş başvurularında geriye düşmesi.
 
-### **Filtre Balonu (Filter Bubble)**:
+#### **Filtre Balonu (Filter Bubble)**:
 Algoritmaların kişisel tercihlere dayanarak kullanıcıyı belirli içeriklere hapsetmesi. Örneğin aramalara dayanarak reklam gösterilmesi.
 
-### **[BlackBox Algoritmaları](https://www.arimetrics.com/en/digital-glossary/black-box-algorithm)**:
+#### **[BlackBox Algoritmaları](https://www.arimetrics.com/en/digital-glossary/black-box-algorithm)**:
 Kullanıcıların algoritmaların nasıl çalıştığı veya neye göre karar verdiğinin bilememesi ve şeffaf ve rekabet karşı olan algoritma türü. Örneğin bankalarda veya finans sistemlerinde kredi limit veya kredi/sigorta başvurularının reddedilmesi.
 
-### **Ekran Süresi(Screen Time)**: 
+#### **Ekran Süresi(Screen Time)**: 
 Kullanıcıların teknolojik cihazlarla(telefon, bilgisayar, TV vb.) ne kadar süre geçirdiğini anlatan ölçüt. Ekran süresinin ergin bireyler için 1.30-2 saat arası olması öneriliyor.
 
 Genel tanımları verdiğimize göre yazının geri kalanında algoritmaların yarattığı olayları sınıflandırıp detaylara geçeceğiz.
 
-### **Cookie**: 
+#### **Cookie**: 
 İnternet sitelerinin, kullanıcıların tarayıcılarına kaydettiği küçük veri dosyalarıdır. Kullanıcı tercihlerini hatırlamak ve oturum bilgilerini saklamanın yanı sıra, **reklam ve pazarlama amaçlı kullanıcı davranışlarını takip ederek hedeflenmiş reklamlar sunmak** için de kullanılır.
 
-# 2. Algoritmanın Yarattığı Problemler
+## 2. Algoritmanın Yarattığı Problemler
 
-## Ayrımcılık ve Sosyal Adaletsizlik
 
-### Amazon'un İşe Alım Süreçleri
+### Ayrımcılık ve Sosyal Adaletsizlik
+
+#### Amazon'un İşe Alım Süreçleri
 <figure>
     <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim2.webp" width="600" alt="resim1">
  
@@ -57,13 +58,13 @@ Genel tanımları verdiğimize göre yazının geri kalanında algoritmaların y
 
 
 
-### ABD'de Yargı Üzerinden Irkçılık
+#### ABD'de Yargı Üzerinden Irkçılık
 Amerikalı Mahkemelerde [COMPAS](https://en.wikipedia.org/wiki/COMPAS_(software)) ve LSI-R adlarına sahip veri-tabanlı  karar verme sistemi kullanılıyordu. COMPAS özel bir şirket tarafından geliştirilen bir sistemdi ve blackbox algoritmaya sahipti . Suçluların daha sonra tekrar suç işleyip işlememe durumlarını ele alması için tasarlanmıştı. Diğer tarafta LSI-R adlı bir istatistik yöntemi vardı.[^2] Bu yöntem akademisyenler tarafından tasarlanmıştı. Bu iki yöntemin ortak noktası da ön yargıya karşı problemli olmasıydı. Bu sistemler insanların yaşadığı bölgeyi, akrabalarının ve kendisinin adli sicil kayıtlarını, eğitim ve maddi durumlarını değerlendirerek suça ne kadar eğilimli veya bir suçun onun tarafından mı işlendiğini tespit etmek için Amerikalı Mahkemeler tarafından kullanılan bir sistemlerdi. Bu sistemler sosyo-ekonomik veya sosyolojik yapıların dengesizliği göz ardı edip Siyahi bireylerin mahkeme tarafından cezalandırılmasına ve ayrımcılığa sebep oluyordu. Bu olayların fark edilmesi sonucunda mahkemelerde kullanılma zorunluluğu kaldırıldı ve kullanımının uyarılara ve belirli şartlara bağlanılması istendi. [^3]
 
 
-## Otoriterlik ve Siyasi Kontrol
+### Otoriterlik ve Siyasi Kontrol
 
-### Cambridge Analytica ve Facebook Faciası
+#### Cambridge Analytica ve Facebook Faciası
 
 <figure>
     <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim3.webp" width="600" alt="resim2">
@@ -74,15 +75,15 @@ Amerikalı Mahkemelerde [COMPAS](https://en.wikipedia.org/wiki/COMPAS_(software)
 [^6]
 
 
-### Çin Yüz Tanıma Sistemleri
+#### Çin Yüz Tanıma Sistemleri
 
 Çin, kişi başına düşen güvenlik kamerası sayısında dünya birincisi[^7]. Bu kameralar sayesinde yüz tanıma teknolojileri kullanılarak insanların kimliği tespit edilebiliyor ve hareketleri takip edilebiliyor. Sistem genel güvenlik amacıyla kullanılsa da, özellikle Uygur Müslümanlar gibi azınlık grupların fişlenmesi ve sürekli gözetim altında tutulması için de kullanıldığı bildiriliyor[^8]. Bu uygulamalar, Çin’in Uygur halkına yönelik yıllardır süregelen baskı ve asimilasyon politikalarının bir parçası olarak görülüyor.
 
 Bunun yanı sıra bu kameralar ve yüz tanıma sistemleri toplum üzerinde de baskı oluşturuyor. Sürekli gözetim altında olmak, insanların davranışlarını kısıtlamasına, daha içine kapanmasına ve ifade özgürlüğünü sınırlamasına yol açıyor[^8]. Böylece sistem sadece suç önleme aracı değil, aynı zamanda sosyal kontrol ve otoriter güç aracı olarak işlev görüyor.
 
-## Sosyal Medya Platformlarının Etik Kaygısının Olmaması
+### Sosyal Medya Platformlarının Etik Kaygısının Olmaması
 
-### Elon Musk'ın Twitter'ı Satın Alması
+#### Elon Musk'ın Twitter'ı Satın Alması
 
 <figure>
     <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim4.webp" width="600" alt="resim3">
@@ -91,21 +92,21 @@ Bunun yanı sıra bu kameralar ve yüz tanıma sistemleri toplum üzerinde de ba
 Kasım 2022'de Elon Musk Twitter'ı 45 Milyar USD'ye satın aldı. Ve satın almasının amacının ifade özgürlüğünü ve şeffaflığı artırmak için olduğunu söylemişti. Ama alındıktan kısa süre sonra platformda bir takım problemler meydana geldi. Bot ve zararlı içeriğin engellenemesi, ırkçı ve nefret söyleminin artması, mavi tik üzerinden kazanç vaadiyle ölü internet teorisini doğrulayan bir platforma dönüştürdü. Ve mavi tıka sahip olan hesaplarının önerilerde daha fazla önerilmesini ve öne çıkmasını sağlamıştır. 2024 Amerika Seçimlerinde Trump'ın yanında yer alması platformun bağımsız ve tarafsızlığına gölge düşürdü. Ayrıyeten öneri algoritmasının şeffaf olmaması en büyük problemlerden birisi. Fransa Mahkemeleri, X'in otomatik veri işleme sisteminin şeffaf olmaması gerekçesiyle soruşturma başlattı. Soruşturmada algoritmanın bağımsız bir önerme yapmadığı genellikle aşırı sağ ve ırkçı gönderilerinin öne çıkarıldığını iddia edilmiştir.
 Grok'un ise kontrolden çıkıp nefret söyleminde bulunması da ayrı bir olaydır.[^8] [^9] [^10][^11]
 
-## Kişiselleştirilmiş Öneriler
+### Kişiselleştirilmiş Öneriler
 
-### Kısa Videolar ve Dikkat Süresinin Azalması
+#### Kısa Videolar ve Dikkat Süresinin Azalması
 <figure>
     <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim5.webp" width="600" alt="resim4">
  
 </figure>
 Belki de aralarında en çok maruz kaldığımız ve bize en çok zarar veren algoritma sistemleri sosyal medya kısa video öneri sistemler... İlk türevleri Vine-2013'e dayansa da özellikle Çinli sosyal medya platformu TikTokun 2018'de piyasaya girmesiyle ön plana çıktı. Kullanıcıların 15-30 saniyelik videolar izlemesiyle dopamin reseptörlerinin bozulmasına bağımlılık geliştirmesine ve dikkat süresinin azalmasında belirgin sebep olmuştur.[^12] Bu tür algoritmalar kişinin sadece dikkat süresini ve dopamin reseptörlerini bozmakla kalmıyor. Ayrıca uyku düzenini , benmerkezcil algısını, özgüvenini de yıkıyor. Bireylerin daha fazla ekrana bağlı kalıp hiçbir şey yapmadığı ve çevresiyle zayıf iletişimi olan pasif bir bireye dönüştürüyor. 
 
-### Kişileştirilmiş Reklamlar
+#### Kişileştirilmiş Reklamlar
 
 Yazının bu kısmında kişiselleştirilmiş reklam algoritmalarını ele alacağız. Kişiselleştirilmiş reklamlar kişilerin internet aramaları, sosyal medya paylaşımları ve gezinti geçmişiniz toplayarak size bir dijital-reklam kimliği oluşturur.[^13] Dijital-reklam kimlikleri ayrıyeten izleme sistemleri olan [cookie](https://en.wikipedia.org/wiki/HTTP_cookie)leri kullanır. Bu sayede birden fazla reklam sisteminde kişisel bilgileriniz bulunur. Kişiselleştirilmiş reklamlar sizin harcama eğilimlerinizi hedeflediği birinci olarak cebinizin düşmanı, ikinci olaraksa mahremiyetinizin düşmanı. Bu verilerin ne kadar ve ne amaçla tutulduğu da muamma. 
 Bu yüzden cookie kullanımı azaltmak ve [reklam engelleyicileri](https://en.wikipedia.org/wiki/Ad_blocking) hayatınıza dahil ederek hem temiz bir internet hem de mahremiyet dostu bir deneyim elde edersiniz.
 
-## Finansal Sistemler
+### Finansal Sistemler
 <figure>
     <img src="/assets/img/2025-11-02-algoritmalarin-zehirli-dunyasi/resim6.webp" width="600" alt="resim5">
  
@@ -134,7 +135,7 @@ Bir başka problem ise İmage-Gen teknolojileri. Bunlar üzerinden realistik fot
 ## Sonuç 
 Göreceğiniz üzere algoritmaların ne kadar insanlık yararına katkıları olsa da günümüzde hem ayrımcılığa hem yalan bilgiye sebep olabiliyorlar. Kişisel verilerimizde ayrıyeten bir tehdit. Bunun için bu sistemleri kullanırken dikkatli olmalıyız. Kişisel verilerin paylaşımına dikkat etmeli ve sosyal medya platformlarını kısıtlı ve dikkatli kullanmalıyız.
 
-# İleri Okumalar
+## İleri Okumalar
 * Cal Newport - Pürdikkat
 * Johann Hari - Çalınan Dikkat
 * Cathy O'Neil - Matematiksel İmha Silahları

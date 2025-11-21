@@ -1,127 +1,160 @@
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
 <style>
-  /* Chat Butonu */
+  /* --- BUTON VE PENCERE --- */
   #chat-trigger {
     position: fixed;
     bottom: 25px;
     right: 25px;
     width: 60px;
     height: 60px;
-    background: #1a1a1a; /* Sitenin koyu temasına uygun */
+    background: #1a1a1a;
     border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     cursor: pointer;
     z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s;
     border: 2px solid #333;
   }
-  #chat-trigger:hover { transform: scale(1.1); }
+  #chat-trigger:hover { transform: scale(1.1); background: #000; }
   #chat-trigger svg { width: 30px; height: 30px; fill: #fff; }
 
-  /* Chat Penceresi */
   #chat-window {
-    display: none; /* Başlangıçta gizli */
+    display: none;
     position: fixed;
     bottom: 100px;
     right: 25px;
-    width: 350px;
-    height: 500px;
+    width: 360px;
+    height: 550px; /* Biraz daha uzun yaptım */
     background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     z-index: 9999;
     flex-direction: column;
     overflow: hidden;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     border: 1px solid #e0e0e0;
+    animation: chatPop 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
   }
 
-  /* Başlık */
+  @keyframes chatPop {
+    0% { opacity: 0; transform: scale(0.9) translateY(20px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  /* --- BAŞLIK --- */
   .chat-header {
     background: #1a1a1a;
     color: #fff;
-    padding: 15px;
-    font-weight: bold;
+    padding: 16px;
+    font-weight: 600;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #333;
   }
-  .chat-header .close-btn { cursor: pointer; font-size: 20px; }
+  .chat-header-controls { display: flex; align-items: center; gap: 15px; }
+  .clear-btn { font-size: 12px; color: #bbb; cursor: pointer; text-decoration: underline; }
+  .clear-btn:hover { color: #fff; }
+  .close-btn { cursor: pointer; font-size: 22px; line-height: 1; }
 
-  /* Mesaj Alanı */
+  /* --- MESAJ ALANI --- */
   #chat-messages {
     flex: 1;
     padding: 15px;
     overflow-y: auto;
-    background: #f9f9f9;
+    background: #f8f9fa;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 
-  /* Mesaj Balonları */
+  /* --- BALONCUKLAR --- */
   .message {
-    max-width: 80%;
-    padding: 10px 12px;
-    border-radius: 10px;
+    max-width: 85%;
+    padding: 12px 16px;
+    border-radius: 12px;
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 1.5;
     word-wrap: break-word;
+    position: relative;
   }
+
+  /* Bot Mesajı */
   .message.bot {
     background: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid #e5e7eb;
     align-self: flex-start;
-    border-bottom-left-radius: 2px;
-    color: #333;
+    border-bottom-left-radius: 4px;
+    color: #374151;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
   }
+
+  /* Bot Mesajı İçindeki Markdown Stilleri */
+  .message.bot strong { color: #000; font-weight: 700; }
+  .message.bot a { color: #2563eb; text-decoration: none; font-weight: 500; }
+  .message.bot a:hover { text-decoration: underline; }
+  .message.bot ul, .message.bot ol { margin: 5px 0; padding-left: 20px; }
+  .message.bot p { margin: 0 0 8px 0; }
+  .message.bot p:last-child { margin-bottom: 0; }
+  .message.bot code { background: #f3f4f6; padding: 2px 4px; border-radius: 4px; font-family: monospace; font-size: 12px; color: #e11d48; }
+  .message.bot pre { background: #1f2937; color: #e5e7eb; padding: 10px; border-radius: 8px; overflow-x: auto; margin: 10px 0; }
+  .message.bot pre code { background: transparent; color: inherit; padding: 0; }
+
+  /* Kullanıcı Mesajı */
   .message.user {
     background: #000;
     color: #fff;
     align-self: flex-end;
-    border-bottom-right-radius: 2px;
+    border-bottom-right-radius: 4px;
   }
-  .message a { color: #007bff; text-decoration: underline; }
 
-  /* Input Alanı */
+  /* --- INPUT ALANI --- */
   .chat-input-area {
-    padding: 10px;
+    padding: 12px;
     border-top: 1px solid #eee;
     background: #fff;
     display: flex;
-    gap: 5px;
+    gap: 8px;
+    align-items: center;
   }
   .chat-input-area input {
     flex: 1;
-    padding: 10px;
+    padding: 12px 15px;
     border: 1px solid #ddd;
-    border-radius: 20px;
+    border-radius: 25px;
     outline: none;
     font-size: 14px;
+    transition: border-color 0.2s;
   }
+  .chat-input-area input:focus { border-color: #666; }
+
   .chat-input-area button {
     background: #000;
     color: #fff;
     border: none;
-    padding: 0 15px;
-    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     cursor: pointer;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
   }
-  .chat-input-area button:disabled { background: #ccc; }
-  
-  /* Yazıyor animasyonu */
-  .typing-indicator { font-size: 12px; color: #666; margin-left: 5px; display: none; }
-  .clear-btn {
-      font-size: 12px;
-      color: #aaa;
-      cursor: pointer;
-      margin-right: 10px;
-      text-decoration: underline;
-    }
-    .chat-header-controls { display: flex; align-items: center; }
+  .chat-input-area button:hover { background: #333; }
+  .chat-input-area button:disabled { background: #ccc; cursor: not-allowed; }
+  .chat-input-area button svg { width: 18px; height: 18px; fill: #fff; margin-left: 2px; }
+
+  .typing-indicator {
+    font-size: 12px; color: #666;
+    margin: 0 0 10px 15px;
+    display: none;
+    font-style: italic;
+  }
 </style>
 
 <div id="chat-trigger" onclick="toggleChat()">
@@ -132,7 +165,7 @@
   <div class="chat-header">
     <span>FuneralCS Asistan 🤖</span>
     <div class="chat-header-controls">
-      <span class="clear-btn" onclick="clearChat()">Temizle</span>
+      <span class="clear-btn" onclick="clearChat()">Geçmişi Sil</span>
       <span class="close-btn" onclick="toggleChat()">×</span>
     </div>
   </div>
@@ -144,13 +177,16 @@
 
   <div class="chat-input-area">
     <input type="text" id="user-input" placeholder="Sorunu yaz..." onkeypress="handleKeyPress(event)">
-    <button id="send-btn" onclick="sendMessage()">Gönder</button>
+    <button id="send-btn" onclick="sendMessage()">
+      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
   </div>
 </div>
 
 <script>
+  // --- AYARLAR ---
   const WORKER_URL = "https://funeralcs-bot.funeralcsblog.workers.dev";
-  let chatHistory = []; // AI formatında geçmiş: [{role: 'user', content: '...'}, {role: 'assistant', content: '...'}]
+  let chatHistory = [];
 
   // Sayfa Yüklendiğinde
   document.addEventListener('DOMContentLoaded', () => {
@@ -159,8 +195,9 @@
 
   function toggleChat() {
     const win = document.getElementById('chat-window');
-    win.style.display = win.style.display === 'flex' ? 'none' : 'flex';
-    if(win.style.display === 'flex') {
+    const isHidden = win.style.display === 'none' || win.style.display === '';
+    win.style.display = isHidden ? 'flex' : 'none';
+    if(isHidden) {
       document.getElementById('user-input').focus();
       scrollToBottom();
     }
@@ -170,91 +207,104 @@
     if (e.key === 'Enter') sendMessage();
   }
 
-  // Sohbeti Temizle
   function clearChat() {
     localStorage.removeItem('funeralcs_chat_history');
     chatHistory = [];
     document.getElementById('chat-messages').innerHTML = '';
-    addMessage("Sohbet temizlendi. Merhaba! 👋 Nasıl yardımcı olabilirim?", 'bot');
+    // Bot'tan temiz bir başlangıç mesajı (Markdown destekli)
+    addMessageToUI("**Sohbet temizlendi.** \n\nMerhaba! 👋 FuneralCS blogundaki içeriklerle ilgili neyi merak ediyorsun?", 'bot');
   }
 
-  // Geçmişi Yükle
   function loadHistory() {
     const saved = localStorage.getItem('funeralcs_chat_history');
-    const messagesDiv = document.getElementById('chat-messages');
 
     if (saved) {
-      chatHistory = JSON.parse(saved);
-      // UI'ı tekrar oluştur
-      chatHistory.forEach(msg => {
-        const sender = msg.role === 'user' ? 'user' : 'bot';
-        // Bot mesajlarındaki HTML'i koru
-        addMessageToUI(msg.content, sender);
-      });
+      try {
+        chatHistory = JSON.parse(saved);
+        chatHistory.forEach(msg => {
+          const sender = msg.role === 'user' ? 'user' : 'bot';
+          addMessageToUI(msg.content, sender);
+        });
+      } catch (e) {
+        console.error("Geçmiş yükleme hatası:", e);
+        clearChat();
+      }
     } else {
-      // İlk açılış mesajı
-      addMessageToUI("Selam! 👋 FuneralCS blogundaki içeriklerle ilgili neyi merak ediyorsun?", 'bot');
+      addMessageToUI("**Selam!** 👋 FuneralCS blogundaki içeriklerle ilgili neyi merak ediyorsun?", 'bot');
     }
   }
 
-  // Mesaj Gönderme
   async function sendMessage() {
     const input = document.getElementById('user-input');
     const question = input.value.trim();
     if (!question) return;
 
-    // UI'a ekle
+    // 1. Kullanıcı mesajını ekle
     addMessageToUI(question, 'user');
     input.value = '';
 
-    // Geçmişe ekle (User)
+    // 2. Geçmişe ekle
     chatHistory.push({ role: 'user', content: question });
     saveHistory();
 
-    // UI Durumları
-    document.getElementById('send-btn').disabled = true;
-    document.getElementById('typing-indicator').style.display = 'block';
+    // UI Kilitleme
+    const sendBtn = document.getElementById('send-btn');
+    const typing = document.getElementById('typing-indicator');
+    input.disabled = true;
+    sendBtn.disabled = true;
+    typing.style.display = 'block';
 
     try {
-      // TÜM GEÇMİŞİ GÖNDER
+      // 3. Worker'a Gönder
       const response = await fetch(WORKER_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          question: question, // Geriye uyumluluk için
-          history: chatHistory // Asıl olay bu
+          question: question,
+          history: chatHistory
         })
       });
 
       const data = await response.json();
 
       if (data.error) throw new Error(data.error);
+      if (!data.response) throw new Error("Boş cevap döndü");
 
-      const formattedResponse = data.response.replace(/\n/g, '<br>');
+      // 4. Bot cevabını ekle (Markdown renderlanacak)
+      addMessageToUI(data.response, 'bot');
 
-      // UI'a ekle (Bot)
-      addMessageToUI(formattedResponse, 'bot');
-
-      // Geçmişe ekle (Bot) - Ham text yerine formatlıyı saklayabiliriz ama raw daha iyidir.
-      // Burada basitlik için formatlıyı saklıyoruz ki yüklerken kolay olsun.
-      chatHistory.push({ role: 'assistant', content: formattedResponse });
+      // 5. Geçmişe ekle
+      chatHistory.push({ role: 'assistant', content: data.response });
       saveHistory();
 
     } catch (error) {
-      addMessageToUI("⚠️ Bir hata oluştu. Sohbeti temizlemeyi dene.", 'bot');
+      addMessageToUI(`⚠️ **Hata oluştu:** ${error.message || "Sunucuya ulaşılamadı."}`, 'bot');
       console.error(error);
     } finally {
-      document.getElementById('send-btn').disabled = false;
-      document.getElementById('typing-indicator').style.display = 'none';
+      input.disabled = false;
+      sendBtn.disabled = false;
+      typing.style.display = 'none';
       input.focus();
     }
   }
 
+  // MESAJI EKRANA BASMA (Markdown Büyüsü Burada!)
   function addMessageToUI(text, sender) {
     const messages = document.getElementById('chat-messages');
     const msgDiv = document.createElement('div');
     msgDiv.classList.add('message', sender);
-    msgDiv.innerHTML = text;
+
+    if (sender === 'bot') {
+      // MARKDOWN RENDER: marked.parse() fonksiyonu text'i HTML'e çevirir
+      // Linkleri yeni sekmede açması için target="_blank" ekleyelim (opsiyonel ama iyidir)
+      let htmlContent = marked.parse(text);
+      // Basitçe linkleri güvenli hale getirmek için (isteğe bağlı)
+      msgDiv.innerHTML = htmlContent;
+    } else {
+      // Kullanıcı mesajını düz metin olarak bas (Güvenlik için)
+      msgDiv.textContent = text;
+    }
+
     messages.appendChild(msgDiv);
     scrollToBottom();
   }
@@ -265,6 +315,8 @@
   }
 
   function saveHistory() {
+    // LocalStorage sınırı (yaklaşık 5MB) dolmasın diye son 50 mesajı tutabiliriz
+    if(chatHistory.length > 50) chatHistory = chatHistory.slice(-50);
     localStorage.setItem('funeralcs_chat_history', JSON.stringify(chatHistory));
   }
 </script>

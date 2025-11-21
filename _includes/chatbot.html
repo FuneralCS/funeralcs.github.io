@@ -141,8 +141,7 @@
 </div>
 
 <script>
-  // BURAYI KENDİ WORKER URL'İN İLE DEĞİŞTİR!
-  const WORKER_URL = "https://funeralcs-bot.funeralcsblog.workers.dev"; 
+  const WORKER_URL = "https://funeralcs-bot.funeralcsblog.workers.dev";
 
   function toggleChat() {
     const win = document.getElementById('chat-window');
@@ -156,10 +155,9 @@
 
   async function sendMessage() {
     const input = document.getElementById('user-input');
-    const messages = document.getElementById('messages');
     const sendBtn = document.getElementById('send-btn');
     const typing = document.getElementById('typing-indicator');
-    
+
     const question = input.value.trim();
     if (!question) return;
 
@@ -178,14 +176,24 @@
       });
 
       const data = await response.json();
-      
-      // Bot cevabını ekle (Satır boşluklarını <br> yapıyoruz)
+
+      // HATA KONTROLÜ (YENİ EKLENEN KISIM)
+      if (!response.ok || data.error) {
+        throw new Error(data.error || `Sunucu Hatası: ${response.status}`);
+      }
+
+      if (!data.response) {
+        throw new Error("Sunucudan boş cevap döndü.");
+      }
+
+      // Bot cevabını ekle
       const formattedResponse = data.response.replace(/\n/g, '<br>');
       addMessage(formattedResponse, 'bot');
 
     } catch (error) {
-      addMessage("Üzgünüm, bir hata oluştu. Lütfen sonra tekrar dene.", 'bot');
-      console.error(error);
+      // Gerçek hatayı ekrana basıyoruz ki sorunu görelim
+      addMessage(`⚠️ <b>Sistem Hatası:</b> ${error.message}`, 'bot');
+      console.error("Chatbot Hatası:", error);
     } finally {
       input.disabled = false;
       sendBtn.disabled = false;
@@ -198,7 +206,7 @@
     const messages = document.getElementById('chat-messages');
     const msgDiv = document.createElement('div');
     msgDiv.classList.add('message', sender);
-    msgDiv.innerHTML = text; // Linkler için HTML render ediyoruz
+    msgDiv.innerHTML = text;
     messages.appendChild(msgDiv);
     messages.scrollTop = messages.scrollHeight;
   }

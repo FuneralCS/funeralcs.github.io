@@ -114,6 +114,14 @@
   
   /* Yazıyor animasyonu */
   .typing-indicator { font-size: 12px; color: #666; margin-left: 5px; display: none; }
+  .clear-btn {
+      font-size: 12px;
+      color: #aaa;
+      cursor: pointer;
+      margin-right: 10px;
+      text-decoration: underline;
+    }
+    .chat-header-controls { display: flex; align-items: center; }
 </style>
 
 <div id="chat-trigger" onclick="toggleChat()">
@@ -123,14 +131,14 @@
 <div id="chat-window">
   <div class="chat-header">
     <span>FuneralCS Asistan 🤖</span>
-    <span class="close-btn" onclick="toggleChat()">×</span>
-  </div>
-  
-  <div id="chat-messages">
-    <div class="message bot">
-      Selam! 👋 FuneralCS blogundaki içeriklerle ilgili neyi merak ediyorsun?
+    <div class="chat-header-controls">
+      <span class="clear-btn" onclick="clearChat()">Temizle</span>
+      <span class="close-btn" onclick="toggleChat()">×</span>
     </div>
   </div>
+
+  <div id="chat-messages">
+    </div>
 
   <div class="typing-indicator" id="typing-indicator">Asistan düşünüyor...</div>
 
@@ -142,72 +150,121 @@
 
 <script>
   const WORKER_URL = "https://funeralcs-bot.funeralcsblog.workers.dev";
+  let chatHistory = []; // AI formatında geçmiş: [{role: 'user', content: '...'}, {role: 'assistant', content: '...'}]
+
+  // Sayfa Yüklendiğinde
+  document.addEventListener('DOMContentLoaded', () => {
+    loadHistory();
+  });
 
   function toggleChat() {
     const win = document.getElementById('chat-window');
     win.style.display = win.style.display === 'flex' ? 'none' : 'flex';
-    if(win.style.display === 'flex') document.getElementById('user-input').focus();
+    if(win.style.display === 'flex') {
+      document.getElementById('user-input').focus();
+      scrollToBottom();
+    }
   }
 
   function handleKeyPress(e) {
     if (e.key === 'Enter') sendMessage();
   }
 
+  // Sohbeti Temizle
+  function clearChat() {
+    localStorage.removeItem('funeralcs_chat_history');
+    chatHistory = [];
+    document.getElementById('chat-messages').innerHTML = '';
+    addMessage("Sohbet temizlendi. Merhaba! 👋 Nasıl yardımcı olabilirim?", 'bot');
+  }
+
+  // Geçmişi Yükle
+  function loadHistory() {
+    const saved = localStorage.getItem('funeralcs_chat_history');
+    const messagesDiv = document.getElementById('chat-messages');
+
+    if (saved) {
+      chatHistory = JSON.parse(saved);
+      // UI'ı tekrar oluştur
+      chatHistory.forEach(msg => {
+        const sender = msg.role === 'user' ? 'user' : 'bot';
+        // Bot mesajlarındaki HTML'i koru
+        addMessageToUI(msg.content, sender);
+      });
+    } else {
+      // İlk açılış mesajı
+      addMessageToUI("Selam! 👋 FuneralCS blogundaki içeriklerle ilgili neyi merak ediyorsun?", 'bot');
+    }
+  }
+
+  // Mesaj Gönderme
   async function sendMessage() {
     const input = document.getElementById('user-input');
-    const sendBtn = document.getElementById('send-btn');
-    const typing = document.getElementById('typing-indicator');
-
     const question = input.value.trim();
     if (!question) return;
 
-    // Kullanıcı mesajını ekle
-    addMessage(question, 'user');
+    // UI'a ekle
+    addMessageToUI(question, 'user');
     input.value = '';
-    input.disabled = true;
-    sendBtn.disabled = true;
-    typing.style.display = 'block';
+
+    // Geçmişe ekle (User)
+    chatHistory.push({ role: 'user', content: question });
+    saveHistory();
+
+    // UI Durumları
+    document.getElementById('send-btn').disabled = true;
+    document.getElementById('typing-indicator').style.display = 'block';
 
     try {
+      // TÜM GEÇMİŞİ GÖNDER
       const response = await fetch(WORKER_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question: question })
+        body: JSON.stringify({
+          question: question, // Geriye uyumluluk için
+          history: chatHistory // Asıl olay bu
+        })
       });
 
       const data = await response.json();
 
-      // HATA KONTROLÜ (YENİ EKLENEN KISIM)
-      if (!response.ok || data.error) {
-        throw new Error(data.error || `Sunucu Hatası: ${response.status}`);
-      }
+      if (data.error) throw new Error(data.error);
 
-      if (!data.response) {
-        throw new Error("Sunucudan boş cevap döndü.");
-      }
-
-      // Bot cevabını ekle
       const formattedResponse = data.response.replace(/\n/g, '<br>');
-      addMessage(formattedResponse, 'bot');
+
+      // UI'a ekle (Bot)
+      addMessageToUI(formattedResponse, 'bot');
+
+      // Geçmişe ekle (Bot) - Ham text yerine formatlıyı saklayabiliriz ama raw daha iyidir.
+      // Burada basitlik için formatlıyı saklıyoruz ki yüklerken kolay olsun.
+      chatHistory.push({ role: 'assistant', content: formattedResponse });
+      saveHistory();
 
     } catch (error) {
-      // Gerçek hatayı ekrana basıyoruz ki sorunu görelim
-      addMessage(`⚠️ <b>Sistem Hatası:</b> ${error.message}`, 'bot');
-      console.error("Chatbot Hatası:", error);
+      addMessageToUI("⚠️ Bir hata oluştu. Sohbeti temizlemeyi dene.", 'bot');
+      console.error(error);
     } finally {
-      input.disabled = false;
-      sendBtn.disabled = false;
-      typing.style.display = 'none';
+      document.getElementById('send-btn').disabled = false;
+      document.getElementById('typing-indicator').style.display = 'none';
       input.focus();
     }
   }
 
-  function addMessage(text, sender) {
+  function addMessageToUI(text, sender) {
     const messages = document.getElementById('chat-messages');
     const msgDiv = document.createElement('div');
     msgDiv.classList.add('message', sender);
     msgDiv.innerHTML = text;
     messages.appendChild(msgDiv);
+    scrollToBottom();
+  }
+
+  function scrollToBottom() {
+    const messages = document.getElementById('chat-messages');
     messages.scrollTop = messages.scrollHeight;
+  }
+
+  function saveHistory() {
+    localStorage.setItem('funeralcs_chat_history', JSON.stringify(chatHistory));
   }
 </script>

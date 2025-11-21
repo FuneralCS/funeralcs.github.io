@@ -155,6 +155,18 @@
     display: none;
     font-style: italic;
   }
+  .message.bot::after {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 12px;
+    background: #333;
+    animation: blink 1s infinite;
+    vertical-align: middle;
+    display: none; /* Sadece yazarken görünür yapacağız */
+  }
+  .message.bot.typing::after { display: inline-block; }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 </style>
 
 <div id="chat-trigger" onclick="toggleChat()">
@@ -165,148 +177,138 @@
   <div class="chat-header">
     <span>FuneralCS Asistan 🤖</span>
     <div class="chat-header-controls">
-      <span class="clear-btn" onclick="clearChat()">Geçmişi Sil</span>
+      <span class="clear-btn" onclick="clearChat()">Temizle</span>
       <span class="close-btn" onclick="toggleChat()">×</span>
     </div>
   </div>
-
-  <div id="chat-messages">
-    </div>
-
-  <div class="typing-indicator" id="typing-indicator">Asistan düşünüyor...</div>
-
+  <div id="chat-messages"></div>
   <div class="chat-input-area">
     <input type="text" id="user-input" placeholder="Sorunu yaz..." onkeypress="handleKeyPress(event)">
-    <button id="send-btn" onclick="sendMessage()">
-      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-    </button>
+    <button id="send-btn" onclick="sendMessage()"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
   </div>
 </div>
 
 <script>
-  // --- AYARLAR ---
   const WORKER_URL = "https://funeralcs-bot.funeralcsblog.workers.dev";
   let chatHistory = [];
 
-  // Sayfa Yüklendiğinde
-  document.addEventListener('DOMContentLoaded', () => {
-    loadHistory();
-  });
+  document.addEventListener('DOMContentLoaded', loadHistory);
 
   function toggleChat() {
     const win = document.getElementById('chat-window');
     const isHidden = win.style.display === 'none' || win.style.display === '';
     win.style.display = isHidden ? 'flex' : 'none';
-    if(isHidden) {
-      document.getElementById('user-input').focus();
-      scrollToBottom();
-    }
+    if(isHidden) { document.getElementById('user-input').focus(); scrollToBottom(); }
   }
 
-  function handleKeyPress(e) {
-    if (e.key === 'Enter') sendMessage();
-  }
+  function handleKeyPress(e) { if (e.key === 'Enter') sendMessage(); }
 
   function clearChat() {
     localStorage.removeItem('funeralcs_chat_history');
     chatHistory = [];
     document.getElementById('chat-messages').innerHTML = '';
-    // Bot'tan temiz bir başlangıç mesajı (Markdown destekli)
-    addMessageToUI("**Sohbet temizlendi.** \n\nMerhaba! 👋 FuneralCS blogundaki içeriklerle ilgili neyi merak ediyorsun?", 'bot');
+    addMessageToUI("**Sohbet temizlendi.** Merhaba! 👋", 'bot');
   }
 
   function loadHistory() {
     const saved = localStorage.getItem('funeralcs_chat_history');
-
     if (saved) {
-      try {
-        chatHistory = JSON.parse(saved);
-        chatHistory.forEach(msg => {
-          const sender = msg.role === 'user' ? 'user' : 'bot';
-          addMessageToUI(msg.content, sender);
-        });
-      } catch (e) {
-        console.error("Geçmiş yükleme hatası:", e);
-        clearChat();
-      }
+      chatHistory = JSON.parse(saved);
+      chatHistory.forEach(msg => addMessageToUI(msg.content, msg.role === 'user' ? 'user' : 'bot'));
     } else {
-      addMessageToUI("**Selam!** 👋 FuneralCS blogundaki içeriklerle ilgili neyi merak ediyorsun?", 'bot');
+      addMessageToUI("**Selam!** 👋 FuneralCS blog asistanıyım.", 'bot');
     }
   }
 
+  // --- STREAMING SEND MESSAGE ---
   async function sendMessage() {
     const input = document.getElementById('user-input');
     const question = input.value.trim();
     if (!question) return;
 
-    // 1. Kullanıcı mesajını ekle
     addMessageToUI(question, 'user');
     input.value = '';
-
-    // 2. Geçmişe ekle
     chatHistory.push({ role: 'user', content: question });
     saveHistory();
 
-    // UI Kilitleme
     const sendBtn = document.getElementById('send-btn');
-    const typing = document.getElementById('typing-indicator');
     input.disabled = true;
     sendBtn.disabled = true;
-    typing.style.display = 'block';
+
+    // Bot mesajı için boş bir baloncuk oluşturuyoruz
+    const botMessageDiv = addMessageToUI("", 'bot', true); // true: "typing" class ekle
+    let fullResponse = "";
 
     try {
-      // 3. Worker'a Gönder
       const response = await fetch(WORKER_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          question: question,
-          history: chatHistory
-        })
+        body: JSON.stringify({ question: question, history: chatHistory })
       });
 
-      const data = await response.json();
+      // --- AKIŞI OKUMA (STREAM READER) ---
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
 
-      if (data.error) throw new Error(data.error);
-      if (!data.response) throw new Error("Boş cevap döndü");
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
 
-      // 4. Bot cevabını ekle (Markdown renderlanacak)
-      addMessageToUI(data.response, 'bot');
+        // Gelen veriyi (chunk) çöz
+        const chunk = decoder.decode(value, { stream: true });
 
-      // 5. Geçmişe ekle
-      chatHistory.push({ role: 'assistant', content: data.response });
+        // Cloudflare veriyi "data: {...}" formatında gönderir. Bunu ayıklamalıyız.
+        // Bazen birden fazla satır gelebilir.
+        const lines = chunk.split('\n');
+
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            const jsonStr = line.slice(6); // "data: " kısmını at
+            if (jsonStr.trim() === '[DONE]') continue; // Bitiş sinyali
+
+            try {
+              const data = JSON.parse(jsonStr);
+              if (data.response) {
+                fullResponse += data.response;
+                // Anlık olarak ekrana bas (Markdown renderlayarak)
+                botMessageDiv.innerHTML = marked.parse(fullResponse);
+                scrollToBottom();
+              }
+            } catch (e) { console.error("JSON Parse Hatası:", e); }
+          }
+        }
+      }
+
+      // Bittiğinde
+      botMessageDiv.classList.remove('typing'); // İmleci kaldır
+      chatHistory.push({ role: 'assistant', content: fullResponse });
       saveHistory();
 
     } catch (error) {
-      addMessageToUI(`⚠️ **Hata oluştu:** ${error.message || "Sunucuya ulaşılamadı."}`, 'bot');
-      console.error(error);
+      botMessageDiv.innerHTML = `⚠️ **Hata:** ${error.message}`;
+      botMessageDiv.classList.remove('typing');
     } finally {
       input.disabled = false;
       sendBtn.disabled = false;
-      typing.style.display = 'none';
       input.focus();
     }
   }
 
-  // MESAJI EKRANA BASMA (Markdown Büyüsü Burada!)
-  function addMessageToUI(text, sender) {
+  function addMessageToUI(text, sender, isTyping = false) {
     const messages = document.getElementById('chat-messages');
     const msgDiv = document.createElement('div');
     msgDiv.classList.add('message', sender);
+    if (isTyping) msgDiv.classList.add('typing');
 
     if (sender === 'bot') {
-      // MARKDOWN RENDER: marked.parse() fonksiyonu text'i HTML'e çevirir
-      // Linkleri yeni sekmede açması için target="_blank" ekleyelim (opsiyonel ama iyidir)
-      let htmlContent = marked.parse(text);
-      // Basitçe linkleri güvenli hale getirmek için (isteğe bağlı)
-      msgDiv.innerHTML = htmlContent;
+      msgDiv.innerHTML = marked.parse(text);
     } else {
-      // Kullanıcı mesajını düz metin olarak bas (Güvenlik için)
       msgDiv.textContent = text;
     }
 
     messages.appendChild(msgDiv);
     scrollToBottom();
+    return msgDiv; // Div'i geri döndür ki streaming ile içini dolduralım
   }
 
   function scrollToBottom() {
@@ -315,7 +317,6 @@
   }
 
   function saveHistory() {
-    // LocalStorage sınırı (yaklaşık 5MB) dolmasın diye son 50 mesajı tutabiliriz
     if(chatHistory.length > 50) chatHistory = chatHistory.slice(-50);
     localStorage.setItem('funeralcs_chat_history', JSON.stringify(chatHistory));
   }

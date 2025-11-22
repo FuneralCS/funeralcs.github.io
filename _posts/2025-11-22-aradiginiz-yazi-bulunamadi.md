@@ -1,13 +1,13 @@
 ---
 title: "Aradığınız 'FuneralCS yazısı' ile ilgili hiçbir arama sonucu mevcut değil"
 date: 2025-11-22 9:00:00 +0300
-categories: [teknoloji, internet, bilgi-teorisi, yapay-zeka, makine-ogrenmesi, matematik]
+categories: [teknoloji, internet, bilgi teorisi, yapay zeka, makine ogrenmesi, matematik]
 tags: [retrieval, embedding, pagerank, bert, limit dataset, limit article, limit makale, cross encoders, google, not found, search]
 author: tunahan
 image:
   path: /assets/img/2025-11-22-aradiginiz-yazi-bulunamadi/cover.webp
   alt: "Google arama ekranında 'Aradığınız FuneralCS yazısı ile ilgili hiçbir arama sonucu mevcut değil' mesajı"
-description: "Google'ın arama sistemlerinde embedding tabanlı retrieval yöntemlerinin sınırlarını LIMIT makalesi üzerinden inceliyoruz."
+description: "Google her şeyi bulabilir mi? DeepMind'ın LIMIT makalesi ile embedding, retrieval ve vektör tabanlı aramaların matematiksel sınırlarını Python örnekleriyle inceliyoruz."
 toc: true
 math: true
 mermaid: false

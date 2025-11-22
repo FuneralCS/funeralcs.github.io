@@ -2,7 +2,7 @@
 title: "Dil Modellerinde Düşünme Zincirlerinin Kırılganlığı Üzerine"
 date: 2025-08-31 21:00:00 +0300
 categories: [yapay zeka, güvenlik]
-tags: [chain-of-thought, CoT, latent reasoning, süreç gözetimi, process supervision, rationale distillation, XAI, açıklanabilir yapay zekâ, yapay zeka güvenliği, monitorability]
+tags: [chain-of-thought, cot, latent reasoning, süreç gözetimi, process supervision, rationale distillation, xai, açıklanabilir yapay zeka, yapay zeka güvenliği, monitorability]
 authors: ["tunahan", "ibrahim"]
 image:
   path: /assets/img/2025-08-31-düşünme-zinciri-güvenliği/cover.webp
@@ -79,7 +79,7 @@ Yani modele şöyle dendi:
     <figcaption>Düşünme zinciri basamakları</figcaption>
 </figure>
 
-İşte bu yüzden CoT, hem açıklanabilir yapay zekâ hem de güvenlik açısından eşsiz bir fırsat sunuyor. Çünkü mimari olarak değişen bir şey yok. Bu modeller sanki bir çocuğa matematik öğretirken işlemleri göstermesini isteyip doğru çözdüğünde ödül, yanlış çözdüğünde ise ceza vermek gibi. 
+İşte bu yüzden CoT, hem açıklanabilir yapay zeka hem de güvenlik açısından eşsiz bir fırsat sunuyor. Çünkü mimari olarak değişen bir şey yok. Bu modeller sanki bir çocuğa matematik öğretirken işlemleri göstermesini isteyip doğru çözdüğünde ödül, yanlış çözdüğünde ise ceza vermek gibi. 
 
 - *Örneğin*:
 	    
@@ -178,7 +178,7 @@ Bu durumda da CoT'un sağladığı şeffaflık ve güvenlik avantajları tamamen
 Explicit Reasoning, bugün GPT’lerde gördüğümüz klasik **Chain of Thought** yaklaşımı iken, Latent Reasoning ise modelin aklından geçenler **kelimeye dökülmeden**, kendi içinde gizli (latent) temsil olarak kalıyor. Nasıl çok çalıştığımız bir gün sonunda gece yatmadan önce aklımızdan aşırı hızlı bir şekilde anlamsız düşünceler geçiyorsa, latent reasoning de modelin aklından çok hızlı şekilde -ama bu sefer anlamlı (?)- düşünceler geçiyor. Öyle ki bu içsel bilgi taşıma kapasitesi (bant genişliği) makaleye göre 40960 bit'e kadar çıkmakta. Ama bu durumda açıklanabilirlikten ödün verip, verimliliğe pay veriyoruz. [8]
 
 ## 7. Kapanış
-> “Düşünme zincirleri, bize yapay zekânın şeffaflık vaadini fısıldarken aynı anda onun kırılganlığını da açığa vuruyor. İç seslerini duyduğumuz sürece kontrol bizdeymiş gibi hissediyoruz; ama sustuklarında kimin gerçekten düşündüğünü bilemeyeceğiz. Geleceğin güvenliği belki de tam bu ince çizgide şekillenecek: neyi görmek istediğimizle, neleri asla göremeyeceğimiz arasında.”
+> “Düşünme zincirleri, bize yapay zekanın şeffaflık vaadini fısıldarken aynı anda onun kırılganlığını da açığa vuruyor. İç seslerini duyduğumuz sürece kontrol bizdeymiş gibi hissediyoruz; ama sustuklarında kimin gerçekten düşündüğünü bilemeyeceğiz. Geleceğin güvenliği belki de tam bu ince çizgide şekillenecek: neyi görmek istediğimizle, neleri asla göremeyeceğimiz arasında.”
 
 # *Kaynakça*
 1. [What is chain of thought (CoT) prompting?][1]  

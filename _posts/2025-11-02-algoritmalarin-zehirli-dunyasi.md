@@ -15,9 +15,6 @@ pin: false
 lang: tr
 ---
 
-
-
-
 Bu yazımızda kullandığımız teknolojilerin kalbinde yatan algoritmalar ve bunların bize olan zararlarını ele alacağız.
 
 Yazıda, genel olarak 21.yy'da yaşanmış olayları ele alarak günümüze ve güncel yaşananlara odaklanacağız. Hazırsanız başlayalım. İlk olarak algoritma nedir? Ve genel tanımlara odaklanalım.

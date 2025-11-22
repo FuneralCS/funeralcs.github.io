@@ -2,7 +2,7 @@
 title: "Yazılım Korsanlığı ve Açık Kaynak Farkı: Hukuki, Etik ve Güvenlik Analizi"
 date: 2025-10-26 17:00:00 +0300
 categories: [yazılım,internet,özgür yazılım]
-tags: [açık kaynak,korsan,korsan yazılım,telif hakkı,FSEK,GPL,MIT]
+tags: [açık kaynak,korsan,korsan yazılım,telif hakkı,fsek,gpl,mit]
 author: yunus
 description: "Yazılım korsanlığı ile Açık Kaynak arasındaki devasa farkı öğrenin. Korsan yazılımın hukuki risklerini, Açık Kaynak'ın yasal ve etik güvenlik avantajlarını keşfedin."
 image:

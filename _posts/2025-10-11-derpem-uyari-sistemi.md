@@ -2,7 +2,7 @@
 title: "Cebimizdeki Hayat Kurtarıcı: Android Deprem Uyarı Sistemi Nasıl Çalışır?"
 date: 2025-10-11 09:00:00 +0300
 categories: [teknoloji, bilim, donanımlar, matematik]
-tags: [Android, deprem, erken-uyarı, sismoloji, P-dalgası, ivmeölçer, Google, 6Şubat]
+tags: [android, deprem, erken-uyarı, sismoloji, p-dalgası, ivmeölçer, google, 6 şubat]
 author: tunahan
 image:
   path: /assets/img/xx-xx-xx-derpem-uyari-sistemi/cover.webp 

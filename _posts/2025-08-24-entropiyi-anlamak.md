@@ -19,7 +19,7 @@ tags:
 author: tunahan
 image:
   path: /assets/img/2025-08-24-entropiyi-anlamak/cover.webp
-description: "Entropinin termodinamikten Shannon entropisine ve yapay zekâya uzanan rolü: karar ağaçları, cross-entropy loss ve PCA örnekleriyle karmaşanın matematiği."
+description: "Entropinin termodinamikten Shannon entropisine ve yapay zekaya uzanan rolü: karar ağaçları, cross-entropy loss ve PCA örnekleriyle karmaşanın matematiği."
 toc: true
 math: true
 mermaid: false
@@ -52,12 +52,12 @@ Termodinamik yasaları çok genel bir geçerliliğe sahiptirler ve karşılıkl�
     <img src="/assets/img/2025-08-24-entropiyi-anlamak/entropy.webp" alt="Entropi">
     <figcaption>Görsel: Entropi</figcaption>
 </figure>
-## Bilgi Teorisi ve Shannon Entropisi 
-Bilgi teorisi, bilginin niceliklendirilmesi, depolanması ve iletilmesinin uygulamalı matematik ve elektrik mühendisliği dalıdır. Bu alan, 1940'larda Claude Shannon tarafından kurulmuş ve geliştirilmiştir. Bilgi teorisinin temel konularının uygulamaları arasında kaynak kodlama/veri sıkıştırma (örneğin ZIP dosyaları) ve kanal kodlama/hata algılama (channel coding/error dedection) ve düzeltme (örneğin DSL) yer almaktadır.
+## bilgi teorisi ve Shannon Entropisi 
+bilgi teorisi, bilginin niceliklendirilmesi, depolanması ve iletilmesinin uygulamalı matematik ve elektrik mühendisliği dalıdır. Bu alan, 1940'larda Claude Shannon tarafından kurulmuş ve geliştirilmiştir. bilgi teorisinin temel konularının uygulamaları arasında kaynak kodlama/veri sıkıştırma (örneğin ZIP dosyaları) ve kanal kodlama/hata algılama (channel coding/error dedection) ve düzeltme (örneğin DSL) yer almaktadır.
 
 Entropi 20. yy'da Shannon tarafından bilgi teorisine kazandırılmıştır. Shannon, entropiyi, bir iletinin veya olayın içerdiği bilgi miktarını veya daha doğrusu _tahmin edilemezliğini ve belirsizliğini_ ölçmek için kullanmıştır. 
 
-Bilgi teorisinde entropi, fizikten biraz farklı olarak bir sonucun ne kadar belirsiz veya sürprizli olduğunun bir ölçüsüdür. Bir yazı tura atışında, paranın yazı mı tura mı geleceği belirsizdir, dolayısıyla bu olayın entropisi maksimumdur. Eğer paranın hileli olduğunu ve %75 olasılıkla tura geldiğini biliyorsak, sonuç hakkındaki belirsizliğimiz azalır ve entropi de düşer.
+bilgi teorisinde entropi, fizikten biraz farklı olarak bir sonucun ne kadar belirsiz veya sürprizli olduğunun bir ölçüsüdür. Bir yazı tura atışında, paranın yazı mı tura mı geleceği belirsizdir, dolayısıyla bu olayın entropisi maksimumdur. Eğer paranın hileli olduğunu ve %75 olasılıkla tura geldiğini biliyorsak, sonuç hakkındaki belirsizliğimiz azalır ve entropi de düşer.
 
 Benzer şekilde kuantum mekaniğinde Schrödinger’in meşhur kedisi örneği vardır: kutunun içindeki kedi gözlem yapılana kadar hem ölü hem diri kabul edilir. Yani sistemin durumu belirsizlik içindedir. Buradaki “süperpozisyon” kavramı bilgi teorisindeki entropiye doğrudan denk olmasa da, ikisi de “bilginin eksikliği → belirsizlik → karmaşa” ortak noktasında buluşur.
 
@@ -123,11 +123,11 @@ Karar Ağaçları (Decision Tree), parametrik olmayan ve hem sınıflandırma he
     <figcaption>Görsel: Karar Ağaçları</figcaption>
 </figure>
 Karar ağaçları bir düğümden (Root Node) başlayarak yeni düğümler ve yapraklar (leaf) oluşturmak üzerine kuruludur. Yeni düğüm ve yaprakların oluşturulması ise entropi ile sağlanır. veri setinde her seferinde basit bir entropi hesabı **Bilgi
-Kazancı (Information Gain)** hesaplanır ve bu algoritma bilgi kazancını maksimum, belirsizliği ise minimum düzeyde tutmaya çalışır. Yani bilgi kazancını maksimize edecek özelliği seçer. Karar Ağaçları en açıklanabilir yapay zekâ algoritmalarından biridir (XAI, explainable AI).
+Kazancı (Information Gain)** hesaplanır ve bu algoritma bilgi kazancını maksimum, belirsizliği ise minimum düzeyde tutmaya çalışır. Yani bilgi kazancını maksimize edecek özelliği seçer. Karar Ağaçları en açıklanabilir yapay zeka algoritmalarından biridir (XAI, explainable AI).
 
 ### **Çapraz Entropi (Cross-Entropy)**
 Özellikle sınıflandırma problemlerinde (yani model “hangi sınıf bu?” diye karar verecekse) **açık ara en yaygın kullanılan loss çeşididir**.
-Öncelikle kayıp fonksiyonu, yapay zekâ modellerinin "ne kadar hatalı" düşündüğünü ölçtüğümüz metriklerdir. 
+Öncelikle kayıp fonksiyonu, yapay zeka modellerinin "ne kadar hatalı" düşündüğünü ölçtüğümüz metriklerdir. 
 
 Örneğin, bir modelin kedi, köpek ve kuş sınıflarını içeren bir görseli sınıflandırdığını düşünelim. Eğer görsel bir kedi ise gerçek etiket dağılımı P = [1, 0, 0] olacaktır. Model iyi bir tahmin yapıp Q = [0.8, 0.15, 0.05] olasılıklarını üretirse, çapraz entropi kaybı düşük olacaktır. Ancak, model kötü bir tahmin yaparak Q = [0.25, 0.6, 0.15] (köpeğe yüksek olasılık) gibi bir dağılım üretirse, çapraz entropi kaybı daha yüksek çıkar ve model bu hatayı minimize etmek için ağırlıklarını ayarlar. Bu, modelin sadece doğru cevabı bulmasını değil, aynı zamanda doğru cevaba ne kadar güvenle yaklaştığını da öğrenmesini sağlar. 
 
@@ -144,13 +144,13 @@ Cross-entropy, Shannon entropisinin makine öğrenmesindeki uyarlaması gibi ça
 Örneğin on sınıflı bir problemde modelin en kötü durumu (yani her sınıfa %10 şans verdiği durumda):  $-\log(10) = ~2.3$'tür.
 
 ## **Sonuç**
-Entropi, bir kavram olarak fizikteki başlangıcından, bilginin soyut dünyasına ve modern yapay zekânın karmaşık algoritmalarına kadar uzanan etkileyici bir yolculuk geçirmiştir. Bu yolculuk boyunca entropi, termodinamiğin evrenin kaderini belirleyen bir yasası olmaktan, enformasyonun kendisini ölçen bir araca ve nihayetinde makine öğrenmesi algoritmalarının temelini oluşturan bir optimizasyon ve güvenilirlik prensibine dönüşmüştür.
+Entropi, bir kavram olarak fizikteki başlangıcından, bilginin soyut dünyasına ve modern yapay zekanın karmaşık algoritmalarına kadar uzanan etkileyici bir yolculuk geçirmiştir. Bu yolculuk boyunca entropi, termodinamiğin evrenin kaderini belirleyen bir yasası olmaktan, enformasyonun kendisini ölçen bir araca ve nihayetinde makine öğrenmesi algoritmalarının temelini oluşturan bir optimizasyon ve güvenilirlik prensibine dönüşmüştür.
 
 | Tanım                         | Formül                            | Birim            | Kavramsal Anlam                                   | Örnek                           | Uygulama Alanı                   |
 | ----------------------------- | --------------------------------- | ---------------- | ------------------------------------------------ | ------------------------------- | -------------------------------- |
 | Termodinamik Entropi          | $\Delta S = \dfrac{\delta Q}{T}$  | J/K              | Faydasız enerji veya iş potansiyeli kaybı         | Sıcak bir nesnenin soğuması     | Termodinamik, Kimya Mühendisliği |
 | İstatistiksel Mekanik Entropi | $S = k \ln W$                     | J/K              | Olası mikroskobik durumların sayısı / Düzensizlik | Bir odada yayılan gaz molekülleri | İstatistiksel Fizik              |
-| Enformasyon Kuramı Entropisi  | $H = - \sum p_i \log p_i$         | bit (log₂ tabanı), nat (ln tabanı) | Bir olayın belirsizliği / Bilgi miktarı | Bir yazı tura atışının sonucu | Bilgi Teorisi, Bilgisayar Bilimi |
+| Enformasyon Kuramı Entropisi  | $H = - \sum p_i \log p_i$         | bit (log₂ tabanı), nat (ln tabanı) | Bir olayın belirsizliği / Bilgi miktarı | Bir yazı tura atışının sonucu | bilgi teorisi, Bilgisayar Bilimi |
 
 # Kaynakça:
 

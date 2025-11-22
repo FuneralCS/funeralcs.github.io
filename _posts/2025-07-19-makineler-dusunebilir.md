@@ -56,7 +56,7 @@ Sonuç olarak Arf, düşünen makineyi hem teorik hem de tasarım boyutuyla ele 
 
 ## 2. Makine Yeteneklerinin Tanımı ve İnsan Bilişiyle Benzerlikleri
 
-Cahit Arf, makineleri yalnızca hesap yapan araçlar olarak değil; dil kullanabilen, hesap yapabilen, benzerlik kurabilen ve çıkarımda bulunabilen yapılar olarak tasavvur etmiştir. Analog ve dijital makineler üzerine verdiği örneklerle, makinelerin insan muhakemesine benzer yetenekler sergileyebileceğini göstermiştir. Örneğin, tavşan-tavuk problemi gibi matematiksel sorulara çözüm üretebilen bir makinenin, insan mantığını taklit ettiğini savunmuştur. Ayrıca, makinelerin sadece programlandıkları durumlarda değil, yeni karşılaştıkları sorunlarda da **intibak kabiliyeti** (İntibak:**uyum sağlama, eşitleme ve dengeleme**) gösterebileceğini ileri sürmüştür. Bu öngörü, makine öğrenimi ve modern yapay zekâ kavramlarının öncüsü olarak değerlendirilebilir.
+Cahit Arf, makineleri yalnızca hesap yapan araçlar olarak değil; dil kullanabilen, hesap yapabilen, benzerlik kurabilen ve çıkarımda bulunabilen yapılar olarak tasavvur etmiştir. Analog ve dijital makineler üzerine verdiği örneklerle, makinelerin insan muhakemesine benzer yetenekler sergileyebileceğini göstermiştir. Örneğin, tavşan-tavuk problemi gibi matematiksel sorulara çözüm üretebilen bir makinenin, insan mantığını taklit ettiğini savunmuştur. Ayrıca, makinelerin sadece programlandıkları durumlarda değil, yeni karşılaştıkları sorunlarda da **intibak kabiliyeti** (İntibak:**uyum sağlama, eşitleme ve dengeleme**) gösterebileceğini ileri sürmüştür. Bu öngörü, makine öğrenimi ve modern yapay zeka kavramlarının öncüsü olarak değerlendirilebilir.
 
 ---
 
@@ -66,19 +66,19 @@ Cahit Arf, makineleri yalnızca hesap yapan araçlar olarak değil; dil kullanab
 
 Yapay zekanın fark edilebilir bir çalışma alanı olarak doğuşu 1950'lerin başında gerçekleşmiştir. Bu döneme İngiliz matematikçi ve mantıkçı Alan Turing'in çalışmaları damgasını vurmuştur.
 
-- **1950:** Alan Turing, 1950 yılında, **Turing Testi** olarak bilinen makine zekâsı kavramını tanıtmıştır. Test, bir makinenin insanınkine eşdeğer veya ondan ayırt edilemeyen akıllı davranış sergileme yeteneğini değerlendirmek için tasarlanmıştır. Turing'in fikirleri, yapay zekânın bilimsel bir disiplin olarak gelişmesine zemin hazırlamıştır.
+- **1950:** Alan Turing, 1950 yılında, **Turing Testi** olarak bilinen makine zekâsı kavramını tanıtmıştır. Test, bir makinenin insanınkine eşdeğer veya ondan ayırt edilemeyen akıllı davranış sergileme yeteneğini değerlendirmek için tasarlanmıştır. Turing'in fikirleri, yapay zekanın bilimsel bir disiplin olarak gelişmesine zemin hazırlamıştır.
 <img src="https://coderspace-storage-prod.s3.eu-central-1.amazonaws.com/media/blog/post/content_images/9703c6d9-5f12-4442-8c02-756f53495cf4.webp" alt="makaleden bir fotograf." width="600">
 <figcaption>Görsel 1</figcaption>
 
 - **1952:** Bilgisayar bilimcisi Arthur Samuel, dama oynayan bir bilgisayar programı geliştirmiştir; bağımsız olarak oyun oynamayı öğrenen ilk program olmuştur.
 
-- **1956:** 1956'daki **Dartmouth Konferansı**, yapay zekânın bir alan olarak doğuşu olarak kabul edilmiştir. John McCarthy, Marvin Minsky, Nathaniel Rochester ve Claude Shannon tarafından düzenlenen konferans, sinir ağları ve akıllı davranışın otomasyonu ile ilgilenen araştırmacıları bir araya getirmiştir. "Yapay Zeka" terimi bu konferansta ortaya atılmış ve benimsenmiştir.
+- **1956:** 1956'daki **Dartmouth Konferansı**, yapay zekanın bir alan olarak doğuşu olarak kabul edilmiştir. John McCarthy, Marvin Minsky, Nathaniel Rochester ve Claude Shannon tarafından düzenlenen konferans, sinir ağları ve akıllı davranışın otomasyonu ile ilgilenen araştırmacıları bir araya getirmiştir. "Yapay Zeka" terimi bu konferansta ortaya atılmış ve benimsenmiştir.
 
 - **1958:** John McCarthy, yapay zeka araştırmalarında popüler bir programlama dili olan **Lisp**'i geliştirmiştir.
 
 ## 4. Cahit Arf'ın Türkiye'deki Paralel Katkısı
 
-Cahit Arf, 1958/59'da Erzurum'da verdiği "Makine Düşünebilir mi ve Nasıl Düşünebilir?" başlıklı halk konferansında makine düşüncesi konusunu ele almıştır. Çalışması, Türkiye'deki yapay zeka tartışmalarına önemli bir katkı olarak kabul edilmektedir. Arf'ın bu katkısı, ülkemizde yapay zekâya yönelik ilk çağdaş adım olarak açıkça belirtilmektedir. Arf'ın, yapay zeka kavramlarıyla Türkiye'de proaktif bir şekilde ilgilenmesi, o dönemde doğrudan uluslararası işbirliğinden bağımsız olarak, tek bir vizyonerin ulusal bilimsel söylemi başlatmada ne kadar derin bir etkiye sahip olabileceğini göstermektedir. Önde gelen bir matematikçi olarak konumu, bu yeni yapay zeka tartışmalarına Türkiye'nin akademik ve kamusal alanlarında önemli bir ağırlık ve meşruiyet kazandırmıştır. Bu durum, temel figürlerin bir ülkedeki gelecekteki teknolojik ve felsefi gelişmeler için entelektüel zemini nasıl hazırlayabileceğini ortaya koymaktadır.
+Cahit Arf, 1958/59'da Erzurum'da verdiği "Makine Düşünebilir mi ve Nasıl Düşünebilir?" başlıklı halk konferansında makine düşüncesi konusunu ele almıştır. Çalışması, Türkiye'deki yapay zeka tartışmalarına önemli bir katkı olarak kabul edilmektedir. Arf'ın bu katkısı, ülkemizde yapay zekaya yönelik ilk çağdaş adım olarak açıkça belirtilmektedir. Arf'ın, yapay zeka kavramlarıyla Türkiye'de proaktif bir şekilde ilgilenmesi, o dönemde doğrudan uluslararası işbirliğinden bağımsız olarak, tek bir vizyonerin ulusal bilimsel söylemi başlatmada ne kadar derin bir etkiye sahip olabileceğini göstermektedir. Önde gelen bir matematikçi olarak konumu, bu yeni yapay zeka tartışmalarına Türkiye'nin akademik ve kamusal alanlarında önemli bir ağırlık ve meşruiyet kazandırmıştır. Bu durum, temel figürlerin bir ülkedeki gelecekteki teknolojik ve felsefi gelişmeler için entelektüel zemini nasıl hazırlayabileceğini ortaya koymaktadır.
 
 | Yıl     | Olay / Katkı                                                     | Anahtar Figür(ler)        | YZ ile İlgisi                          |
 | ------- | ---------------------------------------------------------------- | ------------------------- | -------------------------------------- |
@@ -89,7 +89,7 @@ Cahit Arf, 1958/59'da Erzurum'da verdiği "Makine Düşünebilir mi ve Nasıl D�
 | 1958/59 | “Makine Düşünebilir mi ve Nasıl Düşünebilir?” konferansı         | Cahit Arf                 | Türkiye’den ilk YZ felsefesi bildirisi |
 | 1959    | “Makine öğrenimi” terimi resmi YZ alanında kullanılmaya başlandı | Arthur Samuel             | Makine öğrenimi alanına katkı          |
 
-Yukarıdaki tablo, 1950’lerden itibaren yapay zekâ tarihinin dönüm noktalarını ve bu bağlamda Cahit Arf’ın 1958–59’daki konferansıyla bu akıma nasıl entegre olduğunu göstermektedir.
+Yukarıdaki tablo, 1950’lerden itibaren yapay zeka tarihinin dönüm noktalarını ve bu bağlamda Cahit Arf’ın 1958–59’daki konferansıyla bu akıma nasıl entegre olduğunu göstermektedir.
 
 Makalenin bu kısmında Cahit Arf'ın makinelerin düşünme kısmını nasıl ele aldığı ve ne tür bir düşünme zinciri içinde olduğu ele alacağız. Birtakım felsefi ve ortak olayları beraber ele alacağız.
 # "Makineler Düşünebilir mi?"  Makalesine Felsefi bakış
@@ -145,7 +145,7 @@ Cahit Arf makinelerin düşünebilme sezisinin dönemine göre sadece bir determ
 
 Cahit Arf'ın ortaya attığı çoğu görüş hala geçerliliğini korusa da, bazı kısımlar o çağın imkanlarını aşarak makinelerin sadece bir hesap aracı olmaktan çıkartarak bir bilgi üretme, resim çizdirme, yorum yapabilecek seviyeye gelen LLM'ler ve yapay zeka sistemlerinin oluşmasına imkan sağlamıştır. Ama halen Arf'ın ortaya attığı bilinç, estetik ve özgünlük problemlerine sahip olduğunu görebiliriz. Bunlar bize Cahit Arf'ın düşüncelerinin o zamana göre çok büyük bir cesurluk ve ileri zekanın ürünü olarak değerlendirmemizi sağlar.
 
-Bundan sebeple; Cahit Arf’ın yaklaşımı, teknolojik gelişmelere rağmen günümüzdeki yapay zekâ sistemlerinin sınırlarını sorgulamak için hâlâ geçerli bir felsefi çerçeve sunmaktadır. Özellikle bilinç, anlam üretimi ve estetik değerlendirme gibi alanlarda yapay zekânın hâlâ yetersiz kalması, Arf’ın insan bilinci ve zihninin  eşsizliğine yaptığı yönlendirmenin güncelliğini koruduğunu göstermektedir.
+Bundan sebeple; Cahit Arf’ın yaklaşımı, teknolojik gelişmelere rağmen günümüzdeki yapay zeka sistemlerinin sınırlarını sorgulamak için hâlâ geçerli bir felsefi çerçeve sunmaktadır. Özellikle bilinç, anlam üretimi ve estetik değerlendirme gibi alanlarda yapay zekanın hâlâ yetersiz kalması, Arf’ın insan bilinci ve zihninin  eşsizliğine yaptığı yönlendirmenin güncelliğini koruduğunu göstermektedir.
 
 
 # Kaynakça

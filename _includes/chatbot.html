@@ -235,9 +235,11 @@
     input.disabled = true;
     sendBtn.disabled = true;
 
-    // Bot mesajı için boş bir baloncuk oluşturuyoruz
-    const botMessageDiv = addMessageToUI("", 'bot', true); // true: "typing" class ekle
+    const botMessageDiv = addMessageToUI("", 'bot', true);
     let fullResponse = "";
+
+    // --- TAMPON DEĞİŞKENİ (Yarım kalan veriler burada bekleyecek) ---
+    let buffer = "";
 
     try {
       const response = await fetch(WORKER_URL, {
@@ -246,7 +248,6 @@
         body: JSON.stringify({ question: question, history: chatHistory })
       });
 
-      // --- AKIŞI OKUMA (STREAM READER) ---
       const reader = response.body.getReader();
       const decoder = new TextDecoder("utf-8");
 
@@ -254,33 +255,37 @@
         const { done, value } = await reader.read();
         if (done) break;
 
-        // Gelen veriyi (chunk) çöz
+        // 1. Gelen parçayı decode et ve tampona ekle
         const chunk = decoder.decode(value, { stream: true });
+        buffer += chunk;
 
-        // Cloudflare veriyi "data: {...}" formatında gönderir. Bunu ayıklamalıyız.
-        // Bazen birden fazla satır gelebilir.
-        const lines = chunk.split('\n');
+        // 2. Tamponu satırlara böl
+        const lines = buffer.split('\n');
+
+        // 3. SON SATIR HARİÇ hepsini işle (Son satır yarım olabilir, onu tamponda tut)
+        buffer = lines.pop();
 
         for (const line of lines) {
           if (line.startsWith('data: ')) {
-            const jsonStr = line.slice(6); // "data: " kısmını at
-            if (jsonStr.trim() === '[DONE]') continue; // Bitiş sinyali
+            const jsonStr = line.slice(6);
+            if (jsonStr.trim() === '[DONE]') continue;
 
             try {
               const data = JSON.parse(jsonStr);
               if (data.response) {
                 fullResponse += data.response;
-                // Anlık olarak ekrana bas (Markdown renderlayarak)
                 botMessageDiv.innerHTML = marked.parse(fullResponse);
                 scrollToBottom();
               }
-            } catch (e) { console.error("JSON Parse Hatası:", e); }
+            } catch (e) {
+              console.log("Parça birleştiriliyor...", e);
+            }
           }
         }
       }
 
-      // Bittiğinde
-      botMessageDiv.classList.remove('typing'); // İmleci kaldır
+      // Döngü bitti, imleci kaldır
+      botMessageDiv.classList.remove('typing');
       chatHistory.push({ role: 'assistant', content: fullResponse });
       saveHistory();
 
@@ -293,7 +298,6 @@
       input.focus();
     }
   }
-
   function addMessageToUI(text, sender, isTyping = false) {
     const messages = document.getElementById('chat-messages');
     const msgDiv = document.createElement('div');

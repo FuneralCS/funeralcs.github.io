@@ -60,7 +60,7 @@ Makineler rastgeleliği sağlamak için muazzam bir hesaplama yapar ancak beyni 
 
 ### 3.1 Tekrardan Kaçınma ve Negatif Bitişiklik
 
-İnsan zihni, "gerçek" rastlantısallığı tekrarsız olduğunu sanarlar mesela yazı-tura deneyinde "yazı-yazı-yazı-yazı-yazı" gelmesini rastgele değil diye değerlendirir. Ancak "yazı-tura-yazı-tura-yazı" gelmesi insanlara rastgele gelir. Ama bu iki dizinin gelme olasılığı aynıdır. İnsanlar kendi dizilerini oluştururken, ardışık tekrarları bilinçsizce bastırır. Buna "Negatif Bitişiklik Etkisi" (Negative Recency Effect) denir. Örneğin, 1 ile 10 arasında sayı söylerken, bir kişi "5" dedikten sonra bir sonraki sayının "5" olmama ihtimalini yapay olarak artırır.
+İnsan zihni, "gerçek" rastlantısallığın tekrarsız olduğunu sanar mesela yazı-tura deneyinde "yazı-yazı-yazı-yazı-yazı" gelmesini rastgele değil diye değerlendirir. Ancak "yazı-tura-yazı-tura-yazı" gelmesi insanlara rastgele gelir. Ama bu iki dizinin gelme olasılığı aynıdır. İnsanlar kendi dizilerini oluştururken, ardışık tekrarları bilinçsizce bastırır. Buna "Negatif Bitişiklik Etkisi" (Negative Recency Effect) denir. Örneğin, 1 ile 10 arasında sayı söylerken, bir kişi "5" dedikten sonra bir sonraki sayının "5" olmama ihtimalini yapay olarak artırır.
 
 >Mavi-Yedi Fenomeni: İnsanlara tek haneli bir sayı tutun dendiğinde insanların çoğu '7' rakamını, bir renk tutun dendiğinde 'mavi' rengini söylemişlerdir.
 
@@ -72,7 +72,7 @@ Makineler rastgeleliği sağlamak için muazzam bir hesaplama yapar ancak beyni 
 
 ## 4. Oyunlarda rastgelelik
 
-Oyun endüstrisi rastgele sayı üretme sistemlerini çok sık kullanırlar. Ancak saf rastgele sayı üreticiler oyuncular tarafından çok sert ve acımasız olarak algılandığından, geliştiriciler bazen rastgelelik algoritmaların kasten entropisini azaltabilir.
+Oyun endüstrisi rastgele sayı üretme sistemlerini çok sık kullanırlar. Ancak saf rastgele sayı üreticiler oyuncular tarafından çok sert ve acımasız olarak algılandığından, geliştiriciler bazen rastgelelik algoritmalarının kasten entropisini azaltabilir.
 
 ### 4.1 "Adil" hissedilen raslantısallık: Sözde Rastgele Dağılım (PRD)
 
@@ -88,7 +88,7 @@ PRD sisteminde, bir olayın gerçekleşme olasılığı her başarısız sonuçt
 
 ## 5. Sonuç
 
-Göreceğiniz gibi insan beyni rastgele sayı üretmekte berbat bir durumdadır. Ancak makineler bu işi sanıldığından daha iyi yapabilir. Yazının en başında dediğim gibi klasik fizik her fiziksel olayın deterministik olduğunu söyler ki bu da lav lambaları veya gürültülerle çelişir gibi gözüküyor. Ancak bu fenomenlerin nasıl gerçekleşeceğini hesaplamak evrenin bir sonraki anını hesaplamak kadar zordur bu yüzden TRNG sistemleri pratikte indeterministik bir yapıda diyebiliriz. Şuanki bildiğimiz bilgiler gerçek rastgeleliğin sadece kuantum dünyasında meydana geldiğini anlatır. Onun dışındaki tüm rastgele olan olgular aslında rastgele gibi gözüken olgulardır. Ek olarak şuanki bildiğimiz şeyler kuantum dünyasının çok az bir kısmı dolayısı ile bildiğimiz kuantum evreni de bir veya birden fazla değişkene bağlı olabilir ama biz bunu henüz bilmiyoruz. (Süperdeterminizm)
+Göreceğiniz gibi insan beyni rastgele sayı üretmekte berbat bir durumdadır. Ancak makineler bu işi sanıldığından daha iyi yapabilir. Yazının en başında dediğim gibi klasik fizik her fiziksel olayın deterministik olduğunu söyler ki bu da lav lambaları veya gürültülerle çelişir gibi gözüküyor. Ancak bu fenomenlerin nasıl gerçekleşeceğini hesaplamak evrenin bir sonraki anını hesaplamak kadar zordur bu yüzden TRNG sistemleri pratikte indeterministik bir yapıda diyebiliriz. Şuanki bildiğimiz bilgiler gerçek rastgeleliğin sadece kuantum dünyasında meydana geldiğini anlatır. Onun dışındaki tüm rastgele olan olgular aslında rastgele gibi gözüken olgulardır. Ek olarak şuanki bildiğimiz bilgiler kuantum dünyasının çok az bir kısmını kapsıyor. Dolayısı ile bildiğimiz kuantum evreni de bir veya birden fazla değişkene bağlı olabilir ama biz bunu henüz bilmiyoruz. (Süperdeterminizm)
 
 ---
 

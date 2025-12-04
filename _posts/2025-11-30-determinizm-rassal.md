@@ -20,7 +20,7 @@ Rastgelelik kavramı insanlığın başlangıcından beri insanların zihninde y
 
 Bilgisayarlar deterministik makinelerdir. Bir bilgisayar aynı girdi üzerinde aynı sonucu üretecektir. Ancak biz bazen sürekli farklı sonuç üretmesini isteriz. İşte insanlar bu sorunun altından sözde rastgele sayı üreticileri (PRNG) veya gerçek rastgele sayı üreticileri (TRNG) ile çözmüşlerdir.
 
->TRNG'ler fiziksel olaylar kullanılarak rastgele sayı üreticilerdir. Örneğin bomboş bir atmosferik gürültü veya lavarand gibi teknolojiler ile olur. PRNG'ler ise bir sayıdan (seed) başka bir sayı üreten ve hep aynı sayıyı üreten fonksiyonlardır. Zaten yazının ilerleyen kısımlarında bunlara daha iyi değineceğiz.
+>TRNG'ler fiziksel olaylar kullanılarak çalışan rastgele sayı üreticileridir. Örneğin bomboş bir atmosferik gürültü veya lavarand gibi teknolojiler ile olur. PRNG'ler ise bir sayıdan (seed) başka bir sayı üreten ve hep aynı sayıyı üreten fonksiyonlardır. Zaten yazının ilerleyen kısımlarında bunlara daha iyi değineceğiz.
 
 >Not: Ancak yazının başında dedigim gibi klasik fizik aslında doğa olaylarının zaten deterministik olduğunu söyler. Ancak TRNG'lerin kullandığı kaynaklar gerçekten hesaplanması çok güç sistemlerdir. Tüm o değişkenleri bilmek imkansızdır. Bu yüzden adı gerçek rastgele sayı üreticisidir.
 

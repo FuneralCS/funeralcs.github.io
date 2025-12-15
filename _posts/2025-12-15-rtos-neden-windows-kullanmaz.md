@@ -17,7 +17,9 @@ pin: false
 
 # Mavi Ekran Hatası Bir Arabada Olsaydı? Neden Mars'taki Robotlar Windows Kullanmaz?
 
-
+<figure>
+    <img src="/assets/img/2025-12-15-rtos-neden-windows-kullanmaz/1.webp" width="600" alt="Otonom araç iç görünümü ve sensörler">
+</figure>
 
 ## Ölümcül Bir Senaryo
 
@@ -61,6 +63,9 @@ Windows, macOS veya standart Linux dağıtımları **GPOS (General Purpose Opera
 
 Ancak robotikte adalet değil, **"Öncelik" (Priority)** aranır. Dengesi bozulan bir drone'un motorlarını düzeltmesi gerekirken, işletim sisteminin "Sıranı bekle, şu an Wi-Fi sinyalini kontrol ediyorum" deme lüksü yoktur.
 
+<figure>
+    <img src="/assets/img/2025-12-15-rtos-neden-windows-kullanmaz/2.webp" width="600" alt="GPOS ve RTOS zamanlama şeması karşılaştırması">
+</figure>
 
 Bir fabrikadaki robotik kolun, çalışanlar çalışma alanına girdiğinde anında durabilmesi gerekir. GPOS'taki belirsizlik (non-determinism), burada yaralanmalara yol açabilir. Bu yüzden kritik görevlerde GPOS yerine **RTOS** kullanılır.
 
@@ -74,7 +79,9 @@ Determinizm; sisteme bir girdi verdiğinizde, çıktının her zaman, her koşul
 
 RTOS’un en büyük düşmanı 'Jitter'. Jitter için İstanbul trafiğine benzetmesi yapılabilir. Yola çıkarsınız ama ne zaman varacağınız asla belli olmaz. Robotlar da bu belirsizlikten nefret ediyor işte. Bir robot kolunu hareket ettiren motorlara giden sinyal, bir seferinde 1 milisaniyede, diğer seferinde 5 milisaniyede giderse, o robot kolu titremeye başlar.
 
-
+<figure>
+    <img src="/assets/img/2025-12-15-rtos-neden-windows-kullanmaz/3.webp" width="600" alt="Jitter sinyal grafiği">
+</figure>
 
 RTOS, bu süreyi mikrosaniyeler hassasiyetinde sabit tutarak sistemin pürüzsüz çalışmasını sağlar.
 
@@ -100,6 +107,9 @@ Bunu evinizde otururken kargocuyu beklemeye benzetebilirsiniz. Sürekli pencered
 
 Anlattıklarım size sadece teorik geldiyse, gözümüzü biraz yukarı, Kızıl Gezegen'e çevirelim. NASA'nın Perseverance veya Curiosity gibi Mars gezginlerinin neden Windows kullanmadığını hiç düşündünüz mü?
 
+<figure>
+    <img src="/assets/img/2025-12-15-rtos-neden-windows-kullanmaz/4.webp" width="600" alt="NASA Perseverance Mars Gezgini">
+</figure>
 
 Cevap çok basit: **Gecikme (Latency).**
 
@@ -110,3 +120,14 @@ O kritik dakikalarda paraşütü ne zaman açacağını, iticileri ne zaman ate�
 ## Sonuç
 
 Gömülü sistemler ve çip tasarımı üzerine yaptığım bu araştırmalar bana şunu gösterdi: **İyi bir mühendis olmak sadece "çalışan kod" yazmak değil, donanımın sınırlarını ve zamanı yönetebilen kod yazmaktır.**
+
+
+### Kaynakça
+
+1. [WHAT IS A REAL-TIME SYSTEM? - INTEL](https://www.intel.com/content/www/us/en/learn/what-is-a-real-time-system.html)
+2. [WHAT IS AN RTOS? - HIGH INTEGRITY SYSTEMS](https://www.highintegritysystems.com/rtos/what-is-an-rtos/)
+3. [TASKS AND TASK MANAGEMENT - HIGH INTEGRITY SYSTEMS](https://www.highintegritysystems.com/downloads/RTOS_Tutorials/Tasks_and_Task_Management.pdf)
+4. [WHAT IS A REAL-TIME OPERATING SYSTEM (RTOS)? - WIND RIVER](https://www.windriver.com/solutions/learning/rtos)
+5. [MARS 2020 PERSEVERANCE ROVER COMPONENTS - NASA](https://science.nasa.gov/mission/mars-2020-perseverance/rover-components/)
+6. [REAL-TIME SYSTEMS - GEEKSFORGEEKS](https://www.geeksforgeeks.org/computer-science-fundamentals/real-time-systems/)
+

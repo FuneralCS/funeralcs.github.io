@@ -1,6 +1,23 @@
+---
+title: "Mavi Ekran Hatası Bir Arabada Olsaydı? Neden Mars'taki Robotlar Windows Kullanmaz?"
+date: 2025-12-15 18:00:00 +0300
+categories: [Gömülü Sistemler, Robotik, Mühendislik]
+tags: [rtos, gömülü sistemler, gerçek zamanlı, otonom araçlar, mars, jitter, vxworks]
+author: yunus
+description: "Hız mı, zamanlama mı? Otonom araçların ve Mars robotlarının neden Windows yerine RTOS kullandığını, determinizm ve jitter kavramlarıyla inceliyoruz."
+image:
+  path: /assets/img/2025-12-15-rtos-neden-windows-kullanmaz/cover.webp
+  alt: "Otonom araç kokpiti ve sensör görselleştirmesi"
+toc: true
+math: false
+mermaid: false
+comments: true
+pin: false
+---
+
 # Mavi Ekran Hatası Bir Arabada Olsaydı? Neden Mars'taki Robotlar Windows Kullanmaz?
 
-![[Gemini_Generated_Image_u30100u30100u301 1.png]]
+
 
 ## Ölümcül Bir Senaryo
 
@@ -44,7 +61,6 @@ Windows, macOS veya standart Linux dağıtımları **GPOS (General Purpose Opera
 
 Ancak robotikte adalet değil, **"Öncelik" (Priority)** aranır. Dengesi bozulan bir drone'un motorlarını düzeltmesi gerekirken, işletim sisteminin "Sıranı bekle, şu an Wi-Fi sinyalini kontrol ediyorum" deme lüksü yoktur.
 
-![[Gemini_Generated_Image_u30100u30100u301 (1).png]]
 
 Bir fabrikadaki robotik kolun, çalışanlar çalışma alanına girdiğinde anında durabilmesi gerekir. GPOS'taki belirsizlik (non-determinism), burada yaralanmalara yol açabilir. Bu yüzden kritik görevlerde GPOS yerine **RTOS** kullanılır.
 
@@ -58,7 +74,7 @@ Determinizm; sisteme bir girdi verdiğinizde, çıktının her zaman, her koşul
 
 RTOS’un en büyük düşmanı 'Jitter'. Jitter için İstanbul trafiğine benzetmesi yapılabilir. Yola çıkarsınız ama ne zaman varacağınız asla belli olmaz. Robotlar da bu belirsizlikten nefret ediyor işte. Bir robot kolunu hareket ettiren motorlara giden sinyal, bir seferinde 1 milisaniyede, diğer seferinde 5 milisaniyede giderse, o robot kolu titremeye başlar.
 
-![[Gemini_Generated_Image_u30100u30100u301 (2).png]]
+
 
 RTOS, bu süreyi mikrosaniyeler hassasiyetinde sabit tutarak sistemin pürüzsüz çalışmasını sağlar.
 
@@ -84,7 +100,6 @@ Bunu evinizde otururken kargocuyu beklemeye benzetebilirsiniz. Sürekli pencered
 
 Anlattıklarım size sadece teorik geldiyse, gözümüzü biraz yukarı, Kızıl Gezegen'e çevirelim. NASA'nın Perseverance veya Curiosity gibi Mars gezginlerinin neden Windows kullanmadığını hiç düşündünüz mü?
 
-![[Gemini_Generated_Image_u30100u30100u301 (3).png]]
 
 Cevap çok basit: **Gecikme (Latency).**
 

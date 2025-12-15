@@ -1,7 +1,7 @@
 ---
 title: "Mavi Ekran Hatası Bir Arabada Olsaydı? Neden Mars'taki Robotlar Windows Kullanmaz?"
 date: 2025-12-15 18:00:00 +0300
-categories: [Gömülü Sistemler, Robotik, Mühendislik]
+categories: [gömülü sistemler, robotik, mühendislik]
 tags: [rtos, gömülü sistemler, gerçek zamanlı, otonom araçlar, mars, jitter, vxworks]
 author: yunus
 description: "Hız mı, zamanlama mı? Otonom araçların ve Mars robotlarının neden Windows yerine RTOS kullandığını, determinizm ve jitter kavramlarıyla inceliyoruz."

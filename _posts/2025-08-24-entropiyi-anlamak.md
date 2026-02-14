@@ -3,8 +3,8 @@ layout: post
 title: "Entropiyi Anlamak - Karmaşanın Matematiği"
 date: 2025-08-23 22:00:00 +0300
 categories:
-  - bilgi teorisi
-  - yapay zeka
+  - Bilgi Teorisi
+  - Yapay Zeka
 tags:
   - entropi
   - termodinamik

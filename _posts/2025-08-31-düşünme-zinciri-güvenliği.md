@@ -1,7 +1,7 @@
 ---
 title: "Dil Modellerinde Düşünme Zincirlerinin Kırılganlığı Üzerine"
 date: 2025-08-31 21:00:00 +0300
-categories: [yapay zeka, güvenlik]
+categories: [Yapay Zeka, Güvenlik]
 tags: [chain-of-thought, cot, latent reasoning, süreç gözetimi, process supervision, rationale distillation, xai, açıklanabilir yapay zeka, yapay zeka güvenliği, monitorability]
 authors: ["tunahan", "ibrahim"]
 image:

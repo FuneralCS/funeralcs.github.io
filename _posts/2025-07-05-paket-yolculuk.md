@@ -1,7 +1,7 @@
 ---
 title: "Paketlerin kısa yolculukları"
 date: 2025-07-05 14:26:00 +0300
-categories: [internet, bilgisayar]
+categories: [İnternet, Bilgisayar]
 tags: [internet, bilgisayar]
 author: vladimirdelvis
 image:

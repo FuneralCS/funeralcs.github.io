@@ -1,7 +1,7 @@
 ---
 title: "Sıfırdan CNN’ler: LeNet’ten ResNet’e"
 date: 2025-06-15 09:00:00 +0300
-categories: [derin öğrenme, resnet, lenet, görüntü işleme]
+categories: [Derin Öğrenme, ResNet, LeNet, Görüntü İşleme]
 tags: [derin öğrenme, resnet, lenet, yazılım, görüntü işleme]
 author: tunahan
 image:

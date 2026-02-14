@@ -1,7 +1,7 @@
 ---
 title: "Tiny Bugs, Giant Consequences"
 date: 2025-09-23 03:43:00 +0300
-categories: [technology, history]
+categories: [Technology, History]
 tags: [software bug, case study, software engineering, system failure]
 author: kerim
 image:

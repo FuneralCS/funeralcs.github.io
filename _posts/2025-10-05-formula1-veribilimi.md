@@ -2,11 +2,11 @@
 title: Formula ve Veri Bilimi
 date: 2025-10-05 15:30:00 +0300
 categories:
-  - teknoloji
-  - yapay zeka
-  - spor
-  - makine-ogrenmesi
-  - olasılık
+  - Teknoloji
+  - Yapay Zeka
+  - Spor
+  - Makine Öğrenmesi
+  - Olasılık
 tags:
   - matematik
   - yazılım

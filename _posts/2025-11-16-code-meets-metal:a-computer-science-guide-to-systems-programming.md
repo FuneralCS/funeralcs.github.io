@@ -1,7 +1,7 @@
 ---
 title: "Code Meets Metal: A Computer Science Guide to Systems Programming"
 date: 2025-11-16 20:42:00 +0300
-categories: [technology, computer science, engineering]
+categories: [Technology, Computer Science, Engineering]
 tags: [embedded systems, systems programming, computer science, stm32, ai, robotics]
 author: kerim
 image:

@@ -1,7 +1,7 @@
 ---
 title: "Aradığınız 'FuneralCS yazısı' ile ilgili hiçbir arama sonucu mevcut değil"
 date: 2025-11-22 9:00:00 +0300
-categories: [teknoloji, internet, bilgi teorisi, yapay zeka, makine ogrenmesi, matematik]
+categories: [Teknoloji, İnternet, Bilgi Teorisi, Yapay Zeka, Makine Öğrenmesi, Matematik]
 tags: [retrieval, embedding, pagerank, bert, limit dataset, limit article, limit makale, cross encoders, google, not found, search]
 author: tunahan
 image:

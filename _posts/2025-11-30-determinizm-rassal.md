@@ -1,7 +1,7 @@
 ---
 title: "Determinizim ve Rassal Sayılar Üzerine"
 date: 2025-11-30 14:30:00 +0300
-categories: [rastgelelik, fizik]
+categories: [Rastgelelik, Fizik]
 tags: [rastgele, determinizm, deterministik, fizik, random, bilgisayar, matematik, rand(), seed(), minecraft, random.h, süperdeterminizm, bilgisayar bilimi, aritmetik, fonksiyon]
 author: vladimirdelvis
 image:

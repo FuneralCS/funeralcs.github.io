@@ -1,7 +1,7 @@
 ---
 title: "Şifreleme ve İmzalama"
 date: 2025-09-28 13:00:00 +0300
-categories: [teknoloji, kriptoloji]
+categories: [Teknoloji, Kriptoloji]
 tags: [şifreleme, şifre çözme, matematik, sayılar, hesap, bilgisayar, matematik, kriptoloji, veri, veri güvenliği, siber güvenlik, gizlilik, e-posta, PGP, OpenPGP, protonmail, uçtan uca şifreleme]
 author: vladimirdelvis
 image:

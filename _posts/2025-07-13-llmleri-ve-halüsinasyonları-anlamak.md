@@ -1,7 +1,7 @@
 ---
 title: "LLM'leri ve Halüsinasyonları Anlamak"
 date: 2025-07-13 11:00:00 +0300
-categories: [yapay zeka, derin öğrenme, büyük dil modelleri]
+categories: [Yapay Zeka, Derin Öğrenme, Büyük Dil Modelleri]
 tags: [llm, yapay zeka, halüsinasyon, doğal dil işleme, transformer]
 author: tunahan
 image:

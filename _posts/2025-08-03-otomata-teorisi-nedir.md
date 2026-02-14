@@ -1,7 +1,7 @@
 ---
 title: "Otomata Teorisi Nedir?"
 date: 2025-08-03 13:30:00 +0300
-categories: [matematik, bilgisayar bilimi]
+categories: [Matematik, Bilgisayar Bilimi]
 tags: [otomata teorisi, sonlu otomat, düzenli diller, bağlamdan bağımsız gramer, chomsky hiyerarşisi]
 author: ibrahim
 image:

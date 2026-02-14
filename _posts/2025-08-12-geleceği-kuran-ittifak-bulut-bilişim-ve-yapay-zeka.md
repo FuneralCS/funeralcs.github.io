@@ -1,7 +1,7 @@
 ---
 title: "Geleceği Kuran İttifak: Bulut Bilişim ve Yapay Zeka"
 date: 2025-08-12 04:10:00 +0300
-categories: [teknoloji, yapay zeka]
+categories: [Teknoloji, Yapay Zeka]
 tags: [bulut bilişim, yapay zeka, cloud, ai, hibrit bulut, cloud repatriation, teknoloji trendleri]
 author: kerim
 image:
